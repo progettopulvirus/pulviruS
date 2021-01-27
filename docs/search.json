@@ -1,0 +1,73 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-01-27T00:31:04+01:00"
+    },
+    {
+      "path": "completezza.html",
+      "title": "Completezza serie storiche",
+      "description": "Criteri generali per selezionare le serie storiche complete nel periodo 2013 - 2020.\n",
+      "author": [
+        {
+          "name": "ISPRA",
+          "url": {}
+        }
+      ],
+      "contents": "\nCompletezza a livello mensile\nUn mese e’ valido se contiene almeno il 75% di dati validi su 31\nCompletezza a livello annuale\nUn anno e’ valido se ha almeno 9 mesi validi (75% di 12) e tutte le stagioni valide. Una stagione e’ valida se contiene almeno due mesi validi su tre.\nStagioni:\nInverno: Gennaio-Febbraio-Dicembre (stesso anno)\nPrimavera: Marzo-Aprile-Maggio\nEstate: Giugno-Luglio-Agosto\nAutunno: Settembre-Ottobre-Novembre\nCompletezza periodo 2013-2019\nUna serie e’ completa nel periodo 2013-2019 se:\nnel periodo 2016 - 2019 tutti gli anni sono validi (quindi la disponibilita’ di dati nel periodo 2013-2015 non e’ un elemnto fondamentale per selezionare o meno una serie)\nil 2020 contiene tutti mesi validi nel periodo Gennaio - Giugno.\nQuesti criteri possono essere ritenuti validi per tutti gli inquinanti?\n# Completezza serie 2013-2020\nBiossido di azoto (NO2)\nPM10\nNOX\n\n\n\n",
+      "last_modified": "2021-01-27T00:31:05+01:00"
+    },
+    {
+      "path": "formato.html",
+      "title": "Formato dei dati meteoclimatici",
+      "description": "Descrizione dei formato dei dati estratti da ERA5.\n",
+      "author": [
+        {
+          "name": "ISPRA",
+          "url": "https://example.com/norajones"
+        }
+      ],
+      "contents": "\nFormato dei dati meteorologici\nI dati debbono essere in formato long rispetto al codice stazione e alla data: - sotto il campo station_code e/o station_eu_code si susseguono i codici delle stazioni di monitoraggio - sotto il campo date si susseguono le date dei singoli giorni relativi al periodo dell’analisi dei dati\nI file di output debbono essere in formato testo (estensione .csv) utilizzando la virgola (,) come separatore di campo.\nI dati di ciascuna stazione di monitoraggio sono identificati dal campo: - station_eu_code (Raffaele ha utilizzato questo come codice identificativo delle stazioni per gli inquinanti) - date\nIl campo date deve essere nel formato: ANNO-MESE-GIORNO - anno: 4 cifre - mese: due cifre (0 per il padding nel caso dei mesi da 1 a 9) - giorno: due cifre (0 per il padding nel caso dei giorni da 1 a 9)\nCoordinate dei punti stazione: - epsg 32632 (UTM32) in kilometri\nI dati devono essere riportati (a meno di eccezioni) con una cifra decimale. Separatore dicemale: “.”\nDati mancanti\nI dati mancanti debbono essere identificati dalla stringa NA (no -999 o altre stringhe tipo NULL).\nIl calendario (il campo date) deve essere completo anche laddove tutte le variabili siano mancanti (riga di NA).\nNomi dei campi\nPer facilitare la lettura dei dati su R, le intestazioni dei file dati .csv devono rispettare le seguenti regole: - NON devono contenere spazi - NON devono iniziare con una cifra (0-9) - NON devono contenere caratteri spaciali, SOLO lettere (A-Z) e cifre (0-9) - devono essere nomi brevi di chiaro significato\nPer i nomi delle variabili climatiche principali utilizzare la seguente tabella in cui sono riportati: - il nome sintetico della variabile - l’unità di misura da utilizzare\nNome\nCodice\nUnita\nAggregazione giornaliera\nSurface pressure\nsp\nhPa\nmedia\nAverage temperature (2m)\nt2m\n°C\nmedia\nMaximum temperature (2m)\ntmax2m\n°C\nmassimo giornaliero\nMinimum temperature (2m)\ntmin2m\n°C\nminimo giornaliero\nPlanet Boundary Layer ore 00\npbl00\nkm\nmedia o valore istantaneo\nPlanet Boundary Layer ore 12\npbl12\nkm\nmedia valore istantaneo\nPlanet Boundary Layer daily maximum\npblmax\nkm\nmassimo valore istantaneo\nPlanet Boundary Layer daily minimum\npblmin\nkm\nminimo valore istantaneo\nTotal precipitation\ntp\nmm\nsomma\nPrevious day total precipitation\nptp\nmm\nsomma\nWind speed\nwspeed\nm/s\nmedia\nPrevious day wind speed\npwspeed\nm/s\nmedia\nWind direction\nwdir\ngradi\nmoda\nWind U component (10 meters)\nu10m\nm/s\nmedia\nWind V component (10 meters)\nv10m\nm/s\nmedia\nRelative Humidity\nrh\n%\nmedia\nWind gust\nwgust\nm/s\nmassimo giornaliero\nNet irradiance\nnirradiance\nW/m^2\nmedia\nLa tabella che segue si riferisce ad altre variabili che potrebbero essere d’interesse per il progetto e che meritano comunque un approfondimento:\nPotenziali variabili meteorologiche aggiuntive emerse dall’analisi della letteratura scientifica:\nNome esteso variabile\ncodice per intestazione file .csv\nUnità di misura\nAggregazione giornaliera\nFront\nfrontcat\nnumero o testo\ncategoriale\nNumber of days since front\ndfront\nnumero\nsomma di giorni\nSynoptic group\nsyngr\nnumero o testo\ncategoriale\nCloud cover\nclcover\nokta\nmedia\nCloud cover maxmin\nclcovermaxmin\nokta\ndifferenza massimo-minimo giornaliero (se disponibile)\nBack trajectory\nbacktraj\nnumero o testo\ncategoriale\nAltre da ERA5?\n??\n??\n??\nNOTA: la tabella sopra ancora non è definitiva\nEsempio di file dati prodototto dagli archivi netCDF\nL’ordine delle colonne all’interno del file NON è importante.\nstation_eu_code\ndate\nt2m\ntp\naltre variabili\nIT0966A\n2013-01-01\n49.7\n—\n—\nIT0966A\n2013-01-02\n25.5\n—\n—\nIT0966A\n2013-01-03\nNA\n—\n—\nIT0966A\n2013-01-04\n45.0\n—\n—\nIT0966A\n2013-01-05\n46.9\n—\n—\nIT0966A\n2013-01-06\n64.0\n—\n—\nIT0966A\n2013-01-07\n51.6\n—\n—\nIT0966A\n2013-01-08\n46.6\n—\n—\nIT0966A\n2013-01-09\n48.8\n—\n—\nIT0966A\n2013-01-10\n61.5\n—\n—\n—\n—\n—\n—\n—\nIT0967A\n2013-01-08\n46.64223\n—\n—\nIT0967A\n2013-01-09\n48.8916\n—\n—\nIT0967A\n2013-01-10\n61.53846\n—\n—\n\n\n\n",
+      "last_modified": "2021-01-27T00:31:06+01:00"
+    },
+    {
+      "path": "index.html",
+      "title": "pulviruS",
+      "description": "Il sito del progetto di ricerca.\n",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-01-27T00:31:06+01:00"
+    },
+    {
+      "path": "inquinanti.html",
+      "title": "Dati inquinanti pacchettizzati",
+      "description": "Descrizione dei dati degli inquinanti contenuti in pacchetti R.\n",
+      "author": [
+        {
+          "name": "ISPRA",
+          "url": {}
+        }
+      ],
+      "contents": "\nIstallare i dati\nda scrivere\n\n\n\n",
+      "last_modified": "2021-01-27T00:31:07+01:00"
+    },
+    {
+      "path": "parametri.html",
+      "title": "Variabili Meteoclimatiche",
+      "description": "Variabili meteo estratte dalle rianalisi del modello ERA5.\n",
+      "author": [
+        {
+          "name": "ISPRA",
+          "url": {}
+        }
+      ],
+      "contents": "\nI parametri wspeed, wdir e pwspeed sono stati ricalcolati in quanto quelli forniti inizialmente si sono rivelati errati.\nTabella Variabili Meteo\nNome\nCodice\nUnita\nAggregazione giornaliera\nSurface pressure\nsp\nhPa\nmedia\nAverage temperature (2m)\nt2m\n°C\nmedia\nMaximum temperature (2m)\ntmax2m\n°C\nmassimo giornaliero\nMinimum temperature (2m)\ntmin2m\n°C\nminimo giornaliero\nPlanet Boundary Layer ore 00\npbl00\nkm\nmedia o valore istantaneo\nPlanet Boundary Layer ore 12\npbl12\nkm\nmedia valore istantaneo\nPlanet Boundary Layer daily maximum\npblmax\nkm\nmassimo valore istantaneo\nPlanet Boundary Layer daily minimum\npblmin\nkm\nminimo valore istantaneo\nTotal precipitation\ntp\nmm\nsomma\nPrevious day total precipitation\nptp\nmm\nsomma\nWind speed\nwspeed\nm/s\nmedia\nPrevious day wind speed\npwspeed\nm/s\nmedia\nWind direction\nwdir\ngradi\nmoda\nWind U component (10 meters)\nu10m\nm/s\nmedia\nWind V component (10 meters)\nv10m\nm/s\nmedia\nRelative Humidity\nrh\n%\nmedia\nWind gust\nwgust\nm/s\nmassimo giornaliero\nNet irradiance\nnirradiance\nW/m^2\nmedia\n\n\n\n",
+      "last_modified": "2021-01-27T00:31:07+01:00"
+    }
+  ],
+  "collections": []
+}
