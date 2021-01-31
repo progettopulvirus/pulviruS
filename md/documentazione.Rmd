@@ -1,0 +1,38 @@
+---
+title: "Documentazione"
+description: |
+  A new article created using the Distill format.
+author:
+  - name: Guido Fioravanti 
+
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+### [Inquinanti](./inquinanti.html)
+
+Gli inquinanti del progetto
+
+### [Parametri meteoclimatici](./parametri.html)
+
+Questo documento sintetizza i parametri meteorologici estratti dalle rianalisi ERA5.
+
+### [Formato dei dati](./formato.html)
+
+Le specifiche per la predisposizione dei dati di input.
+
+### [Completezza delle serie](./completezza.html)
+
+Una sintesi dei criteri adottati per selezionare le serie degli inquinanti nel periodo 2013-2020.
+
+
+
+
+

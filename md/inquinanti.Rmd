@@ -1,0 +1,23 @@
+---
+title: "Dati inquinanti pacchettizzati"
+description: |
+  Descrizione dei dati degli inquinanti contenuti in pacchetti R.
+author:
+  - name: ISPRA 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Istallare i dati
+
+da scrivere
+
+
+
+
+

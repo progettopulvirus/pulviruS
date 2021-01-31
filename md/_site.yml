@@ -1,0 +1,18 @@
+name: "pulvirus"
+title: "pulviruS"
+description: |
+  pulviruS
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Documentazione"
+      href: documentazione.html
+    - text: "Dati"
+      href: dati.html
+    - text: "Risultati"
+      href: risultati.html
+output: distill::distill_article
