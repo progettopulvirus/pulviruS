@@ -1,18 +1,19 @@
 name: "pulvirus"
 title: "pulviruS"
 description: |
-  pulviruS
+  "Qualita' dell'aria ai tempi della pandemia"
 output_dir: "_site"
 navbar:
   right:
-    - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
+    - text: "About PULVIRUS"
+      href: PULVIRUS.html  
     - text: "Documentazione"
       href: documentazione.html
     - text: "Dati"
       href: dati.html
     - text: "Risultati"
       href: risultati.html
+favicon: img/favicon.ico
+base_url: https://progettopulvirus.github.io/pulviruS/
 output: distill::distill_article
+

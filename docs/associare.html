@@ -86,28 +86,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>pulviruS: Variabili Meteoclimatiche</title>
+  <title>pulviruS: Dati inquinanti e dati meteoclimatici</title>
 
+  <meta property="description" itemprop="description" content="Fare il join dei dati."/>
 
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
 
   <meta name="article:author" content="ISPRA"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="pulviruS: Variabili Meteoclimatiche"/>
+  <meta property="og:title" content="pulviruS: Dati inquinanti e dati meteoclimatici"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Fare il join dei dati."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="pulviruS"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="pulviruS: Variabili Meteoclimatiche"/>
+  <meta property="twitter:title" content="pulviruS: Dati inquinanti e dati meteoclimatici"/>
+  <meta property="twitter:description" content="Fare il join dei dati."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","output"]}},"value":[{"type":"character","attributes":{},"value":["Variabili Meteoclimatiche"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output"]}},"value":[{"type":"character","attributes":{},"value":["Dati inquinanti e dati meteoclimatici"]},{"type":"character","attributes":{},"value":["Fare il join dei dati.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2052,7 +2055,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Variabili Meteoclimatiche","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}]}
+{"title":"Dati inquinanti e dati meteoclimatici","description":"Fare il join dei dati.","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2076,10 +2079,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Variabili Meteoclimatiche</h1>
+<h1>Dati inquinanti e dati meteoclimatici</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>Fare il join dei dati.</p></p>
 </div>
 
 <div class="d-byline">
@@ -2089,128 +2092,92 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>La tabella riassume i parametri meteoclimatici i cui dati giornalieri sono stati estratti dalle rianalisi <a href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5</a>. I dati sono disponibili dal database del progetto PULVIRUS o come data.grame all’interno del pacchetto R <code>datiMeteo</code> presso il repository github <a href="https://github.com/progettopulvirus/">progettopulvirus</a>.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Nome</th>
-<th>Codice</th>
-<th>Unita</th>
-<th>Aggregazione giornaliera</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Surface pressure</td>
-<td>sp</td>
-<td>hPa</td>
-<td>media</td>
-</tr>
-<tr class="even">
-<td>Average temperature (2m)</td>
-<td>t2m</td>
-<td>°C</td>
-<td>media</td>
-</tr>
-<tr class="odd">
-<td>Maximum temperature (2m)</td>
-<td>tmax2m</td>
-<td>°C</td>
-<td><strong>massimo giornaliero</strong></td>
-</tr>
-<tr class="even">
-<td>Minimum temperature (2m)</td>
-<td>tmin2m</td>
-<td>°C</td>
-<td><strong>minimo giornaliero</strong></td>
-</tr>
-<tr class="odd">
-<td>Planet Boundary Layer ore 00</td>
-<td>pbl00</td>
-<td>km</td>
-<td>media o <strong>valore istantaneo</strong></td>
-</tr>
-<tr class="even">
-<td>Planet Boundary Layer ore 12</td>
-<td>pbl12</td>
-<td>km</td>
-<td>media <strong>valore istantaneo</strong></td>
-</tr>
-<tr class="odd">
-<td>Planet Boundary Layer daily maximum</td>
-<td>pblmax</td>
-<td>km</td>
-<td>massimo <strong>valore istantaneo</strong></td>
-</tr>
-<tr class="even">
-<td>Planet Boundary Layer daily minimum</td>
-<td>pblmin</td>
-<td>km</td>
-<td>minimo <strong>valore istantaneo</strong></td>
-</tr>
-<tr class="odd">
-<td>Total precipitation</td>
-<td>tp</td>
-<td>mm</td>
-<td>somma</td>
-</tr>
-<tr class="even">
-<td>Previous day total precipitation</td>
-<td>ptp</td>
-<td>mm</td>
-<td>somma</td>
-</tr>
-<tr class="odd">
-<td>Wind speed</td>
-<td>wspeed</td>
-<td>m/s</td>
-<td>media</td>
-</tr>
-<tr class="even">
-<td>Previous day wind speed</td>
-<td>pwspeed</td>
-<td>m/s</td>
-<td>media</td>
-</tr>
-<tr class="odd">
-<td>Wind direction</td>
-<td>wdir</td>
-<td>gradi</td>
-<td><strong>moda</strong></td>
-</tr>
-<tr class="even">
-<td>Wind U component (10 meters)</td>
-<td>u10m</td>
-<td>m/s</td>
-<td>media</td>
-</tr>
-<tr class="odd">
-<td>Wind V component (10 meters)</td>
-<td>v10m</td>
-<td>m/s</td>
-<td>media</td>
-</tr>
-<tr class="even">
-<td>Relative Humidity</td>
-<td>rh</td>
-<td>%</td>
-<td>media</td>
-</tr>
-<tr class="odd">
-<td>Wind gust</td>
-<td>wgust</td>
-<td>m/s</td>
-<td><strong>massimo giornaliero</strong></td>
-</tr>
-<tr class="even">
-<td>Net irradiance</td>
-<td>nirradiance</td>
-<td>W/m^2</td>
-<td>media</td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>Problema: associare i dati degli inquinanti ai dati dei parametri meteoclimatici.</p>
+<p>Il primo passo consiste nell’<a href="acquisire_dati_meteo.html">istallare il pacchetto <code>datiMeteo</code></a> e <a href="acquisire_dati_inquinanti.html">istallare i dati degli inquinanti</a> di almeno una regione.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/datiMeteo"</span><span class='op'>)</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/lazio"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Carichiamo entrambi i pacchetti.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'>"datiMeteo"</span><span class='op'>)</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'>"lazio"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>Il comando <code>data</code> fornisce informazioni sui <code>data frame</code> contenuti nel pacchetto <code>lazio</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span>package<span class='op'>=</span><span class='st'>"lazio"</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>In questo esempio vogliamo associare i dati del PM2.5 (<code>data frame</code> <code>pm25</code>) con i dati delle rianalisi <code>ERA5</code>. A questo proposito carichiamo la libreria <code>dplyr</code> e utilizziamo la funzione <code>left_join</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Istallo la libreria dplyr se non disponibile...ma oggi chi non usa dplyr?</span>
+<span class='co'>#install.packages("dplyr")</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://dplyr.tidyverse.org'>"dplyr"</a></span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>
+Attaching package: &#39;dplyr&#39;</code></pre>
+<pre><code>The following objects are masked from &#39;package:stats&#39;:
+
+    filter, lag</code></pre>
+<pre><code>The following objects are masked from &#39;package:base&#39;:
+
+    intersect, setdiff, setequal, union</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#left_join: associo ai dati del PM2.5 i dati meteoclimatici</span>
+<span class='co'>#questa operazione puo' richiedere qualche secondo</span>
+<span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>pm25</span>,<span class='va'>meteo</span><span class='op'>)</span><span class='op'>-&gt;</span><span class='va'>nuoviDati</span>
+</code></pre>
+</div>
+<pre><code>Joining, by = c(&quot;station_eu_code&quot;, &quot;date&quot;)</code></pre>
+</div>
+<p>Non avendo specificato i campi da utilizzare per il <code>join</code>, <code>R</code> ci avverte di aver effettuato un <code>natural join</code> (ovvero: ha utilizzato le colonne che nei due <code>data frame</code> <code>pm25</code> e <code>meteo</code> hanno lo stesso nome).</p>
+<p>Volendo specificare direttamente i campi per il join possiamo utilizzare il parametro facoltativo <code>by</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#associo ai dati del PM2.5 i dati meteoclimatici</span>
+<span class='co'>#specificando i campi da utilizzare per il join</span>
+<span class='fu'><a href='https://rdrr.io/pkg/dplyr/man/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>pm25</span>,<span class='va'>meteo</span>,by<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"date"</span><span class='op'>=</span><span class='st'>"date"</span>,<span class='st'>"station_eu_code"</span><span class='op'>=</span><span class='st'>"station_eu_code"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>-&gt;</span><span class='va'>nuoviDati</span>
+</code></pre>
+</div>
+</div>
+<p>Il risultato finale:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>nuoviDati</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 4,942 x 30
+   reporting_year pollutant_fk station_eu_code date       value    mm
+            &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1           2013         6001 IT0983A         2013-01-01    41     1
+ 2           2013         6001 IT0983A         2013-01-02    25     1
+ 3           2013         6001 IT0983A         2013-01-03    30     1
+ 4           2013         6001 IT0983A         2013-01-04    32     1
+ 5           2013         6001 IT0983A         2013-01-05     9     1
+ 6           2013         6001 IT0983A         2013-01-06     6     1
+ 7           2013         6001 IT0983A         2013-01-07    17     1
+ 8           2013         6001 IT0983A         2013-01-08    38     1
+ 9           2013         6001 IT0983A         2013-01-09    49     1
+10           2013         6001 IT0983A         2013-01-10    40     1
+# … with 4,932 more rows, and 24 more variables: yy &lt;dbl&gt;,
+#   regione &lt;chr&gt;, station_code &lt;dbl&gt;, t2m &lt;dbl&gt;, tmin2m &lt;dbl&gt;,
+#   tmax2m &lt;dbl&gt;, tp &lt;dbl&gt;, ptp &lt;dbl&gt;, rh &lt;dbl&gt;, u10m &lt;dbl&gt;,
+#   v10m &lt;dbl&gt;, sp &lt;dbl&gt;, nirradiance &lt;dbl&gt;, pbl00 &lt;dbl&gt;,
+#   pbl12 &lt;dbl&gt;, pblmin &lt;dbl&gt;, pblmax &lt;dbl&gt;, coordx &lt;dbl&gt;,
+#   coordy &lt;dbl&gt;, altitude &lt;dbl&gt;, altitudedem &lt;dbl&gt;, wdir &lt;dbl&gt;,
+#   wspeed &lt;dbl&gt;, pwspeed &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

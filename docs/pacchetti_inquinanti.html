@@ -86,28 +86,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>pulviruS: Variabili Meteoclimatiche</title>
+  <title>pulviruS: Regioni con dati per gli inquinanti</title>
 
+  <meta property="description" itemprop="description" content="Pacchetti R disponibili su github con i dati degli inquinanti."/>
 
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
 
-  <meta name="article:author" content="ISPRA"/>
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-02-01"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-01"/>
+  <meta name="article:author" content="Guido Fioravanti"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="pulviruS: Variabili Meteoclimatiche"/>
+  <meta property="og:title" content="pulviruS: Regioni con dati per gli inquinanti"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="Pacchetti R disponibili su github con i dati degli inquinanti."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="pulviruS"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="pulviruS: Variabili Meteoclimatiche"/>
+  <meta property="twitter:title" content="pulviruS: Regioni con dati per gli inquinanti"/>
+  <meta property="twitter:description" content="Pacchetti R disponibili su github con i dati degli inquinanti."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","output"]}},"value":[{"type":"character","attributes":{},"value":["Variabili Meteoclimatiche"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Regioni con dati per gli inquinanti"]},{"type":"character","attributes":{},"value":["Pacchetti R disponibili su github con i dati degli inquinanti.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-01"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2052,7 +2058,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Variabili Meteoclimatiche","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}]}
+{"title":"Regioni con dati per gli inquinanti","description":"Pacchetti R disponibili su github con i dati degli inquinanti.","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-01T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2076,137 +2082,168 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Variabili Meteoclimatiche</h1>
+<h1>Regioni con dati per gli inquinanti</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>Pacchetti R disponibili su github con i dati degli inquinanti.</p></p>
 </div>
 
 <div class="d-byline">
-  ISPRA  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
+  Guido Fioravanti  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
   
-
+<br/>2021-02-01
 </div>
 
 <div class="d-article">
-<p>La tabella riassume i parametri meteoclimatici i cui dati giornalieri sono stati estratti dalle rianalisi <a href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5</a>. I dati sono disponibili dal database del progetto PULVIRUS o come data.grame all’interno del pacchetto R <code>datiMeteo</code> presso il repository github <a href="https://github.com/progettopulvirus/">progettopulvirus</a>.</p>
+<p>I dati distribuiti mediante pacchetti R rappresentano un sottoinsieme dei dati disponibili nel database del progetto PULVIRUS: si tratta,infatti, delle serie di dati degli inquinanti selezionate in base ai <a href="completezza.html">controlli di completezza</a>.</p>
+<p>Per ogni regione viene riportato il nome del corrispondente pacchetto R e i dati in esso contenuti.</p>
 <table>
 <thead>
 <tr class="header">
-<th>Nome</th>
-<th>Codice</th>
-<th>Unita</th>
-<th>Aggregazione giornaliera</th>
+<th>Regione</th>
+<th>Pacchetto</th>
+<th>pm10</th>
+<th>pm2.5</th>
+<th>no2</th>
+<th>nox</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Surface pressure</td>
-<td>sp</td>
-<td>hPa</td>
-<td>media</td>
+<td>Basilicata</td>
+<td>basilicata</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="even">
-<td>Average temperature (2m)</td>
-<td>t2m</td>
-<td>°C</td>
-<td>media</td>
+<td>Campania</td>
+<td>campania</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Maximum temperature (2m)</td>
-<td>tmax2m</td>
-<td>°C</td>
-<td><strong>massimo giornaliero</strong></td>
+<td>Emilia Romagna</td>
+<td>emiliaromagna</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="even">
-<td>Minimum temperature (2m)</td>
-<td>tmin2m</td>
-<td>°C</td>
-<td><strong>minimo giornaliero</strong></td>
+<td>Friuli Venezia Giulia</td>
+<td>friuliveneziagiulia</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Planet Boundary Layer ore 00</td>
-<td>pbl00</td>
-<td>km</td>
-<td>media o <strong>valore istantaneo</strong></td>
+<td>Lazio</td>
+<td>lazio</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="even">
-<td>Planet Boundary Layer ore 12</td>
-<td>pbl12</td>
-<td>km</td>
-<td>media <strong>valore istantaneo</strong></td>
+<td>Lombardia</td>
+<td>lombardia</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="odd">
-<td>Planet Boundary Layer daily maximum</td>
-<td>pblmax</td>
-<td>km</td>
-<td>massimo <strong>valore istantaneo</strong></td>
+<td>Molise</td>
+<td>molise</td>
+<td></td>
+<td></td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="even">
-<td>Planet Boundary Layer daily minimum</td>
-<td>pblmin</td>
-<td>km</td>
-<td>minimo <strong>valore istantaneo</strong></td>
+<td>Bolzano, Provincia Autonoma</td>
+<td>pabolzano</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Total precipitation</td>
-<td>tp</td>
-<td>mm</td>
-<td>somma</td>
+<td>Trento, Provincia Autonoma</td>
+<td>patrento</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Previous day total precipitation</td>
-<td>ptp</td>
-<td>mm</td>
-<td>somma</td>
+<td>Piemonte</td>
+<td>piemonte</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Wind speed</td>
-<td>wspeed</td>
-<td>m/s</td>
-<td>media</td>
+<td>Puglia</td>
+<td>puglia</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="even">
-<td>Previous day wind speed</td>
-<td>pwspeed</td>
-<td>m/s</td>
-<td>media</td>
+<td>Sardegna</td>
+<td>sardegna</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="odd">
-<td>Wind direction</td>
-<td>wdir</td>
-<td>gradi</td>
-<td><strong>moda</strong></td>
+<td>Sicilia</td>
+<td>sicilia</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td></td>
 </tr>
 <tr class="even">
-<td>Wind U component (10 meters)</td>
-<td>u10m</td>
-<td>m/s</td>
-<td>media</td>
+<td>Toscana</td>
+<td>toscana</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="odd">
-<td>Wind V component (10 meters)</td>
-<td>v10m</td>
-<td>m/s</td>
-<td>media</td>
+<td>Umbria</td>
+<td>umbria</td>
+<td></td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 <tr class="even">
-<td>Relative Humidity</td>
-<td>rh</td>
-<td>%</td>
-<td>media</td>
+<td>Valle d’Aosta</td>
+<td>valleaosta</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td></td>
 </tr>
 <tr class="odd">
-<td>Wind gust</td>
-<td>wgust</td>
-<td>m/s</td>
-<td><strong>massimo giornaliero</strong></td>
-</tr>
-<tr class="even">
-<td>Net irradiance</td>
-<td>nirradiance</td>
-<td>W/m^2</td>
-<td>media</td>
+<td>Veneto</td>
+<td>veneto</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
 </tr>
 </tbody>
 </table>

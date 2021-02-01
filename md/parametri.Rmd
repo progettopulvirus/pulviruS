@@ -1,7 +1,5 @@
 ---
 title: "Variabili Meteoclimatiche"
-description: |
-  Variabili meteo estratte dalle rianalisi del modello ERA5.
 author:
   - name: ISPRA
     affiliation: ISPRA
@@ -13,10 +11,7 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-
-I parametri wspeed, wdir e pwspeed sono stati ricalcolati in quanto quelli forniti inizialmente si sono rivelati errati.
-
-## Tabella Variabili Meteo
+La tabella riassume i parametri meteoclimatici i cui dati giornalieri sono stati estratti dalle rianalisi [ERA5](https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5). I dati sono disponibili dal database del progetto PULVIRUS o come data.grame all'interno del pacchetto R `datiMeteo` presso il repository github [progettopulvirus](https://github.com/progettopulvirus/).
 
 | Nome | Codice | Unita | Aggregazione giornaliera |
 | ---| --- | --- | --- |
@@ -38,8 +33,6 @@ I parametri wspeed, wdir e pwspeed sono stati ricalcolati in quanto quelli forni
 | Relative Humidity | rh | % | media |
 | Wind gust | wgust | m/s | **massimo giornaliero**  | media |
 | Net irradiance | nirradiance | W/m^2 | media |
-
-
 
 
 

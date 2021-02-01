@@ -1,0 +1,33 @@
+---
+title: "Il progetto PULVIRUS"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Offrire a Istituzioni e cittadini informazioni, risposte e indicazioni, sulla base di dati scientifici, competenze ed esperienze in tema di inquinamento atmosferico e Covid-19. Nasce con questi obiettivi l’alleanza scientifica fra [ENEA](https://www.enea.it/it), [Istituto Superiore di Sanità](https://www.iss.it/) e Sistema Nazionale per la Protezione Ambientale (composto da [ISPRA](https://www.isprambiente.gov.it/it) e dalle Agenzie Regionali del Sistema Nazionale per la Protezione dell’Ambiente) annunciata oggi con l’avvio di un progetto di ricerca congiunto denominato **PULVIRUS**.
+
+#### Obiettivi del progetto PULVIRUS
+
+Il progetto vuole approfondire: 
+
+- il discusso legame fra inquinamento atmosferico e diffusione della pandemia
+
+- le interazioni fisico-chimiche-biologiche fra polveri sottili e virus 
+
+- gli  effetti del “lock down” sull’inquinamento atmosferico e sui gas serra.
+
+Il Progetto parte dall’evidenza che l’introduzione delle misure di contrasto al coronavirus (COVID-19) ha causato riduzioni delle concentrazioni di alcuni inquinanti atmosferici, riscontrata dai dati delle reti di monitoraggio della qualità dell’aria. L’analisi preliminare indica che le concentrazioni degli inquinanti non seguono gli stessi andamenti, come è inevitabile che sia per fenomeni complessi e non lineari. La diminuzione delle concentrazioni di alcuni inquinanti come il biossido di azoto (NO2) sembra interessare maggiormente le stazioni di monitoraggio vicine al traffico veicolare e meno quelle lontane dalle sorgenti. Gli andamenti altalenanti della concentrazione del particolato dipendono dal ruolo che la variabilità meteorologica e le reazioni chimiche in atmosfera giocano nella sua formazione e dispersione.
+
+Si tratta di un’iniziativa di respiro nazionale in raccordo con il Servizio pre-operativo Nazionale in via di definizione “Qualità dell’Aria - Mirror Copernicus” e in stretto rapporto con il Progetto Europeo Life-Prepair sul bacino Padano, che si propone di mettere a fattor comune rilevanti insiemi di dati, competenze ed esperienze in corso di cui dispongono le tre istituzioni e di verificare gli strumenti che la comunità scientifica si è data per supportare le policy ambientali e sanitarie.
+
+
+
+Il progetto utilizzerà per lo studio di interazione fra particolato atmosferico e virus sia analisi “ in silico”, ossia la riproduzione dell’interazione fra virus e particolato atmosferico mediante la simulazione matematica al computer, sia un modello biologico rappresentativo delle caratteristiche di SARS-COv2.
+
+“_Ciò che si è verificato con il lockdown è un evento eccezionale e speriamo unico e rappresenta un involontario esperimento di blocco delle sorgenti emissive, altrimenti non attuabile, che può dimostrare l’ampiezza e l’intensità delle misure da porre in essere per rispettare i limiti alle concentrazioni e fornire indicazioni per affrontare le cosiddette “emergenze smog” che si ripresentano annualmente_” spiegano ENEA, ISS e Sistema Nazionale per la protezione ambientale. 
+	 
+
+

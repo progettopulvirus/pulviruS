@@ -1,0 +1,64 @@
+---
+title: "Dati inquinanti e dati meteoclimatici"
+description: |
+  Fare il join dei dati.
+author:
+  - name: ISPRA 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,eval=FALSE,include=TRUE)
+```
+
+Problema: associare i dati degli inquinanti ai dati dei parametri meteoclimatici.
+
+Il primo passo consiste nell'[istallare il pacchetto `datiMeteo`](acquisire_dati_meteo.html) e [istallare i dati degli inquinanti](acquisire_dati_inquinanti.html) di almeno una regione.
+
+```{r}
+devtools::install_github("progettopulvirus/datiMeteo")
+devtools::install_github("progettopulvirus/lazio")
+```
+
+Carichiamo entrambi i pacchetti.
+
+```{r, eval=TRUE}
+library("datiMeteo")
+library("lazio")
+```
+
+Il comando `data` fornisce informazioni sui `data frame` contenuti nel pacchetto `lazio`.
+
+```{r}
+data(package="lazio")
+```
+
+In questo esempio vogliamo associare i dati del PM2.5 (`data frame` `pm25`) con i dati delle rianalisi `ERA5`. A questo proposito carichiamo la libreria `dplyr` e utilizziamo la funzione `left_join`. 
+
+```{r, include=TRUE,eval=TRUE,message=TRUE}
+#Istallo la libreria dplyr se non disponibile...ma oggi chi non usa dplyr?
+#install.packages("dplyr")
+library("dplyr")
+
+#left_join: associo ai dati del PM2.5 i dati meteoclimatici
+#questa operazione puo' richiedere qualche secondo
+left_join(pm25,meteo)->nuoviDati
+```
+
+Non avendo specificato i campi da utilizzare per il `join`, `R` ci avverte di aver effettuato un `natural join` (ovvero: ha utilizzato le colonne che nei due `data frame` `pm25` e `meteo` hanno lo stesso nome).
+
+Volendo specificare direttamente i campi per il join possiamo utilizzare il parametro facoltativo `by`.
+
+```{r, include=TRUE,eval=TRUE,message=TRUE}
+#associo ai dati del PM2.5 i dati meteoclimatici
+#specificando i campi da utilizzare per il join
+left_join(pm25,meteo,by=c("date"="date","station_eu_code"="station_eu_code"))->nuoviDati
+```
+
+Il risultato finale:
+
+```{r, include=TRUE,eval=TRUE,message=TRUE}
+nuoviDati
+```

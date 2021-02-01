@@ -1,0 +1,49 @@
+---
+title: "Regioni con dati per gli inquinanti"
+description: |
+  Pacchetti R disponibili su github con i dati degli inquinanti.
+author:
+  - name: Guido Fioravanti 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+I dati distribuiti mediante pacchetti R rappresentano un sottoinsieme dei dati disponibili nel database del progetto PULVIRUS: si tratta,infatti, delle serie di dati degli inquinanti selezionate in base ai [controlli di completezza](completezza.html). 
+
+Per ogni regione viene riportato il nome del corrispondente pacchetto R e i dati in esso contenuti.
+
+| Regione | Pacchetto | pm10 | pm2.5 | no2 | nox| 
+| ---     | ---       | --   | --    | --  | -- |
+| Basilicata   | basilicata |  | x   | x   |  x |
+| Campania     | campania   |  | x   | x   |    |
+| Emilia Romagna | emiliaromagna | x | x   | x  |  x  |
+| Friuli Venezia Giulia | friuliveneziagiulia | x | x | | |
+| Lazio | lazio | | x | x | x |
+| Lombardia | lombardia | x | x | x | x |
+| Molise | molise | | | x | x |
+| Bolzano, Provincia Autonoma | pabolzano | | x | x | |
+| Trento, Provincia Autonoma | patrento | x | x | x | |
+| Piemonte | piemonte | | x | x | |
+| Puglia | puglia | | x | x | x |
+| Sardegna | sardegna | | x | x | x |
+| Sicilia  | sicilia | | x | x | |
+| Toscana  | toscana | | x | x | x |
+| Umbria   | umbria  | | x | x | x |
+| Valle d'Aosta| valleaosta | x | x | x | |
+| Veneto       | veneto | x | x | x | x |
+
+
+
+
+
+
+
+
+
+

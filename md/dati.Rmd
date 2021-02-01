@@ -1,0 +1,29 @@
+---
+title: "Dati"
+author:
+  - name: Guido Fioravanti 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### [Dati inquinanti](./acquisire_dati_inquinanti.html)
+
+Come scaricare i dati giornalieri degli inquinanti sotto forma di `data frame` per il linguaggio `R`.
+
+### [Parametri meteoclimatici](./acquisire_dati_meteo.html)
+
+Istallare il pacchetto R `datiMeteo` contenente i dati giornalieri dei parametri meteoclimatici.
+
+### [Associare i dati degli inquinanti con i parametri meteoclimatici](./associare.html)
+
+Come fare il `join` tra i dati degli inquinanti e quelli dei parametri meteoclimatici utilizzando il pacchetto `R` `dplyr`.
+
+
+
+

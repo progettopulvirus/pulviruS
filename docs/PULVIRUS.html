@@ -86,28 +86,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>pulviruS: Variabili Meteoclimatiche</title>
+  <title>pulviruS: Il progetto PULVIRUS</title>
 
 
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
 
-  <meta name="article:author" content="ISPRA"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="pulviruS: Variabili Meteoclimatiche"/>
+  <meta property="og:title" content="pulviruS: Il progetto PULVIRUS"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="pulviruS"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="pulviruS: Variabili Meteoclimatiche"/>
+  <meta property="twitter:title" content="pulviruS: Il progetto PULVIRUS"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","output"]}},"value":[{"type":"character","attributes":{},"value":["Variabili Meteoclimatiche"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","output"]}},"value":[{"type":"character","attributes":{},"value":["Il progetto PULVIRUS"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2052,7 +2051,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Variabili Meteoclimatiche","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}]}
+{"title":"Il progetto PULVIRUS","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2076,140 +2075,26 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Variabili Meteoclimatiche</h1>
+<h1>Il progetto PULVIRUS</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
 </div>
 
-<div class="d-byline">
-  ISPRA  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
-  
-
-</div>
 
 <div class="d-article">
-<p>La tabella riassume i parametri meteoclimatici i cui dati giornalieri sono stati estratti dalle rianalisi <a href="https://www.ecmwf.int/en/forecasts/datasets/reanalysis-datasets/era5">ERA5</a>. I dati sono disponibili dal database del progetto PULVIRUS o come data.grame all’interno del pacchetto R <code>datiMeteo</code> presso il repository github <a href="https://github.com/progettopulvirus/">progettopulvirus</a>.</p>
-<table>
-<thead>
-<tr class="header">
-<th>Nome</th>
-<th>Codice</th>
-<th>Unita</th>
-<th>Aggregazione giornaliera</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Surface pressure</td>
-<td>sp</td>
-<td>hPa</td>
-<td>media</td>
-</tr>
-<tr class="even">
-<td>Average temperature (2m)</td>
-<td>t2m</td>
-<td>°C</td>
-<td>media</td>
-</tr>
-<tr class="odd">
-<td>Maximum temperature (2m)</td>
-<td>tmax2m</td>
-<td>°C</td>
-<td><strong>massimo giornaliero</strong></td>
-</tr>
-<tr class="even">
-<td>Minimum temperature (2m)</td>
-<td>tmin2m</td>
-<td>°C</td>
-<td><strong>minimo giornaliero</strong></td>
-</tr>
-<tr class="odd">
-<td>Planet Boundary Layer ore 00</td>
-<td>pbl00</td>
-<td>km</td>
-<td>media o <strong>valore istantaneo</strong></td>
-</tr>
-<tr class="even">
-<td>Planet Boundary Layer ore 12</td>
-<td>pbl12</td>
-<td>km</td>
-<td>media <strong>valore istantaneo</strong></td>
-</tr>
-<tr class="odd">
-<td>Planet Boundary Layer daily maximum</td>
-<td>pblmax</td>
-<td>km</td>
-<td>massimo <strong>valore istantaneo</strong></td>
-</tr>
-<tr class="even">
-<td>Planet Boundary Layer daily minimum</td>
-<td>pblmin</td>
-<td>km</td>
-<td>minimo <strong>valore istantaneo</strong></td>
-</tr>
-<tr class="odd">
-<td>Total precipitation</td>
-<td>tp</td>
-<td>mm</td>
-<td>somma</td>
-</tr>
-<tr class="even">
-<td>Previous day total precipitation</td>
-<td>ptp</td>
-<td>mm</td>
-<td>somma</td>
-</tr>
-<tr class="odd">
-<td>Wind speed</td>
-<td>wspeed</td>
-<td>m/s</td>
-<td>media</td>
-</tr>
-<tr class="even">
-<td>Previous day wind speed</td>
-<td>pwspeed</td>
-<td>m/s</td>
-<td>media</td>
-</tr>
-<tr class="odd">
-<td>Wind direction</td>
-<td>wdir</td>
-<td>gradi</td>
-<td><strong>moda</strong></td>
-</tr>
-<tr class="even">
-<td>Wind U component (10 meters)</td>
-<td>u10m</td>
-<td>m/s</td>
-<td>media</td>
-</tr>
-<tr class="odd">
-<td>Wind V component (10 meters)</td>
-<td>v10m</td>
-<td>m/s</td>
-<td>media</td>
-</tr>
-<tr class="even">
-<td>Relative Humidity</td>
-<td>rh</td>
-<td>%</td>
-<td>media</td>
-</tr>
-<tr class="odd">
-<td>Wind gust</td>
-<td>wgust</td>
-<td>m/s</td>
-<td><strong>massimo giornaliero</strong></td>
-</tr>
-<tr class="even">
-<td>Net irradiance</td>
-<td>nirradiance</td>
-<td>W/m^2</td>
-<td>media</td>
-</tr>
-</tbody>
-</table>
+<p>Offrire a Istituzioni e cittadini informazioni, risposte e indicazioni, sulla base di dati scientifici, competenze ed esperienze in tema di inquinamento atmosferico e Covid-19. Nasce con questi obiettivi l’alleanza scientifica fra <a href="https://www.enea.it/it">ENEA</a>, <a href="https://www.iss.it/">Istituto Superiore di Sanità</a> e Sistema Nazionale per la Protezione Ambientale (composto da <a href="https://www.isprambiente.gov.it/it">ISPRA</a> e dalle Agenzie Regionali del Sistema Nazionale per la Protezione dell’Ambiente) annunciata oggi con l’avvio di un progetto di ricerca congiunto denominato <strong>PULVIRUS</strong>.</p>
+<h4 id="obiettivi-del-progetto-pulvirus">Obiettivi del progetto PULVIRUS</h4>
+<p>Il progetto vuole approfondire:</p>
+<ul>
+<li><p>il discusso legame fra inquinamento atmosferico e diffusione della pandemia</p></li>
+<li><p>le interazioni fisico-chimiche-biologiche fra polveri sottili e virus</p></li>
+<li><p>gli effetti del “lock down” sull’inquinamento atmosferico e sui gas serra.</p></li>
+</ul>
+<p>Il Progetto parte dall’evidenza che l’introduzione delle misure di contrasto al coronavirus (COVID-19) ha causato riduzioni delle concentrazioni di alcuni inquinanti atmosferici, riscontrata dai dati delle reti di monitoraggio della qualità dell’aria. L’analisi preliminare indica che le concentrazioni degli inquinanti non seguono gli stessi andamenti, come è inevitabile che sia per fenomeni complessi e non lineari. La diminuzione delle concentrazioni di alcuni inquinanti come il biossido di azoto (NO2) sembra interessare maggiormente le stazioni di monitoraggio vicine al traffico veicolare e meno quelle lontane dalle sorgenti. Gli andamenti altalenanti della concentrazione del particolato dipendono dal ruolo che la variabilità meteorologica e le reazioni chimiche in atmosfera giocano nella sua formazione e dispersione.</p>
+<p>Si tratta di un’iniziativa di respiro nazionale in raccordo con il Servizio pre-operativo Nazionale in via di definizione “Qualità dell’Aria - Mirror Copernicus” e in stretto rapporto con il Progetto Europeo Life-Prepair sul bacino Padano, che si propone di mettere a fattor comune rilevanti insiemi di dati, competenze ed esperienze in corso di cui dispongono le tre istituzioni e di verificare gli strumenti che la comunità scientifica si è data per supportare le policy ambientali e sanitarie.</p>
+<p>Il progetto utilizzerà per lo studio di interazione fra particolato atmosferico e virus sia analisi “ in silico”, ossia la riproduzione dell’interazione fra virus e particolato atmosferico mediante la simulazione matematica al computer, sia un modello biologico rappresentativo delle caratteristiche di SARS-COv2.</p>
+<p>“<em>Ciò che si è verificato con il lockdown è un evento eccezionale e speriamo unico e rappresenta un involontario esperimento di blocco delle sorgenti emissive, altrimenti non attuabile, che può dimostrare l’ampiezza e l’intensità delle misure da porre in essere per rispettare i limiti alle concentrazioni e fornire indicazioni per affrontare le cosiddette “emergenze smog” che si ripresentano annualmente</em>” spiegano ENEA, ISS e Sistema Nazionale per la protezione ambientale.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

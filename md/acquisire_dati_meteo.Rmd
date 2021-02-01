@@ -1,0 +1,52 @@
+---
+title: "Come accedere ai dati"
+description: |
+  Scaricare i dati giornalieri dei parametri meteoclimatici mediante R.
+author:
+  - name: Guido Fioravanti 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = "",include = TRUE,eval=FALSE)
+```
+
+I dati giornalieri dei parametri meteoclimatici per il periodo 2013 - 2020 sono stati raccolti in unico data frame (o meglio in un formato di data frame noto come [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)) disponibile mediante il pacchetto `R` `datiMeteo`. 
+
+Una volta istallato, il pacchetto con i dati meteoclimatici risiedono in modo permanente nel computer dell'utente (in altre parole: l'istallazione non va ripetuta ogni volta che voglio elaborare i dati!).
+
+Il pacchetto `datiMeteo` e' disponibile sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus/datiMeteo).
+
+Per scaricare e istallare i dati e' necessario utilizzare la funzione `install_github` disponibile nella libreria `devtools` (o in alternativa nella libreria `remotes`). 
+
+```{r}
+#Istallare il pacchetto `devtools` o `remotes` se necessario
+install.packages("devtools")
+# install.packages("remotes")
+
+#se l'istallazione e' andata a buon fine
+devtools::install_github("progettopulvirus/datiMeteo")
+#
+#in modo analogo posso usare la libreria remotes
+#remotes::install_github("progettopulvirus/datiMeteo")
+```
+
+A questo punto possiamo caricare il pacchetto `datiMeteo` ed accedere al `data frame` `meteo`.
+
+```{r,include=TRUE,eval=TRUE}
+library("datiMeteo")
+
+#tramite il comando data posso vedere quali e quanti dataset/data frame fornisce
+#il pacchetto
+data(package="datiMeteo")
+
+#una breve pagina di help accompagna il data frame
+?meteo
+
+meteo
+```
+
+I codici dei parametri meteoclimatici sono spiegati in [questa](parametri.html) pagina di documentazione.

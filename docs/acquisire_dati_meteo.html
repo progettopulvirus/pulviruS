@@ -86,29 +86,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>pulviruS: About this site</title>
+  <title>pulviruS: Come accedere ai dati</title>
 
-  <meta property="description" itemprop="description" content="Some additional details about the website"/>
+  <meta property="description" itemprop="description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R."/>
 
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-02-01"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-01"/>
+  <meta name="article:author" content="Guido Fioravanti"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="pulviruS: About this site"/>
+  <meta property="og:title" content="pulviruS: Come accedere ai dati"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the website"/>
+  <meta property="og:description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="pulviruS"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="pulviruS: About this site"/>
-  <meta property="twitter:description" content="Some additional details about the website"/>
+  <meta property="twitter:title" content="pulviruS: Come accedere ai dati"/>
+  <meta property="twitter:description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this site"]},{"type":"character","attributes":{},"value":["Some additional details about the website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Come accedere ai dati"]},{"type":"character","attributes":{},"value":["Scaricare i dati giornalieri dei parametri meteoclimatici mediante R.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-01"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2053,7 +2058,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this site","description":"Some additional details about the website","authors":[]}
+{"title":"Come accedere ai dati","description":"Scaricare i dati giornalieri dei parametri meteoclimatici mediante R.","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-01T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2064,30 +2069,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <a href="index.html" class="title">pulviruS</a>
 </div>
 <div class="nav-right">
-<a href="index.html">Home</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Dati
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="inquinanti.html">Inquinanti</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Documentazione
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="formato.html">Formato dati</a>
-<a href="completezza.html">Completezza delle serie</a>
-<a href="parametri.html">Parametri</a>
-</div>
-</div>
-<a href="about.html">About</a>
+<a href="PULVIRUS.html">About PULVIRUS</a>
+<a href="documentazione.html">Documentazione</a>
+<a href="dati.html">Dati</a>
+<a href="risultati.html">Risultati</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2097,15 +2082,73 @@ Documentazione
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this site</h1>
+<h1>Come accedere ai dati</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Some additional details about the website</p></p>
+<p><p>Scaricare i dati giornalieri dei parametri meteoclimatici mediante R.</p></p>
 </div>
 
+<div class="d-byline">
+  Guido Fioravanti  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
+  
+<br/>2021-02-01
+</div>
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>I dati giornalieri dei parametri meteoclimatici per il periodo 2013 - 2020 sono stati raccolti in unico data frame (o meglio in un formato di data frame noto come <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">tibble</a>) disponibile mediante il pacchetto <code>R</code> <code>datiMeteo</code>.</p>
+<p>Una volta istallato, il pacchetto con i dati meteoclimatici risiedono in modo permanente nel computer dell’utente (in altre parole: l’istallazione non va ripetuta ogni volta che voglio elaborare i dati!).</p>
+<p>Il pacchetto <code>datiMeteo</code> e’ disponibile sul repository <code>github</code> <a href="https://github.com/progettopulvirus/datiMeteo"><code>progettopulvirus</code></a>.</p>
+<p>Per scaricare e istallare i dati e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Istallare il pacchetto `devtools` o `remotes` se necessario</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"devtools"</span><span class='op'>)</span>
+<span class='co'># install.packages("remotes")</span>
+
+<span class='co'>#se l'istallazione e' andata a buon fine</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/datiMeteo"</span><span class='op'>)</span>
+<span class='co'>#</span>
+<span class='co'>#in modo analogo posso usare la libreria remotes</span>
+<span class='co'>#remotes::install_github("progettopulvirus/datiMeteo")</span>
+</code></pre>
+</div>
+</div>
+<p>A questo punto possiamo caricare il pacchetto <code>datiMeteo</code> ed accedere al <code>data frame</code> <code>meteo</code>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'>"datiMeteo"</span><span class='op'>)</span>
+
+<span class='co'>#tramite il comando data posso vedere quali e quanti dataset/data frame fornisce</span>
+<span class='co'>#il pacchetto</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span>package<span class='op'>=</span><span class='st'>"datiMeteo"</span><span class='op'>)</span>
+
+<span class='co'>#una breve pagina di help accompagna il data frame</span>
+<span class='op'>?</span><span class='va'>meteo</span>
+
+<span class='va'>meteo</span>
+</code></pre>
+</div>
+<pre><code># A tibble: 2,250,900 x 24
+   station_code station_eu_code date         t2m tmin2m tmax2m    tp
+          &lt;dbl&gt; &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+ 1       100108 IT0469A         2012-12-25   4.3    3.5    4.7   1.1
+ 2       100108 IT0469A         2012-12-26   5     -0.7    9.4   0.5
+ 3       100108 IT0469A         2012-12-27   2.2   -2.3    7.1   0.6
+ 4       100108 IT0469A         2012-12-28   4.2   -0.7   10.4   0  
+ 5       100108 IT0469A         2012-12-29   3.5    0      8.2   0  
+ 6       100108 IT0469A         2012-12-30   3.5   -0.8    7.7   0  
+ 7       100108 IT0469A         2012-12-31   2.5   -1.4    7.3   0  
+ 8       100108 IT0469A         2013-01-01   2.3   -1.1    5.4   0.9
+ 9       100108 IT0469A         2013-01-02   3.3    0      6.6   0.5
+10       100108 IT0469A         2013-01-03   3.6   -0.3    8.2   0  
+# … with 2,250,890 more rows, and 17 more variables: ptp &lt;dbl&gt;,
+#   rh &lt;dbl&gt;, u10m &lt;dbl&gt;, v10m &lt;dbl&gt;, sp &lt;dbl&gt;, nirradiance &lt;dbl&gt;,
+#   pbl00 &lt;dbl&gt;, pbl12 &lt;dbl&gt;, pblmin &lt;dbl&gt;, pblmax &lt;dbl&gt;,
+#   coordx &lt;dbl&gt;, coordy &lt;dbl&gt;, altitude &lt;dbl&gt;, altitudedem &lt;dbl&gt;,
+#   wdir &lt;dbl&gt;, wspeed &lt;dbl&gt;, pwspeed &lt;dbl&gt;</code></pre>
+</div>
+<p>I codici dei parametri meteoclimatici sono spiegati in <a href="parametri.html">questa</a> pagina di documentazione.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
