@@ -14,30 +14,27 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = TRUE,comment = "",include = TRUE,eval=FALSE)
 ```
 
-I dati giornalieri degli inquinanti per il periodo 2013 - 2020 sono stati organizzati in `data frame` per il software `R`. Qui di seguito sono riportati i comandi per scaricare da `github` i pacchetti che contengono tali dati.
+I dati giornalieri degli inquinanti per il periodo 2013 - 2020 sono stati raccolti in `data frame` ^[Piuu' precisamente in un  [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)] e archiviati come pacchetti R sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus). 
 
-### Scaricare i dati come pacchetti R
-
-I dati degli inquinanti sono stati raccolti in data frame (o meglio in un formato di data frame noto come [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)) e archiviati come pacchetti R sul repository github [progettopulvirus](https://github.com/progettopulvirus). 
-
-Una volta istallati, i pacchetti con i dati degli inquinanti risiedono in modo permanente nel computer dell'utente (in altre parole: l'istallazione va fatta una volta sola, a meno che non ci siano aggiornamenti nel database!).
+Una volta istallati i pacchetti `R` con i dati degli inquinanti, questi risiedono in modo permanente nel computer dell'utente (in altre parole: l'istallazione va fatta una volta sola, a meno che non ci sia un aggiornamento dei dati alla fonte!).
 
 Per scaricare e istallare pacchetti R da `github` e' necessario utilizzare la funzione `install_github` disponibile nella libreria `devtools` (o in alternativa nella libreria `remotes`). 
 
 ```{r}
-#Istallare il pacchetto `devtools` o `remotes` se necessario
-install.packages("devtools")
-# install.packages("remotes")
+install.packages("devtools") #Istallare `devtools` se necessario
+#install.packages("remotes") #...o remotes
 ```
 
-### Esempio: istallare il pacchetto `valleaosta` con i dati della Valle d'Aosta.
+### Esempio: istallare il pacchetto con i dati della Valle d'Aosta.
 
-Consultando questa [tabella](pacchetti_inquinanti.html) e' possibile ricavare, per ciascuna regione, il nome del corrispondente pacchetto con i dati degli inquinanti disponibili. 
+Consultando questa [tabella](pacchetti_inquinanti.html) e' possibile ricavare, per ciascuna regione, il nome del corrispondente pacchetto con i dati degli inquinanti ad oggi disponibili. 
 
-Per la Valle d'Aosta il pacchetto `R` si chiama `valleaosta` e contiene tre data frame: `pm10`, `pm25` e `no2`. 
+Il pacchetto `R` con i dati della Valle d'Aosta si chiama `valleaosta` e contiene tre data frame: `pm10`, `pm25` e `no2`. 
 
 ```{r step0}
-library("devtools") # carico devtools o in alternativa remotes
+# carico devtools o in alternativa remotes
+# per utilizzare install_github
+library("devtools") 
 
 #istallo il pacchetto valleaosta dal repository github progettopulvirus
 install_github("progettopulvirus/valleaosta")  
@@ -56,7 +53,7 @@ Which would you like to update?
 
 - rispondere `None` nel caso di una connessione lenta o se si preferisce effettuare un aggiornamento manuale delle librerie di `R`.
 
-Se l'istallazione e' andata a buon fine, il pacchetto puo' essere caricato mediante il comando `library`.
+Se l'istallazione e' andata a buon fine, abbiamo a disposizione i `data frame` con i dati della Valle d'Aosta.
 
 ```{r,echo=TRUE,include=TRUE,message=TRUE,eval=TRUE}
 #carico il pacchetto valleaosta
@@ -68,28 +65,14 @@ pm10
 
 ```
 
-Nell'esempio qui sopra osseviamo che il data frame del `pm10` contiene:
-
-- il codice identificativo della stazione (colonna `station_eu_code`)
-
-- la data dell'osservazione nel formato ANNO-MESE-GIORNO (colonna `date`) 
-
-- il valore osservato (colonna `value`)
-
-- il nome della regione (colonna `regione`)
-
-- il mese dell'osservazione (`mm`)
-
-- l'anno dell'osservazione (questa informazione e' riportata in modo ridondante sia nella colonna `yy` che nella colonna `reporting_year`).
-
 ### Quali data frame sono disponibili all'interno di ciascun pacchetto?
 
-Questa informazione e' ricavabile dalla [tabella](pacchetti_inquinanti.html) dei pacchetti oppure utilizzando il comando `data`.
+Questa informazione e' ricavabile dalla [tabella](pacchetti_inquinanti.html) dei pacchetti oppure utilizzando il comando `data` di `R`.
 
 ```{r}
 #dopo aver istallato il pacchetto valleaosta posso utilizzare
 #il comando data per sapere quali e quanti data frame sono 
-#in esso disponibili
+#disponibili
 data(package="valleaosta")
 ```
 

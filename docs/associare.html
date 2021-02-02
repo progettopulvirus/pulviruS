@@ -1873,8 +1873,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Il primo passo consiste nell’<a href="acquisire_dati_meteo.html">istallare il pacchetto <code>datiMeteo</code></a> e <a href="acquisire_dati_inquinanti.html">istallare i dati degli inquinanti</a> di almeno una regione.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/devtools/man/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/datiMeteo"</span><span class='op'>)</span>
-<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/devtools/man/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/lazio"</span><span class='op'>)</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/datiMeteo"</span><span class='op'>)</span>
+<span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/lazio"</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
@@ -1899,18 +1899,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Istallo la libreria dplyr se non disponibile...ma oggi chi non usa dplyr?</span>
 <span class='co'>#install.packages("dplyr")</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://dplyr.tidyverse.org'>"dplyr"</a></span><span class='op'>)</span>
-</code></pre>
-</div>
-<pre><code>
-Attaching package: &#39;dplyr&#39;</code></pre>
-<pre><code>The following objects are masked from &#39;package:stats&#39;:
 
-    filter, lag</code></pre>
-<pre><code>The following objects are masked from &#39;package:base&#39;:
-
-    intersect, setdiff, setequal, union</code></pre>
-<div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#left_join: associo ai dati del PM2.5 i dati meteoclimatici</span>
+<span class='co'>#left_join: associo ai dati del PM2.5 i dati meteoclimatici</span>
 <span class='co'>#questa operazione puo' richiedere qualche secondo</span>
 <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>pm25</span>,<span class='va'>meteo</span><span class='op'>)</span><span class='op'>-&gt;</span><span class='va'>nuoviDati</span>
 </code></pre>
@@ -1954,7 +1944,7 @@ Attaching package: &#39;dplyr&#39;</code></pre>
 #   coordy &lt;dbl&gt;, altitude &lt;dbl&gt;, altitudedem &lt;dbl&gt;, wdir &lt;dbl&gt;,
 #   wspeed &lt;dbl&gt;, pwspeed &lt;dbl&gt;</code></pre>
 </div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

@@ -1,7 +1,7 @@
 ---
 title: "Regioni con dati per gli inquinanti"
 description: |
-  Pacchetti R disponibili su github con i dati degli inquinanti.
+  Pacchetti R disponibili su github con i dati degli inquinanti
 author:
   - name: Guido Fioravanti 
     affiliation: ISPRA
@@ -14,11 +14,28 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-I dati distribuiti mediante pacchetti R rappresentano un sottoinsieme dei dati disponibili nel database del progetto PULVIRUS: si tratta,infatti, delle serie di dati degli inquinanti selezionate in base ai [controlli di completezza](completezza.html). 
+I dati giornalieri degli inquinanti distribuiti mediante pacchetti R rappresentano un sottoinsieme dei dati disponibili nel database del progetto `PULVIRUS`: si tratta,infatti, delle serie di dati selezionate in base ai [controlli di completezza](completezza.html). 
 
-Per ogni regione viene riportato il nome del corrispondente pacchetto R e i dati in esso contenuti.
 
-| Regione | Pacchetto | pm10 | pm2.5 | no2 | nox| 
+### Organizzazione dei `data frame`
+
+I `data frame` con i dati degli inquinanti contengono:
+
+- il codice identificativo della stazione (colonna `station_eu_code`)
+
+- la data dell'osservazione nel formato ANNO-MESE-GIORNO (colonna `date`) 
+
+- il valore osservato (colonna `value`)
+
+- il nome della regione (colonna `regione`)
+
+- il mese dell'osservazione (`mm`)
+
+- l'anno dell'osservazione (questa informazione e' riportata in modo ridondante sia nella colonna `yy` che nella colonna `reporting_year`).
+
+### Pacchetti con i dati 
+
+| Regione | Nome Pacchetto | pm10 | pm2.5 | no2 | nox| 
 | ---     | ---       | --   | --    | --  | -- |
 | Basilicata   | basilicata |  | x   | x   |  x |
 | Campania     | campania   |  | x   | x   |    |

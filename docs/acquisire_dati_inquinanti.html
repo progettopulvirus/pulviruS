@@ -1872,28 +1872,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>I dati giornalieri degli inquinanti per il periodo 2013 - 2020 sono stati organizzati in <code>data frame</code> per il software <code>R</code>. Qui di seguito sono riportati i comandi per scaricare da <code>github</code> i pacchetti che contengono tali dati.</p>
-<h3 id="scaricare-i-dati-come-pacchetti-r">Scaricare i dati come pacchetti R</h3>
-<p>I dati degli inquinanti sono stati raccolti in data frame (o meglio in un formato di data frame noto come <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">tibble</a>) e archiviati come pacchetti R sul repository github <a href="https://github.com/progettopulvirus">progettopulvirus</a>.</p>
-<p>Una volta istallati, i pacchetti con i dati degli inquinanti risiedono in modo permanente nel computer dell’utente (in altre parole: l’istallazione va fatta una volta sola, a meno che non ci siano aggiornamenti nel database!).</p>
+<p>I dati giornalieri degli inquinanti per il periodo 2013 - 2020 sono stati raccolti in <code>data frame</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> e archiviati come pacchetti R sul repository <code>github</code> <a href="https://github.com/progettopulvirus"><code>progettopulvirus</code></a>.</p>
+<p>Una volta istallati i pacchetti <code>R</code> con i dati degli inquinanti, questi risiedono in modo permanente nel computer dell’utente (in altre parole: l’istallazione va fatta una volta sola, a meno che non ci sia un aggiornamento dei dati alla fonte!).</p>
 <p>Per scaricare e istallare pacchetti R da <code>github</code> e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Istallare il pacchetto `devtools` o `remotes` se necessario</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"devtools"</span><span class='op'>)</span>
-<span class='co'># install.packages("remotes")</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"devtools"</span><span class='op'>)</span> <span class='co'>#Istallare `devtools` se necessario</span>
+<span class='co'>#install.packages("remotes") #...o remotes</span>
 </code></pre>
 </div>
 </div>
-<h3 id="esempio-istallare-il-pacchetto-valleaosta-con-i-dati-della-valle-daosta.">Esempio: istallare il pacchetto <code>valleaosta</code> con i dati della Valle d’Aosta.</h3>
-<p>Consultando questa <a href="pacchetti_inquinanti.html">tabella</a> e’ possibile ricavare, per ciascuna regione, il nome del corrispondente pacchetto con i dati degli inquinanti disponibili.</p>
-<p>Per la Valle d’Aosta il pacchetto <code>R</code> si chiama <code>valleaosta</code> e contiene tre data frame: <code>pm10</code>, <code>pm25</code> e <code>no2</code>.</p>
+<h3 id="esempio-istallare-il-pacchetto-con-i-dati-della-valle-daosta.">Esempio: istallare il pacchetto con i dati della Valle d’Aosta.</h3>
+<p>Consultando questa <a href="pacchetti_inquinanti.html">tabella</a> e’ possibile ricavare, per ciascuna regione, il nome del corrispondente pacchetto con i dati degli inquinanti ad oggi disponibili.</p>
+<p>Il pacchetto <code>R</code> con i dati della Valle d’Aosta si chiama <code>valleaosta</code> e contiene tre data frame: <code>pm10</code>, <code>pm25</code> e <code>no2</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://devtools.r-lib.org/'>"devtools"</a></span><span class='op'>)</span> <span class='co'># carico devtools o in alternativa remotes</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'># carico devtools o in alternativa remotes</span>
+<span class='co'># per utilizzare install_github</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://devtools.r-lib.org/'>"devtools"</a></span><span class='op'>)</span> 
 
 <span class='co'>#istallo il pacchetto valleaosta dal repository github progettopulvirus</span>
-<span class='fu'><a href='https://rdrr.io/pkg/devtools/man/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/valleaosta"</span><span class='op'>)</span>  
+<span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/valleaosta"</span><span class='op'>)</span>  
 </code></pre>
 </div>
 </div>
@@ -1906,7 +1905,7 @@ Which would you like to update?</code></pre>
 <li><p>scegliere <code>All</code> se si ha una connessione veloce e il tempo di bere un caffe’ (a seconda del numero dei pacchetti, il caffe’ puo’ essere anche un americano lungo)</p></li>
 <li><p>rispondere <code>None</code> nel caso di una connessione lenta o se si preferisce effettuare un aggiornamento manuale delle librerie di <code>R</code>.</p></li>
 </ul>
-<p>Se l’istallazione e’ andata a buon fine, il pacchetto puo’ essere caricato mediante il comando <code>library</code>.</p>
+<p>Se l’istallazione e’ andata a buon fine, abbiamo a disposizione i <code>data frame</code> con i dati della Valle d’Aosta.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#carico il pacchetto valleaosta</span>
@@ -1933,22 +1932,13 @@ Which would you like to update?</code></pre>
 # … with 7,768 more rows, and 2 more variables: yy &lt;dbl&gt;,
 #   regione &lt;chr&gt;</code></pre>
 </div>
-<p>Nell’esempio qui sopra osseviamo che il data frame del <code>pm10</code> contiene:</p>
-<ul>
-<li><p>il codice identificativo della stazione (colonna <code>station_eu_code</code>)</p></li>
-<li><p>la data dell’osservazione nel formato ANNO-MESE-GIORNO (colonna <code>date</code>)</p></li>
-<li><p>il valore osservato (colonna <code>value</code>)</p></li>
-<li><p>il nome della regione (colonna <code>regione</code>)</p></li>
-<li><p>il mese dell’osservazione (<code>mm</code>)</p></li>
-<li><p>l’anno dell’osservazione (questa informazione e’ riportata in modo ridondante sia nella colonna <code>yy</code> che nella colonna <code>reporting_year</code>).</p></li>
-</ul>
 <h3 id="quali-data-frame-sono-disponibili-allinterno-di-ciascun-pacchetto">Quali data frame sono disponibili all’interno di ciascun pacchetto?</h3>
-<p>Questa informazione e’ ricavabile dalla <a href="pacchetti_inquinanti.html">tabella</a> dei pacchetti oppure utilizzando il comando <code>data</code>.</p>
+<p>Questa informazione e’ ricavabile dalla <a href="pacchetti_inquinanti.html">tabella</a> dei pacchetti oppure utilizzando il comando <code>data</code> di <code>R</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#dopo aver istallato il pacchetto valleaosta posso utilizzare</span>
 <span class='co'>#il comando data per sapere quali e quanti data frame sono </span>
-<span class='co'>#in esso disponibili</span>
+<span class='co'>#disponibili</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span>package<span class='op'>=</span><span class='st'>"valleaosta"</span><span class='op'>)</span>
 </code></pre>
 </div>
@@ -1963,6 +1953,12 @@ Which would you like to update?</code></pre>
 </div>
 </div>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Piuu’ precisamente in un <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">tibble</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
