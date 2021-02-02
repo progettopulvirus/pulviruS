@@ -1788,14 +1788,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   body{
     color: #A7A7A7;
-    background-color: #e6dec9;
+    background-color: #F7F4EE;/*#e6dec9;*/
     font-family: 'Lato', sans-serif;
     font-size: 16px;
   }
 
 
   .distill-site-nav{
-    background-color: #1c333f;
+    background-color:  #1c333f; 
     text-decoration: none;
   }
 
@@ -1816,6 +1816,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-family: 'Roboto Condensed', sans-serif;
   }
 
+
+  /* link hover */
+
+  d-article p a{
+    color: #B94B3B;/*verde #abd174; */
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+
+  d-article p a:hover{
+    color: #FF2E3D;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #FF2E3D;
+    text-decoration: none;
+  }
+
+  /* nome dell'autore che compare negli articoli */
+  .author .name, .affiliation{
+    color: #FF2E3D;  
+    font-weight: 900;
+  }
+
+  .affiliation{
+    font-weight: 400;
+  }
+
+
+  /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
+  d-article div.sourceCode pre {
+      padding-left: 10px;
+      font-size: 12px;
+      border-left: 0 solid rgba(0,0,0,0.1);
+  }
   </style>
   <!--/radix_placeholder_site_in_header-->
 

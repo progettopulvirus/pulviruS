@@ -1,7 +1,7 @@
 ---
 title: "Formato dei dati meteoclimatici"
 description: |
-  Descrizione dei formato dei dati estratti da ERA5.
+  Descrizione dei formato dei dati estratti da ERA5
 author:
   - name: ISPRA 
     url: https://example.com/norajones
@@ -14,11 +14,11 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Formato dei dati meteorologici
-
 I dati debbono essere in formato **long** rispetto al codice stazione e alla data: 
-- sotto il campo _station_code_ e/o _station_eu_code_ si susseguono i codici delle stazioni di monitoraggio
-- sotto il campo _date_ si susseguono le date dei singoli giorni relativi al periodo dell'analisi dei dati
+
+- sotto il campo `station_code` e/o `station_eu_code` si susseguono i codici delle stazioni di monitoraggio
+
+- sotto il campo `date` si susseguono le date dei singoli giorni relativi al periodo dell'analisi dei dati
 
 I file di output debbono essere in formato testo (estensione `.csv`) utilizzando la virgola (,) come separatore di campo.
 
@@ -27,32 +27,42 @@ I dati di ciascuna stazione di monitoraggio sono identificati dal campo:
 - date
 
 Il campo date deve essere nel formato: ANNO-MESE-GIORNO
+
 - anno: 4 cifre
+
 - mese: due cifre (0 per il padding nel caso dei mesi da 1 a 9)
+
 - giorno: due cifre (0 per il padding nel caso dei giorni da 1 a 9)
 
 Coordinate dei punti stazione:
+
 - epsg 32632 (UTM32) in kilometri 
 
 
-I dati devono essere riportati (a meno di eccezioni) con una cifra decimale. 
-Separatore dicemale: "."
+I dati devono essere riportati (a meno di eccezioni) con una cifra decimale. Separatore dicemale: "."
 
 ## Dati mancanti
 
 - I dati mancanti debbono essere identificati dalla stringa NA (no -999 o altre stringhe tipo NULL).
+
 - Il calendario (il campo date) deve essere completo anche laddove tutte le variabili siano mancanti (riga di NA).
 
 ## Nomi dei campi
 
 Per facilitare la lettura dei dati su R, le intestazioni dei file dati `.csv` devono rispettare le seguenti regole:
+
 - NON devono contenere spazi
+
 - NON devono iniziare con una cifra (0-9) 
+
 - NON devono contenere caratteri spaciali, SOLO lettere (A-Z) e cifre (0-9)
+
 - devono essere nomi brevi di chiaro significato
 
 Per i nomi delle variabili climatiche principali utilizzare la seguente tabella in cui sono riportati:
+
 - il nome sintetico della variabile
+
 - l'unità di misura da utilizzare 
 
 | Nome | Codice | Unita | Aggregazione giornaliera |

@@ -93,8 +93,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-02-02"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-02-02"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-02-03"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-03"/>
   <meta name="article:author" content="Guido Fioravanti"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -113,7 +113,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Regioni con dati per gli inquinanti"]},{"type":"character","attributes":{},"value":["Pacchetti R disponibili su github con i dati degli inquinanti\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-02"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Regioni con dati per gli inquinanti"]},{"type":"character","attributes":{},"value":["Pacchetti R disponibili su github con i dati degli inquinanti\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-03"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1795,14 +1795,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   body{
     color: #A7A7A7;
-    background-color: #e6dec9;
+    background-color: #F7F4EE;/*#e6dec9;*/
     font-family: 'Lato', sans-serif;
     font-size: 16px;
   }
 
 
   .distill-site-nav{
-    background-color: #1c333f;
+    background-color:  #1c333f; 
     text-decoration: none;
   }
 
@@ -1823,6 +1823,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-family: 'Roboto Condensed', sans-serif;
   }
 
+
+  /* link hover */
+
+  d-article p a{
+    color: #B94B3B;/*verde #abd174; */
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+
+  d-article p a:hover{
+    color: #FF2E3D;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #FF2E3D;
+    text-decoration: none;
+  }
+
+  /* nome dell'autore che compare negli articoli */
+  .author .name, .affiliation{
+    color: #FF2E3D;  
+    font-weight: 900;
+  }
+
+  .affiliation{
+    font-weight: 400;
+  }
+
+
+  /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
+  d-article div.sourceCode pre {
+      padding-left: 10px;
+      font-size: 12px;
+      border-left: 0 solid rgba(0,0,0,0.1);
+  }
   </style>
   <!--/radix_placeholder_site_in_header-->
 
@@ -1835,7 +1869,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Regioni con dati per gli inquinanti","description":"Pacchetti R disponibili su github con i dati degli inquinanti","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-02T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
+{"title":"Regioni con dati per gli inquinanti","description":"Pacchetti R disponibili su github con i dati degli inquinanti","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-03T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1868,20 +1902,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-byline">
   Guido Fioravanti  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
   
-<br/>2021-02-02
+<br/>2021-02-03
 </div>
 
 <div class="d-article">
-<p>I dati giornalieri degli inquinanti distribuiti mediante pacchetti R rappresentano un sottoinsieme dei dati disponibili nel database del progetto <code>PULVIRUS</code>: si tratta,infatti, delle serie di dati selezionate in base ai <a href="completezza.html">controlli di completezza</a>.</p>
+<h3 id="dati-inquinanti-per-pulvirus">Dati inquinanti per PULVIRUS</h3>
+<p>I dati giornalieri degli inquinanti distribuiti mediante pacchetti R rappresentano un sottoinsieme dei dati disponibili nel database del progetto <code>PULVIRUS</code>: si tratta, infatti, delle serie di dati selezionate in base ai <a href="completezza.html">controlli di completezza</a>.</p>
 <h3 id="organizzazione-dei-data-frame">Organizzazione dei <code>data frame</code></h3>
 <p>I <code>data frame</code> con i dati degli inquinanti contengono:</p>
 <ul>
-<li><p>il codice identificativo della stazione (colonna <code>station_eu_code</code>)</p></li>
-<li><p>la data dell’osservazione nel formato ANNO-MESE-GIORNO (colonna <code>date</code>)</p></li>
-<li><p>il valore osservato (colonna <code>value</code>)</p></li>
-<li><p>il nome della regione (colonna <code>regione</code>)</p></li>
-<li><p>il mese dell’osservazione (<code>mm</code>)</p></li>
-<li><p>l’anno dell’osservazione (questa informazione e’ riportata in modo ridondante sia nella colonna <code>yy</code> che nella colonna <code>reporting_year</code>).</p></li>
+<li><p>il codice (<code>pollutant_fk</code>) dell’inquinante [INSERIRE TABELLA]</p></li>
+<li><p>il codice (<code>station_eu_code</code>) identificativo della stazione</p></li>
+<li><p>la data (<code>date</code>) dell’osservazione nel formato %Y-%m-%d</p></li>
+<li><p>il valore osservato (<code>value</code>) dell’inquinante</p></li>
+<li><p>il nome della regione (<code>regione</code>)</p></li>
+<li><p>il giorno (<code>dd</code>) dell’osservazione</p></li>
+<li><p>il mese (<code>mm</code>) dell’osservazione</p></li>
+<li><p>l’anno (<code>yy</code>) dell’osservazione</p></li>
 </ul>
 <h3 id="pacchetti-con-i-dati">Pacchetti con i dati</h3>
 <table>

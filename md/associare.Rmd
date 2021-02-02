@@ -3,9 +3,10 @@ title: "Dati inquinanti e dati meteoclimatici"
 description: |
   Fare il join dei dati.
 author:
-  - name: ISPRA 
+  - name: Guido Fioravanti
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
 output: distill::distill_article
 ---
 
@@ -13,9 +14,9 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = TRUE,eval=FALSE,include=TRUE)
 ```
 
-Problema: associare i dati degli inquinanti ai dati dei parametri meteoclimatici.
+**Problema**: associare i dati degli inquinanti ai dati dei parametri meteoclimatici.
 
-Il primo passo consiste nell'[istallare il pacchetto `datiMeteo`](acquisire_dati_meteo.html) e [istallare i dati degli inquinanti](acquisire_dati_inquinanti.html) di almeno una regione.
+Il primo passo consiste nell'[istallare il pacchetto `datiMeteo`](acquisire_dati_meteo.html) e [istallare i dati degli inquinanti](acquisire_dati_inquinanti.html) di almeno una regione (in questo esempio, del Lazio).
 
 ```{r}
 devtools::install_github("progettopulvirus/datiMeteo")
@@ -35,10 +36,10 @@ Il comando `data` fornisce informazioni sui `data frame` contenuti nel pacchetto
 data(package="lazio")
 ```
 
-In questo esempio vogliamo associare i dati del PM2.5 (`data frame` `pm25`) con i dati delle rianalisi `ERA5`. A questo proposito carichiamo la libreria `dplyr` e utilizziamo la funzione `left_join`. 
+Associamo i dati del PM2.5 (`data frame` `pm25`) con i dati delle rianalisi `ERA5` utilizzando la funzione `left_join` contenuta nella libreria `dplyr` ^[Nel 2021 tutti hanno istallato `dplyr`]. 
 
-```{r, include=TRUE,eval=TRUE,message=TRUE}
-#Istallo la libreria dplyr se non disponibile...ma oggi chi non usa dplyr?
+```{r, include=TRUE,eval=TRUE,message=FALSE}
+#Istallo la libreria dplyr se non disponibile...
 #install.packages("dplyr")
 library("dplyr")
 
@@ -47,13 +48,15 @@ library("dplyr")
 left_join(pm25,meteo)->nuoviDati
 ```
 
-Non avendo specificato i campi da utilizzare per il `join`, `R` ci avverte di aver effettuato un `natural join` (ovvero: ha utilizzato le colonne che nei due `data frame` `pm25` e `meteo` hanno lo stesso nome).
+Non avendo specificato i campi da utilizzare per il `join`, `R` effettua un `natural join` (ovvero:  utilizza le colonne che nei due `data frame` `pm25` e `meteo` hanno lo stesso nome).
 
-Volendo specificare direttamente i campi per il join possiamo utilizzare il parametro facoltativo `by`.
+Volendo specificare i campi per il `join` possiamo utilizzare il parametro facoltativo `by`.
 
 ```{r, include=TRUE,eval=TRUE,message=TRUE}
 #associo ai dati del PM2.5 i dati meteoclimatici
 #specificando i campi da utilizzare per il join
+
+#Associazione in base al codice identificativo dela stazione e alla data
 left_join(pm25,meteo,by=c("date"="date","station_eu_code"="station_eu_code"))->nuoviDati
 ```
 

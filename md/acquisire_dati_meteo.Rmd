@@ -1,7 +1,7 @@
 ---
 title: "Come accedere ai dati"
 description: |
-  Scaricare i dati giornalieri dei parametri meteoclimatici mediante R.
+  Scaricare i dati giornalieri dei parametri meteoclimatici mediante R
 author:
   - name: Guido Fioravanti 
     affiliation: ISPRA
@@ -14,13 +14,11 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = TRUE,comment = "",include = TRUE,eval=FALSE)
 ```
 
-I dati giornalieri dei parametri meteoclimatici per il periodo 2013 - 2020 sono stati raccolti in unico data frame (o meglio in un formato di data frame noto come [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)) disponibile mediante il pacchetto `R` `datiMeteo`. 
+I dati giornalieri dei parametri meteoclimatici sono stati raccolti in unico `data frame` ^[piu' precisamente in un [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)] archiviato nel pacchetto `R` `datiMeteo` disponibile sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus/datiMeteo). 
 
-Una volta istallato, il pacchetto con i dati meteoclimatici risiedono in modo permanente nel computer dell'utente (in altre parole: l'istallazione non va ripetuta ogni volta che voglio elaborare i dati!).
+Una volta istallato, il pacchetto con i dati meteoclimatici risiede in modo permanente nel computer dell'utente (**in altre parole**: l'istallazione va effettuata una volta sola!).
 
-Il pacchetto `datiMeteo` e' disponibile sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus/datiMeteo).
-
-Per scaricare e istallare i dati e' necessario utilizzare la funzione `install_github` disponibile nella libreria `devtools` (o in alternativa nella libreria `remotes`). 
+Per scaricare e istallare il pacchetto da `github` e' necessario utilizzare la funzione `install_github` disponibile nella libreria `devtools` (o in alternativa nella libreria `remotes`). 
 
 ```{r}
 #Istallare il pacchetto `devtools` o `remotes` se necessario
@@ -49,4 +47,4 @@ data(package="datiMeteo")
 meteo
 ```
 
-I codici dei parametri meteoclimatici sono spiegati in [questa](parametri.html) pagina di documentazione.
+I codici identificativi dei parametri meteoclimatici sono documentati in [questa pagina](parametri.html).

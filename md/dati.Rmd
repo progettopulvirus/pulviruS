@@ -20,6 +20,10 @@ Come scaricare i dati giornalieri degli inquinanti sotto forma di `data frame` p
 
 Istallare il pacchetto R `datiMeteo` contenente i dati giornalieri dei parametri meteoclimatici.
 
+### [Pacchetti R per gli inquinanti](./pacchetti_inquinanti.html)
+
+Descrizione dei dati degli inquinanti e tabella dei pacchetti R disponibili su `github`.
+
 ### [Associare i dati degli inquinanti con i parametri meteoclimatici](./associare.html)
 
 Come fare il `join` tra i dati degli inquinanti e quelli dei parametri meteoclimatici utilizzando il pacchetto `R` `dplyr`.

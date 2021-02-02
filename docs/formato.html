@@ -88,7 +88,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>pulviruS: Formato dei dati meteoclimatici</title>
 
-  <meta property="description" itemprop="description" content="Descrizione dei formato dei dati estratti da ERA5."/>
+  <meta property="description" itemprop="description" content="Descrizione dei formato dei dati estratti da ERA5"/>
 
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
 
@@ -97,20 +97,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="pulviruS: Formato dei dati meteoclimatici"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Descrizione dei formato dei dati estratti da ERA5."/>
+  <meta property="og:description" content="Descrizione dei formato dei dati estratti da ERA5"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="pulviruS"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="pulviruS: Formato dei dati meteoclimatici"/>
-  <meta property="twitter:description" content="Descrizione dei formato dei dati estratti da ERA5."/>
+  <meta property="twitter:description" content="Descrizione dei formato dei dati estratti da ERA5"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output"]}},"value":[{"type":"character","attributes":{},"value":["Formato dei dati meteoclimatici"]},{"type":"character","attributes":{},"value":["Descrizione dei formato dei dati estratti da ERA5.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output"]}},"value":[{"type":"character","attributes":{},"value":["Formato dei dati meteoclimatici"]},{"type":"character","attributes":{},"value":["Descrizione dei formato dei dati estratti da ERA5\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://example.com/norajones"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1792,14 +1792,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   body{
     color: #A7A7A7;
-    background-color: #e6dec9;
+    background-color: #F7F4EE;/*#e6dec9;*/
     font-family: 'Lato', sans-serif;
     font-size: 16px;
   }
 
 
   .distill-site-nav{
-    background-color: #1c333f;
+    background-color:  #1c333f; 
     text-decoration: none;
   }
 
@@ -1820,6 +1820,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-family: 'Roboto Condensed', sans-serif;
   }
 
+
+  /* link hover */
+
+  d-article p a{
+    color: #B94B3B;/*verde #abd174; */
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+
+  d-article p a:hover{
+    color: #FF2E3D;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #FF2E3D;
+    text-decoration: none;
+  }
+
+  /* nome dell'autore che compare negli articoli */
+  .author .name, .affiliation{
+    color: #FF2E3D;  
+    font-weight: 900;
+  }
+
+  .affiliation{
+    font-weight: 400;
+  }
+
+
+  /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
+  d-article div.sourceCode pre {
+      padding-left: 10px;
+      font-size: 12px;
+      border-left: 0 solid rgba(0,0,0,0.1);
+  }
   </style>
   <!--/radix_placeholder_site_in_header-->
 
@@ -1832,7 +1866,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Formato dei dati meteoclimatici","description":"Descrizione dei formato dei dati estratti da ERA5.","authors":[{"author":"ISPRA","authorURL":"https://example.com/norajones","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}]}
+{"title":"Formato dei dati meteoclimatici","description":"Descrizione dei formato dei dati estratti da ERA5","authors":[{"author":"ISPRA","authorURL":"https://example.com/norajones","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1859,7 +1893,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Formato dei dati meteoclimatici</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Descrizione dei formato dei dati estratti da ERA5.</p></p>
+<p><p>Descrizione dei formato dei dati estratti da ERA5</p></p>
 </div>
 
 <div class="d-byline">
@@ -1869,21 +1903,42 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h1 id="formato-dei-dati-meteorologici">Formato dei dati meteorologici</h1>
-<p>I dati debbono essere in formato <strong>long</strong> rispetto al codice stazione e alla data: - sotto il campo <em>station_code</em> e/o <em>station_eu_code</em> si susseguono i codici delle stazioni di monitoraggio - sotto il campo <em>date</em> si susseguono le date dei singoli giorni relativi al periodo dell’analisi dei dati</p>
+<p>I dati debbono essere in formato <strong>long</strong> rispetto al codice stazione e alla data:</p>
+<ul>
+<li><p>sotto il campo <code>station_code</code> e/o <code>station_eu_code</code> si susseguono i codici delle stazioni di monitoraggio</p></li>
+<li><p>sotto il campo <code>date</code> si susseguono le date dei singoli giorni relativi al periodo dell’analisi dei dati</p></li>
+</ul>
 <p>I file di output debbono essere in formato testo (estensione <code>.csv</code>) utilizzando la virgola (,) come separatore di campo.</p>
 <p>I dati di ciascuna stazione di monitoraggio sono identificati dal campo: - station_eu_code (Raffaele ha utilizzato questo come codice identificativo delle stazioni per gli inquinanti) - date</p>
-<p>Il campo date deve essere nel formato: ANNO-MESE-GIORNO - anno: 4 cifre - mese: due cifre (0 per il padding nel caso dei mesi da 1 a 9) - giorno: due cifre (0 per il padding nel caso dei giorni da 1 a 9)</p>
-<p>Coordinate dei punti stazione: - epsg 32632 (UTM32) in kilometri</p>
+<p>Il campo date deve essere nel formato: ANNO-MESE-GIORNO</p>
+<ul>
+<li><p>anno: 4 cifre</p></li>
+<li><p>mese: due cifre (0 per il padding nel caso dei mesi da 1 a 9)</p></li>
+<li><p>giorno: due cifre (0 per il padding nel caso dei giorni da 1 a 9)</p></li>
+</ul>
+<p>Coordinate dei punti stazione:</p>
+<ul>
+<li>epsg 32632 (UTM32) in kilometri</li>
+</ul>
 <p>I dati devono essere riportati (a meno di eccezioni) con una cifra decimale. Separatore dicemale: “.”</p>
 <h2 id="dati-mancanti">Dati mancanti</h2>
 <ul>
-<li>I dati mancanti debbono essere identificati dalla stringa NA (no -999 o altre stringhe tipo NULL).</li>
-<li>Il calendario (il campo date) deve essere completo anche laddove tutte le variabili siano mancanti (riga di NA).</li>
+<li><p>I dati mancanti debbono essere identificati dalla stringa NA (no -999 o altre stringhe tipo NULL).</p></li>
+<li><p>Il calendario (il campo date) deve essere completo anche laddove tutte le variabili siano mancanti (riga di NA).</p></li>
 </ul>
 <h2 id="nomi-dei-campi">Nomi dei campi</h2>
-<p>Per facilitare la lettura dei dati su R, le intestazioni dei file dati <code>.csv</code> devono rispettare le seguenti regole: - NON devono contenere spazi - NON devono iniziare con una cifra (0-9) - NON devono contenere caratteri spaciali, SOLO lettere (A-Z) e cifre (0-9) - devono essere nomi brevi di chiaro significato</p>
-<p>Per i nomi delle variabili climatiche principali utilizzare la seguente tabella in cui sono riportati: - il nome sintetico della variabile - l’unità di misura da utilizzare</p>
+<p>Per facilitare la lettura dei dati su R, le intestazioni dei file dati <code>.csv</code> devono rispettare le seguenti regole:</p>
+<ul>
+<li><p>NON devono contenere spazi</p></li>
+<li><p>NON devono iniziare con una cifra (0-9)</p></li>
+<li><p>NON devono contenere caratteri spaciali, SOLO lettere (A-Z) e cifre (0-9)</p></li>
+<li><p>devono essere nomi brevi di chiaro significato</p></li>
+</ul>
+<p>Per i nomi delle variabili climatiche principali utilizzare la seguente tabella in cui sono riportati:</p>
+<ul>
+<li><p>il nome sintetico della variabile</p></li>
+<li><p>l’unità di misura da utilizzare</p></li>
+</ul>
 <table>
 <thead>
 <tr class="header">

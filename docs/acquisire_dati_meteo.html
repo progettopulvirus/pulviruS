@@ -88,32 +88,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>pulviruS: Come accedere ai dati</title>
 
-  <meta property="description" itemprop="description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R."/>
+  <meta property="description" itemprop="description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R"/>
 
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-02-02"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-02-02"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-02-03"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-03"/>
   <meta name="article:author" content="Guido Fioravanti"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="pulviruS: Come accedere ai dati"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R."/>
+  <meta property="og:description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="pulviruS"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="pulviruS: Come accedere ai dati"/>
-  <meta property="twitter:description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R."/>
+  <meta property="twitter:description" content="Scaricare i dati giornalieri dei parametri meteoclimatici mediante R"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Come accedere ai dati"]},{"type":"character","attributes":{},"value":["Scaricare i dati giornalieri dei parametri meteoclimatici mediante R.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-02"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Come accedere ai dati"]},{"type":"character","attributes":{},"value":["Scaricare i dati giornalieri dei parametri meteoclimatici mediante R\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-03"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1795,14 +1795,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   body{
     color: #A7A7A7;
-    background-color: #e6dec9;
+    background-color: #F7F4EE;/*#e6dec9;*/
     font-family: 'Lato', sans-serif;
     font-size: 16px;
   }
 
 
   .distill-site-nav{
-    background-color: #1c333f;
+    background-color:  #1c333f; 
     text-decoration: none;
   }
 
@@ -1823,6 +1823,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-family: 'Roboto Condensed', sans-serif;
   }
 
+
+  /* link hover */
+
+  d-article p a{
+    color: #B94B3B;/*verde #abd174; */
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+
+  d-article p a:hover{
+    color: #FF2E3D;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #FF2E3D;
+    text-decoration: none;
+  }
+
+  /* nome dell'autore che compare negli articoli */
+  .author .name, .affiliation{
+    color: #FF2E3D;  
+    font-weight: 900;
+  }
+
+  .affiliation{
+    font-weight: 400;
+  }
+
+
+  /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
+  d-article div.sourceCode pre {
+      padding-left: 10px;
+      font-size: 12px;
+      border-left: 0 solid rgba(0,0,0,0.1);
+  }
   </style>
   <!--/radix_placeholder_site_in_header-->
 
@@ -1835,7 +1869,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Come accedere ai dati","description":"Scaricare i dati giornalieri dei parametri meteoclimatici mediante R.","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-02T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
+{"title":"Come accedere ai dati","description":"Scaricare i dati giornalieri dei parametri meteoclimatici mediante R","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-03T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1862,20 +1896,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Come accedere ai dati</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Scaricare i dati giornalieri dei parametri meteoclimatici mediante R.</p></p>
+<p><p>Scaricare i dati giornalieri dei parametri meteoclimatici mediante R</p></p>
 </div>
 
 <div class="d-byline">
   Guido Fioravanti  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
   
-<br/>2021-02-02
+<br/>2021-02-03
 </div>
 
 <div class="d-article">
-<p>I dati giornalieri dei parametri meteoclimatici per il periodo 2013 - 2020 sono stati raccolti in unico data frame (o meglio in un formato di data frame noto come <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">tibble</a>) disponibile mediante il pacchetto <code>R</code> <code>datiMeteo</code>.</p>
-<p>Una volta istallato, il pacchetto con i dati meteoclimatici risiedono in modo permanente nel computer dell’utente (in altre parole: l’istallazione non va ripetuta ogni volta che voglio elaborare i dati!).</p>
-<p>Il pacchetto <code>datiMeteo</code> e’ disponibile sul repository <code>github</code> <a href="https://github.com/progettopulvirus/datiMeteo"><code>progettopulvirus</code></a>.</p>
-<p>Per scaricare e istallare i dati e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
+<p>I dati giornalieri dei parametri meteoclimatici sono stati raccolti in unico <code>data frame</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> archiviato nel pacchetto <code>R</code> <code>datiMeteo</code> disponibile sul repository <code>github</code> <a href="https://github.com/progettopulvirus/datiMeteo"><code>progettopulvirus</code></a>.</p>
+<p>Una volta istallato, il pacchetto con i dati meteoclimatici risiede in modo permanente nel computer dell’utente (<strong>in altre parole</strong>: l’istallazione va effettuata una volta sola!).</p>
+<p>Per scaricare e istallare il pacchetto da <code>github</code> e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Istallare il pacchetto `devtools` o `remotes` se necessario</span>
@@ -1924,8 +1957,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 #   coordx &lt;dbl&gt;, coordy &lt;dbl&gt;, altitude &lt;dbl&gt;, altitudedem &lt;dbl&gt;,
 #   wdir &lt;dbl&gt;, wspeed &lt;dbl&gt;, pwspeed &lt;dbl&gt;</code></pre>
 </div>
-<p>I codici dei parametri meteoclimatici sono spiegati in <a href="parametri.html">questa</a> pagina di documentazione.</p>
+<p>I codici identificativi dei parametri meteoclimatici sono documentati in <a href="parametri.html">questa pagina</a>.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>piu’ precisamente in un <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">tibble</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

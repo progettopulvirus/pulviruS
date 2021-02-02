@@ -92,7 +92,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
 
-  <meta name="article:author" content="ISPRA"/>
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-02-03"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-03"/>
+  <meta name="article:author" content="Guido Fioravanti"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="pulviruS: Dati inquinanti e dati meteoclimatici"/>
@@ -110,7 +113,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","output"]}},"value":[{"type":"character","attributes":{},"value":["Dati inquinanti e dati meteoclimatici"]},{"type":"character","attributes":{},"value":["Fare il join dei dati.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Dati inquinanti e dati meteoclimatici"]},{"type":"character","attributes":{},"value":["Fare il join dei dati.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-03"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1792,14 +1795,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   body{
     color: #A7A7A7;
-    background-color: #e6dec9;
+    background-color: #F7F4EE;/*#e6dec9;*/
     font-family: 'Lato', sans-serif;
     font-size: 16px;
   }
 
 
   .distill-site-nav{
-    background-color: #1c333f;
+    background-color:  #1c333f; 
     text-decoration: none;
   }
 
@@ -1820,6 +1823,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-family: 'Roboto Condensed', sans-serif;
   }
 
+
+  /* link hover */
+
+  d-article p a{
+    color: #B94B3B;/*verde #abd174; */
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+
+  d-article p a:hover{
+    color: #FF2E3D;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #FF2E3D;
+    text-decoration: none;
+  }
+
+  /* nome dell'autore che compare negli articoli */
+  .author .name, .affiliation{
+    color: #FF2E3D;  
+    font-weight: 900;
+  }
+
+  .affiliation{
+    font-weight: 400;
+  }
+
+
+  /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
+  d-article div.sourceCode pre {
+      padding-left: 10px;
+      font-size: 12px;
+      border-left: 0 solid rgba(0,0,0,0.1);
+  }
   </style>
   <!--/radix_placeholder_site_in_header-->
 
@@ -1832,7 +1869,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Dati inquinanti e dati meteoclimatici","description":"Fare il join dei dati.","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}]}
+{"title":"Dati inquinanti e dati meteoclimatici","description":"Fare il join dei dati.","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-03T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1863,14 +1900,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-byline">
-  ISPRA  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
+  Guido Fioravanti  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
   
-
+<br/>2021-02-03
 </div>
 
 <div class="d-article">
-<p>Problema: associare i dati degli inquinanti ai dati dei parametri meteoclimatici.</p>
-<p>Il primo passo consiste nell’<a href="acquisire_dati_meteo.html">istallare il pacchetto <code>datiMeteo</code></a> e <a href="acquisire_dati_inquinanti.html">istallare i dati degli inquinanti</a> di almeno una regione.</p>
+<p><strong>Problema</strong>: associare i dati degli inquinanti ai dati dei parametri meteoclimatici.</p>
+<p>Il primo passo consiste nell’<a href="acquisire_dati_meteo.html">istallare il pacchetto <code>datiMeteo</code></a> e <a href="acquisire_dati_inquinanti.html">istallare i dati degli inquinanti</a> di almeno una regione (in questo esempio, del Lazio).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/datiMeteo"</span><span class='op'>)</span>
@@ -1893,10 +1930,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </code></pre>
 </div>
 </div>
-<p>In questo esempio vogliamo associare i dati del PM2.5 (<code>data frame</code> <code>pm25</code>) con i dati delle rianalisi <code>ERA5</code>. A questo proposito carichiamo la libreria <code>dplyr</code> e utilizziamo la funzione <code>left_join</code>.</p>
+<p>Associamo i dati del PM2.5 (<code>data frame</code> <code>pm25</code>) con i dati delle rianalisi <code>ERA5</code> utilizzando la funzione <code>left_join</code> contenuta nella libreria <code>dplyr</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Istallo la libreria dplyr se non disponibile...ma oggi chi non usa dplyr?</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Istallo la libreria dplyr se non disponibile...</span>
 <span class='co'>#install.packages("dplyr")</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://dplyr.tidyverse.org'>"dplyr"</a></span><span class='op'>)</span>
 
@@ -1905,14 +1942,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>pm25</span>,<span class='va'>meteo</span><span class='op'>)</span><span class='op'>-&gt;</span><span class='va'>nuoviDati</span>
 </code></pre>
 </div>
-<pre><code>Joining, by = c(&quot;station_eu_code&quot;, &quot;date&quot;)</code></pre>
 </div>
-<p>Non avendo specificato i campi da utilizzare per il <code>join</code>, <code>R</code> ci avverte di aver effettuato un <code>natural join</code> (ovvero: ha utilizzato le colonne che nei due <code>data frame</code> <code>pm25</code> e <code>meteo</code> hanno lo stesso nome).</p>
-<p>Volendo specificare direttamente i campi per il join possiamo utilizzare il parametro facoltativo <code>by</code>.</p>
+<p>Non avendo specificato i campi da utilizzare per il <code>join</code>, <code>R</code> effettua un <code>natural join</code> (ovvero: utilizza le colonne che nei due <code>data frame</code> <code>pm25</code> e <code>meteo</code> hanno lo stesso nome).</p>
+<p>Volendo specificare i campi per il <code>join</code> possiamo utilizzare il parametro facoltativo <code>by</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#associo ai dati del PM2.5 i dati meteoclimatici</span>
 <span class='co'>#specificando i campi da utilizzare per il join</span>
+
+<span class='co'>#Associazione in base al codice identificativo dela stazione e alla data</span>
 <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>pm25</span>,<span class='va'>meteo</span>,by<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"date"</span><span class='op'>=</span><span class='st'>"date"</span>,<span class='st'>"station_eu_code"</span><span class='op'>=</span><span class='st'>"station_eu_code"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>-&gt;</span><span class='va'>nuoviDati</span>
 </code></pre>
 </div>
@@ -1924,27 +1962,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </code></pre>
 </div>
 <pre><code># A tibble: 40,998 x 30
-   reporting_year pollutant_fk station_eu_code date       value    mm
-            &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;
- 1           2013         6001 IT0952A         2013-01-01    55     1
- 2           2013         6001 IT0953A         2013-01-01    66     1
- 3           2013         6001 IT1906A         2013-01-01    58     1
- 4           2013         6001 IT2012A         2013-01-01    95     1
- 5           2013         6001 IT1183A         2013-01-01   166     1
- 6           2013         6001 IT1184A         2013-01-01    39     1
- 7           2013         6001 IT0957A         2013-01-01    45     1
- 8           2013         6001 IT2023A         2013-01-01    33     1
- 9           2013         6001 IT2013A         2013-01-01   108     1
-10           2013         6001 IT1836A         2013-01-01    NA     1
-# … with 40,988 more rows, and 24 more variables: yy &lt;dbl&gt;,
-#   regione &lt;chr&gt;, station_code &lt;dbl&gt;, t2m &lt;dbl&gt;, tmin2m &lt;dbl&gt;,
-#   tmax2m &lt;dbl&gt;, tp &lt;dbl&gt;, ptp &lt;dbl&gt;, rh &lt;dbl&gt;, u10m &lt;dbl&gt;,
-#   v10m &lt;dbl&gt;, sp &lt;dbl&gt;, nirradiance &lt;dbl&gt;, pbl00 &lt;dbl&gt;,
-#   pbl12 &lt;dbl&gt;, pblmin &lt;dbl&gt;, pblmax &lt;dbl&gt;, coordx &lt;dbl&gt;,
-#   coordy &lt;dbl&gt;, altitude &lt;dbl&gt;, altitudedem &lt;dbl&gt;, wdir &lt;dbl&gt;,
-#   wspeed &lt;dbl&gt;, pwspeed &lt;dbl&gt;</code></pre>
+   pollutant_fk regione station_eu_code date          yy    mm    dd
+          &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1         6001 LAZIO   IT0952A         2013-01-01  2013     1     1
+ 2         6001 LAZIO   IT0953A         2013-01-01  2013     1     1
+ 3         6001 LAZIO   IT1906A         2013-01-01  2013     1     1
+ 4         6001 LAZIO   IT2012A         2013-01-01  2013     1     1
+ 5         6001 LAZIO   IT1183A         2013-01-01  2013     1     1
+ 6         6001 LAZIO   IT1184A         2013-01-01  2013     1     1
+ 7         6001 LAZIO   IT0957A         2013-01-01  2013     1     1
+ 8         6001 LAZIO   IT2023A         2013-01-01  2013     1     1
+ 9         6001 LAZIO   IT2013A         2013-01-01  2013     1     1
+10         6001 LAZIO   IT1836A         2013-01-01  2013     1     1
+# … with 40,988 more rows, and 23 more variables: value &lt;dbl&gt;,
+#   station_code &lt;dbl&gt;, t2m &lt;dbl&gt;, tmin2m &lt;dbl&gt;, tmax2m &lt;dbl&gt;,
+#   tp &lt;dbl&gt;, ptp &lt;dbl&gt;, rh &lt;dbl&gt;, u10m &lt;dbl&gt;, v10m &lt;dbl&gt;, sp &lt;dbl&gt;,
+#   nirradiance &lt;dbl&gt;, pbl00 &lt;dbl&gt;, pbl12 &lt;dbl&gt;, pblmin &lt;dbl&gt;,
+#   pblmax &lt;dbl&gt;, coordx &lt;dbl&gt;, coordy &lt;dbl&gt;, altitude &lt;dbl&gt;,
+#   altitudedem &lt;dbl&gt;, wdir &lt;dbl&gt;, wspeed &lt;dbl&gt;, pwspeed &lt;dbl&gt;</code></pre>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Nel 2021 tutti hanno istallato <code>dplyr</code><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

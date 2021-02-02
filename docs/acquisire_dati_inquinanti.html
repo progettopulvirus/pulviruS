@@ -1795,14 +1795,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   body{
     color: #A7A7A7;
-    background-color: #e6dec9;
+    background-color: #F7F4EE;/*#e6dec9;*/
     font-family: 'Lato', sans-serif;
     font-size: 16px;
   }
 
 
   .distill-site-nav{
-    background-color: #1c333f;
+    background-color:  #1c333f; 
     text-decoration: none;
   }
 
@@ -1823,6 +1823,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-family: 'Roboto Condensed', sans-serif;
   }
 
+
+  /* link hover */
+
+  d-article p a{
+    color: #B94B3B;/*verde #abd174; */
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+
+  d-article p a:hover{
+    color: #FF2E3D;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #FF2E3D;
+    text-decoration: none;
+  }
+
+  /* nome dell'autore che compare negli articoli */
+  .author .name, .affiliation{
+    color: #FF2E3D;  
+    font-weight: 900;
+  }
+
+  .affiliation{
+    font-weight: 400;
+  }
+
+
+  /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
+  d-article div.sourceCode pre {
+      padding-left: 10px;
+      font-size: 12px;
+      border-left: 0 solid rgba(0,0,0,0.1);
+  }
   </style>
   <!--/radix_placeholder_site_in_header-->
 
@@ -1872,8 +1906,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<p>I dati giornalieri degli inquinanti per il periodo 2013 - 2020 sono stati raccolti in <code>data frame</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> e archiviati come pacchetti R sul repository <code>github</code> <a href="https://github.com/progettopulvirus"><code>progettopulvirus</code></a>.</p>
-<p>Una volta istallati i pacchetti <code>R</code> con i dati degli inquinanti, questi risiedono in modo permanente nel computer dell’utente (in altre parole: l’istallazione va fatta una volta sola, a meno che non ci sia un aggiornamento dei dati alla fonte!).</p>
+<p>I dati giornalieri degli inquinanti sono stati raccolti in <code>data frame</code> <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> e archiviati come pacchetti R sul repository <code>github</code> <a href="https://github.com/progettopulvirus"><code>progettopulvirus</code></a>.</p>
+<p>I pacchetti, una volta istallati, questi risiedono in modo permanente nel computer dell’utente (<strong>in altre parole</strong>: l’istallazione va fatta una volta sola, a meno che non ci sia un aggiornamento dei dati alla fonte!).</p>
 <p>Per scaricare e istallare pacchetti R da <code>github</code> e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1883,8 +1917,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 </div>
 <h3 id="esempio-istallare-il-pacchetto-con-i-dati-della-valle-daosta.">Esempio: istallare il pacchetto con i dati della Valle d’Aosta.</h3>
-<p>Consultando questa <a href="pacchetti_inquinanti.html">tabella</a> e’ possibile ricavare, per ciascuna regione, il nome del corrispondente pacchetto con i dati degli inquinanti ad oggi disponibili.</p>
-<p>Il pacchetto <code>R</code> con i dati della Valle d’Aosta si chiama <code>valleaosta</code> e contiene tre data frame: <code>pm10</code>, <code>pm25</code> e <code>no2</code>.</p>
+<p>Il pacchetto <code>R</code> con i dati della Valle d’Aosta si chiama <code>valleaosta</code> e contiene tre data frame: <code>pm10</code>, <code>pm25</code> e <code>no2</code> ( i nomi dei pacchetti disponibili sono elencati nella tabella in fondo a <a href="pacchetti_inquinanti.html">questa pagina</a> )</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'># carico devtools o in alternativa remotes</span>
@@ -1897,10 +1930,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 </div>
 <p>Se al momento dell’istallazione <code>R</code> dovesse chiedere di aggiornare uno o piu’ pacchetti:</p>
-<pre><code>Downloading GitHub repo progettopulvirus/valleaosta@HEAD
-These packages have more recent versions available.
-It is recommended to update all of them.
-Which would you like to update?</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r">
+<code class="sourceCode r">
+<span class="co">Downloading GitHub repo progettopulvirus/valleaosta@HEAD</span>
+<span class="co">These packages have more recent versions available.</span>
+<span class="co">It is recommended to update all of them.</span>
+<span class="co">Which would you like to update?</span>
+</code>
+</pre>
+</div>
 <ul>
 <li><p>scegliere <code>All</code> se si ha una connessione veloce e il tempo di bere un caffe’ (a seconda del numero dei pacchetti, il caffe’ puo’ essere anche un americano lungo)</p></li>
 <li><p>rispondere <code>None</code> nel caso di una connessione lenta o se si preferisce effettuare un aggiornamento manuale delle librerie di <code>R</code>.</p></li>
@@ -1917,23 +1956,22 @@ Which would you like to update?</code></pre>
 </code></pre>
 </div>
 <pre><code># A tibble: 7,778 x 8
-   reporting_year pollutant_fk station_eu_code date       value    mm
-            &lt;dbl&gt;        &lt;dbl&gt; &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt;
- 1           2013            5 IT0983A         2013-01-01    58     1
- 2           2013            5 IT0988A         2013-01-01    NA     1
- 3           2013            5 IT0983A         2013-01-02    32     1
- 4           2013            5 IT0988A         2013-01-02    29     1
- 5           2013            5 IT0983A         2013-01-03    53     1
- 6           2013            5 IT0988A         2013-01-03    NA     1
- 7           2013            5 IT0983A         2013-01-04    45     1
- 8           2013            5 IT0988A         2013-01-04    12     1
- 9           2013            5 IT0983A         2013-01-05    18     1
-10           2013            5 IT0988A         2013-01-05    NA     1
-# … with 7,768 more rows, and 2 more variables: yy &lt;dbl&gt;,
-#   regione &lt;chr&gt;</code></pre>
+   pollutant_fk regione station_eu_code date          yy    mm    dd
+          &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1            5 VALLE_… IT0983A         2013-01-01  2013     1     1
+ 2            5 VALLE_… IT0988A         2013-01-01  2013     1     1
+ 3            5 VALLE_… IT0983A         2013-01-02  2013     1     2
+ 4            5 VALLE_… IT0988A         2013-01-02  2013     1     2
+ 5            5 VALLE_… IT0983A         2013-01-03  2013     1     3
+ 6            5 VALLE_… IT0988A         2013-01-03  2013     1     3
+ 7            5 VALLE_… IT0983A         2013-01-04  2013     1     4
+ 8            5 VALLE_… IT0988A         2013-01-04  2013     1     4
+ 9            5 VALLE_… IT0983A         2013-01-05  2013     1     5
+10            5 VALLE_… IT0988A         2013-01-05  2013     1     5
+# … with 7,768 more rows, and 1 more variable: value &lt;dbl&gt;</code></pre>
 </div>
 <h3 id="quali-data-frame-sono-disponibili-allinterno-di-ciascun-pacchetto">Quali data frame sono disponibili all’interno di ciascun pacchetto?</h3>
-<p>Questa informazione e’ ricavabile dalla <a href="pacchetti_inquinanti.html">tabella</a> dei pacchetti oppure utilizzando il comando <code>data</code> di <code>R</code>.</p>
+<p>Questa informazione e’ ricavabile dalla <a href="pacchetti_inquinanti.html">tabella</a> dei pacchetti oppure utilizzando il comando <code>data</code>…</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#dopo aver istallato il pacchetto valleaosta posso utilizzare</span>
@@ -1949,14 +1987,17 @@ Which would you like to update?</code></pre>
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#per ogni inquinante e' stata creata una breve pagina di documentazione</span>
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'>"valleaosta"</span><span class='op'>)</span>
 <span class='op'>?</span><span class='va'>no2</span>
+
+<span class='co'>#altrimenti possiamo contare i codici unici delle stazioni</span>
+<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span><span class='op'>(</span><span class='va'>no2</span><span class='op'>$</span><span class='va'>station_eu_code</span><span class='op'>)</span><span class='op'>)</span>
 </code></pre>
 </div>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <section class="footnotes" role="doc-endnotes">
 <hr />
 <ol>
-<li id="fn1" role="doc-endnote"><p>Piuu’ precisamente in un <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">tibble</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p>Piu’ precisamente in <a href="https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html">tibble</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section>
 <!--radix_placeholder_article_footer-->

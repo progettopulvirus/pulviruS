@@ -14,24 +14,32 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-I dati giornalieri degli inquinanti distribuiti mediante pacchetti R rappresentano un sottoinsieme dei dati disponibili nel database del progetto `PULVIRUS`: si tratta,infatti, delle serie di dati selezionate in base ai [controlli di completezza](completezza.html). 
+### Dati inquinanti per PULVIRUS
+
+I dati giornalieri degli inquinanti distribuiti mediante pacchetti R rappresentano un sottoinsieme dei dati disponibili nel database del progetto `PULVIRUS`: si tratta, infatti, delle serie di dati selezionate in base ai [controlli di completezza](completezza.html). 
 
 
 ### Organizzazione dei `data frame`
 
 I `data frame` con i dati degli inquinanti contengono:
 
-- il codice identificativo della stazione (colonna `station_eu_code`)
+- il codice (`pollutant_fk`) dell'inquinante [INSERIRE TABELLA]
 
-- la data dell'osservazione nel formato ANNO-MESE-GIORNO (colonna `date`) 
+- il codice (`station_eu_code`) identificativo della stazione 
 
-- il valore osservato (colonna `value`)
+- la data (`date`) dell'osservazione nel formato %Y-%m-%d  
 
-- il nome della regione (colonna `regione`)
+- il valore osservato (`value`) dell'inquinante
 
-- il mese dell'osservazione (`mm`)
+- il nome della regione (`regione`)
 
-- l'anno dell'osservazione (questa informazione e' riportata in modo ridondante sia nella colonna `yy` che nella colonna `reporting_year`).
+- il giorno (`dd`) dell'osservazione
+
+- il mese (`mm`) dell'osservazione
+
+- l'anno (`yy`) dell'osservazione
+
+
 
 ### Pacchetti con i dati 
 
