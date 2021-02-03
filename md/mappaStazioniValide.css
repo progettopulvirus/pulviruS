@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700i|Source+Sans+Pro");
+
+.l-body{
+  margin-top: 5em;
+}
+
+.leaflet-popup-content-wrapper h4{
+  font-family: "Playfair Display",Serif;
+  text-align: center;
+  color: #292929;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #292929;
+}
+
+.leaflet-popup-content-wrapper p{
+  font-family: "Source Sans Pro",Sans-serif;
+  text-align: left;
+  color: #292929;
+  border-bottom-style: solid;
+  border-bottom-width: 0;
+  border-bottom-color: #FcFcFc;
+}

@@ -1,0 +1,64 @@
+---
+title: "Stazioni di monitoraggio"
+author:
+  - name: Guido Fioravanti 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    css: mappaStazioniValide.css
+---
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE,include=FALSE}
+rm(list=objects())
+library("tidyverse")
+library("leaflet")
+
+
+read_delim("./assets/ana.csv",delim=";",col_names = TRUE)->ana
+
+#file con l'elenco delle stazioni valide per regione
+list.files(pattern="^stazioniValide_[np].+csv$",full.names = TRUE,path = "./assets")->ffile
+
+stopifnot(length(ffile)!=0)
+
+leggi<-function(.x){
+  read_delim(.x,col_names = FALSE,delim=";")->dati
+  names(dati)<-c("station_eu_code","regione")
+  
+  #quale inquinante
+  str_remove(str_remove(.x,"^.+_"),"\\.csv")->siglaInquinante
+  dati$inquinante<-siglaInquinante
+  
+  dati
+  
+}
+
+purrr::map_dfr(ffile,.f=leggi)->stazioni
+
+
+full_join(stazioni,ana)->stazioni
+
+stazioni %>%
+  mutate(testoPop=glue::glue("<h4>{nome_stazione} ({provincia})</h4><p>Regione: {str_replace(Hmisc::capitalize(regione),'_',' ')}</p><p>Altitudine: {altitudine} m</p> <p>Station EU code: {station_eu_code}</p>"))->stazioni
+
+purrr::partial(.f=addMarkers,lng=~st_x,lat=~st_y,label=~nome_stazione,popup=~testoPop)->mappaMarkers
+```
+
+
+```{r mappa,eval=TRUE,include=TRUE,echo=FALSE,fig.width=8,fig.height=8}
+
+icons<-awesomeIcons(icon="ios-close",iconColor = "black",library = "ion",markerColor ="yellow")
+
+leaflet() %>%
+  setView(lng=13,lat=42,zoom=6) %>%
+  leaflet::addTiles() %>%
+  mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="pm10"),group="PM10") %>%
+  mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="pm25"),group="PM2.5") %>%
+  mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="no2"),group="NO2") %>%
+  mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="nox"),group="NOx")  %>%
+  leaflet::addLayersControl(overlayGroups = c("PM10","PM2.5","NO2","NOx")) %>%
+  hideGroup(c("PM2.5","NO2","NOx")) 
+  
+```

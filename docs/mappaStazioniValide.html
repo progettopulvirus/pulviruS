@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>pulviruS: Stazioni di monitoraggio</title>
+
+
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
+
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-02-03"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-03"/>
+  <meta name="article:author" content="Guido Fioravanti"/>
+
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="pulviruS: Stazioni di monitoraggio"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="pulviruS"/>
+
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="pulviruS: Stazioni di monitoraggio"/>
+
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Stazioni di monitoraggio"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-03"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css"]}},"value":[{"type":"character","attributes":{},"value":["mappaStazioniValide.css"]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+
+  <script type="application/javascript">
+
+    window.headroom_prevent_pin = false;
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+
+  /* Theme (user-documented overrideables for nav appearance) */
+
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .distill-site-nav a:hover {
+    color: white;
+  }
+
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+
+  .distill-site-header {
+
+  }
+
+  .distill-site-footer {
+
+  }
+
+
+  /* Site Header */
+
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+
+
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+
+  .distill-site-header .logo {
+    padding: 0;
+  }
+
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+
+
+
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+
+
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-dropdown-active {
+    display: block;
+  }
+
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+  /* Site Footer */
+
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Headroom */
+
+  d-title {
+    padding-top: 6rem;
+  }
+
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+
+  .headroom--unpinned {
+    top: -100px;
+  }
+
+  .headroom--pinned {
+    top: 0;
+  }
+
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+
+  </style>
+
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+
+  <style type="text/css">
+
+  body {
+    background-color: white;
+  }
+
+  .pandoc-table {
+    width: 100%;
+  }
+
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .shaded .shaded-content {
+    background: white;
+  }
+
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+
+  d-appendix {
+    padding-top: 30px;
+  }
+
+  d-article>p>img {
+    width: 100%;
+  }
+
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+
+  /* Tweak code blocks */
+
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+
+  d-article div.sourceCode {
+    background-color: white;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  d-article pre a {
+    border-bottom: none;
+  }
+
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+
+  @media(min-width: 768px) {
+
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+
+  d-article pre {
+    font-size: 14px;
+  }
+
+  }
+
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  /* CSS for d-contents */
+
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  .d-contents li {
+    list-style-type: none
+  }
+
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+
+  .d-contents ul {
+    padding-left: 1em
+  }
+
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+
+
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+
+
+  /* Figure */
+
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+
+  .figure img {
+    width: 100%;
+  }
+
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+
+  /* Citations */
+
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+
+  /* Citation hover box */
+
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+
+
+  /* Tweak 1000px media break to show more text */
+
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+
+    .grid {
+      grid-column-gap: 16px;
+    }
+
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+
+
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Include appendix styles here so they can be overridden */
+
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  d-appendix > * {
+    grid-column: text;
+  }
+
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+
+  /* Include footnote styles here so they can be overridden */
+
+  d-footnote-list {
+    contain: layout style;
+  }
+
+  d-footnote-list > * {
+    grid-column: text;
+  }
+
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+
+
+
+  /* Anchor.js */
+
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  /* Social footer */
+
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+
+  .disqus-comments {
+    margin-right: 30px;
+  }
+
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+
+  #disqus_thread {
+    margin-top: 30px;
+  }
+
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+
+
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+
+
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+
+  /* Styles for posts lists (not auto-injected) */
+
+
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .posts-list img {
+    opacity: 1;
+  }
+
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+
+  .posts-more {
+    clear: both;
+  }
+
+
+  .posts-sidebar {
+    font-size: 16px;
+  }
+
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+
+  .categories li>a {
+    border-bottom: none;
+  }
+
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .categories .active {
+    font-weight: 600;
+  }
+
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+
+
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+
+
+
+  </style>
+
+  <script type="application/javascript">
+
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+
+  // show body when load is complete
+  function on_load_complete() {
+
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+
+
+    // set body to visible
+    document.body.style.visibility = 'visible';
+
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+
+  function init_distill() {
+
+    init_common();
+
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+
+      // capture layout
+      var layout = $(this).attr('data-layout');
+
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+
+
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+
+    // load distill framework
+    load_distill_framework();
+
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+
+      // clear polling timer
+      clearInterval(tid);
+
+      // show body now that everything is ready
+      on_load_complete();
+    }
+
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+
+  }
+
+  function init_downlevel() {
+
+    init_common();
+
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+
+    // remove toc
+    $('.d-contents').remove();
+
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+
+
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+
+    $('body').addClass('downlevel');
+
+    on_load_complete();
+  }
+
+
+  function init_common() {
+
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+
+      }
+    });
+
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+
+  </script>
+
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+  <script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+  <script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+  <link href="site_libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+  <script src="site_libs/leaflet-1.3.1/leaflet.js"></script>
+  <link href="site_libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+  <script src="site_libs/Proj4Leaflet-1.0.1/proj4-compressed.js"></script>
+  <script src="site_libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+  <link href="site_libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+  <script src="site_libs/leaflet-binding-2.0.3/leaflet.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Arvo|Lato");
+  @import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700");
+
+  body{
+    color: #A7A7A7;
+    background-color: #F7F4EE;/*#e6dec9;*/
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+  }
+
+
+  .distill-site-nav{
+    background-color:  #1c333f; 
+    text-decoration: none;
+  }
+
+  .nav-left a{
+    color: inherit;
+    font-weight: 900;
+  }
+
+
+  .nav-left a:hover{
+    color: #fae16c;
+    font-weight: 900;
+  }
+
+
+  d-title h1, d-title p{
+    color: #292929;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+
+  /* link hover */
+
+  d-article p a{
+    color: #B94B3B;/*verde #abd174; */
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+
+  d-article p a:hover{
+    color: #FF2E3D;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #FF2E3D;
+    text-decoration: none;
+  }
+
+  /* nome dell'autore che compare negli articoli */
+  .author .name, .affiliation{
+    color: #FF2E3D;  
+    font-weight: 900;
+  }
+
+  .affiliation{
+    font-weight: 400;
+  }
+
+
+  /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
+  d-article div.sourceCode pre {
+      padding-left: 10px;
+      font-size: 12px;
+      border-left: 0 solid rgba(0,0,0,0.1);
+  }
+  </style>
+  <!--/radix_placeholder_site_in_header-->
+
+  <link rel="stylesheet" href="mappaStazioniValide.css" type="text/css"/>
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Stazioni di monitoraggio","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-03T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">pulviruS</a>
+</div>
+<div class="nav-right">
+<a href="PULVIRUS.html">About PULVIRUS</a>
+<a href="documentazione.html">Documentazione</a>
+<a href="dati.html">Dati</a>
+<a href="mappaStazioniValide.html">Stazioni</a>
+<a href="risultati.html">Risultati</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Stazioni di monitoraggio</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+
+</div>
+
+<div class="d-byline">
+  Guido Fioravanti  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
+  
+<br/>2021-02-03
+</div>
+
+<div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<div id="htmlwidget-e3e4630b984a56031c1e" style="width:768px;height:768px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e3e4630b984a56031c1e">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"setView":[[42,13],6,[]],"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[45.73583,45.5966,45.734306,45.142222,45.695687,45.469722,45.462778,45.47833,45.144444,45.185556,45.54083,45.132778,45.849444,46.167222,45.193889,45.305278,45.816944,45.58111,45.30278678,45.16444,46.16861,46.05184,46.06293,45.89244,45.89147,46.10434,45.429444,45.714444,45.499167,45.836944,45.371944,45.44528,45.6725,45.560556,46.14139,45.07472,45.29,45.43333,45.65877,45.43301,44.8425,44.42,44.82389,44.35556,44.0625,44.05222,44.219167,44.78833,44.47222,44.63605,44.79943,44.49972,44.215,44.839722,44.42861,44.65061,44.139167,44.516111,44.79361,44.690833,44.662222,44.73473,44.53944,44.15,44.5,44.926111,44.299722,44.54121,44.095833,44.825,44.283889,44.6575,43.9275,45.038333,44.013056,44.873056,45.04889,44.700278,44.92784,43.908056,44.285612,46.066111,46.035,45.856944,45.957778,46.07083,45.96254],[7.32417,7.76643,7.329645,10.045833,9.661667,9.198056,9.195833,9.23583,10.803333,9.146944,10.22361,10.016667,9.395833,9.870556,9.164722,9.485556,8.820278,9.27444,9.49528589,10.78194,9.88028,11.45389,11.1262,11.03941,10.84449,11.11023,12.313889,11.368611,12.262222,12.510278,11.841944,10.96389,12.238611,11.539722,12.21694,11.78333,11.643056,11.89056,12.2161,11.0301,11.61306,12.225556,9.83028,11.72028,12.553333,12.57556,12.048889,10.33667,11.41639,10.90473,10.88365,11.32833,12.056389,11.961111,12.18667,10.90633,12.239167,10.733889,10.33167,10.664722,11.639444,9.36693,10.79139,10.926111,11.286111,10.370833,10.430278,10.8189,12.4025,11.649722,12.332222,10.288889,12.224722,9.669167,12.42,10.663889,9.69333,10.622778,11.17795,12.401667,11.873396,13.240556,13.225278,12.925833,12.618611,13.22972,12.65595],null,null,"PM10",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<h4>AOSTA (PIAZZA PLOUVES) (Aosta)<\/h4><p>Regione: VALLE AOSTA<\/p><p>Altitudine: 581 m<\/p> <p>Station EU code: IT0983A<\/p>","<h4>DONNAS (Aosta)<\/h4><p>Regione: VALLE AOSTA<\/p><p>Altitudine: 371 m<\/p> <p>Station EU code: IT0988A<\/p>","<h4>Aosta Liconi (Aosta)<\/h4><p>Regione: VALLE AOSTA<\/p><p>Altitudine: 583 m<\/p> <p>Station EU code: IT2233A<\/p>","<h4>CREMONA VIA FATEBENEFRATELLI (Cremona)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 45 m<\/p> <p>Station EU code: IT1739A<\/p>","<h4>BERGAMO - VIA GARIBALDI (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 249 m<\/p> <p>Station EU code: IT0997A<\/p>","<h4>MILANO - SENATO (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT1016A<\/p>","<h4>MILANO - VERZIERE (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT0705A<\/p>","<h4>MILANO PASCAL CITTà STUDI (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT1692A<\/p>","<h4>MANTOVA - VIA ARIOSTO (Mantova)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT0709A<\/p>","<h4>PAVIA - P.ZZA MINERVA (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 77 m<\/p> <p>Station EU code: IT1104A<\/p>","<h4>BRESCIA - BROLETTO (Brescia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 149 m<\/p> <p>Station EU code: IT0594A<\/p>","<h4>CREMONA - P.ZZA CADORNA (Cremona)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 45 m<\/p> <p>Station EU code: IT1153A<\/p>","<h4>LECCO VIA AMENDOLA (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 214 m<\/p> <p>Station EU code: IT0776A<\/p>","<h4>SONDRIO - VIA MAZZINI (Sondrio)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 307 m<\/p> <p>Station EU code: IT0906A<\/p>","<h4>PAVIA - VIA FOLPERTI (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 77 m<\/p> <p>Station EU code: IT0912A<\/p>","<h4>LODI Vignati (Lodi)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 80 m<\/p> <p>Station EU code: IT1286A<\/p>","<h4>VARESE - VIA COPELLI (Varese)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 388 m<\/p> <p>Station EU code: IT1588A<\/p>","<h4>MONZA - VIA  MACHIAVELLI (Monza e della Brianza)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 162 m<\/p> <p>Station EU code: IT1743A<\/p>","<h4>LODI S.ALBERTO (Lodi)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 76 m<\/p> <p>Station EU code: IT1965A<\/p>","<h4>MANTOVA - piazza GRAMSCI (Mantova)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 19 m<\/p> <p>Station EU code: IT1869A<\/p>","<h4>SONDRIO - VIA PARIBELLI (Sondrio)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 290 m<\/p> <p>Station EU code: IT1967A<\/p>","<h4>BORGO VAL (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 380 m<\/p> <p>Station EU code: IT0703A<\/p>","<h4>TRENTO PSC (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 203 m<\/p> <p>Station EU code: IT1037A<\/p>","<h4>ROVERETO LGP (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 200 m<\/p> <p>Station EU code: IT0591A<\/p>","<h4>RIVA GAR (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 73 m<\/p> <p>Station EU code: IT0753A<\/p>","<h4>TRENTO VBZ (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 197 m<\/p> <p>Station EU code: IT1859A<\/p>","<h4>VE - Sacca Fisola (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT0448A<\/p>","<h4>SCHIO (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 190 m<\/p> <p>Station EU code: IT0663A<\/p>","<h4>VE - Parco Bissuola (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT0963A<\/p>","<h4>MANSUE' (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 14 m<\/p> <p>Station EU code: IT1596A<\/p>","<h4>PD - Mandria (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT1453A<\/p>","<h4>VR - Borgo Milano (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 62 m<\/p> <p>Station EU code: IT1336A<\/p>","<h4>TV - Via Lancieri di Novara (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1590A<\/p>","<h4>VI - Quartiere Italia (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 36 m<\/p> <p>Station EU code: IT1177A<\/p>","<h4>BL - Parco Città di Bologna (Belluno)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 401 m<\/p> <p>Station EU code: IT1594A<\/p>","<h4>RO - Largo Martiri (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 7 m<\/p> <p>Station EU code: IT1215A<\/p>","<h4>PARCO COLLI EUGANEI (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT1870A<\/p>","<h4>PD - Arcella (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 11 m<\/p> <p>Station EU code: IT1880A<\/p>","<h4>TV - Strada S. Agnese (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT2231A<\/p>","<h4>VR- Giarol Grande (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT2243A<\/p>","<h4>ISONZO (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 8 m<\/p> <p>Station EU code: IT0187A<\/p>","<h4>CAORLE (Ravenna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT1204A<\/p>","<h4>LUGAGNANO (Piacenza)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 210 m<\/p> <p>Station EU code: IT0544A<\/p>","<h4>DE AMICIS (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 42 m<\/p> <p>Station EU code: IT1029A<\/p>","<h4>MARECCHIA (Rimini)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 6 m<\/p> <p>Station EU code: IT1043A<\/p>","<h4>FLAMINIA (Rimini)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1044A<\/p>","<h4>PARCO RESISTENZA (Forli'-Cesena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 29 m<\/p> <p>Station EU code: IT1048A<\/p>","<h4>MONTEBELLO (Parma)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 55 m<\/p> <p>Station EU code: IT1105A<\/p>","<h4>SAN LAZZARO (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 64 m<\/p> <p>Station EU code: IT1163A<\/p>","<h4>GIARDINI (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 39 m<\/p> <p>Station EU code: IT0721A<\/p>","<h4>REMESINA (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT1152A<\/p>","<h4>PORTA SAN FELICE (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 54 m<\/p> <p>Station EU code: IT1159A<\/p>","<h4>ROMA (Forli'-Cesena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 26 m<\/p> <p>Station EU code: IT0755A<\/p>","<h4>GHERARDI (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: -2 m<\/p> <p>Station EU code: IT1179A<\/p>","<h4>ZALAMELLA (Ravenna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT0895A<\/p>","<h4>PARCO FERRARI (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 34 m<\/p> <p>Station EU code: IT1771A<\/p>","<h4>FRANCHINI ANGELONI (Forli'-Cesena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 37 m<\/p> <p>Station EU code: IT1670A<\/p>","<h4>CASTELLARANO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 150 m<\/p> <p>Station EU code: IT0903A<\/p>","<h4>CITTADELLA (Parma)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 60 m<\/p> <p>Station EU code: IT0804A<\/p>","<h4>S. LAZZARO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 50 m<\/p> <p>Station EU code: IT0940A<\/p>","<h4>SAN PIETRO CAPOFIUME (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 11 m<\/p> <p>Station EU code: IT1451A<\/p>","<h4>CORTE BRUGNATELLA (Piacenza)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 765 m<\/p> <p>Station EU code: IT2074A<\/p>","<h4>PARCO EDILCARANI (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 118 m<\/p> <p>Station EU code: IT2073A<\/p>","<h4>CASTELLUCCIO (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 811 m<\/p> <p>Station EU code: IT2097A<\/p>","<h4>VIA CHIARINI (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 56 m<\/p> <p>Station EU code: IT2075A<\/p>","<h4>SARAGAT (Parma)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 30 m<\/p> <p>Station EU code: IT1910A<\/p>","<h4>FEBBIO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 1120 m<\/p> <p>Station EU code: IT1672A<\/p>","<h4>SAN FRANCESCO (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 131 m<\/p> <p>Station EU code: IT1920A<\/p>","<h4>SAVIGNANO (Forli'-Cesena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 32 m<\/p> <p>Station EU code: IT1908A<\/p>","<h4>VILLA FULVIA (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 9 m<\/p> <p>Station EU code: IT1918A<\/p>","<h4>DELTA CERVIA (Ravenna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 0 m<\/p> <p>Station EU code: IT1928A<\/p>","<h4>BADIA (Parma)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 202 m<\/p> <p>Station EU code: IT1911A<\/p>","<h4>SAVIGNANO DI RIGO (Forli'-Cesena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 615 m<\/p> <p>Station EU code: IT2027A<\/p>","<h4>PARCO MONTECUCCO (Piacenza)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT1975A<\/p>","<h4>VERUCCHIO (Rimini)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 78 m<\/p> <p>Station EU code: IT1916A<\/p>","<h4>SAN ROCCO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT1914A<\/p>","<h4>GIORDANI FARNESE (Piacenza)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT1923A<\/p>","<h4>TIMAVO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 59 m<\/p> <p>Station EU code: IT2156A<\/p>","<h4>GAVELLO (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT1921A<\/p>","<h4>SAN LEO (Rimini)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 540 m<\/p> <p>Station EU code: IT2158A<\/p>","<h4>PARCO BERTOZZI (Ravenna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 35 m<\/p> <p>Station EU code: IT2209A<\/p>","<h4>CAIROLI (Udine)<\/h4><p>Regione: FRIULI VENEZIA_GIULIA<\/p><p>Altitudine: 100 m<\/p> <p>Station EU code: IT0966A<\/p>","<h4>S.OSVALDO (Udine)<\/h4><p>Regione: FRIULI VENEZIA_GIULIA<\/p><p>Altitudine: 100 m<\/p> <p>Station EU code: IT1170A<\/p>","<h4>MORSANO AL TAGLIAMENTO (Pordenone)<\/h4><p>Regione: FRIULI VENEZIA_GIULIA<\/p><p>Altitudine: 0 m<\/p> <p>Station EU code: IT2115A<\/p>","<h4>PORCIA (Pordenone)<\/h4><p>Regione: FRIULI VENEZIA_GIULIA<\/p><p>Altitudine: 29 m<\/p> <p>Station EU code: IT1112A<\/p>","<h4>SAN DANIELE (Udine)<\/h4><p>Regione: FRIULI VENEZIA_GIULIA<\/p><p>Altitudine: 116 m<\/p> <p>Station EU code: IT2140A<\/p>","<h4>Pordenone Centro 1 (Pordenone)<\/h4><p>Regione: FRIULI VENEZIA_GIULIA<\/p><p>Altitudine: 30 m<\/p> <p>Station EU code: IT2201A<\/p>"],null,null,null,["AOSTA (PIAZZA PLOUVES)","DONNAS","Aosta Liconi","CREMONA VIA FATEBENEFRATELLI","BERGAMO - VIA GARIBALDI","MILANO - SENATO","MILANO - VERZIERE","MILANO PASCAL CITTà STUDI","MANTOVA - VIA ARIOSTO","PAVIA - P.ZZA MINERVA","BRESCIA - BROLETTO","CREMONA - P.ZZA CADORNA","LECCO VIA AMENDOLA","SONDRIO - VIA MAZZINI","PAVIA - VIA FOLPERTI","LODI Vignati","VARESE - VIA COPELLI","MONZA - VIA  MACHIAVELLI","LODI S.ALBERTO","MANTOVA - piazza GRAMSCI","SONDRIO - VIA PARIBELLI","BORGO VAL","TRENTO PSC","ROVERETO LGP","RIVA GAR","TRENTO VBZ","VE - Sacca Fisola","SCHIO","VE - Parco Bissuola","MANSUE'","PD - Mandria","VR - Borgo Milano","TV - Via Lancieri di Novara","VI - Quartiere Italia","BL - Parco Città di Bologna","RO - Largo Martiri","PARCO COLLI EUGANEI","PD - Arcella","TV - Strada S. Agnese","VR- Giarol Grande","ISONZO","CAORLE","LUGAGNANO","DE AMICIS","MARECCHIA","FLAMINIA","PARCO RESISTENZA","MONTEBELLO","SAN LAZZARO","GIARDINI","REMESINA","PORTA SAN FELICE","ROMA","GHERARDI","ZALAMELLA","PARCO FERRARI","FRANCHINI ANGELONI","CASTELLARANO","CITTADELLA","S. LAZZARO","SAN PIETRO CAPOFIUME","CORTE BRUGNATELLA","PARCO EDILCARANI","CASTELLUCCIO","VIA CHIARINI","SARAGAT","FEBBIO","SAN FRANCESCO","SAVIGNANO","VILLA FULVIA","DELTA CERVIA","BADIA","SAVIGNANO DI RIGO","PARCO MONTECUCCO","VERUCCHIO","SAN ROCCO","GIORDANI FARNESE","TIMAVO","GAVELLO","SAN LEO","PARCO BERTOZZI","CAIROLI","S.OSVALDO","MORSANO AL TAGLIAMENTO","PORCIA","SAN DANIELE","Pordenone Centro 1"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[44.80801,45.4512,45.55882,44.9203,45.31891,45.93034,44.38175,45.71317,45.1432,45.73583,45.734306,45.64389,45.284722,45.816944,45.132778,46.16861,45.30278678,45.626944,45.690278,45.47833,45.58111,45.80444,45.913056,45.849444,44.99694,45.160556,45.69795956,45.683333,45.469722,45.41083,45.4975,45.54083,45.10167,45.518333,46.61949,46.43444,45.89244,46.05184,46.06293,45.438333,45.6725,46.030833,45.630278,45.760833,45.371944,45.226667,44.825,44.690833,43.932778,44.49972,44.839722,44.741667,45.038333,44.6575,44.65061,44.92784,44.526485,44.989444,44.873056,44.15,44.79361,44.662222,44.48333,44.0625,44.219167,44.516111,44.42,44.53944,44.285612,46.066111,45.96254,42.77861,43.47278,43.87278,43.77306,43.78667,43.738889,43.55472,43.91611,43.46111,43.52,43.883889,43.840833,43.87472,44.0311,43.71389,43.456944,43.35278,43.10306,42.55222,43.133056,43.10444,42.73972,42.56,42.95167,42.551944,42.737222,41.889444,41.932778,41.893889,41.875556,41.49,41.531389,41.931389,42.74472,41.638889,41.906389,42.42194,42.5725,42.40417,41.99556,41.9475,40.52111,40.48861,40.494444,40.64917,40.48944,40.48806,37.156119,40.61107,40.315619,39.235833,40.72444,39.260556,39.8425,39.17722,39.203333,40.256389],[8.31031,7.87804,8.05639,8.6232,8.40236,8.56548,7.5382,8.28353,7.77818,7.32417,7.329645,9.61472,9.864167,8.820278,10.016667,9.88028,9.49528589,9.024167,9.643889,9.23583,9.27444,9.08361,9.496944,9.395833,11.07083,10.795556,9.40619194,9.466667,9.198056,10.69194,9.556389,10.22361,8.90556,9.591389,10.85907,11.33944,11.03941,11.45389,11.1262,12.205556,12.238611,11.905833,12.591667,11.736667,11.841944,11.665833,11.649722,10.664722,12.6275,11.32833,11.961111,11.942222,9.669167,10.288889,10.90633,11.17795,11.981381,10.019167,10.663889,10.926111,10.33167,11.639444,11.355,12.553333,12.048889,10.733889,12.225556,10.79139,11.873396,13.240556,12.65595,11.11917,11.14194,11.09194,11.27222,11.2875,10.401667,10.32972,11.00694,11.88889,10.321667,10.245,10.573889,11.10528,10.13276,10.41056,12.245833,12.57639,12.36611,12.65167,12.205833,12.37472,12.73722,12.65083,12.70778,12.419722,12.136667,12.266389,12.506944,12.475278,12.345,13.83056,12.946111,12.659167,11.865,13.323333,12.4475,12.10917,12.961944,12.85833,12.72639,12.46972,17.20417,17.22583,17.263611,17.5125,18.04722,18.05361,15.190867,14.97584,15.9548,9.115,8.57611,9.136389,9.216389,8.43028,8.386111,8.773056],null,null,"PM2.5",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<h4>Vinchio - San Michele (Asti)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 258 m<\/p> <p>Station EU code: IT1948A<\/p>","<h4>Ivrea - Liberazione (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 240 m<\/p> <p>Station EU code: IT1788A<\/p>","<h4>Biella - Sturzo (Biella)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 405 m<\/p> <p>Station EU code: IT1247A<\/p>","<h4>Alessandria - Volta (Alessandria)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 91 m<\/p> <p>Station EU code: IT1830A<\/p>","<h4>Vercelli - CONI (Vercelli)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 131 m<\/p> <p>Station EU code: IT1878A<\/p>","<h4>Verbania - Gabardi (Verbano-Cusio-Ossola)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 203 m<\/p> <p>Station EU code: IT1510A<\/p>","<h4>Cuneo - Alpini (Cuneo)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 550 m<\/p> <p>Station EU code: IT1529A<\/p>","<h4>Borgosesia - Tonella (Vercelli)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 344 m<\/p> <p>Station EU code: IT1532A<\/p>","<h4>Settimo T. - Vivaldi (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 202 m<\/p> <p>Station EU code: IT1130A<\/p>","<h4>AOSTA (PIAZZA PLOUVES) (Aosta)<\/h4><p>Regione: VALLE AOSTA<\/p><p>Altitudine: 581 m<\/p> <p>Station EU code: IT0983A<\/p>","<h4>Aosta Liconi (Aosta)<\/h4><p>Regione: VALLE AOSTA<\/p><p>Altitudine: 583 m<\/p> <p>Station EU code: IT2233A<\/p>","<h4>DALMiNE - Via Verdi (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 207 m<\/p> <p>Station EU code: IT2062A<\/p>","<h4>SORESINA (Cremona)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 70 m<\/p> <p>Station EU code: IT0840A<\/p>","<h4>VARESE - VIA COPELLI (Varese)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 388 m<\/p> <p>Station EU code: IT1588A<\/p>","<h4>CREMONA - P.ZZA CADORNA (Cremona)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 45 m<\/p> <p>Station EU code: IT1153A<\/p>","<h4>SONDRIO - VIA PARIBELLI (Sondrio)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 290 m<\/p> <p>Station EU code: IT1967A<\/p>","<h4>LODI S.ALBERTO (Lodi)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 76 m<\/p> <p>Station EU code: IT1965A<\/p>","<h4>SARONNO - SANTUARIO (Varese)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 212 m<\/p> <p>Station EU code: IT1650A<\/p>","<h4>BERGAMO - VIA MEUCCI (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 249 m<\/p> <p>Station EU code: IT0707A<\/p>","<h4>MILANO PASCAL CITTà STUDI (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT1692A<\/p>","<h4>MONZA - VIA  MACHIAVELLI (Monza e della Brianza)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 162 m<\/p> <p>Station EU code: IT1743A<\/p>","<h4>COMO - VIALE CATTANEO (Como)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 201 m<\/p> <p>Station EU code: IT0771A<\/p>","<h4>MOGGIO (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 1192 m<\/p> <p>Station EU code: IT1812A<\/p>","<h4>LECCO VIA SORA (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 267 m<\/p> <p>Station EU code: IT1826A<\/p>","<h4>SCHIVENOGLIA (Mantova)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 16 m<\/p> <p>Station EU code: IT1865A<\/p>","<h4>MANTOVA SANT'AGNESE (Mantova)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT1868A<\/p>","<h4>MERATE (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 292 m<\/p> <p>Station EU code: IT0777A<\/p>","<h4>CALUSCO (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 273 m<\/p> <p>Station EU code: IT1876A<\/p>","<h4>MILANO - SENATO (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT1016A<\/p>","<h4>PONTI SUL MINCIO (Mantova)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 113 m<\/p> <p>Station EU code: IT1388A<\/p>","<h4>CASIRATE D'ADDA (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 115 m<\/p> <p>Station EU code: IT1464A<\/p>","<h4>BRESCIA - BROLETTO (Brescia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 149 m<\/p> <p>Station EU code: IT0594A<\/p>","<h4>SANNAZZARO (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 87 m<\/p> <p>Station EU code: IT0692A<\/p>","<h4>TREVIGLIO (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 125 m<\/p> <p>Station EU code: IT0778A<\/p>","<h4>LA1 Laces (Bolzano)<\/h4><p>Regione: PA BOLZANO<\/p><p>Altitudine: 640 m<\/p> <p>Station EU code: IT0499A<\/p>","<h4>LS1 Laives (Bolzano)<\/h4><p>Regione: PA BOLZANO<\/p><p>Altitudine: 230 m<\/p> <p>Station EU code: IT1696A<\/p>","<h4>ROVERETO LGP (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 200 m<\/p> <p>Station EU code: IT0591A<\/p>","<h4>BORGO VAL (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 380 m<\/p> <p>Station EU code: IT0703A<\/p>","<h4>TRENTO PSC (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 203 m<\/p> <p>Station EU code: IT1037A<\/p>","<h4>VE - Malcontenta (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT1936A<\/p>","<h4>TV - Via Lancieri di Novara (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1590A<\/p>","<h4>AREA FELTRINA (Belluno)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 263 m<\/p> <p>Station EU code: IT1619A<\/p>","<h4>SAN DONA' DI PIAVE (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1222A<\/p>","<h4>BASSANO DEL GRAPPA (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 114 m<\/p> <p>Station EU code: IT1065A<\/p>","<h4>PD - Mandria (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT1453A<\/p>","<h4>ESTE (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 12 m<\/p> <p>Station EU code: IT1871A<\/p>","<h4>VILLA FULVIA (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 9 m<\/p> <p>Station EU code: IT1918A<\/p>","<h4>S. LAZZARO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 50 m<\/p> <p>Station EU code: IT0940A<\/p>","<h4>SAN CLEMENTE (Rimini)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 165 m<\/p> <p>Station EU code: IT1915A<\/p>","<h4>PORTA SAN FELICE (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 54 m<\/p> <p>Station EU code: IT1159A<\/p>","<h4>GHERARDI (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: -2 m<\/p> <p>Station EU code: IT1179A<\/p>","<h4>OSTELLATO (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 0 m<\/p> <p>Station EU code: IT1919A<\/p>","<h4>PARCO MONTECUCCO (Piacenza)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT1975A<\/p>","<h4>BADIA (Parma)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 202 m<\/p> <p>Station EU code: IT1911A<\/p>","<h4>PARCO FERRARI (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 34 m<\/p> <p>Station EU code: IT1771A<\/p>","<h4>GAVELLO (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT1921A<\/p>","<h4>BALLIRANA (Ravenna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT1927A<\/p>","<h4>BESENZONE (Piacenza)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT1924A<\/p>","<h4>SAN ROCCO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT1914A<\/p>","<h4>CASTELLUCCIO (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 811 m<\/p> <p>Station EU code: IT2097A<\/p>","<h4>CITTADELLA (Parma)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 60 m<\/p> <p>Station EU code: IT0804A<\/p>","<h4>SAN PIETRO CAPOFIUME (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 11 m<\/p> <p>Station EU code: IT1451A<\/p>","<h4>GIARDINI MARGHERITA (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 43 m<\/p> <p>Station EU code: IT0892A<\/p>","<h4>MARECCHIA (Rimini)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 6 m<\/p> <p>Station EU code: IT1043A<\/p>","<h4>PARCO RESISTENZA (Forli'-Cesena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 29 m<\/p> <p>Station EU code: IT1048A<\/p>","<h4>CASTELLARANO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 150 m<\/p> <p>Station EU code: IT0903A<\/p>","<h4>CAORLE (Ravenna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT1204A<\/p>","<h4>PARCO EDILCARANI (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 118 m<\/p> <p>Station EU code: IT2073A<\/p>","<h4>PARCO BERTOZZI (Ravenna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 35 m<\/p> <p>Station EU code: IT2209A<\/p>","<h4>CAIROLI (Udine)<\/h4><p>Regione: FRIULI VENEZIA_GIULIA<\/p><p>Altitudine: 100 m<\/p> <p>Station EU code: IT0966A<\/p>","<h4>Pordenone Centro 1 (Pordenone)<\/h4><p>Regione: FRIULI VENEZIA_GIULIA<\/p><p>Altitudine: 30 m<\/p> <p>Station EU code: IT2201A<\/p>","<h4>GR-URSS (Grosseto)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1593A<\/p>","<h4>SI-POGGIBONSI (Siena)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 105 m<\/p> <p>Station EU code: IT2032A<\/p>","<h4>PO-ROMA (Prato)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 54 m<\/p> <p>Station EU code: IT1654A<\/p>","<h4>FI-GRAMSCI (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 49 m<\/p> <p>Station EU code: IT0861A<\/p>","<h4>FI-BASSI (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT0862A<\/p>","<h4>PI-PASSI (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 5 m<\/p> <p>Station EU code: IT1110A<\/p>","<h4>LI-CARDUCCI (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 9 m<\/p> <p>Station EU code: IT1560A<\/p>","<h4>PT-MONTALE (Pistoia)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT1553A<\/p>","<h4>AR-ACROPOLI (Arezzo)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 260 m<\/p> <p>Station EU code: IT0950A<\/p>","<h4>LI-CAPPIELLO (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT1557A<\/p>","<h4>LU-VIAREGGIO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1186A<\/p>","<h4>LU-CAPANNORI (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1187A<\/p>","<h4>PO-FERRUCCI (Prato)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 62 m<\/p> <p>Station EU code: IT0945A<\/p>","<h4>MS-MARINA-VECCHIA (Massa Carrara)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 42 m<\/p> <p>Station EU code: IT2241A<\/p>","<h4>PI-BORGHETTO (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 5 m<\/p> <p>Station EU code: IT1409A<\/p>","<h4>C Castello (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 284 m<\/p> <p>Station EU code: IT2105A<\/p>","<h4>PIAZZA 40 MARTIRI (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 498 m<\/p> <p>Station EU code: IT1901A<\/p>","<h4>CORTONESE (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 290 m<\/p> <p>Station EU code: IT1180A<\/p>","<h4>Le Grazie (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 138 m<\/p> <p>Station EU code: IT1728A<\/p>","<h4>Magione (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 242 m<\/p> <p>Station EU code: IT2100A<\/p>","<h4>FONTIVEGGE1 (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 305 m<\/p> <p>Station EU code: IT2004A<\/p>","<h4>Piazza Vittoria (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 319 m<\/p> <p>Station EU code: IT1860A<\/p>","<h4>CARRARA (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 128 m<\/p> <p>Station EU code: IT1011A<\/p>","<h4>PORTA ROMANA (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 234 m<\/p> <p>Station EU code: IT1900A<\/p>","<h4>Amelia (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 329 m<\/p> <p>Station EU code: IT2109A<\/p>","<h4>Ciconia2 (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 143 m<\/p> <p>Station EU code: IT2113A<\/p>","<h4>CASTEL DI GUIDO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT0952A<\/p>","<h4>VILLA ADA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 50 m<\/p> <p>Station EU code: IT0953A<\/p>","<h4>ARENULA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 31 m<\/p> <p>Station EU code: IT1906A<\/p>","<h4>MALAGROTTA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 55 m<\/p> <p>Station EU code: IT2012A<\/p>","<h4>CASSINO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT1183A<\/p>","<h4>LATINA SCALO (Latina)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT1184A<\/p>","<h4>TENUTA DEL CAVALIERE (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT0957A<\/p>","<h4>ACQUAPENDENTE (Viterbo)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 420 m<\/p> <p>Station EU code: IT2023A<\/p>","<h4>FROSINONE MAZZINI (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 255 m<\/p> <p>Station EU code: IT2013A<\/p>","<h4>CIPRO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 31 m<\/p> <p>Station EU code: IT1836A<\/p>","<h4>VITERBO (Viterbo)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 338 m<\/p> <p>Station EU code: IT0863A<\/p>","<h4>LEONESSA (Rieti)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 948 m<\/p> <p>Station EU code: IT0989A<\/p>","<h4>RIETI (Rieti)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 397 m<\/p> <p>Station EU code: IT0867A<\/p>","<h4>GUIDONIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 89 m<\/p> <p>Station EU code: IT0887A<\/p>","<h4>C.SO FRANCIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 43 m<\/p> <p>Station EU code: IT0825A<\/p>","<h4>Taranto CISI (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1609A<\/p>","<h4>taranto MACHIAVELLI (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1611A<\/p>","<h4>taranto ADIGE (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1613A<\/p>","<h4>Ceglie Messapica (Brindisi)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 100 m<\/p> <p>Station EU code: IT2148A<\/p>","<h4>Torchiarolo ENEL (Brindisi)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 50 m<\/p> <p>Station EU code: IT2151A<\/p>","<h4>TORCHIAROLO (Brindisi)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1658A<\/p>","<h4>Priolo (Siracusa)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 35 m<\/p> <p>Station EU code: IT0614A<\/p>","<h4>Battipaglia parco fiume (Salerno)<\/h4><p>Regione: CAMPANIA<\/p><p>Altitudine: 70 m<\/p> <p>Station EU code: IT2268A<\/p>","<h4>VIGGIANO - COSTA MOLINA SUD 1 (Potenza)<\/h4><p>Regione: BASILICATA<\/p><p>Altitudine: 690 m<\/p> <p>Station EU code: IT2205A<\/p>","<h4>CENCA1 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 33 m<\/p> <p>Station EU code: IT2056A<\/p>","<h4>CENS16 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 275 m<\/p> <p>Station EU code: IT2009A<\/p>","<h4>CENMO1 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1993A<\/p>","<h4>CENSE0 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 736 m<\/p> <p>Station EU code: IT2011A<\/p>","<h4>CENPS6 (Carbonia-Iglesias)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 16 m<\/p> <p>Station EU code: IT1575A<\/p>","<h4>CENPS7 (Carbonia-Iglesias)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT1576A<\/p>","<h4>CENMA1 (Nuoro)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 532 m<\/p> <p>Station EU code: IT1996A<\/p>"],null,null,null,["Vinchio - San Michele","Ivrea - Liberazione","Biella - Sturzo","Alessandria - Volta","Vercelli - CONI","Verbania - Gabardi","Cuneo - Alpini","Borgosesia - Tonella","Settimo T. - Vivaldi","AOSTA (PIAZZA PLOUVES)","Aosta Liconi","DALMiNE - Via Verdi","SORESINA","VARESE - VIA COPELLI","CREMONA - P.ZZA CADORNA","SONDRIO - VIA PARIBELLI","LODI S.ALBERTO","SARONNO - SANTUARIO","BERGAMO - VIA MEUCCI","MILANO PASCAL CITTà STUDI","MONZA - VIA  MACHIAVELLI","COMO - VIALE CATTANEO","MOGGIO","LECCO VIA SORA","SCHIVENOGLIA","MANTOVA SANT'AGNESE","MERATE","CALUSCO","MILANO - SENATO","PONTI SUL MINCIO","CASIRATE D'ADDA","BRESCIA - BROLETTO","SANNAZZARO","TREVIGLIO","LA1 Laces","LS1 Laives","ROVERETO LGP","BORGO VAL","TRENTO PSC","VE - Malcontenta","TV - Via Lancieri di Novara","AREA FELTRINA","SAN DONA' DI PIAVE","BASSANO DEL GRAPPA","PD - Mandria","ESTE","VILLA FULVIA","S. LAZZARO","SAN CLEMENTE","PORTA SAN FELICE","GHERARDI","OSTELLATO","PARCO MONTECUCCO","BADIA","PARCO FERRARI","GAVELLO","BALLIRANA","BESENZONE","SAN ROCCO","CASTELLUCCIO","CITTADELLA","SAN PIETRO CAPOFIUME","GIARDINI MARGHERITA","MARECCHIA","PARCO RESISTENZA","CASTELLARANO","CAORLE","PARCO EDILCARANI","PARCO BERTOZZI","CAIROLI","Pordenone Centro 1","GR-URSS","SI-POGGIBONSI","PO-ROMA","FI-GRAMSCI","FI-BASSI","PI-PASSI","LI-CARDUCCI","PT-MONTALE","AR-ACROPOLI","LI-CAPPIELLO","LU-VIAREGGIO","LU-CAPANNORI","PO-FERRUCCI","MS-MARINA-VECCHIA","PI-BORGHETTO","C Castello","PIAZZA 40 MARTIRI","CORTONESE","Le Grazie","Magione","FONTIVEGGE1","Piazza Vittoria","CARRARA","PORTA ROMANA","Amelia","Ciconia2","CASTEL DI GUIDO","VILLA ADA","ARENULA","MALAGROTTA","CASSINO","LATINA SCALO","TENUTA DEL CAVALIERE","ACQUAPENDENTE","FROSINONE MAZZINI","CIPRO","VITERBO","LEONESSA","RIETI","GUIDONIA","C.SO FRANCIA","Taranto CISI","taranto MACHIAVELLI","taranto ADIGE","Ceglie Messapica","Torchiarolo ENEL","TORCHIAROLO","Priolo","Battipaglia parco fiume","VIGGIANO - COSTA MOLINA SUD 1","CENCA1","CENS16","CENMO1","CENSE0","CENPS6","CENPS7","CENMA1"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[45.13911,45.00687,45.15464,44.89422,45.56911,45.40973,45.07585,44.70371,44.38175,44.90661,45.93034,45.4512,44.76335,45.1432,45.32842,45.71317,45.17577,45.04188,44.9203,45.31891,45.03478,45.73583,45.5966,45.734306,45.305278,45.185556,45.62058256,45.30278678,45.54667,45.235,45.158611,45.626944,45.58288714,45.47833,45.816944,45.44917,46.470278,45.193889,45.80444,46.137222,45.849444,45.142222,45.69795956,45.040833,45.518333,45.160556,45.84083,45.849444,45.695687,45.53861,45.16444,45.36722,45.469722,46.13167,45.504722,45.683333,45.329444,45.000278,45.61667,45.495556,45.83611,45.54083,45.63944,46.167222,45.873889,45.279167,45.63306,45.809444,44.92467,45.5476,45.282778,45.114444,46.66222,46.5,46.71528,46.79734,46.49528,46.08253,46.06293,46.05184,46.10434,45.89244,45.039722,45.890556,45.183611,45.60028,45.103889,45.429444,45.54583,45.43333,45.53636,45.499167,45.438333,45.07472,45.371944,46.14139,45.466389,46.030833,46.1625,45.714444,45.29,45.630278,45.44528,45.836944,45.560556,45.760833,45.6725,45.4,45.226667,45.59,45.848333,45.04667,45.43301,45.65877,44.49972,44.662222,44.53944,44.839722,44.741667,44.65061,44.926111,44.79943,44.989444,44.873056,44.8425,44.78833,44.54121,44.05222,44.92784,44.825,44.700278,44.285612,42.77861,43.47278,43.94083,43.52,43.86889,43.840833,44.00555,43.247778,43.71389,43.91611,42.939167,43.738889,43.87472,43.46111,43.883889,43.87278,43.84389,43.4625,43.66028,43.75694,44.078333,43.713056,43.78583,43.77306,43.78667,43.789167,42.67056,43.79306,42.93194,43.3378,43.5689,43.83281,44.0311,42.7625,43.456944,43.133056,43.10306,43.10444,43.08889,43.35278,42.58194,42.56,43.06694,42.55222,42.73972,42.95167,42.53417,42.551944,42.737222,41.875556,42.74472,42.09944,41.906389,41.889444,41.932778,41.531389,41.857778,41.62,41.9475,42.5725,41.73,41.88306,41.86417,41.67,41.886111,41.947778,41.49,41.893889,41.91028,41.79778,42.42194,41.595278,42.40417,41.463889,41.75,41.69,41.57,42.157778,42.091667,41.99556,41.730833,41.725,42.09417,41.22306,41.774849,42.086803,42.09705,40.41194,40.48861,40.52111,40.494444,40.48806,40.64583,40.59194,40.64917,37.156119,37.564125,37.09125,37.2184,37.515714,37.102472,37.977911,38.050162,37.182374,41.566944,41.557778,40.86369,40.84936,40.87234,40.69536,40.314068,40.9841,40.315619,39.226944,39.260556,39.286389,39.07,39.885278,40.71028,39.8425,40.9275,40.831389,39.203333,40.72444,40.256389,39.235833,40.928333,39.232778,39.17722,40.815,40.23722,39.208611,40.575],[7.05006,7.54963,7.65804,8.19756,8.18761,8.786132,7.67822,8.03328,7.5382,8.612,8.56548,7.87804,9.05243,7.77818,8.41514,8.28353,7.5602,7.62593,8.6232,8.40236,6.83592,7.32417,7.76643,7.329645,9.485556,9.146944,9.6115435,9.49528589,8.84861,9.66694,9.698333,9.024167,8.83449244,9.23583,8.820278,9.1825,10.3725,9.164722,9.08361,9.385,9.395833,10.045833,9.40619194,8.915,9.591389,10.795556,9.34889,9.395833,9.661667,10.23194,10.78194,9.705,9.198056,9.56639,10.313056,9.466667,9.414722,9.009444,8.75,9.191389,8.80417,10.22361,10.38583,9.870556,10.1775,10.007222,9.55639,9.222778,10.5172,9.16698,8.989444,8.875,11.16194,11.34222,11.65444,11.94403,11.34028,10.95804,11.1262,11.45389,11.11023,11.03941,11.791111,12.308056,11.311389,11.90222,11.553333,12.313889,11.53417,11.89056,11.293281,12.262222,12.205556,11.78333,11.841944,12.21694,11.387222,11.905833,12.360833,11.368611,11.643056,12.591667,10.96389,12.510278,11.539722,11.736667,12.238611,11.28611,11.665833,11.03778,11.569167,12.06194,11.0301,12.2161,11.32833,11.639444,10.79139,11.961111,11.942222,10.90633,10.370833,10.88365,10.019167,10.663889,11.61306,10.33667,10.8189,12.57556,11.17795,11.649722,10.622778,11.873396,11.11917,11.14194,10.90528,10.321667,10.45361,10.573889,10.55988,10.881667,10.41056,11.00694,10.534167,10.401667,11.10528,11.88889,10.245,11.09194,10.51222,11.87667,11.90167,11.19278,10.097222,10.771667,11.23139,11.27222,11.2875,11.323889,11.09417,11.09778,10.52417,11.325,10.3327,10.50048,10.13276,11.11,12.245833,12.205833,12.36611,12.37472,12.44194,12.57639,12.62361,12.65083,12.46806,12.65167,12.73722,12.70778,12.52194,12.419722,12.136667,12.345,11.865,11.79806,12.4475,12.266389,12.506944,12.946111,12.568611,13.33083,12.46972,12.961944,13.33833,12.50889,12.46944,13.674444,12.541667,12.533611,13.83056,12.475278,12.54889,12.60694,12.10917,12.653611,12.85833,12.913056,13.149722,13.25028,13.33722,11.908611,11.8025,12.72639,13.004444,13.009444,11.79556,13.57028,12.223413,11.806498,11.78835,17.28389,17.22583,17.20417,17.263611,18.05361,17.96055,17.11583,17.5125,15.190867,14.281463,15.286222,15.2205,15.010788,15.265639,13.687987,13.11859,15.128831,14.672778,14.663333,14.25451,14.23111,14.27547,14.77751,15.90458,15.639965,15.9548,8.995833,9.136389,9.011389,9.016667,8.605278,8.55139,9.216389,9.491667,8.405278,8.386111,8.57611,8.773056,9.115,9.501667,9.188056,8.43028,8.360278,9.0325,8.39,9.69444],null,null,"NO2",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<h4>Susa - Repubblica (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 499 m<\/p> <p>Station EU code: IT1114A<\/p>","<h4>Orbassano - Gozzano (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 268 m<\/p> <p>Station EU code: IT1120A<\/p>","<h4>Borgaro T. - Caduti (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 257 m<\/p> <p>Station EU code: IT1128A<\/p>","<h4>Asti - Baussano (Asti)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 119 m<\/p> <p>Station EU code: IT1903A<\/p>","<h4>Cossato - Pace (Biella)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 271 m<\/p> <p>Station EU code: IT1246A<\/p>","<h4>Cerano - Bagno (Novara)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 124 m<\/p> <p>Station EU code: IT1509A<\/p>","<h4>Torino - Consolata (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 243 m<\/p> <p>Station EU code: IT0469A<\/p>","<h4>Alba - Tanaro (Cuneo)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 164 m<\/p> <p>Station EU code: IT1524A<\/p>","<h4>Cuneo - Alpini (Cuneo)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 550 m<\/p> <p>Station EU code: IT1529A<\/p>","<h4>Alessandria - D'Annunzio (Alessandria)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 95 m<\/p> <p>Station EU code: IT0643A<\/p>","<h4>Verbania - Gabardi (Verbano-Cusio-Ossola)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 203 m<\/p> <p>Station EU code: IT1510A<\/p>","<h4>Ivrea - Liberazione (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 240 m<\/p> <p>Station EU code: IT1788A<\/p>","<h4>Dernice - Costa (Alessandria)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 620 m<\/p> <p>Station EU code: IT1904A<\/p>","<h4>Settimo T. - Vivaldi (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 202 m<\/p> <p>Station EU code: IT1130A<\/p>","<h4>Vercelli - Gastaldi (Vercelli)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 130 m<\/p> <p>Station EU code: IT1533A<\/p>","<h4>Borgosesia - Tonella (Vercelli)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 344 m<\/p> <p>Station EU code: IT1532A<\/p>","<h4>Druento - La Mandria (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 335 m<\/p> <p>Station EU code: IT1121A<\/p>","<h4>Torino - Rubino (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 260 m<\/p> <p>Station EU code: IT1877A<\/p>","<h4>Alessandria - Volta (Alessandria)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 91 m<\/p> <p>Station EU code: IT1830A<\/p>","<h4>Vercelli - CONI (Vercelli)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 131 m<\/p> <p>Station EU code: IT1878A<\/p>","<h4>Oulx - Roma (Torino)<\/h4><p>Regione: PIEMONTE<\/p><p>Altitudine: 1077 m<\/p> <p>Station EU code: IT1847A<\/p>","<h4>AOSTA (PIAZZA PLOUVES) (Aosta)<\/h4><p>Regione: VALLE AOSTA<\/p><p>Altitudine: 581 m<\/p> <p>Station EU code: IT0983A<\/p>","<h4>DONNAS (Aosta)<\/h4><p>Regione: VALLE AOSTA<\/p><p>Altitudine: 371 m<\/p> <p>Station EU code: IT0988A<\/p>","<h4>Aosta Liconi (Aosta)<\/h4><p>Regione: VALLE AOSTA<\/p><p>Altitudine: 583 m<\/p> <p>Station EU code: IT2233A<\/p>","<h4>LODI Vignati (Lodi)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 80 m<\/p> <p>Station EU code: IT1286A<\/p>","<h4>PAVIA - P.ZZA MINERVA (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 77 m<\/p> <p>Station EU code: IT1104A<\/p>","<h4>OSIO SOTTO (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 182 m<\/p> <p>Station EU code: IT1463A<\/p>","<h4>LODI S.ALBERTO (Lodi)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 76 m<\/p> <p>Station EU code: IT1965A<\/p>","<h4>ARCONATE (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 184 m<\/p> <p>Station EU code: IT1203A<\/p>","<h4>BERTONICO (Lodi)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 63 m<\/p> <p>Station EU code: IT1964A<\/p>","<h4>CODOGNO (Lodi)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 58 m<\/p> <p>Station EU code: IT1287A<\/p>","<h4>SARONNO - SANTUARIO (Varese)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 212 m<\/p> <p>Station EU code: IT1650A<\/p>","<h4>BUSTO ARSIZIO - ACCAM (Varese)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 206 m<\/p> <p>Station EU code: IT1459A<\/p>","<h4>MILANO PASCAL CITTà STUDI (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT1692A<\/p>","<h4>VARESE - VIA COPELLI (Varese)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 388 m<\/p> <p>Station EU code: IT1588A<\/p>","<h4>MILANO - V.LE LIGURIA (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT0761A<\/p>","<h4>BORMIO (Sondrio)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 1225 m<\/p> <p>Station EU code: IT0908A<\/p>","<h4>PAVIA - VIA FOLPERTI (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 77 m<\/p> <p>Station EU code: IT0912A<\/p>","<h4>COMO - VIALE CATTANEO (Como)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 201 m<\/p> <p>Station EU code: IT0771A<\/p>","<h4>COLICO (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 228 m<\/p> <p>Station EU code: IT0775A<\/p>","<h4>LECCO VIA AMENDOLA (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 214 m<\/p> <p>Station EU code: IT0776A<\/p>","<h4>CREMONA VIA FATEBENEFRATELLI (Cremona)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 45 m<\/p> <p>Station EU code: IT1739A<\/p>","<h4>MERATE (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 292 m<\/p> <p>Station EU code: IT0777A<\/p>","<h4>CORNALE (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 74 m<\/p> <p>Station EU code: IT1736A<\/p>","<h4>TREVIGLIO (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 125 m<\/p> <p>Station EU code: IT0778A<\/p>","<h4>MANTOVA SANT'AGNESE (Mantova)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT1868A<\/p>","<h4>VALMADRERA (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 237 m<\/p> <p>Station EU code: IT1734A<\/p>","<h4>LECCO VIA SORA (Lecco)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 267 m<\/p> <p>Station EU code: IT1826A<\/p>","<h4>BERGAMO - VIA GARIBALDI (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 249 m<\/p> <p>Station EU code: IT0997A<\/p>","<h4>BRESCIA - VIA TURATI (Brescia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 170 m<\/p> <p>Station EU code: IT1251A<\/p>","<h4>MANTOVA - piazza GRAMSCI (Mantova)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 19 m<\/p> <p>Station EU code: IT1869A<\/p>","<h4>CREMA (Cremona)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 79 m<\/p> <p>Station EU code: IT0839A<\/p>","<h4>MILANO - SENATO (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT1016A<\/p>","<h4>MORBEGNO (Sondrio)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 262 m<\/p> <p>Station EU code: IT1190A<\/p>","<h4>REZZATO (Brescia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 147 m<\/p> <p>Station EU code: IT0846A<\/p>","<h4>CALUSCO (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 273 m<\/p> <p>Station EU code: IT1876A<\/p>","<h4>TAVAZZANO (Lodi)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 80 m<\/p> <p>Station EU code: IT0267A<\/p>","<h4>VOGHERA - VIA POZZONI (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 90 m<\/p> <p>Station EU code: IT1735A<\/p>","<h4>FERNO (Varese)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 215 m<\/p> <p>Station EU code: IT1873A<\/p>","<h4>MILANO - V.LE MARCHE (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 122 m<\/p> <p>Station EU code: IT0477A<\/p>","<h4>VARESE - VIA VIDOLETTI (Varese)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 382 m<\/p> <p>Station EU code: IT0732A<\/p>","<h4>BRESCIA - BROLETTO (Brescia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 149 m<\/p> <p>Station EU code: IT0594A<\/p>","<h4>ODOLO (Brescia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 345 m<\/p> <p>Station EU code: IT0742A<\/p>","<h4>SONDRIO - VIA MAZZINI (Sondrio)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 307 m<\/p> <p>Station EU code: IT0906A<\/p>","<h4>DARFO_2 (Brescia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 226 m<\/p> <p>Station EU code: IT1385A<\/p>","<h4>CORTE DEI CORTESI (Cremona)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT0842A<\/p>","<h4>FILAGO (Bergamo)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 190 m<\/p> <p>Station EU code: IT0837A<\/p>","<h4>ERBA- Via Battisti (Como)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 323 m<\/p> <p>Station EU code: IT2007A<\/p>","<h4>VIADANA (Mantova)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 26 m<\/p> <p>Station EU code: IT2230A<\/p>","<h4>Cormano-Edison (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 155 m<\/p> <p>Station EU code: IT2232A<\/p>","<h4>MOTTA VISCONTI (Milano)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 100 m<\/p> <p>Station EU code: IT1174A<\/p>","<h4>FERRERA ERBOGNONE - Eni (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 88 m<\/p> <p>Station EU code: IT1746A<\/p>","<h4>ME1 Merano (Bolzano)<\/h4><p>Regione: PA BOLZANO<\/p><p>Altitudine: 297 m<\/p> <p>Station EU code: IT1335A<\/p>","<h4>BZ6 Via Amba Alagi (Bolzano)<\/h4><p>Regione: PA BOLZANO<\/p><p>Altitudine: 260 m<\/p> <p>Station EU code: IT2096A<\/p>","<h4>BX1 Bressanone (Bolzano)<\/h4><p>Regione: PA BOLZANO<\/p><p>Altitudine: 564 m<\/p> <p>Station EU code: IT0507A<\/p>","<h4>BR1 Brunico (Bolzano)<\/h4><p>Regione: PA BOLZANO<\/p><p>Altitudine: 830 m<\/p> <p>Station EU code: IT0508A<\/p>","<h4>BZ5 piazza Adriano (Bolzano)<\/h4><p>Regione: PA BOLZANO<\/p><p>Altitudine: 260 m<\/p> <p>Station EU code: IT1334A<\/p>","<h4>MONTE GAZA (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 1601 m<\/p> <p>Station EU code: IT1191A<\/p>","<h4>TRENTO PSC (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 203 m<\/p> <p>Station EU code: IT1037A<\/p>","<h4>BORGO VAL (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 380 m<\/p> <p>Station EU code: IT0703A<\/p>","<h4>TRENTO VBZ (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 197 m<\/p> <p>Station EU code: IT1859A<\/p>","<h4>ROVERETO LGP (Trento)<\/h4><p>Regione: PA TRENTO<\/p><p>Altitudine: 200 m<\/p> <p>Station EU code: IT0591A<\/p>","<h4>RO - Borsea (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1214A<\/p>","<h4>CONEGLIANO (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 72 m<\/p> <p>Station EU code: IT1328A<\/p>","<h4>LEGNAGO (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT1535A<\/p>","<h4>ALTA PADOVANA (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT2071A<\/p>","<h4>BADIA POLESINE (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 6 m<\/p> <p>Station EU code: IT2072A<\/p>","<h4>VE - Sacca Fisola (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT0448A<\/p>","<h4>VI - San Felice (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 35 m<\/p> <p>Station EU code: IT1838A<\/p>","<h4>PD - Arcella (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 11 m<\/p> <p>Station EU code: IT1880A<\/p>","<h4>CHIAMPO (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 200 m<\/p> <p>Station EU code: IT1833A<\/p>","<h4>VE - Parco Bissuola (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT0963A<\/p>","<h4>VE - Malcontenta (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT1936A<\/p>","<h4>RO - Largo Martiri (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 7 m<\/p> <p>Station EU code: IT1215A<\/p>","<h4>PD - Mandria (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT1453A<\/p>","<h4>BL - Parco Città di Bologna (Belluno)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 401 m<\/p> <p>Station EU code: IT1594A<\/p>","<h4>MONTEBELLO VICENTINO (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT1172A<\/p>","<h4>AREA FELTRINA (Belluno)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 263 m<\/p> <p>Station EU code: IT1619A<\/p>","<h4>PIEVE D'ALPAGO (Belluno)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 615 m<\/p> <p>Station EU code: IT1790A<\/p>","<h4>SCHIO (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 190 m<\/p> <p>Station EU code: IT0663A<\/p>","<h4>PARCO COLLI EUGANEI (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT1870A<\/p>","<h4>SAN DONA' DI PIAVE (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1222A<\/p>","<h4>VR - Borgo Milano (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 62 m<\/p> <p>Station EU code: IT1336A<\/p>","<h4>MANSUE' (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 14 m<\/p> <p>Station EU code: IT1596A<\/p>","<h4>VI - Quartiere Italia (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 36 m<\/p> <p>Station EU code: IT1177A<\/p>","<h4>BASSANO DEL GRAPPA (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 114 m<\/p> <p>Station EU code: IT1065A<\/p>","<h4>TV - Via Lancieri di Novara (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1590A<\/p>","<h4>SAN BONIFACIO (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 30 m<\/p> <p>Station EU code: IT1340A<\/p>","<h4>ESTE (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 12 m<\/p> <p>Station EU code: IT1871A<\/p>","<h4>BOSCOCHIESANUOVA (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 824 m<\/p> <p>Station EU code: IT1848A<\/p>","<h4>ASIAGO - CIMA EKAR (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1366 m<\/p> <p>Station EU code: IT1791A<\/p>","<h4>ADRIA (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT1213A<\/p>","<h4>VR- Giarol Grande (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT2243A<\/p>","<h4>TV - Strada S. Agnese (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT2231A<\/p>","<h4>PORTA SAN FELICE (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 54 m<\/p> <p>Station EU code: IT1159A<\/p>","<h4>SAN PIETRO CAPOFIUME (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 11 m<\/p> <p>Station EU code: IT1451A<\/p>","<h4>PARCO EDILCARANI (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 118 m<\/p> <p>Station EU code: IT2073A<\/p>","<h4>GHERARDI (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: -2 m<\/p> <p>Station EU code: IT1179A<\/p>","<h4>OSTELLATO (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 0 m<\/p> <p>Station EU code: IT1919A<\/p>","<h4>PARCO FERRARI (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 34 m<\/p> <p>Station EU code: IT1771A<\/p>","<h4>SARAGAT (Parma)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 30 m<\/p> <p>Station EU code: IT1910A<\/p>","<h4>REMESINA (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT1152A<\/p>","<h4>BESENZONE (Piacenza)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT1924A<\/p>","<h4>SAN ROCCO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT1914A<\/p>","<h4>ISONZO (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 8 m<\/p> <p>Station EU code: IT0187A<\/p>","<h4>MONTEBELLO (Parma)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 55 m<\/p> <p>Station EU code: IT1105A<\/p>","<h4>SAN FRANCESCO (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 131 m<\/p> <p>Station EU code: IT1920A<\/p>","<h4>FLAMINIA (Rimini)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1044A<\/p>","<h4>GAVELLO (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT1921A<\/p>","<h4>VILLA FULVIA (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 9 m<\/p> <p>Station EU code: IT1918A<\/p>","<h4>TIMAVO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 59 m<\/p> <p>Station EU code: IT2156A<\/p>","<h4>PARCO BERTOZZI (Ravenna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 35 m<\/p> <p>Station EU code: IT2209A<\/p>","<h4>GR-URSS (Grosseto)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1593A<\/p>","<h4>SI-POGGIBONSI (Siena)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 105 m<\/p> <p>Station EU code: IT2032A<\/p>","<h4>PT-SIGNORELLI (Pistoia)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 80 m<\/p> <p>Station EU code: IT1571A<\/p>","<h4>LI-CAPPIELLO (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT1557A<\/p>","<h4>LU-CARIGNANO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 120 m<\/p> <p>Station EU code: IT1644A<\/p>","<h4>LU-CAPANNORI (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1187A<\/p>","<h4>LU-FORNOLI (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 130 m<\/p> <p>Station EU code: IT2239A<\/p>","<h4>PI-MONTECERBOLI (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 353 m<\/p> <p>Station EU code: IT1149A<\/p>","<h4>PI-BORGHETTO (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 5 m<\/p> <p>Station EU code: IT1409A<\/p>","<h4>PT-MONTALE (Pistoia)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT1553A<\/p>","<h4>LI-COTONE (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 37 m<\/p> <p>Station EU code: IT0063A<\/p>","<h4>PI-PASSI (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 5 m<\/p> <p>Station EU code: IT1110A<\/p>","<h4>PO-FERRUCCI (Prato)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 62 m<\/p> <p>Station EU code: IT0945A<\/p>","<h4>AR-ACROPOLI (Arezzo)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 260 m<\/p> <p>Station EU code: IT0950A<\/p>","<h4>LU-VIAREGGIO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1186A<\/p>","<h4>PO-ROMA (Prato)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 54 m<\/p> <p>Station EU code: IT1654A<\/p>","<h4>LU-MICHELETTO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1001A<\/p>","<h4>AR-REPUBBLICA (Arezzo)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 256 m<\/p> <p>Station EU code: IT0832A<\/p>","<h4>AR-CASA-STABBI (Arezzo)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 650 m<\/p> <p>Station EU code: IT1681A<\/p>","<h4>FI-SCANDICCI (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 45 m<\/p> <p>Station EU code: IT1551A<\/p>","<h4>MS-COLOMBAROTTO (Massa Carrara)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 98 m<\/p> <p>Station EU code: IT1819A<\/p>","<h4>PI-SANTA-CROCE-COOP (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 16 m<\/p> <p>Station EU code: IT1071A<\/p>","<h4>FI-MOSSE (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT0860A<\/p>","<h4>FI-GRAMSCI (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 49 m<\/p> <p>Station EU code: IT0861A<\/p>","<h4>FI-BASSI (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT0862A<\/p>","<h4>FI-SETTIGNANO (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 195 m<\/p> <p>Station EU code: IT0883A<\/p>","<h4>GR-MAREMMA (Grosseto)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 40 m<\/p> <p>Station EU code: IT1942A<\/p>","<h4>FI-SIGNA (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT2153A<\/p>","<h4>LI-PIOMBINO-PARCO-VIII-MARZO (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 40 m<\/p> <p>Station EU code: IT2154A<\/p>","<h4>SI-BRACCI (Siena)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 316 m<\/p> <p>Station EU code: IT2184A<\/p>","<h4>LI-LA-PIRA (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 8 m<\/p> <p>Station EU code: IT2183A<\/p>","<h4>LU-SAN-CONCORDIO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT2240A<\/p>","<h4>MS-MARINA-VECCHIA (Massa Carrara)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 42 m<\/p> <p>Station EU code: IT2241A<\/p>","<h4>GR-SONNINO (Grosseto)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1592A<\/p>","<h4>C Castello (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 284 m<\/p> <p>Station EU code: IT2105A<\/p>","<h4>Magione (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 242 m<\/p> <p>Station EU code: IT2100A<\/p>","<h4>CORTONESE (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 290 m<\/p> <p>Station EU code: IT1180A<\/p>","<h4>FONTIVEGGE1 (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 305 m<\/p> <p>Station EU code: IT2004A<\/p>","<h4>P.S.GIOVANNI (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 197 m<\/p> <p>Station EU code: IT1182A<\/p>","<h4>PIAZZA 40 MARTIRI (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 498 m<\/p> <p>Station EU code: IT1901A<\/p>","<h4>BORGO RIVO (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 156 m<\/p> <p>Station EU code: IT1365A<\/p>","<h4>CARRARA (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 128 m<\/p> <p>Station EU code: IT1011A<\/p>","<h4>BRUFA (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 209 m<\/p> <p>Station EU code: IT1902A<\/p>","<h4>Le Grazie (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 138 m<\/p> <p>Station EU code: IT1728A<\/p>","<h4>Piazza Vittoria (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 319 m<\/p> <p>Station EU code: IT1860A<\/p>","<h4>PORTA ROMANA (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 234 m<\/p> <p>Station EU code: IT1900A<\/p>","<h4>Narni Scalo (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 95 m<\/p> <p>Station EU code: IT2134A<\/p>","<h4>Amelia (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 329 m<\/p> <p>Station EU code: IT2109A<\/p>","<h4>Ciconia2 (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 143 m<\/p> <p>Station EU code: IT2113A<\/p>","<h4>MALAGROTTA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 55 m<\/p> <p>Station EU code: IT2012A<\/p>","<h4>ACQUAPENDENTE (Viterbo)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 420 m<\/p> <p>Station EU code: IT2023A<\/p>","<h4>Civitavecchia- Villa Albani (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: -9999 m<\/p> <p>Station EU code: IT2172A<\/p>","<h4>CIPRO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 31 m<\/p> <p>Station EU code: IT1836A<\/p>","<h4>CASTEL DI GUIDO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT0952A<\/p>","<h4>VILLA ADA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 50 m<\/p> <p>Station EU code: IT0953A<\/p>","<h4>LATINA SCALO (Latina)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT1184A<\/p>","<h4>CINECITTA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 53 m<\/p> <p>Station EU code: IT0956A<\/p>","<h4>FROSINONE SCALO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 161 m<\/p> <p>Station EU code: IT1200A<\/p>","<h4>C.SO FRANCIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 43 m<\/p> <p>Station EU code: IT0825A<\/p>","<h4>LEONESSA (Rieti)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 948 m<\/p> <p>Station EU code: IT0989A<\/p>","<h4>ALATRI (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 445 m<\/p> <p>Station EU code: IT0991A<\/p>","<h4>L.GO MAGNA GRECIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 49 m<\/p> <p>Station EU code: IT0828A<\/p>","<h4>FERMI (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 26 m<\/p> <p>Station EU code: IT1837A<\/p>","<h4>FONTECHIARI (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 388 m<\/p> <p>Station EU code: IT0992A<\/p>","<h4>L.GO PERESTRELLO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 37 m<\/p> <p>Station EU code: IT1176A<\/p>","<h4>BUFALOTTA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT1835A<\/p>","<h4>CASSINO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT1183A<\/p>","<h4>ARENULA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 31 m<\/p> <p>Station EU code: IT1906A<\/p>","<h4>TIBURTINA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 32 m<\/p> <p>Station EU code: IT1834A<\/p>","<h4>CIAMPINO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 134 m<\/p> <p>Station EU code: IT1841A<\/p>","<h4>VITERBO (Viterbo)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 338 m<\/p> <p>Station EU code: IT0863A<\/p>","<h4>APRILIA 2 (Latina)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 83 m<\/p> <p>Station EU code: IT0865A<\/p>","<h4>RIETI (Rieti)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 397 m<\/p> <p>Station EU code: IT0867A<\/p>","<h4>LT TASSO (Latina)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 21 m<\/p> <p>Station EU code: IT0869A<\/p>","<h4>ANAGNI (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 401 m<\/p> <p>Station EU code: IT0870A<\/p>","<h4>FERENTINO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 316 m<\/p> <p>Station EU code: IT0871A<\/p>","<h4>CECCANO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 130 m<\/p> <p>Station EU code: IT0872A<\/p>","<h4>ALLUMIERE (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 542 m<\/p> <p>Station EU code: IT0884A<\/p>","<h4>CIVITAVECCHIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 26 m<\/p> <p>Station EU code: IT0885A<\/p>","<h4>GUIDONIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 89 m<\/p> <p>Station EU code: IT0887A<\/p>","<h4>COLLEFERRO OBERDAN (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 219 m<\/p> <p>Station EU code: IT0888A<\/p>","<h4>COLLEFERRO EUROPA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 223 m<\/p> <p>Station EU code: IT0889A<\/p>","<h4>Civitavecchia- via Roma (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: -9999 m<\/p> <p>Station EU code: IT2171A<\/p>","<h4>Gaeta Porto (Latina)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: -9999 m<\/p> <p>Station EU code: IT2173A<\/p>","<h4>Fiumicino Porto (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT2246A<\/p>","<h4>Civitavecchia via Morandi (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT2265A<\/p>","<h4>Civitavecchia Porto (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 6 m<\/p> <p>Station EU code: IT2264A<\/p>","<h4>TALSANO (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1614A<\/p>","<h4>taranto MACHIAVELLI (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1611A<\/p>","<h4>Taranto CISI (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1609A<\/p>","<h4>taranto ADIGE (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1613A<\/p>","<h4>TORCHIAROLO (Brindisi)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1658A<\/p>","<h4>TERMINAL PASSEGGERI (Brindisi)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 20 m<\/p> <p>Station EU code: IT2139A<\/p>","<h4>Massafra (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 118 m<\/p> <p>Station EU code: IT2021A<\/p>","<h4>Ceglie Messapica (Brindisi)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 100 m<\/p> <p>Station EU code: IT2148A<\/p>","<h4>Priolo (Siracusa)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 35 m<\/p> <p>Station EU code: IT0614A<\/p>","<h4>Enna (Enna)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 925 m<\/p> <p>Station EU code: IT1890A<\/p>","<h4>SR - Verga (Siracusa)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 62 m<\/p> <p>Station EU code: IT1346A<\/p>","<h4>Augusta (Siracusa)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT0618A<\/p>","<h4>Misterbianco (Catania)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 160 m<\/p> <p>Station EU code: IT1899A<\/p>","<h4>SR - Via Gela (Siracusa)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 60 m<\/p> <p>Station EU code: IT0620A<\/p>","<h4>Termini Imerese (Palermo)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 101 m<\/p> <p>Station EU code: IT1889A<\/p>","<h4>Partinico (Palermo)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 187 m<\/p> <p>Station EU code: IT1888A<\/p>","<h4>Melilli (Siracusa)<\/h4><p>Regione: SICILIA<\/p><p>Altitudine: 300 m<\/p> <p>Station EU code: IT0611A<\/p>","<h4>CAMPOBASSO4 (Campobasso)<\/h4><p>Regione: MOLISE<\/p><p>Altitudine: 726 m<\/p> <p>Station EU code: IT1799A<\/p>","<h4>CAMPOBASSO1 (Campobasso)<\/h4><p>Regione: MOLISE<\/p><p>Altitudine: 686 m<\/p> <p>Station EU code: IT1753A<\/p>","<h4>NA01 OSSERVATORIO ASTRONOMICO (Napoli)<\/h4><p>Regione: CAMPANIA<\/p><p>Altitudine: 145 m<\/p> <p>Station EU code: IT1497A<\/p>","<h4>NA02 OSPEDALE SANTOBONO (Napoli)<\/h4><p>Regione: CAMPANIA<\/p><p>Altitudine: 173 m<\/p> <p>Station EU code: IT1496A<\/p>","<h4>NA08 OSPEDALE NUOVO PELLEGRINI (Napoli)<\/h4><p>Regione: CAMPANIA<\/p><p>Altitudine: 143 m<\/p> <p>Station EU code: IT1495A<\/p>","<h4>SA23 SCUOLA OSVALDO CONTI (Salerno)<\/h4><p>Regione: CAMPANIA<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT1041A<\/p>","<h4>Viggiano (Potenza)<\/h4><p>Regione: BASILICATA<\/p><p>Altitudine: 604 m<\/p> <p>Station EU code: IT1742A<\/p>","<h4>MELFI (Potenza)<\/h4><p>Regione: BASILICATA<\/p><p>Altitudine: 561 m<\/p> <p>Station EU code: IT1193A<\/p>","<h4>VIGGIANO - COSTA MOLINA SUD 1 (Potenza)<\/h4><p>Regione: BASILICATA<\/p><p>Altitudine: 690 m<\/p> <p>Station EU code: IT2205A<\/p>","<h4>CENAS8 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 9 m<\/p> <p>Station EU code: IT1397A<\/p>","<h4>CENMO1 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1993A<\/p>","<h4>CENAS9 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 5 m<\/p> <p>Station EU code: IT2049A<\/p>","<h4>CENSA2 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT1269A<\/p>","<h4>CESGI1 (Oristano)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT2008A<\/p>","<h4>CENS12 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 192 m<\/p> <p>Station EU code: IT1243A<\/p>","<h4>CENSE0 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 736 m<\/p> <p>Station EU code: IT2011A<\/p>","<h4>CEOLB1 (Olbia-Tempio)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 17 m<\/p> <p>Station EU code: IT2005A<\/p>","<h4>CENPT1 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 16 m<\/p> <p>Station EU code: IT2010A<\/p>","<h4>CENPS7 (Carbonia-Iglesias)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT1576A<\/p>","<h4>CENS16 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 275 m<\/p> <p>Station EU code: IT2009A<\/p>","<h4>CENMA1 (Nuoro)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 532 m<\/p> <p>Station EU code: IT1996A<\/p>","<h4>CENCA1 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 33 m<\/p> <p>Station EU code: IT2056A<\/p>","<h4>CENS10 (Olbia-Tempio)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1309A<\/p>","<h4>CENQU1 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 8 m<\/p> <p>Station EU code: IT2040A<\/p>","<h4>CENPS6 (Carbonia-Iglesias)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 16 m<\/p> <p>Station EU code: IT1575A<\/p>","<h4>CENSS3 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1347A<\/p>","<h4>CENOT3 (Nuoro)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 181 m<\/p> <p>Station EU code: IT1407A<\/p>","<h4>CENPS4 (Carbonia-Iglesias)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT1273A<\/p>","<h4>CENSN1 (Nuoro)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 39 m<\/p> <p>Station EU code: IT1277A<\/p>"],null,null,null,["Susa - Repubblica","Orbassano - Gozzano","Borgaro T. - Caduti","Asti - Baussano","Cossato - Pace","Cerano - Bagno","Torino - Consolata","Alba - Tanaro","Cuneo - Alpini","Alessandria - D'Annunzio","Verbania - Gabardi","Ivrea - Liberazione","Dernice - Costa","Settimo T. - Vivaldi","Vercelli - Gastaldi","Borgosesia - Tonella","Druento - La Mandria","Torino - Rubino","Alessandria - Volta","Vercelli - CONI","Oulx - Roma","AOSTA (PIAZZA PLOUVES)","DONNAS","Aosta Liconi","LODI Vignati","PAVIA - P.ZZA MINERVA","OSIO SOTTO","LODI S.ALBERTO","ARCONATE","BERTONICO","CODOGNO","SARONNO - SANTUARIO","BUSTO ARSIZIO - ACCAM","MILANO PASCAL CITTà STUDI","VARESE - VIA COPELLI","MILANO - V.LE LIGURIA","BORMIO","PAVIA - VIA FOLPERTI","COMO - VIALE CATTANEO","COLICO","LECCO VIA AMENDOLA","CREMONA VIA FATEBENEFRATELLI","MERATE","CORNALE","TREVIGLIO","MANTOVA SANT'AGNESE","VALMADRERA","LECCO VIA SORA","BERGAMO - VIA GARIBALDI","BRESCIA - VIA TURATI","MANTOVA - piazza GRAMSCI","CREMA","MILANO - SENATO","MORBEGNO","REZZATO","CALUSCO","TAVAZZANO","VOGHERA - VIA POZZONI","FERNO","MILANO - V.LE MARCHE","VARESE - VIA VIDOLETTI","BRESCIA - BROLETTO","ODOLO","SONDRIO - VIA MAZZINI","DARFO_2","CORTE DEI CORTESI","FILAGO","ERBA- Via Battisti","VIADANA","Cormano-Edison","MOTTA VISCONTI","FERRERA ERBOGNONE - Eni","ME1 Merano","BZ6 Via Amba Alagi","BX1 Bressanone","BR1 Brunico","BZ5 piazza Adriano","MONTE GAZA","TRENTO PSC","BORGO VAL","TRENTO VBZ","ROVERETO LGP","RO - Borsea","CONEGLIANO","LEGNAGO","ALTA PADOVANA","BADIA POLESINE","VE - Sacca Fisola","VI - San Felice","PD - Arcella","CHIAMPO","VE - Parco Bissuola","VE - Malcontenta","RO - Largo Martiri","PD - Mandria","BL - Parco Città di Bologna","MONTEBELLO VICENTINO","AREA FELTRINA","PIEVE D'ALPAGO","SCHIO","PARCO COLLI EUGANEI","SAN DONA' DI PIAVE","VR - Borgo Milano","MANSUE'","VI - Quartiere Italia","BASSANO DEL GRAPPA","TV - Via Lancieri di Novara","SAN BONIFACIO","ESTE","BOSCOCHIESANUOVA","ASIAGO - CIMA EKAR","ADRIA","VR- Giarol Grande","TV - Strada S. Agnese","PORTA SAN FELICE","SAN PIETRO CAPOFIUME","PARCO EDILCARANI","GHERARDI","OSTELLATO","PARCO FERRARI","SARAGAT","REMESINA","BESENZONE","SAN ROCCO","ISONZO","MONTEBELLO","SAN FRANCESCO","FLAMINIA","GAVELLO","VILLA FULVIA","TIMAVO","PARCO BERTOZZI","GR-URSS","SI-POGGIBONSI","PT-SIGNORELLI","LI-CAPPIELLO","LU-CARIGNANO","LU-CAPANNORI","LU-FORNOLI","PI-MONTECERBOLI","PI-BORGHETTO","PT-MONTALE","LI-COTONE","PI-PASSI","PO-FERRUCCI","AR-ACROPOLI","LU-VIAREGGIO","PO-ROMA","LU-MICHELETTO","AR-REPUBBLICA","AR-CASA-STABBI","FI-SCANDICCI","MS-COLOMBAROTTO","PI-SANTA-CROCE-COOP","FI-MOSSE","FI-GRAMSCI","FI-BASSI","FI-SETTIGNANO","GR-MAREMMA","FI-SIGNA","LI-PIOMBINO-PARCO-VIII-MARZO","SI-BRACCI","LI-LA-PIRA","LU-SAN-CONCORDIO","MS-MARINA-VECCHIA","GR-SONNINO","C Castello","Magione","CORTONESE","FONTIVEGGE1","P.S.GIOVANNI","PIAZZA 40 MARTIRI","BORGO RIVO","CARRARA","BRUFA","Le Grazie","Piazza Vittoria","PORTA ROMANA","Narni Scalo","Amelia","Ciconia2","MALAGROTTA","ACQUAPENDENTE","Civitavecchia- Villa Albani","CIPRO","CASTEL DI GUIDO","VILLA ADA","LATINA SCALO","CINECITTA","FROSINONE SCALO","C.SO FRANCIA","LEONESSA","ALATRI","L.GO MAGNA GRECIA","FERMI","FONTECHIARI","L.GO PERESTRELLO","BUFALOTTA","CASSINO","ARENULA","TIBURTINA","CIAMPINO","VITERBO","APRILIA 2","RIETI","LT TASSO","ANAGNI","FERENTINO","CECCANO","ALLUMIERE","CIVITAVECCHIA","GUIDONIA","COLLEFERRO OBERDAN","COLLEFERRO EUROPA","Civitavecchia- via Roma","Gaeta Porto","Fiumicino Porto","Civitavecchia via Morandi","Civitavecchia Porto","TALSANO","taranto MACHIAVELLI","Taranto CISI","taranto ADIGE","TORCHIAROLO","TERMINAL PASSEGGERI","Massafra","Ceglie Messapica","Priolo","Enna","SR - Verga","Augusta","Misterbianco","SR - Via Gela","Termini Imerese","Partinico","Melilli","CAMPOBASSO4","CAMPOBASSO1","NA01 OSSERVATORIO ASTRONOMICO","NA02 OSPEDALE SANTOBONO","NA08 OSPEDALE NUOVO PELLEGRINI","SA23 SCUOLA OSVALDO CONTI","Viggiano","MELFI","VIGGIANO - COSTA MOLINA SUD 1","CENAS8","CENMO1","CENAS9","CENSA2","CESGI1","CENS12","CENSE0","CEOLB1","CENPT1","CENPS7","CENS16","CENMA1","CENCA1","CENS10","CENQU1","CENPS6","CENSS3","CENOT3","CENPS4","CENSN1"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addMarkers","args":[[45.040833,46.030833,45.466389,45.560556,45.714444,45.438333,45.039722,45.07472,45.499167,45.630278,46.14139,46.1625,45.59,45.890556,45.43333,45.429444,45.44528,45.4,45.371944,45.226667,45.760833,45.836944,45.183611,45.54583,45.29,45.49028,45.53636,45.6725,45.60028,45.103889,45.848333,45.04667,45.43301,45.65877,44.662222,44.839722,44.989444,44.873056,44.92784,44.741667,42.939167,42.77861,43.87472,43.46111,43.883889,43.840833,43.78583,43.77306,43.78667,43.84389,43.75694,43.713056,43.87278,43.789167,42.67056,43.738889,43.91611,43.52,43.4625,43.94083,43.47278,43.247778,44.00555,43.71389,43.86889,43.66028,44.078333,43.79306,42.93194,43.3378,43.5689,43.83281,44.0311,42.7625,43.10306,43.08889,43.133056,43.06694,42.58194,42.56,42.73972,42.55222,43.35278,42.95167,43.10444,43.456944,42.53417,42.551944,42.737222,41.886111,41.49,41.531389,41.889444,41.932778,41.62,41.91028,41.857778,42.74472,42.42194,42.5725,41.73,41.947778,41.67,42.40417,41.906389,41.86417,41.463889,41.75,41.69,41.9475,41.57,42.157778,41.88306,42.091667,41.893889,41.99556,41.730833,41.725,42.09944,41.875556,41.79778,42.09417,41.22306,40.41194,41.557778,40.314068,40.315619,40.9275,40.72444,40.831389,39.203333,40.71028,39.07,39.208611,40.575,39.885278,39.235833,40.928333,39.232778,40.815,39.17722,40.256389,39.260556,39.226944,39.286389,39.8425,40.23722],[8.915,11.905833,11.387222,11.539722,11.368611,12.205556,11.791111,11.78333,12.262222,12.591667,12.21694,12.360833,11.03778,12.308056,11.89056,12.313889,10.96389,11.28611,11.841944,11.665833,11.736667,12.510278,11.311389,11.53417,11.643056,12.21833,11.293281,12.238611,11.90222,11.553333,11.569167,12.06194,11.0301,12.2161,11.639444,11.961111,10.019167,10.663889,11.17795,11.942222,10.534167,11.11917,11.10528,11.88889,10.245,10.573889,11.23139,11.27222,11.2875,10.51222,11.19278,10.771667,11.09194,11.323889,11.09417,10.401667,11.00694,10.321667,11.87667,10.90528,11.14194,10.881667,10.55988,10.41056,10.45361,11.90167,10.097222,11.09778,10.52417,11.325,10.3327,10.50048,10.13276,11.11,12.36611,12.44194,12.205833,12.46806,12.62361,12.65083,12.73722,12.65167,12.57639,12.70778,12.37472,12.245833,12.52194,12.419722,12.136667,12.541667,13.83056,12.946111,12.266389,12.506944,13.33083,12.54889,12.568611,11.865,12.10917,12.961944,13.33833,12.533611,13.674444,12.85833,12.4475,12.46944,12.913056,13.149722,13.25028,12.46972,13.33722,11.908611,12.50889,11.8025,12.475278,12.72639,13.004444,13.009444,11.79806,12.345,12.60694,11.79556,13.57028,17.28389,14.663333,15.90458,15.9548,9.491667,8.57611,8.405278,8.386111,8.55139,9.016667,8.39,9.69444,8.605278,9.115,9.501667,9.188056,8.360278,8.43028,8.773056,9.136389,8.995833,9.011389,9.216389,9.0325],null,null,"NOx",{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["<h4>CORNALE (Pavia)<\/h4><p>Regione: LOMBARDIA<\/p><p>Altitudine: 74 m<\/p> <p>Station EU code: IT1736A<\/p>","<h4>AREA FELTRINA (Belluno)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 263 m<\/p> <p>Station EU code: IT1619A<\/p>","<h4>MONTEBELLO VICENTINO (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT1172A<\/p>","<h4>VI - Quartiere Italia (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 36 m<\/p> <p>Station EU code: IT1177A<\/p>","<h4>SCHIO (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 190 m<\/p> <p>Station EU code: IT0663A<\/p>","<h4>VE - Malcontenta (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT1936A<\/p>","<h4>RO - Borsea (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1214A<\/p>","<h4>RO - Largo Martiri (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 7 m<\/p> <p>Station EU code: IT1215A<\/p>","<h4>VE - Parco Bissuola (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT0963A<\/p>","<h4>SAN DONA' DI PIAVE (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1222A<\/p>","<h4>BL - Parco Città di Bologna (Belluno)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 401 m<\/p> <p>Station EU code: IT1594A<\/p>","<h4>PIEVE D'ALPAGO (Belluno)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 615 m<\/p> <p>Station EU code: IT1790A<\/p>","<h4>BOSCOCHIESANUOVA (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 824 m<\/p> <p>Station EU code: IT1848A<\/p>","<h4>CONEGLIANO (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 72 m<\/p> <p>Station EU code: IT1328A<\/p>","<h4>PD - Arcella (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 11 m<\/p> <p>Station EU code: IT1880A<\/p>","<h4>VE - Sacca Fisola (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT0448A<\/p>","<h4>VR - Borgo Milano (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 62 m<\/p> <p>Station EU code: IT1336A<\/p>","<h4>SAN BONIFACIO (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 30 m<\/p> <p>Station EU code: IT1340A<\/p>","<h4>PD - Mandria (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT1453A<\/p>","<h4>ESTE (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 12 m<\/p> <p>Station EU code: IT1871A<\/p>","<h4>BASSANO DEL GRAPPA (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 114 m<\/p> <p>Station EU code: IT1065A<\/p>","<h4>MANSUE' (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 14 m<\/p> <p>Station EU code: IT1596A<\/p>","<h4>LEGNAGO (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT1535A<\/p>","<h4>VI - San Felice (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 35 m<\/p> <p>Station EU code: IT1838A<\/p>","<h4>PARCO COLLI EUGANEI (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT1870A<\/p>","<h4>VE - Via Tagliamento (Venezia)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1 m<\/p> <p>Station EU code: IT1862A<\/p>","<h4>CHIAMPO (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 200 m<\/p> <p>Station EU code: IT1833A<\/p>","<h4>TV - Via Lancieri di Novara (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1590A<\/p>","<h4>ALTA PADOVANA (Padova)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT2071A<\/p>","<h4>BADIA POLESINE (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 6 m<\/p> <p>Station EU code: IT2072A<\/p>","<h4>ASIAGO - CIMA EKAR (Vicenza)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 1366 m<\/p> <p>Station EU code: IT1791A<\/p>","<h4>ADRIA (Rovigo)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT1213A<\/p>","<h4>VR- Giarol Grande (Verona)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT2243A<\/p>","<h4>TV - Strada S. Agnese (Treviso)<\/h4><p>Regione: VENETO<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT2231A<\/p>","<h4>SAN PIETRO CAPOFIUME (Bologna)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 11 m<\/p> <p>Station EU code: IT1451A<\/p>","<h4>GHERARDI (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: -2 m<\/p> <p>Station EU code: IT1179A<\/p>","<h4>BESENZONE (Piacenza)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT1924A<\/p>","<h4>SAN ROCCO (Reggio nell'Emilia)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT1914A<\/p>","<h4>GAVELLO (Modena)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT1921A<\/p>","<h4>OSTELLATO (Ferrara)<\/h4><p>Regione: EMILIA ROMAGNA<\/p><p>Altitudine: 0 m<\/p> <p>Station EU code: IT1919A<\/p>","<h4>LI-COTONE (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 37 m<\/p> <p>Station EU code: IT0063A<\/p>","<h4>GR-URSS (Grosseto)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1593A<\/p>","<h4>PO-FERRUCCI (Prato)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 62 m<\/p> <p>Station EU code: IT0945A<\/p>","<h4>AR-ACROPOLI (Arezzo)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 260 m<\/p> <p>Station EU code: IT0950A<\/p>","<h4>LU-VIAREGGIO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 3 m<\/p> <p>Station EU code: IT1186A<\/p>","<h4>LU-CAPANNORI (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1187A<\/p>","<h4>FI-MOSSE (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT0860A<\/p>","<h4>FI-GRAMSCI (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 49 m<\/p> <p>Station EU code: IT0861A<\/p>","<h4>FI-BASSI (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT0862A<\/p>","<h4>LU-MICHELETTO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1001A<\/p>","<h4>FI-SCANDICCI (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 45 m<\/p> <p>Station EU code: IT1551A<\/p>","<h4>PI-SANTA-CROCE-COOP (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 16 m<\/p> <p>Station EU code: IT1071A<\/p>","<h4>PO-ROMA (Prato)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 54 m<\/p> <p>Station EU code: IT1654A<\/p>","<h4>FI-SETTIGNANO (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 195 m<\/p> <p>Station EU code: IT0883A<\/p>","<h4>GR-MAREMMA (Grosseto)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 40 m<\/p> <p>Station EU code: IT1942A<\/p>","<h4>PI-PASSI (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 5 m<\/p> <p>Station EU code: IT1110A<\/p>","<h4>PT-MONTALE (Pistoia)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 48 m<\/p> <p>Station EU code: IT1553A<\/p>","<h4>LI-CAPPIELLO (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT1557A<\/p>","<h4>AR-REPUBBLICA (Arezzo)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 256 m<\/p> <p>Station EU code: IT0832A<\/p>","<h4>PT-SIGNORELLI (Pistoia)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 80 m<\/p> <p>Station EU code: IT1571A<\/p>","<h4>SI-POGGIBONSI (Siena)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 105 m<\/p> <p>Station EU code: IT2032A<\/p>","<h4>PI-MONTECERBOLI (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 353 m<\/p> <p>Station EU code: IT1149A<\/p>","<h4>LU-FORNOLI (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 130 m<\/p> <p>Station EU code: IT2239A<\/p>","<h4>PI-BORGHETTO (Pisa)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 5 m<\/p> <p>Station EU code: IT1409A<\/p>","<h4>LU-CARIGNANO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 120 m<\/p> <p>Station EU code: IT1644A<\/p>","<h4>AR-CASA-STABBI (Arezzo)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 650 m<\/p> <p>Station EU code: IT1681A<\/p>","<h4>MS-COLOMBAROTTO (Massa Carrara)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 98 m<\/p> <p>Station EU code: IT1819A<\/p>","<h4>FI-SIGNA (Firenze)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT2153A<\/p>","<h4>LI-PIOMBINO-PARCO-VIII-MARZO (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 40 m<\/p> <p>Station EU code: IT2154A<\/p>","<h4>SI-BRACCI (Siena)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 316 m<\/p> <p>Station EU code: IT2184A<\/p>","<h4>LI-LA-PIRA (Livorno)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 8 m<\/p> <p>Station EU code: IT2183A<\/p>","<h4>LU-SAN-CONCORDIO (Lucca)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 13 m<\/p> <p>Station EU code: IT2240A<\/p>","<h4>MS-MARINA-VECCHIA (Massa Carrara)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 42 m<\/p> <p>Station EU code: IT2241A<\/p>","<h4>GR-SONNINO (Grosseto)<\/h4><p>Regione: TOSCANA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1592A<\/p>","<h4>CORTONESE (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 290 m<\/p> <p>Station EU code: IT1180A<\/p>","<h4>P.S.GIOVANNI (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 197 m<\/p> <p>Station EU code: IT1182A<\/p>","<h4>Magione (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 242 m<\/p> <p>Station EU code: IT2100A<\/p>","<h4>BRUFA (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 209 m<\/p> <p>Station EU code: IT1902A<\/p>","<h4>BORGO RIVO (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 156 m<\/p> <p>Station EU code: IT1365A<\/p>","<h4>CARRARA (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 128 m<\/p> <p>Station EU code: IT1011A<\/p>","<h4>Piazza Vittoria (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 319 m<\/p> <p>Station EU code: IT1860A<\/p>","<h4>Le Grazie (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 138 m<\/p> <p>Station EU code: IT1728A<\/p>","<h4>PIAZZA 40 MARTIRI (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 498 m<\/p> <p>Station EU code: IT1901A<\/p>","<h4>PORTA ROMANA (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 234 m<\/p> <p>Station EU code: IT1900A<\/p>","<h4>FONTIVEGGE1 (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 305 m<\/p> <p>Station EU code: IT2004A<\/p>","<h4>C Castello (Perugia)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 284 m<\/p> <p>Station EU code: IT2105A<\/p>","<h4>Narni Scalo (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 95 m<\/p> <p>Station EU code: IT2134A<\/p>","<h4>Amelia (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 329 m<\/p> <p>Station EU code: IT2109A<\/p>","<h4>Ciconia2 (Terni)<\/h4><p>Regione: UMBRIA<\/p><p>Altitudine: 143 m<\/p> <p>Station EU code: IT2113A<\/p>","<h4>L.GO PERESTRELLO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 37 m<\/p> <p>Station EU code: IT1176A<\/p>","<h4>CASSINO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT1183A<\/p>","<h4>LATINA SCALO (Latina)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT1184A<\/p>","<h4>CASTEL DI GUIDO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 61 m<\/p> <p>Station EU code: IT0952A<\/p>","<h4>VILLA ADA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 50 m<\/p> <p>Station EU code: IT0953A<\/p>","<h4>FROSINONE SCALO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 161 m<\/p> <p>Station EU code: IT1200A<\/p>","<h4>TIBURTINA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 32 m<\/p> <p>Station EU code: IT1834A<\/p>","<h4>CINECITTA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 53 m<\/p> <p>Station EU code: IT0956A<\/p>","<h4>ACQUAPENDENTE (Viterbo)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 420 m<\/p> <p>Station EU code: IT2023A<\/p>","<h4>VITERBO (Viterbo)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 338 m<\/p> <p>Station EU code: IT0863A<\/p>","<h4>LEONESSA (Rieti)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 948 m<\/p> <p>Station EU code: IT0989A<\/p>","<h4>ALATRI (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 445 m<\/p> <p>Station EU code: IT0991A<\/p>","<h4>BUFALOTTA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 41 m<\/p> <p>Station EU code: IT1835A<\/p>","<h4>FONTECHIARI (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 388 m<\/p> <p>Station EU code: IT0992A<\/p>","<h4>RIETI (Rieti)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 397 m<\/p> <p>Station EU code: IT0867A<\/p>","<h4>CIPRO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 31 m<\/p> <p>Station EU code: IT1836A<\/p>","<h4>FERMI (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 26 m<\/p> <p>Station EU code: IT1837A<\/p>","<h4>LT TASSO (Latina)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 21 m<\/p> <p>Station EU code: IT0869A<\/p>","<h4>ANAGNI (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 401 m<\/p> <p>Station EU code: IT0870A<\/p>","<h4>FERENTINO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 316 m<\/p> <p>Station EU code: IT0871A<\/p>","<h4>C.SO FRANCIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 43 m<\/p> <p>Station EU code: IT0825A<\/p>","<h4>CECCANO (Frosinone)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 130 m<\/p> <p>Station EU code: IT0872A<\/p>","<h4>ALLUMIERE (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 542 m<\/p> <p>Station EU code: IT0884A<\/p>","<h4>L.GO MAGNA GRECIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 49 m<\/p> <p>Station EU code: IT0828A<\/p>","<h4>CIVITAVECCHIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 26 m<\/p> <p>Station EU code: IT0885A<\/p>","<h4>ARENULA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 31 m<\/p> <p>Station EU code: IT1906A<\/p>","<h4>GUIDONIA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 89 m<\/p> <p>Station EU code: IT0887A<\/p>","<h4>COLLEFERRO OBERDAN (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 219 m<\/p> <p>Station EU code: IT0888A<\/p>","<h4>COLLEFERRO EUROPA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 223 m<\/p> <p>Station EU code: IT0889A<\/p>","<h4>Civitavecchia- Villa Albani (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: -9999 m<\/p> <p>Station EU code: IT2172A<\/p>","<h4>MALAGROTTA (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 55 m<\/p> <p>Station EU code: IT2012A<\/p>","<h4>CIAMPINO (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: 134 m<\/p> <p>Station EU code: IT1841A<\/p>","<h4>Civitavecchia- via Roma (Roma)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: -9999 m<\/p> <p>Station EU code: IT2171A<\/p>","<h4>Gaeta Porto (Latina)<\/h4><p>Regione: LAZIO<\/p><p>Altitudine: -9999 m<\/p> <p>Station EU code: IT2173A<\/p>","<h4>TALSANO (Taranto)<\/h4><p>Regione: PUGLIA<\/p><p>Altitudine: 10 m<\/p> <p>Station EU code: IT1614A<\/p>","<h4>CAMPOBASSO1 (Campobasso)<\/h4><p>Regione: MOLISE<\/p><p>Altitudine: 686 m<\/p> <p>Station EU code: IT1753A<\/p>","<h4>Viggiano (Potenza)<\/h4><p>Regione: BASILICATA<\/p><p>Altitudine: 604 m<\/p> <p>Station EU code: IT1742A<\/p>","<h4>VIGGIANO - COSTA MOLINA SUD 1 (Potenza)<\/h4><p>Regione: BASILICATA<\/p><p>Altitudine: 690 m<\/p> <p>Station EU code: IT2205A<\/p>","<h4>CEOLB1 (Olbia-Tempio)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 17 m<\/p> <p>Station EU code: IT2005A<\/p>","<h4>CENS16 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 275 m<\/p> <p>Station EU code: IT2009A<\/p>","<h4>CENPT1 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 16 m<\/p> <p>Station EU code: IT2010A<\/p>","<h4>CENPS7 (Carbonia-Iglesias)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 25 m<\/p> <p>Station EU code: IT1576A<\/p>","<h4>CENS12 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 192 m<\/p> <p>Station EU code: IT1243A<\/p>","<h4>CENSA2 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 22 m<\/p> <p>Station EU code: IT1269A<\/p>","<h4>CENPS4 (Carbonia-Iglesias)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 18 m<\/p> <p>Station EU code: IT1273A<\/p>","<h4>CENSN1 (Nuoro)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 39 m<\/p> <p>Station EU code: IT1277A<\/p>","<h4>CESGI1 (Oristano)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 4 m<\/p> <p>Station EU code: IT2008A<\/p>","<h4>CENCA1 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 33 m<\/p> <p>Station EU code: IT2056A<\/p>","<h4>CENS10 (Olbia-Tempio)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1309A<\/p>","<h4>CENQU1 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 8 m<\/p> <p>Station EU code: IT2040A<\/p>","<h4>CENSS3 (Sassari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1347A<\/p>","<h4>CENPS6 (Carbonia-Iglesias)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 16 m<\/p> <p>Station EU code: IT1575A<\/p>","<h4>CENMA1 (Nuoro)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 532 m<\/p> <p>Station EU code: IT1996A<\/p>","<h4>CENMO1 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 15 m<\/p> <p>Station EU code: IT1993A<\/p>","<h4>CENAS8 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 9 m<\/p> <p>Station EU code: IT1397A<\/p>","<h4>CENAS9 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 5 m<\/p> <p>Station EU code: IT2049A<\/p>","<h4>CENSE0 (Cagliari)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 736 m<\/p> <p>Station EU code: IT2011A<\/p>","<h4>CENOT3 (Nuoro)<\/h4><p>Regione: SARDEGNA<\/p><p>Altitudine: 181 m<\/p> <p>Station EU code: IT1407A<\/p>"],null,null,null,["CORNALE","AREA FELTRINA","MONTEBELLO VICENTINO","VI - Quartiere Italia","SCHIO","VE - Malcontenta","RO - Borsea","RO - Largo Martiri","VE - Parco Bissuola","SAN DONA' DI PIAVE","BL - Parco Città di Bologna","PIEVE D'ALPAGO","BOSCOCHIESANUOVA","CONEGLIANO","PD - Arcella","VE - Sacca Fisola","VR - Borgo Milano","SAN BONIFACIO","PD - Mandria","ESTE","BASSANO DEL GRAPPA","MANSUE'","LEGNAGO","VI - San Felice","PARCO COLLI EUGANEI","VE - Via Tagliamento","CHIAMPO","TV - Via Lancieri di Novara","ALTA PADOVANA","BADIA POLESINE","ASIAGO - CIMA EKAR","ADRIA","VR- Giarol Grande","TV - Strada S. Agnese","SAN PIETRO CAPOFIUME","GHERARDI","BESENZONE","SAN ROCCO","GAVELLO","OSTELLATO","LI-COTONE","GR-URSS","PO-FERRUCCI","AR-ACROPOLI","LU-VIAREGGIO","LU-CAPANNORI","FI-MOSSE","FI-GRAMSCI","FI-BASSI","LU-MICHELETTO","FI-SCANDICCI","PI-SANTA-CROCE-COOP","PO-ROMA","FI-SETTIGNANO","GR-MAREMMA","PI-PASSI","PT-MONTALE","LI-CAPPIELLO","AR-REPUBBLICA","PT-SIGNORELLI","SI-POGGIBONSI","PI-MONTECERBOLI","LU-FORNOLI","PI-BORGHETTO","LU-CARIGNANO","AR-CASA-STABBI","MS-COLOMBAROTTO","FI-SIGNA","LI-PIOMBINO-PARCO-VIII-MARZO","SI-BRACCI","LI-LA-PIRA","LU-SAN-CONCORDIO","MS-MARINA-VECCHIA","GR-SONNINO","CORTONESE","P.S.GIOVANNI","Magione","BRUFA","BORGO RIVO","CARRARA","Piazza Vittoria","Le Grazie","PIAZZA 40 MARTIRI","PORTA ROMANA","FONTIVEGGE1","C Castello","Narni Scalo","Amelia","Ciconia2","L.GO PERESTRELLO","CASSINO","LATINA SCALO","CASTEL DI GUIDO","VILLA ADA","FROSINONE SCALO","TIBURTINA","CINECITTA","ACQUAPENDENTE","VITERBO","LEONESSA","ALATRI","BUFALOTTA","FONTECHIARI","RIETI","CIPRO","FERMI","LT TASSO","ANAGNI","FERENTINO","C.SO FRANCIA","CECCANO","ALLUMIERE","L.GO MAGNA GRECIA","CIVITAVECCHIA","ARENULA","GUIDONIA","COLLEFERRO OBERDAN","COLLEFERRO EUROPA","Civitavecchia- Villa Albani","MALAGROTTA","CIAMPINO","Civitavecchia- via Roma","Gaeta Porto","TALSANO","CAMPOBASSO1","Viggiano","VIGGIANO - COSTA MOLINA SUD 1","CEOLB1","CENS16","CENPT1","CENPS7","CENS12","CENSA2","CENPS4","CENSN1","CESGI1","CENCA1","CENS10","CENQU1","CENSS3","CENPS6","CENMA1","CENMO1","CENAS8","CENAS9","CENSE0","CENOT3"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLayersControl","args":[[],["PM10","PM2.5","NO2","NOx"],{"collapsed":true,"autoZIndex":true,"position":"topright"}]},{"method":"hideGroup","args":[["PM2.5","NO2","NOx"]]}],"limits":{"lat":[37.09125,46.79734],"lng":[6.83592,18.05361]}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
