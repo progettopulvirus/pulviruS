@@ -43,25 +43,25 @@ I `data frame` con i dati degli inquinanti contengono:
 
 ### Pacchetti con i dati 
 
-| Regione | Nome Pacchetto | pm10 | pm2.5 | no2 | nox| 
-| ---     | ---       | --   | --    | --  | -- |
-| Basilicata   | basilicata |  | x   | x   |  x |
-| Campania     | campania   |  | x   | x   |    |
-| Emilia Romagna | emiliaromagna | x | x   | x  |  x  |
-| Friuli Venezia Giulia | friuliveneziagiulia | x | x | | |
-| Lazio | lazio | | x | x | x |
-| Lombardia | lombardia | x | x | x | x |
-| Molise | molise | | | x | x |
-| Bolzano, Provincia Autonoma | pabolzano | | x | x | |
-| Trento, Provincia Autonoma | patrento | x | x | x | |
-| Piemonte | piemonte | | x | x | |
-| Puglia | puglia | | x | x | x |
-| Sardegna | sardegna | | x | x | x |
-| Sicilia  | sicilia | | x | x | |
-| Toscana  | toscana | | x | x | x |
-| Umbria   | umbria  | | x | x | x |
-| Valle d'Aosta| valleaosta | x | x | x | |
-| Veneto       | veneto | x | x | x | x |
+| Regione | Nome Pacchetto | pm10 | pm2.5 | no2 | nox| c6h6 |
+| ---     | ---       | --   | --    | --  | -- | -- |
+| Basilicata   | basilicata | x  | x   | x   |  x |
+| Campania     | campania   |  | x   | x   |    | |
+| Emilia Romagna | emiliaromagna | x | x   | x  |  x  | x |
+| Friuli Venezia Giulia | friuliveneziagiulia | x | x | | | x |
+| Lazio | lazio | x | x | x | x | |
+| Lombardia | lombardia | x | x | x | x | x |
+| Molise | molise | | | x | x | |
+| Bolzano, Provincia Autonoma | pabolzano | x | x | x | | x |
+| Trento, Provincia Autonoma | patrento | x | x | x | | x |
+| Piemonte | piemonte | x | x | x | | x |
+| Puglia | puglia | x | x | x | x | x |
+| Sardegna | sardegna | x | x | x | x | x |
+| Sicilia  | sicilia | x | x | x | | x |
+| Toscana  | toscana | x | x | x | x | |
+| Umbria   | umbria  | x | x | x | x | x |
+| Valle d'Aosta| valleaosta | x | x | x | | |
+| Veneto       | veneto | x | x | x | x | |
 
 
 

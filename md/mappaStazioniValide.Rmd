@@ -19,7 +19,7 @@ library("leaflet")
 read_delim("./assets/ana.csv",delim=";",col_names = TRUE)->ana
 
 #file con l'elenco delle stazioni valide per regione
-list.files(pattern="^stazioniValide_[np].+csv$",full.names = TRUE,path = "./assets")->ffile
+list.files(pattern="^stazioniValide_[ncp].+csv$",full.names = TRUE,path = "./assets")->ffile
 
 stopifnot(length(ffile)!=0)
 
@@ -52,13 +52,14 @@ purrr::partial(.f=addMarkers,lng=~st_x,lat=~st_y,label=~nome_stazione,popup=~tes
 icons<-awesomeIcons(icon="ios-close",iconColor = "black",library = "ion",markerColor ="yellow")
 
 leaflet() %>%
-  setView(lng=13,lat=42,zoom=6) %>%
+  setView(lng=13,lat=42,zoom=5) %>%
   leaflet::addTiles() %>%
   mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="pm10"),group="PM10") %>%
   mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="pm25"),group="PM2.5") %>%
   mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="no2"),group="NO2") %>%
   mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="nox"),group="NOx")  %>%
-  leaflet::addLayersControl(overlayGroups = c("PM10","PM2.5","NO2","NOx")) %>%
-  hideGroup(c("PM2.5","NO2","NOx")) 
+  mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="c6h6"),group="C6H6")  %>%
+  leaflet::addLayersControl(overlayGroups = c("C6H6","PM10","PM2.5","NO2","NOx"),options=layersControlOptions(collapsed=FALSE)) %>%
+  hideGroup(c("C6H6","PM2.5","NO2","NOx")) 
   
 ```
