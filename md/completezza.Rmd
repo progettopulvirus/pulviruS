@@ -35,17 +35,5 @@ Una serie e' **completa** nel periodo 2013-2019 se:
   - nel periodo 2016 - 2019 tutti gli anni sono validi (quindi la disponibilita' di dati nel periodo 2013-2015 non e' un elemnto fondamentale per selezionare o meno una serie)
   
   - il 2020 contiene tutti mesi validi nel periodo Gennaio - Giugno.
-  
-  
-  *Questi criteri possono essere ritenuti validi per tutti gli inquinanti?*
-  
-  # Completezza serie 2013-2020
-  
-  - [Biossido di azoto (NO2)](./docs/no2.md)
-
-  - [PM10](./docs/pm10.md)
-
-  - [NOX](./docs/nox.md)
-  
 
 
