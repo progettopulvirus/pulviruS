@@ -1,0 +1,49 @@
+---
+title: "Stazioni di monitoraggio"
+description: |
+  Anagrafica delle stazioni
+author:
+  - name: Guido Fioravanti 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+I metadati delle stazioni di monitoraggio sono stati raccolti in unico `data frame` ^[piu' precisamente in un [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)] archiviato nel pacchetto `R` `stazioniMonitoraggio` disponibile sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus/stazioniMonitoraggio). 
+
+Una volta istallato, il pacchetto con l'anagrafica delle stazioni risiede in modo permanente nel computer dell'utente (**in altre parole**: l'istallazione va effettuata una volta sola!).
+
+Per scaricare e istallare il pacchetto da `github` e' necessario utilizzare la funzione `install_github` disponibile nella libreria `devtools` (o in alternativa nella libreria `remotes`). 
+
+```{r}
+#Istallare il pacchetto `devtools` o `remotes` se necessario
+install.packages("devtools")
+# install.packages("remotes")
+
+#se l'istallazione e' andata a buon fine
+devtools::install_github("progettopulvirus/stazioniMonitoraggio")
+#
+#in modo analogo posso usare la libreria remotes
+#remotes::install_github("progettopulvirus/datiMeteo")
+```
+
+A questo punto possiamo caricare il pacchetto `stazioniMonitoraggio` ed accedere al `data frame` `stazioni`.
+
+```{r,include=TRUE,eval=TRUE}
+library("stazioniMonitoraggio")
+
+#tramite il comando data posso vedere quali e quanti dataset/data frame fornisce
+#il pacchetto
+data(package="stazioniMonitoraggio")
+
+#una breve pagina di help accompagna il data frame
+?stazioni
+
+stazioni
+```

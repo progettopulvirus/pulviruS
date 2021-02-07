@@ -20,27 +20,26 @@
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css" data-origin="pandoc">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 div.sourceCode { margin: 1em 0; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -49,9 +48,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ad0000; } /* Alert */
 code span.an { color: #5e5e5e; } /* Annotation */
@@ -86,40 +85,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--radix_placeholder_meta_tags-->
   <title>pulviruS</title>
-
-  <meta property="description" itemprop="description" content="Il sito del progetto di ricerca."/>
-
+  
+  <meta property="description" itemprop="description" content="Il non-sito del progetto di ricerca."/>
+  
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
-
-
+  
+  
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="pulviruS"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Il sito del progetto di ricerca."/>
+  <meta property="og:description" content="Il non-sito del progetto di ricerca."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="pulviruS"/>
-
+  
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="pulviruS"/>
-  <meta property="twitter:description" content="Il sito del progetto di ricerca."/>
-
+  <meta property="twitter:description" content="Il non-sito del progetto di ricerca."/>
+  
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
-
+  
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["pulviruS"]},{"type":"character","attributes":{},"value":["Il sito del progetto di ricerca.\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["pulviruS"]},{"type":"character","attributes":{},"value":["Il non-sito del progetto di ricerca.\n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
   <meta name="distill:offset" content=""/>
-
+  
   <script type="application/javascript">
-
+  
     window.headroom_prevent_pin = false;
-
+  
     window.document.addEventListener("DOMContentLoaded", function (event) {
-
+  
       // initialize headroom for banner
       var header = $('header').get(0);
       var headerHeight = header.offsetHeight;
@@ -136,13 +135,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       if(window.location.hash)
         headroom.unpin();
       $(header).addClass('headroom--transition');
-
+  
       // offset scroll location for banner on hash change
       // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
       window.addEventListener("hashchange", function(event) {
         window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
       });
-
+  
       // responsive menu
       $('.distill-site-header').each(function(i, val) {
         var topnav = $(this);
@@ -151,7 +150,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           topnav.toggleClass('responsive');
         });
       });
-
+  
       // nav dropdowns
       $('.nav-dropbtn').click(function(e) {
         $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
@@ -166,99 +165,99 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       });
     });
   </script>
-
+  
   <style type="text/css">
-
+  
   /* Theme (user-documented overrideables for nav appearance) */
-
+  
   .distill-site-nav {
     color: rgba(255, 255, 255, 0.8);
     background-color: #0F2E3D;
     font-size: 15px;
     font-weight: 300;
   }
-
+  
   .distill-site-nav a {
     color: inherit;
     text-decoration: none;
   }
-
+  
   .distill-site-nav a:hover {
     color: white;
   }
-
+  
   @media print {
     .distill-site-nav {
       display: none;
     }
   }
-
+  
   .distill-site-header {
-
+  
   }
-
+  
   .distill-site-footer {
-
+  
   }
-
-
+  
+  
   /* Site Header */
-
+  
   .distill-site-header {
     width: 100%;
     box-sizing: border-box;
     z-index: 3;
   }
-
+  
   .distill-site-header .nav-left {
     display: inline-block;
     margin-left: 8px;
   }
-
+  
   @media screen and (max-width: 768px) {
     .distill-site-header .nav-left {
       margin-left: 0;
     }
   }
-
-
+  
+  
   .distill-site-header .nav-right {
     float: right;
     margin-right: 8px;
   }
-
+  
   .distill-site-header a,
   .distill-site-header .title {
     display: inline-block;
     text-align: center;
     padding: 14px 10px 14px 10px;
   }
-
+  
   .distill-site-header .title {
     font-size: 18px;
     min-width: 150px;
   }
-
+  
   .distill-site-header .logo {
     padding: 0;
   }
-
+  
   .distill-site-header .logo img {
     display: none;
     max-height: 20px;
     width: auto;
     margin-bottom: -4px;
   }
-
+  
   .distill-site-header .nav-image img {
     max-height: 18px;
     width: auto;
     display: inline-block;
     margin-bottom: -3px;
   }
-
-
-
+  
+  
+  
   @media screen and (min-width: 1000px) {
     .distill-site-header .logo img {
       display: inline-block;
@@ -273,17 +272,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       padding-left: 12px;
     }
   }
-
-
+  
+  
   .distill-site-header .nav-toggle {
     display: none;
   }
-
+  
   .nav-dropdown {
     display: inline-block;
     position: relative;
   }
-
+  
   .nav-dropdown .nav-dropbtn {
     border: none;
     outline: none;
@@ -297,7 +296,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 1px;
     z-index: 2;
   }
-
+  
   .nav-dropdown-content {
     display: none;
     position: absolute;
@@ -312,18 +311,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-top: 4px;
     padding-bottom: 4px;
   }
-
+  
   .nav-dropdown-content hr {
     margin-top: 4px;
     margin-bottom: 4px;
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-
+  
   .nav-dropdown-active {
     display: block;
   }
-
+  
   .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
     color: black;
     padding: 6px 24px;
@@ -331,7 +330,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: block;
     text-align: left;
   }
-
+  
   .nav-dropdown-content .nav-dropdown-header {
     display: block;
     padding: 5px 24px;
@@ -341,21 +340,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     color: #999999;
     white-space: nowrap;
   }
-
+  
   .nav-dropdown:hover .nav-dropbtn {
     color: white;
   }
-
+  
   .nav-dropdown-content a:hover {
     background-color: #ddd;
     color: black;
   }
-
+  
   .nav-right .nav-dropdown-content {
     margin-left: -45%;
     right: 0;
   }
-
+  
   @media screen and (max-width: 768px) {
     .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
     .distill-site-header a.nav-toggle {
@@ -375,8 +374,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       margin-left: 0;
     }
   }
-
-
+  
+  
   @media screen and (max-width: 768px) {
     .distill-site-header.responsive {position: relative; min-height: 500px; }
     .distill-site-header.responsive a.nav-toggle {
@@ -401,9 +400,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       text-align: left;
     }
   }
-
+  
   /* Site Footer */
-
+  
   .distill-site-footer {
     width: 100%;
     overflow: hidden;
@@ -414,19 +413,19 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-bottom: 30px;
     text-align: center;
   }
-
+  
   /* Headroom */
-
+  
   d-title {
     padding-top: 6rem;
   }
-
+  
   @media print {
     d-title {
       padding-top: 4rem;
     }
   }
-
+  
   .headroom {
     z-index: 1000;
     position: fixed;
@@ -434,68 +433,68 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     left: 0;
     right: 0;
   }
-
+  
   .headroom--transition {
     transition: all .4s ease-in-out;
   }
-
+  
   .headroom--unpinned {
     top: -100px;
   }
-
+  
   .headroom--pinned {
     top: 0;
   }
-
+  
   /* adjust viewport for navbar height */
   /* helps vertically center bootstrap (non-distill) content */
   .min-vh-100 {
     min-height: calc(100vh - 100px) !important;
   }
-
+  
   </style>
-
+  
   <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
   <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
   <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
-
+  
   <style type="text/css">
-
+  
   body {
     background-color: white;
   }
-
+  
   .pandoc-table {
     width: 100%;
   }
-
+  
   .pandoc-table>caption {
     margin-bottom: 10px;
   }
-
+  
   .pandoc-table th:not([align]) {
     text-align: left;
   }
-
+  
   .pagedtable-footer {
     font-size: 15px;
   }
-
+  
   d-byline .byline {
     grid-template-columns: 2fr 2fr;
   }
-
+  
   d-byline .byline h3 {
     margin-block-start: 1.5em;
   }
-
+  
   d-byline .byline .authors-affiliations h3 {
     margin-block-start: 0.5em;
   }
-
+  
   .authors-affiliations .orcid-id {
     width: 16px;
     height:16px;
@@ -504,12 +503,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     vertical-align: middle;
     padding-bottom: 2px;
   }
-
+  
   d-title .dt-tags {
     margin-top: 1em;
     grid-column: text;
   }
-
+  
   .dt-tags .dt-tag {
     text-decoration: none;
     display: inline-block;
@@ -523,24 +522,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-transform: uppercase;
     font-weight: 500;
   }
-
+  
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
   }
-
+  
   .html-widget {
     margin-bottom: 2.0em;
   }
-
+  
   .l-screen-inset {
     padding-right: 16px;
   }
-
+  
   .l-screen .caption {
     margin-left: 10px;
   }
-
+  
   .shaded {
     background: rgb(247, 247, 247);
     padding-top: 20px;
@@ -548,75 +547,75 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-
+  
   .shaded .html-widget {
     margin-bottom: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-
+  
   .shaded .shaded-content {
     background: white;
   }
-
+  
   .text-output {
     margin-top: 0;
     line-height: 1.5em;
   }
-
+  
   .hidden {
     display: none !important;
   }
-
+  
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
   }
-
+  
   d-appendix {
     padding-top: 30px;
   }
-
+  
   d-article>p>img {
     width: 100%;
   }
-
+  
   d-article h2 {
     margin: 1rem 0 1.5rem 0;
   }
-
+  
   d-article h3 {
     margin-top: 1.5rem;
   }
-
+  
   d-article iframe {
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 2.0em;
     width: 100%;
   }
-
+  
   /* Tweak code blocks */
-
+  
   d-article div.sourceCode code,
   d-article pre code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
-
+  
   d-article pre,
   d-article div.sourceCode,
   d-article div.sourceCode pre {
     overflow: auto;
   }
-
+  
   d-article div.sourceCode {
     background-color: white;
   }
-
+  
   d-article div.sourceCode pre {
     padding-left: 10px;
     font-size: 12px;
     border-left: 2px solid rgba(0,0,0,0.1);
   }
-
+  
   d-article pre {
     font-size: 12px;
     color: black;
@@ -628,50 +627,50 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-
+  
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-
+  
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-
+  
   d-article pre a {
     border-bottom: none;
   }
-
+  
   d-article pre a:hover {
     border-bottom: none;
     text-decoration: underline;
   }
-
+  
   d-article details {
     grid-column: text;
     margin-bottom: 0.8em;
   }
-
+  
   @media(min-width: 768px) {
-
+  
   d-article pre,
   d-article div.sourceCode,
   d-article div.sourceCode pre {
     overflow: visible !important;
   }
-
+  
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
   }
-
+  
   d-article pre {
     font-size: 14px;
   }
-
+  
   }
-
+  
   figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -679,9 +678,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding: 18px;
     box-sizing: border-box;
   }
-
+  
   /* CSS for d-contents */
-
+  
   .d-contents {
     grid-column: text;
     color: rgba(0,0,0,0.8);
@@ -693,7 +692,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-left: 0.25em;
     justify-self: start;
   }
-
+  
   @media(min-width: 1000px) {
     .d-contents.d-contents-float {
       height: 0;
@@ -704,82 +703,82 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       padding-left: 2em;
     }
   }
-
+  
   .d-contents nav h3 {
     font-size: 18px;
     margin-top: 0;
     margin-bottom: 1em;
   }
-
+  
   .d-contents li {
     list-style-type: none
   }
-
+  
   .d-contents nav > ul {
     padding-left: 0;
   }
-
+  
   .d-contents ul {
     padding-left: 1em
   }
-
+  
   .d-contents nav ul li {
     margin-top: 0.6em;
     margin-bottom: 0.2em;
   }
-
+  
   .d-contents nav a {
     font-size: 13px;
     border-bottom: none;
     text-decoration: none
     color: rgba(0, 0, 0, 0.8);
   }
-
+  
   .d-contents nav a:hover {
     text-decoration: underline solid rgba(0, 0, 0, 0.6)
   }
-
+  
   .d-contents nav > ul > li > a {
     font-weight: 600;
   }
-
+  
   .d-contents nav > ul > li > ul {
     font-weight: inherit;
   }
-
+  
   .d-contents nav > ul > li > ul > li {
     margin-top: 0.2em;
   }
-
-
+  
+  
   .d-contents nav ul {
     margin-top: 0;
     margin-bottom: 0.25em;
   }
-
+  
   .d-article-with-toc h2:nth-child(2) {
     margin-top: 0;
   }
-
-
+  
+  
   /* Figure */
-
+  
   .figure {
     position: relative;
     margin-bottom: 2.5em;
     margin-top: 1.5em;
   }
-
+  
   .figure img {
     width: 100%;
   }
-
+  
   .figure .caption {
     color: rgba(0, 0, 0, 0.6);
     font-size: 12px;
     line-height: 1.5em;
   }
-
+  
   .figure img.external {
     background: white;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -787,42 +786,42 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding: 18px;
     box-sizing: border-box;
   }
-
+  
   .figure .caption a {
     color: rgba(0, 0, 0, 0.6);
   }
-
+  
   .figure .caption b,
   .figure .caption strong, {
     font-weight: 600;
     color: rgba(0, 0, 0, 1.0);
   }
-
+  
   /* Citations */
-
+  
   d-article .citation {
     color: inherit;
     cursor: inherit;
   }
-
+  
   div.hanging-indent{
     margin-left: 1em; text-indent: -1em;
   }
-
+  
   /* Citation hover box */
-
+  
   .tippy-box[data-theme~=light-border] {
     background-color: rgba(250, 250, 250, 0.95);
   }
-
+  
   .tippy-content > p {
     margin-bottom: 0;
     padding: 2px;
   }
-
-
+  
+  
   /* Tweak 1000px media break to show more text */
-
+  
   @media(min-width: 1000px) {
     .base-grid,
     distill-header,
@@ -838,11 +837,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 16px;
     }
-
+  
     .grid {
       grid-column-gap: 16px;
     }
-
+  
     d-article {
       font-size: 1.06rem;
       line-height: 1.7em;
@@ -851,7 +850,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       font-size: 13px;
     }
   }
-
+  
   @media(min-width: 1180px) {
     .base-grid,
     distill-header,
@@ -867,16 +866,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
       grid-column-gap: 32px;
     }
-
+  
     .grid {
       grid-column-gap: 32px;
     }
   }
-
-
+  
+  
   /* Get the citation styles for the appendix (not auto-injected on render since
      we do our own rendering of the citation appendix) */
-
+  
   d-appendix .citation-appendix,
   .d-appendix .citation-appendix {
     font-size: 11px;
@@ -893,9 +892,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-
+  
   /* Include appendix styles here so they can be overridden */
-
+  
   d-appendix {
     contain: layout style;
     font-size: 0.8em;
@@ -907,7 +906,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-top: 60px;
     padding-bottom: 48px;
   }
-
+  
   d-appendix h3 {
     grid-column: page-start / text-start;
     font-size: 15px;
@@ -916,59 +915,59 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-bottom: 0;
     color: rgba(0,0,0,0.65);
   }
-
+  
   d-appendix h3 + * {
     margin-top: 1em;
   }
-
+  
   d-appendix ol {
     padding: 0 0 0 15px;
   }
-
+  
   @media (min-width: 768px) {
     d-appendix ol {
       padding: 0 0 0 30px;
       margin-left: -30px;
     }
   }
-
+  
   d-appendix li {
     margin-bottom: 1em;
   }
-
+  
   d-appendix a {
     color: rgba(0, 0, 0, 0.6);
   }
-
+  
   d-appendix > * {
     grid-column: text;
   }
-
+  
   d-appendix > d-footnote-list,
   d-appendix > d-citation-list,
   d-appendix > distill-appendix {
     grid-column: screen;
   }
-
+  
   /* Include footnote styles here so they can be overridden */
-
+  
   d-footnote-list {
     contain: layout style;
   }
-
+  
   d-footnote-list > * {
     grid-column: text;
   }
-
+  
   d-footnote-list a.footnote-backlink {
     color: rgba(0,0,0,0.3);
     padding-left: 0.5em;
   }
-
-
-
+  
+  
+  
   /* Anchor.js */
-
+  
   .anchorjs-link {
     /*transition: all .25s linear; */
     text-decoration: none;
@@ -979,86 +978,86 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-decoration: none;
     border-bottom: none;
   }
-
+  
   /* Social footer */
-
+  
   .social_footer {
     margin-top: 30px;
     margin-bottom: 0;
     color: rgba(0,0,0,0.67);
   }
-
+  
   .disqus-comments {
     margin-right: 30px;
   }
-
+  
   .disqus-comment-count {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
     cursor: pointer;
   }
-
+  
   #disqus_thread {
     margin-top: 30px;
   }
-
+  
   .article-sharing a {
     border-bottom: none;
     margin-right: 8px;
   }
-
+  
   .article-sharing a:hover {
     border-bottom: none;
   }
-
+  
   .sidebar-section.subscribe {
     font-size: 12px;
     line-height: 1.6em;
   }
-
+  
   .subscribe p {
     margin-bottom: 0.5em;
   }
-
-
+  
+  
   .article-footer .subscribe {
     font-size: 15px;
     margin-top: 45px;
   }
-
-
+  
+  
   .sidebar-section.custom {
     font-size: 12px;
     line-height: 1.6em;
   }
-
+  
   .custom p {
     margin-bottom: 0.5em;
   }
-
+  
   /* Styles for listing layout (hide title) */
   .layout-listing d-title, .layout-listing .d-title {
     display: none;
   }
-
+  
   /* Styles for posts lists (not auto-injected) */
-
-
+  
+  
   .posts-with-sidebar {
     padding-left: 45px;
     padding-right: 45px;
   }
-
+  
   .posts-list .description h2,
   .posts-list .description p {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   }
-
+  
   .posts-list .description h2 {
     font-weight: 700;
     border-bottom: none;
     padding-bottom: 0;
   }
-
+  
   .posts-list h2.post-tag {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding-bottom: 12px;
@@ -1067,7 +1066,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     margin-top: 60px;
     margin-bottom: 24px;
   }
-
+  
   .posts-list .post-preview {
     text-decoration: none;
     overflow: hidden;
@@ -1075,29 +1074,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 24px 0;
   }
-
+  
   .post-preview-last {
     border-bottom: none !important;
   }
-
+  
   .posts-list .posts-list-caption {
     grid-column: screen;
     font-weight: 400;
   }
-
+  
   .posts-list .post-preview h2 {
     margin: 0 0 6px 0;
     line-height: 1.2em;
     font-style: normal;
     font-size: 24px;
   }
-
+  
   .posts-list .post-preview p {
     margin: 0 0 12px 0;
     line-height: 1.4em;
     font-size: 16px;
   }
-
+  
   .posts-list .post-preview .thumbnail {
     box-sizing: border-box;
     margin-bottom: 24px;
@@ -1108,32 +1107,32 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     width: 100%;
     display: block;
   }
-
+  
   .posts-list .metadata {
     font-size: 12px;
     line-height: 1.4em;
     margin-bottom: 18px;
   }
-
+  
   .posts-list .metadata > * {
     display: inline-block;
   }
-
+  
   .posts-list .metadata .publishedDate {
     margin-right: 2em;
   }
-
+  
   .posts-list .metadata .dt-authors {
     display: block;
     margin-top: 0.3em;
     margin-right: 2em;
   }
-
+  
   .posts-list .dt-tags {
     display: block;
     line-height: 1em;
   }
-
+  
   .posts-list .dt-tags .dt-tag {
     display: inline-block;
     color: rgba(0,0,0,0.6);
@@ -1146,24 +1145,24 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     text-transform: uppercase;
     font-weight: 500;
   }
-
+  
   .posts-list img {
     opacity: 1;
   }
-
+  
   .posts-list img[data-src] {
     opacity: 0;
   }
-
+  
   .posts-more {
     clear: both;
   }
-
-
+  
+  
   .posts-sidebar {
     font-size: 16px;
   }
-
+  
   .posts-sidebar h3 {
     font-size: 16px;
     margin-top: 0;
@@ -1171,39 +1170,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     font-weight: 400;
     text-transform: uppercase;
   }
-
+  
   .sidebar-section {
     margin-bottom: 30px;
   }
-
+  
   .categories ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
   }
-
+  
   .categories li {
     color: rgba(0, 0, 0, 0.8);
     margin-bottom: 0;
   }
-
+  
   .categories li>a {
     border-bottom: none;
   }
-
+  
   .categories li>a:hover {
     border-bottom: 1px solid rgba(0, 0, 0, 0.4);
   }
-
+  
   .categories .active {
     font-weight: 600;
   }
-
+  
   .categories .category-count {
     color: rgba(0, 0, 0, 0.4);
   }
-
-
+  
+  
   @media(min-width: 768px) {
     .posts-list .post-preview h2 {
       font-size: 26px;
@@ -1239,55 +1238,55 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       padding-bottom: 24px;
     }
   }
-
-
+  
+  
   /* Improve display for browsers without grid (IE/Edge <= 15) */
-
+  
   .downlevel {
     line-height: 1.6em;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     margin: 0;
   }
-
+  
   .downlevel .d-title {
     padding-top: 6rem;
     padding-bottom: 1.5rem;
   }
-
+  
   .downlevel .d-title h1 {
     font-size: 50px;
     font-weight: 700;
     line-height: 1.1em;
     margin: 0 0 0.5rem;
   }
-
+  
   .downlevel .d-title p {
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.55em;
     margin-top: 0;
   }
-
+  
   .downlevel .d-byline {
     padding-top: 0.8em;
     padding-bottom: 0.8em;
     font-size: 0.8rem;
     line-height: 1.8em;
   }
-
+  
   .downlevel .section-separator {
     border: none;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-
+  
   .downlevel .d-article {
     font-size: 1.06rem;
     line-height: 1.7em;
     padding-top: 1rem;
     padding-bottom: 2rem;
   }
-
-
+  
+  
   .downlevel .d-appendix {
     padding-left: 0;
     padding-right: 0;
@@ -1299,11 +1298,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-top: 40px;
     padding-bottom: 48px;
   }
-
+  
   .downlevel .footnotes ol {
     padding-left: 13px;
   }
-
+  
   .downlevel .base-grid,
   .downlevel .distill-header,
   .downlevel .d-title,
@@ -1320,7 +1319,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     padding-left: 40px;
     padding-right: 40px;
   }
-
+  
   @media(min-width: 768px) {
     .downlevel .base-grid,
     .downlevel .distill-header,
@@ -1340,14 +1339,14 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     max-width: 900px;
   }
   }
-
+  
   .downlevel pre code {
     display: block;
     border-left: 2px solid rgba(0, 0, 0, .1);
     padding: 0 0 0 20px;
     font-size: 14px;
   }
-
+  
   .downlevel code, .downlevel pre {
     color: black;
     background: none;
@@ -1358,27 +1357,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     word-break: normal;
     word-wrap: normal;
     line-height: 1.5;
-
+  
     -moz-tab-size: 4;
     -o-tab-size: 4;
     tab-size: 4;
-
+  
     -webkit-hyphens: none;
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
   }
-
+  
   .downlevel .posts-list .post-preview {
     color: inherit;
   }
-
-
-
+  
+  
+  
   </style>
-
+  
   <script type="application/javascript">
-
+  
   function is_downlevel_browser() {
     if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
                                    window.navigator.userAgent)) {
@@ -1387,20 +1386,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       return window.load_distill_framework === undefined;
     }
   }
-
+  
   // show body when load is complete
   function on_load_complete() {
-
+  
     // add anchors
     if (window.anchors) {
       window.anchors.options.placement = 'left';
       window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
     }
-
-
+  
+  
     // set body to visible
     document.body.style.visibility = 'visible';
-
+  
     // force redraw for leaflet widgets
     if (window.HTMLWidgets) {
       var maps = window.HTMLWidgets.findAll(".leaflet");
@@ -1413,39 +1412,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
         });
       });
     }
-
+  
     // trigger 'shown' so htmlwidgets resize
     $('d-article').trigger('shown');
   }
-
+  
   function init_distill() {
-
+  
     init_common();
-
+  
     // create front matter
     var front_matter = $('<d-front-matter></d-front-matter>');
     $('#distill-front-matter').wrap(front_matter);
-
+  
     // create d-title
     $('.d-title').changeElementType('d-title');
-
+  
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
-
+  
     // create d-article
     var article = $('<d-article></d-article>');
     $('.d-article').wrap(article).children().unwrap();
-
+  
     // move posts container into article
     $('.posts-container').appendTo($('d-article'));
-
+  
     // create d-appendix
     $('.d-appendix').changeElementType('d-appendix');
-
+  
     // flag indicating that we have appendix items
     var appendix = $('.appendix-bottom').children('h3').length > 0;
-
+  
     // replace footnotes with <d-footnote>
     $('.footnote-ref').each(function(i, val) {
       appendix = true;
@@ -1461,10 +1460,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     });
     // remove footnotes
     $('.footnotes').remove();
-
+  
     // move refs into #references-listing
     $('#references-listing').replaceWith($('#refs'));
-
+  
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
     });
@@ -1474,16 +1473,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       appendix = true;
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
     });
-
+  
     // show d-appendix if we have appendix content
     $("d-appendix").css('display', appendix ? 'grid' : 'none');
-
+  
     // localize layout chunks to just output
     $('.layout-chunk').each(function(i, val) {
-
+  
       // capture layout
       var layout = $(this).attr('data-layout');
-
+  
       // apply layout to markdown level block elements
       var elements = $(this).children().not('details, div.sourceCode, pre, script');
       elements.each(function(i, el) {
@@ -1496,40 +1495,40 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           $(this).wrap(layout_div);
         }
       });
-
-
+  
+  
       // unwrap the layout-chunk div
       $(this).children().unwrap();
     });
-
+  
     // remove code block used to force  highlighting css
     $('.distill-force-highlighting-css').parent().remove();
-
+  
     // remove empty line numbers inserted by pandoc when using a
     // custom syntax highlighting theme
     $('code.sourceCode a:empty').remove();
-
+  
     // load distill framework
     load_distill_framework();
-
+  
     // wait for window.distillRunlevel == 4 to do post processing
     function distill_post_process() {
-
+  
       if (!window.distillRunlevel || window.distillRunlevel < 4)
         return;
-
+  
       // hide author/affiliations entirely if we have no authors
       var front_matter = JSON.parse($("#distill-front-matter").html());
       var have_authors = front_matter.authors && front_matter.authors.length > 0;
       if (!have_authors)
         $('d-byline').addClass('hidden');
-
+  
       // article with toc class
       $('.d-contents').parent().addClass('d-article-with-toc');
-
+  
       // strip links that point to #
       $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
-
+  
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
@@ -1544,12 +1543,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           $(this).append(a);
         }
       });
-
+  
       // hide elements of author/affiliations grid that have no value
       function hide_byline_column(caption) {
         $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
       }
-
+  
       // affiliations
       var have_affiliations = false;
       for (var i = 0; i<front_matter.authors.length; ++i) {
@@ -1561,11 +1560,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       }
       if (!have_affiliations)
         $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
-
+  
       // published date
       if (!front_matter.publishedDate)
         hide_byline_column("Published");
-
+  
       // document object identifier
       var doi = $('d-byline').find('h3:contains("DOI")');
       var doi_p = doi.next().empty();
@@ -1585,22 +1584,22 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
            .html(front_matter.doi)
            .appendTo(doi_p);
       }
-
+  
        // change plural form of authors/affiliations
       if (front_matter.authors.length === 1) {
         var grid = $('.authors-affiliations');
         grid.children('h3:contains("Authors")').text('Author');
         grid.children('h3:contains("Affiliations")').text('Affiliation');
       }
-
+  
       // remove d-appendix and d-footnote-list local styles
       $('d-appendix > style:first-child').remove();
       $('d-footnote-list > style:first-child').remove();
-
+  
       // move appendix-bottom entries to the bottom
       $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
       $('.appendix-bottom').remove();
-
+  
       // hoverable references
       $('span.citation[data-cites]').each(function() {
         var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
@@ -1614,39 +1613,39 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           placement: 'bottom-start'
         });
       });
-
+  
       // clear polling timer
       clearInterval(tid);
-
+  
       // show body now that everything is ready
       on_load_complete();
     }
-
+  
     var tid = setInterval(distill_post_process, 50);
     distill_post_process();
-
+  
   }
-
+  
   function init_downlevel() {
-
+  
     init_common();
-
+  
      // insert hr after d-title
     $('.d-title').after($('<hr class="section-separator"/>'));
-
+  
     // check if we have authors
     var front_matter = JSON.parse($("#distill-front-matter").html());
     var have_authors = front_matter.authors && front_matter.authors.length > 0;
-
+  
     // manage byline/border
     if (!have_authors)
       $('.d-byline').remove();
     $('.d-byline').after($('<hr class="section-separator"/>'));
     $('.d-byline a').remove();
-
+  
     // remove toc
     $('.d-contents').remove();
-
+  
     // move appendix elements
     $('h1.appendix, h2.appendix').each(function(i, val) {
       $(this).changeElementType('h3');
@@ -1654,62 +1653,62 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('h3.appendix').each(function(i, val) {
       $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
     });
-
-
+  
+  
     // inject headers into references and footnotes
     var refs_header = $('<h3></h3>');
     refs_header.text('References');
     $('#refs').prepend(refs_header);
-
+  
     var footnotes_header = $('<h3></h3');
     footnotes_header.text('Footnotes');
     $('.footnotes').children('hr').first().replaceWith(footnotes_header);
-
+  
     // move appendix-bottom entries to the bottom
     $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
     $('.appendix-bottom').remove();
-
+  
     // remove appendix if it's empty
     if ($('.d-appendix').children().length === 0)
       $('.d-appendix').remove();
-
+  
     // prepend separator above appendix
     $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
-
+  
     // trim code
     $('pre>code').each(function(i, val) {
       $(this).html($.trim($(this).html()));
     });
-
+  
     // move posts-container right before article
     $('.posts-container').insertBefore($('.d-article'));
-
+  
     $('body').addClass('downlevel');
-
+  
     on_load_complete();
   }
-
-
+  
+  
   function init_common() {
-
+  
     // jquery plugin to change element types
     (function($) {
       $.fn.changeElementType = function(newType) {
         var attrs = {};
-
+  
         $.each(this[0].attributes, function(idx, attr) {
           attrs[attr.nodeName] = attr.nodeValue;
         });
-
+  
         this.replaceWith(function() {
           return $("<" + newType + "/>", attrs).append($(this).contents());
         });
       };
     })(jQuery);
-
+  
     // prevent underline for linked images
     $('a > img').parent().css({'border-bottom' : 'none'});
-
+  
     // mark non-body figures created by knitr chunks as 100% width
     $('.layout-chunk').each(function(i, val) {
       var figures = $(this).find('img, .html-widget');
@@ -1721,35 +1720,35 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
           var fig = $(this);
           fig.css('width', fig.attr('width') + 'px');
         });
-
+  
       }
     });
-
+  
     // auto-append index.html to post-preview links in file: protocol
     // and in rstudio ide preview
     $('.post-preview').each(function(i, val) {
       if (window.location.protocol === "file:")
         $(this).attr('href', $(this).attr('href') + "index.html");
     });
-
+  
     // get rid of index.html references in header
     if (window.location.protocol !== "file:") {
       $('.distill-site-header a[href]').each(function(i,val) {
         $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
       });
     }
-
+  
     // add class to pandoc style tables
     $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
     $('.kable-table').children('table').addClass('pandoc-table');
-
+  
     // add figcaption style to table captions
     $('caption').parent('table').addClass("figcaption");
-
+  
     // initialize posts list
     if (window.init_posts_list)
       window.init_posts_list();
-
+  
     // implmement disqus comment link
     $('.disqus-comment-count').click(function() {
       window.headroom_prevent_pin = true;
@@ -1763,18 +1762,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       }
     });
   }
-
+  
   document.addEventListener('DOMContentLoaded', function() {
     if (is_downlevel_browser())
       init_downlevel();
     else
       window.addEventListener('WebComponentsReady', init_distill);
   });
-
+  
   </script>
-
+  
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.6/header-attrs.js"></script>
+  <script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+  <script src="site_libs/d3-3.5.6/./d3.min.js"></script>
+  <link href="site_libs/circlepackeR-0.1/./style.css" rel="stylesheet" />
+  <script src="site_libs/circlepackeR-binding-0.0.0.9000/circlepackeR.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1787,46 +1789,46 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <style type="text/css">
   @import url("https://fonts.googleapis.com/css?family=Arvo|Lato");
   @import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700");
-
+  
   body{
     color: #A7A7A7;
     background-color: #F7F4EE;/*#e6dec9;*/
     font-family: 'Lato', sans-serif;
     font-size: 16px;
   }
-
-
+  
+  
   .distill-site-nav{
     background-color:  #1c333f; 
     text-decoration: none;
   }
-
+  
   .nav-left a{
     color: #fae16c;
     font-weight: 900;
   }
-
-
+  
+  
   .nav-left a:hover{
     color: #fae16c;
     font-weight: 900;
   }
-
-
+  
+  
   d-title h1, d-title p{
     color: #292929;
     font-family: 'Roboto Condensed', sans-serif;
   }
-
-
+  
+  
   /* link hover */
-
+  
   d-article p a{
     color: #B94B3B;/*verde #abd174; */
     text-decoration: none;
     border-bottom-width: 0;
   }
-
+  
   d-article p a:hover{
     color: #FF2E3D;
     border-bottom-width: 1px;
@@ -1834,18 +1836,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     border-bottom-color: #FF2E3D;
     text-decoration: none;
   }
-
+  
   /* nome dell'autore che compare negli articoli */
   .author .name, .affiliation{
     color: #FF2E3D;  
     font-weight: 900;
   }
-
+  
   .affiliation{
     font-weight: 400;
   }
-
-
+  
+  
   /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
   d-article div.sourceCode pre {
       padding-left: 10px;
@@ -1864,7 +1866,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"pulviruS","description":"Il sito del progetto di ricerca.","authors":[]}
+{"title":"pulviruS","description":"Il non-sito del progetto di ricerca.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1892,11 +1894,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>pulviruS</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Il sito del progetto di ricerca.</p></p>
+<p>Il non-sito del progetto di ricerca.</p>
 </div>
 
 
 <div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+<div id="htmlwidget-f4aec7261e1e862afaf9" style="width:672px;height:672px;" class="circlepackeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f4aec7261e1e862afaf9">{"x":{"data":{"name":"pulvirus","children":[{"name":"BASILICATA","children":[{"name":"IT1193A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"BASILICATA","staz_eu_code":"IT1193A"}]},{"name":"IT1742A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"BASILICATA","staz_eu_code":"IT1742A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"BASILICATA","staz_eu_code":"IT1742A"}]},{"name":"IT1897A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"BASILICATA","staz_eu_code":"IT1897A"}]},{"name":"IT2205A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"BASILICATA","staz_eu_code":"IT2205A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"BASILICATA","staz_eu_code":"IT2205A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"BASILICATA","staz_eu_code":"IT2205A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"BASILICATA","staz_eu_code":"IT2205A"}]}]},{"name":"CAMPANIA","children":[{"name":"IT1041A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"CAMPANIA","staz_eu_code":"IT1041A"}]},{"name":"IT1495A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"CAMPANIA","staz_eu_code":"IT1495A"}]},{"name":"IT1496A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"CAMPANIA","staz_eu_code":"IT1496A"}]},{"name":"IT1497A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"CAMPANIA","staz_eu_code":"IT1497A"}]},{"name":"IT2268A","children":[{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"CAMPANIA","staz_eu_code":"IT2268A"}]}]},{"name":"EMILIA_ROMAGNA","children":[{"name":"IT0187A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0187A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0187A"}]},{"name":"IT0544A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0544A"}]},{"name":"IT0721A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0721A"}]},{"name":"IT0755A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0755A"}]},{"name":"IT0804A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0804A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0804A"}]},{"name":"IT0892A","children":[{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0892A"}]},{"name":"IT0895A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0895A"}]},{"name":"IT0903A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0903A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0903A"}]},{"name":"IT0940A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0940A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT0940A"}]},{"name":"IT1029A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1029A"}]},{"name":"IT1043A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1043A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1043A"}]},{"name":"IT1044A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1044A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1044A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1044A"}]},{"name":"IT1048A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1048A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1048A"}]},{"name":"IT1105A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1105A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1105A"}]},{"name":"IT1152A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1152A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1152A"}]},{"name":"IT1159A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1159A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1159A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1159A"}]},{"name":"IT1163A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1163A"}]},{"name":"IT1179A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1179A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1179A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1179A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1179A"}]},{"name":"IT1204A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1204A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1204A"}]},{"name":"IT1451A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1451A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1451A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1451A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1451A"}]},{"name":"IT1670A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1670A"}]},{"name":"IT1672A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1672A"}]},{"name":"IT1771A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1771A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1771A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1771A"}]},{"name":"IT1908A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1908A"}]},{"name":"IT1910A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1910A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1910A"}]},{"name":"IT1911A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1911A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1911A"}]},{"name":"IT1914A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1914A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1914A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1914A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1914A"}]},{"name":"IT1915A","children":[{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1915A"}]},{"name":"IT1916A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1916A"}]},{"name":"IT1918A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1918A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1918A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1918A"}]},{"name":"IT1919A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1919A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1919A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1919A"}]},{"name":"IT1920A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1920A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1920A"}]},{"name":"IT1921A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1921A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1921A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1921A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1921A"}]},{"name":"IT1923A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1923A"}]},{"name":"IT1924A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1924A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1924A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1924A"}]},{"name":"IT1927A","children":[{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1927A"}]},{"name":"IT1928A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1928A"}]},{"name":"IT1975A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1975A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT1975A"}]},{"name":"IT2027A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2027A"}]},{"name":"IT2073A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2073A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2073A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2073A"}]},{"name":"IT2074A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2074A"}]},{"name":"IT2075A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2075A"}]},{"name":"IT2097A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2097A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2097A"}]},{"name":"IT2156A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2156A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2156A"}]},{"name":"IT2158A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2158A"}]},{"name":"IT2209A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2209A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2209A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"EMILIA_ROMAGNA","staz_eu_code":"IT2209A"}]}]},{"name":"FRIULI_VENEZIA_GIULIA","children":[{"name":"IT0966A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT0966A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT0966A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT0966A"}]},{"name":"IT1090A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT1090A"}]},{"name":"IT1112A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT1112A"}]},{"name":"IT1166A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT1166A"}]},{"name":"IT1168A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT1168A"}]},{"name":"IT1170A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT1170A"}]},{"name":"IT1259A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT1259A"}]},{"name":"IT2115A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2115A"}]},{"name":"IT2133A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2133A"}]},{"name":"IT2140A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2140A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2140A"}]},{"name":"IT2152A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2152A"}]},{"name":"IT2169A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2169A"}]},{"name":"IT2170A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2170A"}]},{"name":"IT2182A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2182A"}]},{"name":"IT2200A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2200A"}]},{"name":"IT2201A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2201A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"FRIULI_VENEZIA_GIULIA","staz_eu_code":"IT2201A"}]}]},{"name":"LAZIO","children":[{"name":"IT0825A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0825A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0825A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0825A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0825A"}]},{"name":"IT0828A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0828A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0828A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0828A"}]},{"name":"IT0863A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0863A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0863A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0863A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0863A"}]},{"name":"IT0865A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0865A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0865A"}]},{"name":"IT0867A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0867A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0867A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0867A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0867A"}]},{"name":"IT0869A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0869A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0869A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0869A"}]},{"name":"IT0870A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0870A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0870A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0870A"}]},{"name":"IT0871A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0871A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0871A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0871A"}]},{"name":"IT0872A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0872A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0872A"}]},{"name":"IT0884A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0884A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0884A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0884A"}]},{"name":"IT0885A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0885A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0885A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0885A"}]},{"name":"IT0887A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0887A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0887A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0887A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0887A"}]},{"name":"IT0888A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0888A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0888A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0888A"}]},{"name":"IT0889A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0889A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0889A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0889A"}]},{"name":"IT0952A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0952A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0952A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0952A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0952A"}]},{"name":"IT0953A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0953A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0953A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0953A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0953A"}]},{"name":"IT0956A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0956A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0956A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0956A"}]},{"name":"IT0957A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0957A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0957A"}]},{"name":"IT0989A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0989A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0989A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0989A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0989A"}]},{"name":"IT0991A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0991A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0991A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0991A"}]},{"name":"IT0992A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0992A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0992A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT0992A"}]},{"name":"IT1176A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1176A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1176A"}]},{"name":"IT1183A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1183A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1183A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1183A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1183A"}]},{"name":"IT1184A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1184A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1184A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1184A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1184A"}]},{"name":"IT1200A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1200A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1200A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1200A"}]},{"name":"IT1834A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1834A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1834A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1834A"}]},{"name":"IT1835A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1835A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1835A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1835A"}]},{"name":"IT1836A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1836A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1836A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1836A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1836A"}]},{"name":"IT1837A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1837A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1837A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1837A"}]},{"name":"IT1841A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1841A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1841A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1841A"}]},{"name":"IT1906A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1906A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1906A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1906A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT1906A"}]},{"name":"IT2012A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2012A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2012A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2012A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2012A"}]},{"name":"IT2013A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2013A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2013A"}]},{"name":"IT2023A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2023A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2023A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2023A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2023A"}]},{"name":"IT2171A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2171A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2171A"}]},{"name":"IT2172A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2172A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2172A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2172A"}]},{"name":"IT2173A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2173A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2173A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2173A"}]},{"name":"IT2246A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2246A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2246A"}]},{"name":"IT2264A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2264A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2264A"}]},{"name":"IT2265A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LAZIO","staz_eu_code":"IT2265A"}]}]},{"name":"LOMBARDIA","children":[{"name":"IT0267A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0267A"}]},{"name":"IT0477A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0477A"}]},{"name":"IT0594A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0594A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0594A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0594A"}]},{"name":"IT0692A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0692A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0692A"}]},{"name":"IT0705A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0705A"}]},{"name":"IT0706A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0706A"}]},{"name":"IT0707A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0707A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0707A"}]},{"name":"IT0709A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0709A"}]},{"name":"IT0732A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0732A"}]},{"name":"IT0740A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0740A"}]},{"name":"IT0742A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0742A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0742A"}]},{"name":"IT0761A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0761A"}]},{"name":"IT0771A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0771A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0771A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0771A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0771A"}]},{"name":"IT0775A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0775A"}]},{"name":"IT0776A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0776A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0776A"}]},{"name":"IT0777A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0777A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0777A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0777A"}]},{"name":"IT0778A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0778A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0778A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0778A"}]},{"name":"IT0837A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0837A"}]},{"name":"IT0839A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0839A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0839A"}]},{"name":"IT0840A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0840A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0840A"}]},{"name":"IT0842A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0842A"}]},{"name":"IT0846A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0846A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0846A"}]},{"name":"IT0906A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0906A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0906A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0906A"}]},{"name":"IT0908A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0908A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0908A"}]},{"name":"IT0912A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0912A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0912A"}]},{"name":"IT0997A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0997A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT0997A"}]},{"name":"IT1010A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1010A"}]},{"name":"IT1016A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1016A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1016A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1016A"}]},{"name":"IT1034A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1034A"}]},{"name":"IT1104A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1104A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1104A"}]},{"name":"IT1153A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1153A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1153A"}]},{"name":"IT1174A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1174A"}]},{"name":"IT1190A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1190A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1190A"}]},{"name":"IT1203A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1203A"}]},{"name":"IT1251A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1251A"}]},{"name":"IT1286A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1286A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1286A"}]},{"name":"IT1287A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1287A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1287A"}]},{"name":"IT1385A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1385A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1385A"}]},{"name":"IT1388A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1388A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1388A"}]},{"name":"IT1392A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1392A"}]},{"name":"IT1459A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1459A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1459A"}]},{"name":"IT1463A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1463A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1463A"}]},{"name":"IT1464A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1464A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1464A"}]},{"name":"IT1588A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1588A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1588A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1588A"}]},{"name":"IT1646A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1646A"}]},{"name":"IT1650A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1650A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1650A"}]},{"name":"IT1692A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1692A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1692A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1692A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1692A"}]},{"name":"IT1734A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1734A"}]},{"name":"IT1735A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1735A"}]},{"name":"IT1736A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1736A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1736A"}]},{"name":"IT1737A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1737A"}]},{"name":"IT1739A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1739A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1739A"}]},{"name":"IT1743A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1743A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1743A"}]},{"name":"IT1746A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1746A"}]},{"name":"IT1812A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1812A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1812A"}]},{"name":"IT1826A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1826A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1826A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1826A"}]},{"name":"IT1865A","children":[{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1865A"}]},{"name":"IT1868A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1868A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1868A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1868A"}]},{"name":"IT1869A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1869A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1869A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1869A"}]},{"name":"IT1873A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1873A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1873A"}]},{"name":"IT1874A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1874A"}]},{"name":"IT1876A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1876A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1876A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1876A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1876A"}]},{"name":"IT1964A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1964A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1964A"}]},{"name":"IT1965A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1965A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1965A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1965A"}]},{"name":"IT1967A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1967A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT1967A"}]},{"name":"IT2007A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT2007A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT2007A"}]},{"name":"IT2062A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT2062A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT2062A"}]},{"name":"IT2230A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT2230A"}]},{"name":"IT2232A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"LOMBARDIA","staz_eu_code":"IT2232A"}]}]},{"name":"MOLISE","children":[{"name":"IT1753A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"MOLISE","staz_eu_code":"IT1753A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"MOLISE","staz_eu_code":"IT1753A"}]},{"name":"IT1799A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"MOLISE","staz_eu_code":"IT1799A"}]}]},{"name":"PA_BOLZANO","children":[{"name":"IT0499A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT0499A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT0499A"}]},{"name":"IT0507A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT0507A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT0507A"}]},{"name":"IT0508A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT0508A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT0508A"}]},{"name":"IT1334A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT1334A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT1334A"}]},{"name":"IT1335A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT1335A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT1335A"}]},{"name":"IT1696A","children":[{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT1696A"}]},{"name":"IT2096A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT2096A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_BOLZANO","staz_eu_code":"IT2096A"}]}]},{"name":"PA_TRENTO","children":[{"name":"IT0591A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT0591A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT0591A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT0591A"}]},{"name":"IT0703A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT0703A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT0703A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT0703A"}]},{"name":"IT0753A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT0753A"}]},{"name":"IT1037A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT1037A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT1037A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT1037A"}]},{"name":"IT1191A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT1191A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT1191A"}]},{"name":"IT1859A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT1859A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT1859A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PA_TRENTO","staz_eu_code":"IT1859A"}]}]},{"name":"PIEMONTE","children":[{"name":"IT0469A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT0469A"}]},{"name":"IT0643A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT0643A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT0643A"}]},{"name":"IT1114A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1114A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1114A"}]},{"name":"IT1120A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1120A"}]},{"name":"IT1121A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1121A"}]},{"name":"IT1125A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1125A"}]},{"name":"IT1128A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1128A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1128A"}]},{"name":"IT1130A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1130A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1130A"}]},{"name":"IT1246A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1246A"}]},{"name":"IT1247A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1247A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1247A"}]},{"name":"IT1509A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1509A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1509A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1509A"}]},{"name":"IT1510A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1510A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1510A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1510A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1510A"}]},{"name":"IT1519A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1519A"}]},{"name":"IT1524A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1524A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1524A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1524A"}]},{"name":"IT1529A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1529A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1529A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1529A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1529A"}]},{"name":"IT1532A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1532A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1532A"}]},{"name":"IT1533A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1533A"}]},{"name":"IT1676A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1676A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1676A"}]},{"name":"IT1788A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1788A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1788A"}]},{"name":"IT1830A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1830A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1830A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1830A"}]},{"name":"IT1847A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1847A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1847A"}]},{"name":"IT1877A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1877A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1877A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1877A"}]},{"name":"IT1878A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1878A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1878A"}]},{"name":"IT1903A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1903A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1903A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1903A"}]},{"name":"IT1904A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1904A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1904A"}]},{"name":"IT1948A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1948A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PIEMONTE","staz_eu_code":"IT1948A"}]}]},{"name":"PUGLIA","children":[{"name":"IT1609A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1609A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1609A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1609A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1609A"}]},{"name":"IT1611A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1611A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1611A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1611A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1611A"}]},{"name":"IT1613A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1613A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1613A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1613A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1613A"}]},{"name":"IT1614A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1614A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1614A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1614A"}]},{"name":"IT1658A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1658A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1658A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1658A"}]},{"name":"IT1704A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT1704A"}]},{"name":"IT2021A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2021A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2021A"}]},{"name":"IT2139A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2139A"}]},{"name":"IT2148A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2148A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2148A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2148A"}]},{"name":"IT2150A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2150A"}]},{"name":"IT2151A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2151A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"PUGLIA","staz_eu_code":"IT2151A"}]}]},{"name":"SARDEGNA","children":[{"name":"IT1243A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1243A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1243A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1243A"}]},{"name":"IT1269A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1269A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1269A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1269A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1269A"}]},{"name":"IT1273A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1273A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1273A"}]},{"name":"IT1277A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1277A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1277A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1277A"}]},{"name":"IT1309A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1309A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1309A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1309A"}]},{"name":"IT1347A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1347A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1347A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1347A"}]},{"name":"IT1375A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1375A"}]},{"name":"IT1383A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1383A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1383A"}]},{"name":"IT1397A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1397A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1397A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1397A"}]},{"name":"IT1407A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1407A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1407A"}]},{"name":"IT1575A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1575A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1575A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1575A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1575A"}]},{"name":"IT1576A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1576A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1576A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1576A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1576A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1576A"}]},{"name":"IT1993A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1993A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1993A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1993A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1993A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1993A"}]},{"name":"IT1996A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1996A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1996A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1996A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1996A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT1996A"}]},{"name":"IT2005A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2005A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2005A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2005A"}]},{"name":"IT2008A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2008A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2008A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2008A"}]},{"name":"IT2009A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2009A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2009A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2009A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2009A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2009A"}]},{"name":"IT2010A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2010A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2010A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2010A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2010A"}]},{"name":"IT2011A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2011A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2011A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2011A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2011A"}]},{"name":"IT2040A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2040A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2040A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2040A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2040A"}]},{"name":"IT2049A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2049A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2049A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2049A"}]},{"name":"IT2056A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2056A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2056A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2056A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2056A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2056A"}]},{"name":"IT2059A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2059A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SARDEGNA","staz_eu_code":"IT2059A"}]}]},{"name":"SICILIA","children":[{"name":"IT0611A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT0611A"}]},{"name":"IT0614A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT0614A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT0614A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT0614A"}]},{"name":"IT0618A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT0618A"}]},{"name":"IT0620A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT0620A"}]},{"name":"IT1346A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1346A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1346A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1346A"}]},{"name":"IT1888A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1888A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1888A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1888A"}]},{"name":"IT1889A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1889A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1889A"}]},{"name":"IT1890A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1890A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1890A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1890A"}]},{"name":"IT1898A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1898A"}]},{"name":"IT1899A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"SICILIA","staz_eu_code":"IT1899A"}]}]},{"name":"TOSCANA","children":[{"name":"IT0063A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0063A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0063A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0063A"}]},{"name":"IT0832A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0832A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0832A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0832A"}]},{"name":"IT0860A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0860A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0860A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0860A"}]},{"name":"IT0861A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0861A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0861A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0861A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0861A"}]},{"name":"IT0862A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0862A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0862A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0862A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0862A"}]},{"name":"IT0883A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0883A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0883A"}]},{"name":"IT0945A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0945A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0945A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0945A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0945A"}]},{"name":"IT0948A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0948A"}]},{"name":"IT0950A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0950A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0950A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0950A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT0950A"}]},{"name":"IT1001A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1001A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1001A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1001A"}]},{"name":"IT1071A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1071A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1071A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1071A"}]},{"name":"IT1110A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1110A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1110A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1110A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1110A"}]},{"name":"IT1149A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1149A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1149A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1149A"}]},{"name":"IT1186A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1186A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1186A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1186A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1186A"}]},{"name":"IT1187A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1187A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1187A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1187A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1187A"}]},{"name":"IT1409A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1409A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1409A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1409A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1409A"}]},{"name":"IT1551A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1551A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1551A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1551A"}]},{"name":"IT1553A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1553A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1553A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1553A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1553A"}]},{"name":"IT1557A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1557A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1557A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1557A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1557A"}]},{"name":"IT1560A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1560A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1560A"}]},{"name":"IT1571A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1571A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1571A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1571A"}]},{"name":"IT1592A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1592A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1592A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1592A"}]},{"name":"IT1593A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1593A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1593A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1593A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1593A"}]},{"name":"IT1644A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1644A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1644A"}]},{"name":"IT1654A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1654A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1654A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1654A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1654A"}]},{"name":"IT1681A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1681A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1681A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1681A"}]},{"name":"IT1819A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1819A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1819A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1819A"}]},{"name":"IT1942A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1942A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT1942A"}]},{"name":"IT2032A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2032A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2032A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2032A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2032A"}]},{"name":"IT2153A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2153A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2153A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2153A"}]},{"name":"IT2154A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2154A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2154A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2154A"}]},{"name":"IT2183A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2183A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2183A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2183A"}]},{"name":"IT2184A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2184A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2184A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2184A"}]},{"name":"IT2239A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2239A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2239A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2239A"}]},{"name":"IT2240A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2240A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2240A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2240A"}]},{"name":"IT2241A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2241A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2241A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2241A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"TOSCANA","staz_eu_code":"IT2241A"}]}]},{"name":"UMBRIA","children":[{"name":"IT1011A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1011A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1011A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1011A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1011A"}]},{"name":"IT1180A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1180A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1180A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1180A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1180A"}]},{"name":"IT1182A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1182A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1182A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1182A"}]},{"name":"IT1365A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1365A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1365A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1365A"}]},{"name":"IT1728A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1728A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1728A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1728A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1728A"}]},{"name":"IT1860A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1860A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1860A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1860A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1860A"}]},{"name":"IT1900A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1900A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1900A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1900A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1900A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1900A"}]},{"name":"IT1901A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1901A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1901A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1901A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1901A"}]},{"name":"IT1902A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1902A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT1902A"}]},{"name":"IT2004A","children":[{"name":"c6h6","inquinante":"c6h6","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2004A"},{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2004A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2004A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2004A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2004A"}]},{"name":"IT2100A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2100A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2100A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2100A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2100A"}]},{"name":"IT2105A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2105A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2105A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2105A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2105A"}]},{"name":"IT2109A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2109A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2109A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2109A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2109A"}]},{"name":"IT2113A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2113A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2113A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2113A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2113A"}]},{"name":"IT2134A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2134A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"UMBRIA","staz_eu_code":"IT2134A"}]}]},{"name":"VALLE_AOSTA","children":[{"name":"IT0983A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VALLE_AOSTA","staz_eu_code":"IT0983A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VALLE_AOSTA","staz_eu_code":"IT0983A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VALLE_AOSTA","staz_eu_code":"IT0983A"}]},{"name":"IT0988A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VALLE_AOSTA","staz_eu_code":"IT0988A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VALLE_AOSTA","staz_eu_code":"IT0988A"}]},{"name":"IT2233A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VALLE_AOSTA","staz_eu_code":"IT2233A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VALLE_AOSTA","staz_eu_code":"IT2233A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VALLE_AOSTA","staz_eu_code":"IT2233A"}]}]},{"name":"VENETO","children":[{"name":"IT0448A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0448A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0448A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0448A"}]},{"name":"IT0663A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0663A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0663A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0663A"}]},{"name":"IT0963A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0963A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0963A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT0963A"}]},{"name":"IT1065A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1065A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1065A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1065A"}]},{"name":"IT1172A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1172A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1172A"}]},{"name":"IT1177A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1177A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1177A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1177A"}]},{"name":"IT1213A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1213A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1213A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1213A"}]},{"name":"IT1214A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1214A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1214A"}]},{"name":"IT1215A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1215A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1215A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1215A"}]},{"name":"IT1222A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1222A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1222A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1222A"}]},{"name":"IT1328A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1328A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1328A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1328A"}]},{"name":"IT1336A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1336A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1336A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1336A"}]},{"name":"IT1340A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1340A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1340A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1340A"}]},{"name":"IT1453A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1453A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1453A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1453A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1453A"}]},{"name":"IT1535A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1535A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1535A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1535A"}]},{"name":"IT1590A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1590A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1590A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1590A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1590A"}]},{"name":"IT1594A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1594A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1594A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1594A"}]},{"name":"IT1596A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1596A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1596A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1596A"}]},{"name":"IT1619A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1619A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1619A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1619A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1619A"}]},{"name":"IT1790A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1790A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1790A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1790A"}]},{"name":"IT1791A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1791A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1791A"}]},{"name":"IT1833A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1833A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1833A"}]},{"name":"IT1838A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1838A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1838A"}]},{"name":"IT1848A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1848A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1848A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1848A"}]},{"name":"IT1862A","children":[{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1862A"}]},{"name":"IT1870A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1870A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1870A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1870A"}]},{"name":"IT1871A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1871A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1871A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1871A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1871A"}]},{"name":"IT1880A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1880A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1880A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1880A"}]},{"name":"IT1936A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1936A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1936A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1936A"},{"name":"pm25","inquinante":"pm25","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT1936A"}]},{"name":"IT2070A","children":[{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2070A"}]},{"name":"IT2071A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2071A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2071A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2071A"}]},{"name":"IT2072A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2072A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2072A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2072A"}]},{"name":"IT2231A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2231A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2231A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2231A"}]},{"name":"IT2243A","children":[{"name":"no2","inquinante":"no2","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2243A"},{"name":"nox","inquinante":"nox","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2243A"},{"name":"pm10","inquinante":"pm10","numeroStazioni":1,"regione":"VENETO","staz_eu_code":"IT2243A"}]}]}]},"options":{"size":"numeroStazioni","color_min":"#fae16c","color_max":"#ab3d2f"}},"evals":[],"jsHooks":[]}</script>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
