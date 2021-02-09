@@ -3,7 +3,7 @@ title: "Completezza serie storiche"
 description: |
   Criteri generali per selezionare le serie storiche complete nel periodo 2013 - 2020.
 author:
-  - name: ISPRA 
+  - name: Hamlet 
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
 output: distill::distill_article

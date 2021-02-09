@@ -1,7 +1,7 @@
 ---
 title: "Problemi di installazione"
 author:
-  - name: Guido Fioravanti 
+  - name: FG
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
 date: "`r Sys.Date()`"

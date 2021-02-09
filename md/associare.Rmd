@@ -3,7 +3,7 @@ title: "Dati inquinanti e dati meteoclimatici"
 description: |
   Fare il join dei dati.
 author:
-  - name: Guido Fioravanti
+  - name: Santa Claus (St. Nick) 
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
 date: "`r Sys.Date()`"
