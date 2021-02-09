@@ -16,16 +16,16 @@ knitr::opts_chunk$set(echo = TRUE,comment = "",include = TRUE,eval=FALSE)
 
 I dati giornalieri degli inquinanti sono stati raccolti in `data frame` ^[Piu' precisamente in   [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)] e archiviati come pacchetti R sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus). 
 
-I pacchetti, una volta istallati, questi risiedono in modo permanente nel computer dell'utente (**in altre parole**: l'istallazione va fatta una volta sola, a meno che non ci sia un aggiornamento dei dati alla fonte!).
+I pacchetti, una volta istallati, questi risiedono in modo permanente nel computer dell'utente (**in altre parole**: l'installazione va fatta una volta sola, a meno che non ci sia un aggiornamento dei dati alla fonte!).
 
-Per scaricare e istallare pacchetti R da `github` e' necessario utilizzare la funzione `install_github` disponibile nella libreria `devtools` (o in alternativa nella libreria `remotes`). 
+Per scaricare e installare pacchetti R da `github` e' necessario utilizzare la funzione `install_github` disponibile nella libreria `devtools` (o in alternativa nella libreria `remotes`). 
 
 ```{r}
-install.packages("devtools") #Istallare `devtools` se necessario
+install.packages("devtools") #installare `devtools` se necessario
 #install.packages("remotes") #...o remotes
 ```
 
-### Esempio: istallare il pacchetto con i dati della Valle d'Aosta.
+### Esempio: installare il pacchetto con i dati della Valle d'Aosta.
 
 Il pacchetto `R` con i dati della Valle d'Aosta si chiama `valleaosta` e contiene tre data frame: `pm10`, `pm25` e `no2` ( i nomi dei pacchetti disponibili sono elencati nella tabella in fondo a [questa pagina](pacchetti_inquinanti.html) )
 
@@ -38,7 +38,7 @@ library("devtools")
 install_github("progettopulvirus/valleaosta")  
 ```
 
-Se al momento dell'istallazione `R` dovesse chiedere di aggiornare uno o piu' pacchetti:
+Se al momento dell'installazione `R` dovesse chiedere di aggiornare uno o piu' pacchetti:
 
 <div class="sourceCode">
 <pre class="sourceCode r">
@@ -51,12 +51,19 @@ Se al momento dell'istallazione `R` dovesse chiedere di aggiornare uno o piu' pa
 </pre>
 </div>
 
-
-- scegliere `All` se si ha una connessione veloce e il tempo di bere un caffe' (a seconda del numero dei pacchetti, il caffe' puo' essere anche un americano lungo)
-
 - rispondere `None` nel caso di una connessione lenta o se si preferisce effettuare un aggiornamento manuale delle librerie di `R`.
 
-Se l'istallazione e' andata a buon fine, abbiamo a disposizione i `data frame` con i dati della Valle d'Aosta.
+- scegliere `All` se si ha una connessione veloce e il tempo di bere un caffe' (a seconda del numero dei pacchetti, il caffe' puo' essere anche un americano lungo). 
+
+**ATTENZIONE**: se decidete di aggiornare uno o piu' pacchetti, R potrebbe bloccarsi lamentando di non poter installare un determinato pacchetto. Questo solitamente si verifica quando R sta provando ad installare un pacchetto di sistema, ovvero un pacchetto che richiede i permessi di Amministratore.
+
+Soluzioni possibili:
+
+- ripetete l'installazione come `Amministratore di sistema`
+
+- installate il pacchetto da `GitHub` e non procedere all'aggiornamento dei pacchetti suggeriti da `R` (None).
+
+Se l'installazione e' andata a buon fine, abbiamo a disposizione i `data frame` con i dati della Valle d'Aosta.
 
 ```{r,echo=TRUE,include=TRUE,message=TRUE,eval=TRUE}
 #carico il pacchetto valleaosta
@@ -73,7 +80,7 @@ pm10
 Questa informazione e' ricavabile dalla [tabella](pacchetti_inquinanti.html) dei pacchetti oppure utilizzando il comando `data`...
 
 ```{r}
-#dopo aver istallato il pacchetto valleaosta posso utilizzare
+#dopo aver installato il pacchetto valleaosta posso utilizzare
 #il comando data per sapere quali e quanti data frame sono 
 #disponibili
 data(package="valleaosta")

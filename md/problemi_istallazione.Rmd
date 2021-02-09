@@ -1,5 +1,5 @@
 ---
-title: "Problemi di istallazione"
+title: "Problemi di installazione"
 author:
   - name: Guido Fioravanti 
     affiliation: ISPRA
@@ -12,9 +12,9 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-### Problemi istallazione
+### Problemi installazione
 
-A volte problemi di istallazione usando la funzione `install_github` possono dipendere dalla connessione di rete. Generalmente il problema si risolve rilanciando il comando `install_github` dopo qualche secondo.
+A volte problemi di installazione usando la funzione `install_github` possono dipendere dalla connessione di rete. Generalmente il problema si risolve rilanciando il comando `install_github` dopo qualche secondo.
 
 ### Se ilproblema persiste
 
@@ -33,7 +33,7 @@ A volte problemi di istallazione usando la funzione `install_github` possono dip
 
 7. Nella barra degli strumenti, in alto a destra, cliccate su `Tools` e quindi su `Install.packages...`.
 
-8. Cliccate sul menu a tendina sotto la voce `Install From` e selezionate `Package Archive File (.tar.gz)`. In questo modo state dicendo a `RStudio` di istallare un pacchetto da file. 
+8. Cliccate sul menu a tendina sotto la voce `Install From` e selezionate `Package Archive File (.tar.gz)`. In questo modo state dicendo a `RStudio` di installare un pacchetto da file. 
 
 9. Cliccando sul pulsante `Browse...` cercate il file scaricato da `GitHub` (nel nostro esempio: `valleaosta-master.zip`).
 

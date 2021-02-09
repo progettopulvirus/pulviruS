@@ -19,7 +19,7 @@ Alcuni suggerimenti per risolvere eventuali [problemi di istallazione dei pacche
 
 ### [Parametri meteoclimatici](./acquisire_dati_meteo.html)
 
-Istallare il pacchetto R `datiMeteo` contenente i dati giornalieri dei parametri meteoclimatici.
+Installare il pacchetto R `datiMeteo` contenente i dati giornalieri dei parametri meteoclimatici.
 
 ### [Pacchetti R per gli inquinanti](./pacchetti_inquinanti.html)
 

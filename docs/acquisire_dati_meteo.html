@@ -1905,15 +1905,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <p>I dati giornalieri dei parametri meteoclimatici sono stati raccolti in unico <code>data frame</code> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> archiviato nel pacchetto <code>R</code> <code>datiMeteo</code> disponibile sul repository <code>github</code> <a href="https://github.com/progettopulvirus/datiMeteo"><code>progettopulvirus</code></a>.</p>
-<p>Una volta istallato, il pacchetto con i dati meteoclimatici risiede in modo permanente nel computer dell’utente (<strong>in altre parole</strong>: l’istallazione va effettuata una volta sola!).</p>
+<p>Una volta installato, il pacchetto con i dati meteoclimatici risiede in modo permanente nel computer dell’utente (<strong>in altre parole</strong>: l’installazione va effettuata una volta sola!).</p>
 <p>Per scaricare e istallare il pacchetto da <code>github</code> e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Istallare il pacchetto `devtools` o `remotes` se necessario</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#Installare il pacchetto `devtools` o `remotes` se necessario</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"devtools"</span><span class='op'>)</span>
 <span class='co'># install.packages("remotes")</span>
 
-<span class='co'>#se l'istallazione e' andata a buon fine</span>
+<span class='co'>#se l'installazione e' andata a buon fine</span>
 <span class='fu'>devtools</span><span class='fu'>::</span><span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/datiMeteo"</span><span class='op'>)</span>
 <span class='co'>#</span>
 <span class='co'>#in modo analogo posso usare la libreria remotes</span>

@@ -1905,16 +1905,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <p>I dati giornalieri degli inquinanti sono stati raccolti in <code>data frame</code> <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> e archiviati come pacchetti R sul repository <code>github</code> <a href="https://github.com/progettopulvirus"><code>progettopulvirus</code></a>.</p>
-<p>I pacchetti, una volta istallati, questi risiedono in modo permanente nel computer dell’utente (<strong>in altre parole</strong>: l’istallazione va fatta una volta sola, a meno che non ci sia un aggiornamento dei dati alla fonte!).</p>
-<p>Per scaricare e istallare pacchetti R da <code>github</code> e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
+<p>I pacchetti, una volta istallati, questi risiedono in modo permanente nel computer dell’utente (<strong>in altre parole</strong>: l’installazione va fatta una volta sola, a meno che non ci sia un aggiornamento dei dati alla fonte!).</p>
+<p>Per scaricare e installare pacchetti R da <code>github</code> e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"devtools"</span><span class='op'>)</span> <span class='co'>#Istallare `devtools` se necessario</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"devtools"</span><span class='op'>)</span> <span class='co'>#installare `devtools` se necessario</span>
 <span class='co'>#install.packages("remotes") #...o remotes</span>
 </code></pre>
 </div>
 </div>
-<h3 id="esempio-istallare-il-pacchetto-con-i-dati-della-valle-daosta.">Esempio: istallare il pacchetto con i dati della Valle d’Aosta.</h3>
+<h3 id="esempio-installare-il-pacchetto-con-i-dati-della-valle-daosta.">Esempio: installare il pacchetto con i dati della Valle d’Aosta.</h3>
 <p>Il pacchetto <code>R</code> con i dati della Valle d’Aosta si chiama <code>valleaosta</code> e contiene tre data frame: <code>pm10</code>, <code>pm25</code> e <code>no2</code> ( i nomi dei pacchetti disponibili sono elencati nella tabella in fondo a <a href="pacchetti_inquinanti.html">questa pagina</a> )</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
@@ -1927,7 +1927,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </code></pre>
 </div>
 </div>
-<p>Se al momento dell’istallazione <code>R</code> dovesse chiedere di aggiornare uno o piu’ pacchetti:</p>
+<p>Se al momento dell’installazione <code>R</code> dovesse chiedere di aggiornare uno o piu’ pacchetti:</p>
 <div class="sourceCode">
 <pre class="sourceCode r">
 <code class="sourceCode r">
@@ -1939,10 +1939,16 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </pre>
 </div>
 <ul>
-<li><p>scegliere <code>All</code> se si ha una connessione veloce e il tempo di bere un caffe’ (a seconda del numero dei pacchetti, il caffe’ puo’ essere anche un americano lungo)</p></li>
 <li><p>rispondere <code>None</code> nel caso di una connessione lenta o se si preferisce effettuare un aggiornamento manuale delle librerie di <code>R</code>.</p></li>
+<li><p>scegliere <code>All</code> se si ha una connessione veloce e il tempo di bere un caffe’ (a seconda del numero dei pacchetti, il caffe’ puo’ essere anche un americano lungo).</p></li>
 </ul>
-<p>Se l’istallazione e’ andata a buon fine, abbiamo a disposizione i <code>data frame</code> con i dati della Valle d’Aosta.</p>
+<p><strong>ATTENZIONE</strong>: se decidete di aggiornare uno o piu’ pacchetti, R potrebbe bloccarsi lamentando di non poter installare un determinato pacchetto. Questo solitamente si verifica quando R sta provando ad installare un pacchetto di sistema, ovvero un pacchetto che richiede i permessi di Amministratore.</p>
+<p>Soluzioni possibili:</p>
+<ul>
+<li><p>ripetete l’installazione come <code>Amministratore di sistema</code></p></li>
+<li><p>installate il pacchetto da <code>GitHub</code> e non procedere all’aggiornamento dei pacchetti suggeriti da <code>R</code> (None).</p></li>
+</ul>
+<p>Se l’installazione e’ andata a buon fine, abbiamo a disposizione i <code>data frame</code> con i dati della Valle d’Aosta.</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#carico il pacchetto valleaosta</span>
@@ -1972,7 +1978,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Questa informazione e’ ricavabile dalla <a href="pacchetti_inquinanti.html">tabella</a> dei pacchetti oppure utilizzando il comando <code>data</code>…</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#dopo aver istallato il pacchetto valleaosta posso utilizzare</span>
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#dopo aver installato il pacchetto valleaosta posso utilizzare</span>
 <span class='co'>#il comando data per sapere quali e quanti data frame sono </span>
 <span class='co'>#disponibili</span>
 <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span>package<span class='op'>=</span><span class='st'>"valleaosta"</span><span class='op'>)</span>

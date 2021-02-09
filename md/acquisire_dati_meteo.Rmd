@@ -16,16 +16,16 @@ knitr::opts_chunk$set(echo = TRUE,comment = "",include = TRUE,eval=FALSE)
 
 I dati giornalieri dei parametri meteoclimatici sono stati raccolti in unico `data frame` ^[piu' precisamente in un [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)] archiviato nel pacchetto `R` `datiMeteo` disponibile sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus/datiMeteo). 
 
-Una volta istallato, il pacchetto con i dati meteoclimatici risiede in modo permanente nel computer dell'utente (**in altre parole**: l'istallazione va effettuata una volta sola!).
+Una volta installato, il pacchetto con i dati meteoclimatici risiede in modo permanente nel computer dell'utente (**in altre parole**: l'installazione va effettuata una volta sola!).
 
 Per scaricare e istallare il pacchetto da `github` e' necessario utilizzare la funzione `install_github` disponibile nella libreria `devtools` (o in alternativa nella libreria `remotes`). 
 
 ```{r}
-#Istallare il pacchetto `devtools` o `remotes` se necessario
+#Installare il pacchetto `devtools` o `remotes` se necessario
 install.packages("devtools")
 # install.packages("remotes")
 
-#se l'istallazione e' andata a buon fine
+#se l'installazione e' andata a buon fine
 devtools::install_github("progettopulvirus/datiMeteo")
 #
 #in modo analogo posso usare la libreria remotes
