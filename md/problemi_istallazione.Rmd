@@ -1,0 +1,45 @@
+---
+title: "Problemi di istallazione"
+author:
+  - name: Guido Fioravanti 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### Problemi istallazione
+
+A volte problemi di istallazione usando la funzione `install_github` possono dipendere dalla connessione di rete. Generalmente il problema si risolve rilanciando il comando `install_github` dopo qualche secondo.
+
+### Se ilproblema persiste
+
+1. Andate alla [pagina](https://github.com/progettopulvirus?tab=repositories) dei repository dei pacchetti
+
+2. Cliccate sul nome della regione di cui volete scaricare i dati (solitamente sono dei link in grassetto di colore blu). Clicchiamo, ad esempio, su
+`valleaosta`.
+
+3. Si apre il repository di `GitHub` del pacchetto `valleaosta`. In alto a destra cliccate sul pulsante verde `Code`.
+
+4. Si apre un menu, alla cui base compare il link `Download ZIP`. 
+
+5. Cliccando su `Download ZIP` vi viene chiesto di salvare un file `.zip` di nome `valleaosta-master.zip`. Salvatelo sul vostro pc.
+
+6. Aprite `RStudio`.
+
+7. Nella barra degli strumenti, in alto a destra, cliccate su `Tools` e quindi su `Install.packages...`.
+
+8. Cliccate sul menu a tendina sotto la voce `Install From` e selezionate `Package Archive File (.tar.gz)`. In questo modo state dicendo a `RStudio` di istallare un pacchetto da file. 
+
+9. Cliccando sul pulsante `Browse...` cercate il file scaricato da `GitHub` (nel nostro esempio: `valleaosta-master.zip`).
+
+10. Cliccate due volte sul file `valleaosta-master.zip`. Dovreste a questo punto essere nuovamente nella finesta di `Install.packages...`.
+
+11. Cliccate su `Install`.
+
+
+

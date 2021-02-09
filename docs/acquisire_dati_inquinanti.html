@@ -91,8 +91,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-02-07"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-02-07"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-02-09"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-09"/>
   <meta name="article:author" content="Guido Fioravanti"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -111,7 +111,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Come accedere ai dati"]},{"type":"character","attributes":{},"value":["Scaricare i dati giornalieri degli inquinanti mediante R.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-07"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Come accedere ai dati"]},{"type":"character","attributes":{},"value":["Scaricare i dati giornalieri degli inquinanti mediante R.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-09"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1866,7 +1866,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Come accedere ai dati","description":"Scaricare i dati giornalieri degli inquinanti mediante R.","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-07T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
+{"title":"Come accedere ai dati","description":"Scaricare i dati giornalieri degli inquinanti mediante R.","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-09T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1900,7 +1900,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-byline">
   Guido Fioravanti  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
   
-<br/>2021-02-07
+<br/>2021-02-09
 </div>
 
 <div class="d-article">
@@ -1923,7 +1923,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://devtools.r-lib.org/'>"devtools"</a></span><span class='op'>)</span> 
 
 <span class='co'>#istallo il pacchetto valleaosta dal repository github progettopulvirus</span>
-<span class='fu'><a href='https://rdrr.io/pkg/devtools/man/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/valleaosta"</span><span class='op'>)</span>  
+<span class='fu'><a href='https://devtools.r-lib.org//reference/remote-reexports.html'>install_github</a></span><span class='op'>(</span><span class='st'>"progettopulvirus/valleaosta"</span><span class='op'>)</span>  
 </code></pre>
 </div>
 </div>
@@ -1953,7 +1953,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span class='va'>pm10</span>
 </code></pre>
 </div>
-<pre><code># A tibble: 7,778 x 8
+<pre><code># A tibble: 8,618 x 8
    pollutant_fk regione station_eu_code date          yy    mm    dd
           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
  1            5 VALLE_… IT0983A         2013-01-01  2013     1     1
@@ -1966,7 +1966,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
  8            5 VALLE_… IT0988A         2013-01-04  2013     1     4
  9            5 VALLE_… IT0983A         2013-01-05  2013     1     5
 10            5 VALLE_… IT0988A         2013-01-05  2013     1     5
-# … with 7,768 more rows, and 1 more variable: value &lt;dbl&gt;</code></pre>
+# … with 8,608 more rows, and 1 more variable: value &lt;dbl&gt;</code></pre>
 </div>
 <h3 id="quali-data-frame-sono-disponibili-allinterno-di-ciascun-pacchetto">Quali data frame sono disponibili all’interno di ciascun pacchetto?</h3>
 <p>Questa informazione e’ ricavabile dalla <a href="pacchetti_inquinanti.html">tabella</a> dei pacchetti oppure utilizzando il comando <code>data</code>…</p>
