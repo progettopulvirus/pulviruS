@@ -1,0 +1,21 @@
+---
+title: "Stazioni di monitoraggio"
+author:
+  - name: Guido Fioravanti 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+### [Mappa stazioni di monitoraggio](./mappaStazioniValide.html)
+
+Mappa interattiva delle stazioni di monitoraggio con dati nei pacchetti `R` degli inquinanti.
+
+### [Tabella anagrafica](./tabella_anagrafica.html)
+
+Anagrafica delle stazioni in Formato `html` dell'anagrafica delle stazioni disponibile nel pacchetto [`stazioniMonitoraggio`](anagrafica.html).

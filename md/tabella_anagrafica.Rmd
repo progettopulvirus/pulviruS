@@ -1,0 +1,26 @@
+---
+title: "Stazioni di monitoraggio"
+author:
+  - name: Guido Fioravanti 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: 
+  distill::distill_article:
+    css: dt.css
+---
+
+```{r setup, include=TRUE,echo=FALSE,message=FALSE,error=FALSE,warning=FALSE}
+library("DT")
+library("readr")
+library("dplyr")
+read_delim("./assets/ana.csv",delim=";",col_names = TRUE)->ana
+```
+
+
+```{r, include=TRUE,echo=FALSE,message=FALSE,warning=FALSE,error=FALSE}
+datatable(ana %>% dplyr::select(-municipality_id,-metropoli,-station_municipality_fk,
+                                -flag_rau,-province_fk,-geom,-note,-region_id,-station_start_time,
+                                -station_end_time,-popolazione,-zona_tipo,-nome_comune,
+                                -st_x,-st_y,-zone_type_),rownames = FALSE)
+```

@@ -12,7 +12,7 @@ navbar:
     - text: "Dati"
       href: dati.html
     - text: "Stazioni"
-      href: "mappaStazioniValide.html"
+      href: stazioni.html
     - text: "Risultati"
       href: risultati.html
   search: false     

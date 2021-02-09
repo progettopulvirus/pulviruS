@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+  <meta name="generator" content="distill" />
+
+  <style type="text/css">
+  /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
+  body {
+    visibility: hidden;
+  }
+  </style>
+
+ <!--radix_placeholder_import_source-->
+ <!--/radix_placeholder_import_source-->
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css" data-origin="pandoc">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ad0000; } /* Alert */
+code span.an { color: #5e5e5e; } /* Annotation */
+code span.at { color: #20794d; } /* Attribute */
+code span.bn { color: #ad0000; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007ba5; } /* ControlFlow */
+code span.ch { color: #20794d; } /* Char */
+code span.cn { color: #8f5902; } /* Constant */
+code span.co { color: #5e5e5e; } /* Comment */
+code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+code span.dt { color: #ad0000; } /* DataType */
+code span.dv { color: #ad0000; } /* DecVal */
+code span.er { color: #ad0000; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #ad0000; } /* Float */
+code span.fu { color: #4758ab; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #5e5e5e; } /* Information */
+code span.kw { color: #007ba5; } /* Keyword */
+code span.op { color: #5e5e5e; } /* Operator */
+code span.ot { color: #007ba5; } /* Other */
+code span.pp { color: #ad0000; } /* Preprocessor */
+code span.sc { color: #20794d; } /* SpecialChar */
+code span.ss { color: #20794d; } /* SpecialString */
+code span.st { color: #20794d; } /* String */
+code span.va { color: #111111; } /* Variable */
+code span.vs { color: #20794d; } /* VerbatimString */
+code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+</style>
+
+  <!--radix_placeholder_meta_tags-->
+  <title>pulviruS: Stazioni di monitoraggio</title>
+  
+  
+  <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
+  
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-02-10"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-02-10"/>
+  <meta name="article:author" content="Guido Fioravanti"/>
+  
+  <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
+  <meta property="og:title" content="pulviruS: Stazioni di monitoraggio"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:locale" content="en_US"/>
+  <meta property="og:site_name" content="pulviruS"/>
+  
+  <!--  https://dev.twitter.com/cards/types/summary -->
+  <meta property="twitter:card" content="summary"/>
+  <meta property="twitter:title" content="pulviruS: Stazioni di monitoraggio"/>
+  
+  <!--/radix_placeholder_meta_tags-->
+  <!--radix_placeholder_rmarkdown_metadata-->
+  
+  <script type="text/json" id="radix-rmarkdown-metadata">
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Stazioni di monitoraggio"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["Guido Fioravanti"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["css"]}},"value":[{"type":"character","attributes":{},"value":["dt.css"]}]}]}]}
+  </script>
+  <!--/radix_placeholder_rmarkdown_metadata-->
+  <!--radix_placeholder_navigation_in_header-->
+  <meta name="distill:offset" content=""/>
+  
+  <script type="application/javascript">
+  
+    window.headroom_prevent_pin = false;
+  
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+  
+      // initialize headroom for banner
+      var header = $('header').get(0);
+      var headerHeight = header.offsetHeight;
+      var headroom = new Headroom(header, {
+        tolerance: 5,
+        onPin : function() {
+          if (window.headroom_prevent_pin) {
+            window.headroom_prevent_pin = false;
+            headroom.unpin();
+          }
+        }
+      });
+      headroom.init();
+      if(window.location.hash)
+        headroom.unpin();
+      $(header).addClass('headroom--transition');
+  
+      // offset scroll location for banner on hash change
+      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
+      window.addEventListener("hashchange", function(event) {
+        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
+      });
+  
+      // responsive menu
+      $('.distill-site-header').each(function(i, val) {
+        var topnav = $(this);
+        var toggle = topnav.find('.nav-toggle');
+        toggle.on('click', function() {
+          topnav.toggleClass('responsive');
+        });
+      });
+  
+      // nav dropdowns
+      $('.nav-dropbtn').click(function(e) {
+        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
+        $(this).parent().siblings('.nav-dropdown')
+           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $("body").click(function(e){
+        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
+      });
+      $(".nav-dropdown").click(function(e){
+        e.stopPropagation();
+      });
+    });
+  </script>
+  
+  <style type="text/css">
+  
+  /* Theme (user-documented overrideables for nav appearance) */
+  
+  .distill-site-nav {
+    color: rgba(255, 255, 255, 0.8);
+    background-color: #0F2E3D;
+    font-size: 15px;
+    font-weight: 300;
+  }
+  
+  .distill-site-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .distill-site-nav a:hover {
+    color: white;
+  }
+  
+  @media print {
+    .distill-site-nav {
+      display: none;
+    }
+  }
+  
+  .distill-site-header {
+  
+  }
+  
+  .distill-site-footer {
+  
+  }
+  
+  
+  /* Site Header */
+  
+  .distill-site-header {
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+  
+  .distill-site-header .nav-left {
+    display: inline-block;
+    margin-left: 8px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .distill-site-header .nav-left {
+      margin-left: 0;
+    }
+  }
+  
+  
+  .distill-site-header .nav-right {
+    float: right;
+    margin-right: 8px;
+  }
+  
+  .distill-site-header a,
+  .distill-site-header .title {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 10px 14px 10px;
+  }
+  
+  .distill-site-header .title {
+    font-size: 18px;
+    min-width: 150px;
+  }
+  
+  .distill-site-header .logo {
+    padding: 0;
+  }
+  
+  .distill-site-header .logo img {
+    display: none;
+    max-height: 20px;
+    width: auto;
+    margin-bottom: -4px;
+  }
+  
+  .distill-site-header .nav-image img {
+    max-height: 18px;
+    width: auto;
+    display: inline-block;
+    margin-bottom: -3px;
+  }
+  
+  
+  
+  @media screen and (min-width: 1000px) {
+    .distill-site-header .logo img {
+      display: inline-block;
+    }
+    .distill-site-header .nav-left {
+      margin-left: 20px;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 20px;
+    }
+    .distill-site-header .title {
+      padding-left: 12px;
+    }
+  }
+  
+  
+  .distill-site-header .nav-toggle {
+    display: none;
+  }
+  
+  .nav-dropdown {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .nav-dropdown .nav-dropbtn {
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 16px 10px;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+    margin-top: 1px;
+    z-index: 2;
+  }
+  
+  .nav-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1;
+    margin-top: 2px;
+    white-space: nowrap;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  
+  .nav-dropdown-content hr {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-dropdown-active {
+    display: block;
+  }
+  
+  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
+    color: black;
+    padding: 6px 24px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .nav-dropdown-content .nav-dropdown-header {
+    display: block;
+    padding: 5px 24px;
+    padding-bottom: 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #999999;
+    white-space: nowrap;
+  }
+  
+  .nav-dropdown:hover .nav-dropbtn {
+    color: white;
+  }
+  
+  .nav-dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .nav-right .nav-dropdown-content {
+    margin-left: -45%;
+    right: 0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
+    .distill-site-header a.nav-toggle {
+      float: right;
+      display: block;
+    }
+    .distill-site-header .title {
+      margin-left: 0;
+    }
+    .distill-site-header .nav-right {
+      margin-right: 0;
+    }
+    .distill-site-header {
+      overflow: hidden;
+    }
+    .nav-right .nav-dropdown-content {
+      margin-left: 0;
+    }
+  }
+  
+  
+  @media screen and (max-width: 768px) {
+    .distill-site-header.responsive {position: relative; min-height: 500px; }
+    .distill-site-header.responsive a.nav-toggle {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .distill-site-header.responsive a,
+    .distill-site-header.responsive .nav-dropdown {
+      display: block;
+      text-align: left;
+    }
+    .distill-site-header.responsive .nav-left,
+    .distill-site-header.responsive .nav-right {
+      width: 100%;
+    }
+    .distill-site-header.responsive .nav-dropdown {float: none;}
+    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
+    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
+  /* Site Footer */
+  
+  .distill-site-footer {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    z-index: 3;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Headroom */
+  
+  d-title {
+    padding-top: 6rem;
+  }
+  
+  @media print {
+    d-title {
+      padding-top: 4rem;
+    }
+  }
+  
+  .headroom {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .headroom--transition {
+    transition: all .4s ease-in-out;
+  }
+  
+  .headroom--unpinned {
+    top: -100px;
+  }
+  
+  .headroom--pinned {
+    top: 0;
+  }
+  
+  /* adjust viewport for navbar height */
+  /* helps vertically center bootstrap (non-distill) content */
+  .min-vh-100 {
+    min-height: calc(100vh - 100px) !important;
+  }
+  
+  </style>
+  
+  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--/radix_placeholder_navigation_in_header-->
+  <!--radix_placeholder_distill-->
+  
+  <style type="text/css">
+  
+  body {
+    background-color: white;
+  }
+  
+  .pandoc-table {
+    width: 100%;
+  }
+  
+  .pandoc-table>caption {
+    margin-bottom: 10px;
+  }
+  
+  .pandoc-table th:not([align]) {
+    text-align: left;
+  }
+  
+  .pagedtable-footer {
+    font-size: 15px;
+  }
+  
+  d-byline .byline {
+    grid-template-columns: 2fr 2fr;
+  }
+  
+  d-byline .byline h3 {
+    margin-block-start: 1.5em;
+  }
+  
+  d-byline .byline .authors-affiliations h3 {
+    margin-block-start: 0.5em;
+  }
+  
+  .authors-affiliations .orcid-id {
+    width: 16px;
+    height:16px;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    padding-bottom: 2px;
+  }
+  
+  d-title .dt-tags {
+    margin-top: 1em;
+    grid-column: text;
+  }
+  
+  .dt-tags .dt-tag {
+    text-decoration: none;
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0em 0.4em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    font-size: 70%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  d-article table.gt_table td,
+  d-article table.gt_table th {
+    border-bottom: none;
+  }
+  
+  .html-widget {
+    margin-bottom: 2.0em;
+  }
+  
+  .l-screen-inset {
+    padding-right: 16px;
+  }
+  
+  .l-screen .caption {
+    margin-left: 10px;
+  }
+  
+  .shaded {
+    background: rgb(247, 247, 247);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .html-widget {
+    margin-bottom: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .shaded .shaded-content {
+    background: white;
+  }
+  
+  .text-output {
+    margin-top: 0;
+    line-height: 1.5em;
+  }
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  d-article {
+    padding-top: 2.5rem;
+    padding-bottom: 30px;
+  }
+  
+  d-appendix {
+    padding-top: 30px;
+  }
+  
+  d-article>p>img {
+    width: 100%;
+  }
+  
+  d-article h2 {
+    margin: 1rem 0 1.5rem 0;
+  }
+  
+  d-article h3 {
+    margin-top: 1.5rem;
+  }
+  
+  d-article iframe {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 2.0em;
+    width: 100%;
+  }
+  
+  /* Tweak code blocks */
+  
+  d-article div.sourceCode code,
+  d-article pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+  
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: auto;
+  }
+  
+  d-article div.sourceCode {
+    background-color: white;
+  }
+  
+  d-article div.sourceCode pre {
+    padding-left: 10px;
+    font-size: 12px;
+    border-left: 2px solid rgba(0,0,0,0.1);
+  }
+  
+  d-article pre {
+    font-size: 12px;
+    color: black;
+    background: none;
+    margin-top: 0;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  d-article pre a {
+    border-bottom: none;
+  }
+  
+  d-article pre a:hover {
+    border-bottom: none;
+    text-decoration: underline;
+  }
+  
+  d-article details {
+    grid-column: text;
+    margin-bottom: 0.8em;
+  }
+  
+  @media(min-width: 768px) {
+  
+  d-article pre,
+  d-article div.sourceCode,
+  d-article div.sourceCode pre {
+    overflow: visible !important;
+  }
+  
+  d-article div.sourceCode pre {
+    padding-left: 18px;
+    font-size: 14px;
+  }
+  
+  d-article pre {
+    font-size: 14px;
+  }
+  
+  }
+  
+  figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  /* CSS for d-contents */
+  
+  .d-contents {
+    grid-column: text;
+    color: rgba(0,0,0,0.8);
+    font-size: 0.9em;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 0.25em;
+    justify-self: start;
+  }
+  
+  @media(min-width: 1000px) {
+    .d-contents.d-contents-float {
+      height: 0;
+      grid-column-start: 1;
+      grid-column-end: 4;
+      justify-self: center;
+      padding-right: 3em;
+      padding-left: 2em;
+    }
+  }
+  
+  .d-contents nav h3 {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  .d-contents li {
+    list-style-type: none
+  }
+  
+  .d-contents nav > ul {
+    padding-left: 0;
+  }
+  
+  .d-contents ul {
+    padding-left: 1em
+  }
+  
+  .d-contents nav ul li {
+    margin-top: 0.6em;
+    margin-bottom: 0.2em;
+  }
+  
+  .d-contents nav a {
+    font-size: 13px;
+    border-bottom: none;
+    text-decoration: none
+    color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .d-contents nav a:hover {
+    text-decoration: underline solid rgba(0, 0, 0, 0.6)
+  }
+  
+  .d-contents nav > ul > li > a {
+    font-weight: 600;
+  }
+  
+  .d-contents nav > ul > li > ul {
+    font-weight: inherit;
+  }
+  
+  .d-contents nav > ul > li > ul > li {
+    margin-top: 0.2em;
+  }
+  
+  
+  .d-contents nav ul {
+    margin-top: 0;
+    margin-bottom: 0.25em;
+  }
+  
+  .d-article-with-toc h2:nth-child(2) {
+    margin-top: 0;
+  }
+  
+  
+  /* Figure */
+  
+  .figure {
+    position: relative;
+    margin-bottom: 2.5em;
+    margin-top: 1.5em;
+  }
+  
+  .figure img {
+    width: 100%;
+  }
+  
+  .figure .caption {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 1.5em;
+  }
+  
+  .figure img.external {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 18px;
+    box-sizing: border-box;
+  }
+  
+  .figure .caption a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .figure .caption b,
+  .figure .caption strong, {
+    font-weight: 600;
+    color: rgba(0, 0, 0, 1.0);
+  }
+  
+  /* Citations */
+  
+  d-article .citation {
+    color: inherit;
+    cursor: inherit;
+  }
+  
+  div.hanging-indent{
+    margin-left: 1em; text-indent: -1em;
+  }
+  
+  /* Citation hover box */
+  
+  .tippy-box[data-theme~=light-border] {
+    background-color: rgba(250, 250, 250, 0.95);
+  }
+  
+  .tippy-content > p {
+    margin-bottom: 0;
+    padding: 2px;
+  }
+  
+  
+  /* Tweak 1000px media break to show more text */
+  
+  @media(min-width: 1000px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 80px [middle-start] 50px [text-start kicker-end] 65px 65px 65px 65px 65px 65px 65px 65px [text-end gutter-start] 65px [middle-end] 65px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 16px;
+    }
+  
+    .grid {
+      grid-column-gap: 16px;
+    }
+  
+    d-article {
+      font-size: 1.06rem;
+      line-height: 1.7em;
+    }
+    figure .caption, .figure .caption, figure figcaption {
+      font-size: 13px;
+    }
+  }
+  
+  @media(min-width: 1180px) {
+    .base-grid,
+    distill-header,
+    d-title,
+    d-abstract,
+    d-article,
+    d-appendix,
+    distill-appendix,
+    d-byline,
+    d-footnote-list,
+    d-citation-list,
+    distill-footer {
+      grid-template-columns: [screen-start] 1fr [page-start kicker-start] 60px [middle-start] 60px [text-start kicker-end] 60px 60px 60px 60px 60px 60px 60px 60px [text-end gutter-start] 60px [middle-end] 60px [page-end gutter-end] 1fr [screen-end];
+      grid-column-gap: 32px;
+    }
+  
+    .grid {
+      grid-column-gap: 32px;
+    }
+  }
+  
+  
+  /* Get the citation styles for the appendix (not auto-injected on render since
+     we do our own rendering of the citation appendix) */
+  
+  d-appendix .citation-appendix,
+  .d-appendix .citation-appendix {
+    font-size: 11px;
+    line-height: 15px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    padding-left: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.02);
+    padding: 10px 18px;
+    border-radius: 3px;
+    color: rgba(150, 150, 150, 1);
+    overflow: hidden;
+    margin-top: -12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  
+  /* Include appendix styles here so they can be overridden */
+  
+  d-appendix {
+    contain: layout style;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-top: 60px;
+    margin-bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+  
+  d-appendix h3 {
+    grid-column: page-start / text-start;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 1em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.65);
+  }
+  
+  d-appendix h3 + * {
+    margin-top: 1em;
+  }
+  
+  d-appendix ol {
+    padding: 0 0 0 15px;
+  }
+  
+  @media (min-width: 768px) {
+    d-appendix ol {
+      padding: 0 0 0 30px;
+      margin-left: -30px;
+    }
+  }
+  
+  d-appendix li {
+    margin-bottom: 1em;
+  }
+  
+  d-appendix a {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  d-appendix > * {
+    grid-column: text;
+  }
+  
+  d-appendix > d-footnote-list,
+  d-appendix > d-citation-list,
+  d-appendix > distill-appendix {
+    grid-column: screen;
+  }
+  
+  /* Include footnote styles here so they can be overridden */
+  
+  d-footnote-list {
+    contain: layout style;
+  }
+  
+  d-footnote-list > * {
+    grid-column: text;
+  }
+  
+  d-footnote-list a.footnote-backlink {
+    color: rgba(0,0,0,0.3);
+    padding-left: 0.5em;
+  }
+  
+  
+  
+  /* Anchor.js */
+  
+  .anchorjs-link {
+    /*transition: all .25s linear; */
+    text-decoration: none;
+    border-bottom: none;
+  }
+  *:hover > .anchorjs-link {
+    margin-left: -1.125em !important;
+    text-decoration: none;
+    border-bottom: none;
+  }
+  
+  /* Social footer */
+  
+  .social_footer {
+    margin-top: 30px;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.67);
+  }
+  
+  .disqus-comments {
+    margin-right: 30px;
+  }
+  
+  .disqus-comment-count {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
+  
+  #disqus_thread {
+    margin-top: 30px;
+  }
+  
+  .article-sharing a {
+    border-bottom: none;
+    margin-right: 8px;
+  }
+  
+  .article-sharing a:hover {
+    border-bottom: none;
+  }
+  
+  .sidebar-section.subscribe {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .subscribe p {
+    margin-bottom: 0.5em;
+  }
+  
+  
+  .article-footer .subscribe {
+    font-size: 15px;
+    margin-top: 45px;
+  }
+  
+  
+  .sidebar-section.custom {
+    font-size: 12px;
+    line-height: 1.6em;
+  }
+  
+  .custom p {
+    margin-bottom: 0.5em;
+  }
+  
+  /* Styles for listing layout (hide title) */
+  .layout-listing d-title, .layout-listing .d-title {
+    display: none;
+  }
+  
+  /* Styles for posts lists (not auto-injected) */
+  
+  
+  .posts-with-sidebar {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  
+  .posts-list .description h2,
+  .posts-list .description p {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  
+  .posts-list .description h2 {
+    font-weight: 700;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  
+  .posts-list h2.post-tag {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 12px;
+  }
+  .posts-list {
+    margin-top: 60px;
+    margin-bottom: 24px;
+  }
+  
+  .posts-list .post-preview {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 24px 0;
+  }
+  
+  .post-preview-last {
+    border-bottom: none !important;
+  }
+  
+  .posts-list .posts-list-caption {
+    grid-column: screen;
+    font-weight: 400;
+  }
+  
+  .posts-list .post-preview h2 {
+    margin: 0 0 6px 0;
+    line-height: 1.2em;
+    font-style: normal;
+    font-size: 24px;
+  }
+  
+  .posts-list .post-preview p {
+    margin: 0 0 12px 0;
+    line-height: 1.4em;
+    font-size: 16px;
+  }
+  
+  .posts-list .post-preview .thumbnail {
+    box-sizing: border-box;
+    margin-bottom: 24px;
+    position: relative;
+    max-width: 500px;
+  }
+  .posts-list .post-preview img {
+    width: 100%;
+    display: block;
+  }
+  
+  .posts-list .metadata {
+    font-size: 12px;
+    line-height: 1.4em;
+    margin-bottom: 18px;
+  }
+  
+  .posts-list .metadata > * {
+    display: inline-block;
+  }
+  
+  .posts-list .metadata .publishedDate {
+    margin-right: 2em;
+  }
+  
+  .posts-list .metadata .dt-authors {
+    display: block;
+    margin-top: 0.3em;
+    margin-right: 2em;
+  }
+  
+  .posts-list .dt-tags {
+    display: block;
+    line-height: 1em;
+  }
+  
+  .posts-list .dt-tags .dt-tag {
+    display: inline-block;
+    color: rgba(0,0,0,0.6);
+    padding: 0.3em 0.4em;
+    margin-right: 0.2em;
+    margin-bottom: 0.4em;
+    font-size: 60%;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .posts-list img {
+    opacity: 1;
+  }
+  
+  .posts-list img[data-src] {
+    opacity: 0;
+  }
+  
+  .posts-more {
+    clear: both;
+  }
+  
+  
+  .posts-sidebar {
+    font-size: 16px;
+  }
+  
+  .posts-sidebar h3 {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  
+  .sidebar-section {
+    margin-bottom: 30px;
+  }
+  
+  .categories ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .categories li {
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 0;
+  }
+  
+  .categories li>a {
+    border-bottom: none;
+  }
+  
+  .categories li>a:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  }
+  
+  .categories .active {
+    font-weight: 600;
+  }
+  
+  .categories .category-count {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  
+  
+  @media(min-width: 768px) {
+    .posts-list .post-preview h2 {
+      font-size: 26px;
+    }
+    .posts-list .post-preview .thumbnail {
+      float: right;
+      width: 30%;
+      margin-bottom: 0;
+    }
+    .posts-list .post-preview .description {
+      float: left;
+      width: 45%;
+    }
+    .posts-list .post-preview .metadata {
+      float: left;
+      width: 20%;
+      margin-top: 8px;
+    }
+    .posts-list .post-preview p {
+      margin: 0 0 12px 0;
+      line-height: 1.5em;
+      font-size: 16px;
+    }
+    .posts-with-sidebar .posts-list {
+      float: left;
+      width: 75%;
+    }
+    .posts-with-sidebar .posts-sidebar {
+      float: right;
+      width: 20%;
+      margin-top: 60px;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+  }
+  
+  
+  /* Improve display for browsers without grid (IE/Edge <= 15) */
+  
+  .downlevel {
+    line-height: 1.6em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .downlevel .d-title {
+    padding-top: 6rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .downlevel .d-title h1 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+    margin: 0 0 0.5rem;
+  }
+  
+  .downlevel .d-title p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.55em;
+    margin-top: 0;
+  }
+  
+  .downlevel .d-byline {
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    font-size: 0.8rem;
+    line-height: 1.8em;
+  }
+  
+  .downlevel .section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .downlevel .d-article {
+    font-size: 1.06rem;
+    line-height: 1.7em;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  
+  
+  .downlevel .d-appendix {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: none;
+    font-size: 0.8em;
+    line-height: 1.7em;
+    margin-bottom: 0;
+    color: rgba(0,0,0,0.5);
+    padding-top: 40px;
+    padding-bottom: 48px;
+  }
+  
+  .downlevel .footnotes ol {
+    padding-left: 13px;
+  }
+  
+  .downlevel .base-grid,
+  .downlevel .distill-header,
+  .downlevel .d-title,
+  .downlevel .d-abstract,
+  .downlevel .d-article,
+  .downlevel .d-appendix,
+  .downlevel .distill-appendix,
+  .downlevel .d-byline,
+  .downlevel .d-footnote-list,
+  .downlevel .d-citation-list,
+  .downlevel .distill-footer,
+  .downlevel .appendix-bottom,
+  .downlevel .posts-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  
+  @media(min-width: 768px) {
+    .downlevel .base-grid,
+    .downlevel .distill-header,
+    .downlevel .d-title,
+    .downlevel .d-abstract,
+    .downlevel .d-article,
+    .downlevel .d-appendix,
+    .downlevel .distill-appendix,
+    .downlevel .d-byline,
+    .downlevel .d-footnote-list,
+    .downlevel .d-citation-list,
+    .downlevel .distill-footer,
+    .downlevel .appendix-bottom,
+    .downlevel .posts-container {
+    padding-left: 150px;
+    padding-right: 150px;
+    max-width: 900px;
+  }
+  }
+  
+  .downlevel pre code {
+    display: block;
+    border-left: 2px solid rgba(0, 0, 0, .1);
+    padding: 0 0 0 20px;
+    font-size: 14px;
+  }
+  
+  .downlevel code, .downlevel pre {
+    color: black;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+  
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+  
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+  }
+  
+  .downlevel .posts-list .post-preview {
+    color: inherit;
+  }
+  
+  
+  
+  </style>
+  
+  <script type="application/javascript">
+  
+  function is_downlevel_browser() {
+    if (bowser.isUnsupportedBrowser({ msie: "12", msedge: "16"},
+                                   window.navigator.userAgent)) {
+      return true;
+    } else {
+      return window.load_distill_framework === undefined;
+    }
+  }
+  
+  // show body when load is complete
+  function on_load_complete() {
+  
+    // add anchors
+    if (window.anchors) {
+      window.anchors.options.placement = 'left';
+      window.anchors.add('d-article > h2, d-article > h3, d-article > h4, d-article > h5');
+    }
+  
+  
+    // set body to visible
+    document.body.style.visibility = 'visible';
+  
+    // force redraw for leaflet widgets
+    if (window.HTMLWidgets) {
+      var maps = window.HTMLWidgets.findAll(".leaflet");
+      $.each(maps, function(i, el) {
+        var map = this.getMap();
+        map.invalidateSize();
+        map.eachLayer(function(layer) {
+          if (layer instanceof L.TileLayer)
+            layer.redraw();
+        });
+      });
+    }
+  
+    // trigger 'shown' so htmlwidgets resize
+    $('d-article').trigger('shown');
+  }
+  
+  function init_distill() {
+  
+    init_common();
+  
+    // create front matter
+    var front_matter = $('<d-front-matter></d-front-matter>');
+    $('#distill-front-matter').wrap(front_matter);
+  
+    // create d-title
+    $('.d-title').changeElementType('d-title');
+  
+    // create d-byline
+    var byline = $('<d-byline></d-byline>');
+    $('.d-byline').replaceWith(byline);
+  
+    // create d-article
+    var article = $('<d-article></d-article>');
+    $('.d-article').wrap(article).children().unwrap();
+  
+    // move posts container into article
+    $('.posts-container').appendTo($('d-article'));
+  
+    // create d-appendix
+    $('.d-appendix').changeElementType('d-appendix');
+  
+    // flag indicating that we have appendix items
+    var appendix = $('.appendix-bottom').children('h3').length > 0;
+  
+    // replace footnotes with <d-footnote>
+    $('.footnote-ref').each(function(i, val) {
+      appendix = true;
+      var href = $(this).attr('href');
+      var id = href.replace('#', '');
+      var fn = $('#' + id);
+      var fn_p = $('#' + id + '>p');
+      fn_p.find('.footnote-back').remove();
+      var text = fn_p.html();
+      var dtfn = $('<d-footnote></d-footnote>');
+      dtfn.html(text);
+      $(this).replaceWith(dtfn);
+    });
+    // remove footnotes
+    $('.footnotes').remove();
+  
+    // move refs into #references-listing
+    $('#references-listing').replaceWith($('#refs'));
+  
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      var id = $(this).attr('id');
+      $('.d-contents a[href="#' + id + '"]').parent().remove();
+      appendix = true;
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('d-appendix'));
+    });
+  
+    // show d-appendix if we have appendix content
+    $("d-appendix").css('display', appendix ? 'grid' : 'none');
+  
+    // localize layout chunks to just output
+    $('.layout-chunk').each(function(i, val) {
+  
+      // capture layout
+      var layout = $(this).attr('data-layout');
+  
+      // apply layout to markdown level block elements
+      var elements = $(this).children().not('details, div.sourceCode, pre, script');
+      elements.each(function(i, el) {
+        var layout_div = $('<div class="' + layout + '"></div>');
+        if (layout_div.hasClass('shaded')) {
+          var shaded_content = $('<div class="shaded-content"></div>');
+          $(this).wrap(shaded_content);
+          $(this).parent().wrap(layout_div);
+        } else {
+          $(this).wrap(layout_div);
+        }
+      });
+  
+  
+      // unwrap the layout-chunk div
+      $(this).children().unwrap();
+    });
+  
+    // remove code block used to force  highlighting css
+    $('.distill-force-highlighting-css').parent().remove();
+  
+    // remove empty line numbers inserted by pandoc when using a
+    // custom syntax highlighting theme
+    $('code.sourceCode a:empty').remove();
+  
+    // load distill framework
+    load_distill_framework();
+  
+    // wait for window.distillRunlevel == 4 to do post processing
+    function distill_post_process() {
+  
+      if (!window.distillRunlevel || window.distillRunlevel < 4)
+        return;
+  
+      // hide author/affiliations entirely if we have no authors
+      var front_matter = JSON.parse($("#distill-front-matter").html());
+      var have_authors = front_matter.authors && front_matter.authors.length > 0;
+      if (!have_authors)
+        $('d-byline').addClass('hidden');
+  
+      // article with toc class
+      $('.d-contents').parent().addClass('d-article-with-toc');
+  
+      // strip links that point to #
+      $('.authors-affiliations').find('a[href="#"]').removeAttr('href');
+  
+      // add orcid ids
+      $('.authors-affiliations').find('.author').each(function(i, el) {
+        var orcid_id = front_matter.authors[i].orcidID;
+        if (orcid_id) {
+          var a = $('<a></a>');
+          a.attr('href', 'https://orcid.org/' + orcid_id);
+          var img = $('<img></img>');
+          img.addClass('orcid-id');
+          img.attr('alt', 'ORCID ID');
+          img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
+          a.append(img);
+          $(this).append(a);
+        }
+      });
+  
+      // hide elements of author/affiliations grid that have no value
+      function hide_byline_column(caption) {
+        $('d-byline').find('h3:contains("' + caption + '")').parent().css('visibility', 'hidden');
+      }
+  
+      // affiliations
+      var have_affiliations = false;
+      for (var i = 0; i<front_matter.authors.length; ++i) {
+        var author = front_matter.authors[i];
+        if (author.affiliation !== "&nbsp;") {
+          have_affiliations = true;
+          break;
+        }
+      }
+      if (!have_affiliations)
+        $('d-byline').find('h3:contains("Affiliations")').css('visibility', 'hidden');
+  
+      // published date
+      if (!front_matter.publishedDate)
+        hide_byline_column("Published");
+  
+      // document object identifier
+      var doi = $('d-byline').find('h3:contains("DOI")');
+      var doi_p = doi.next().empty();
+      if (!front_matter.doi) {
+        // if we have a citation and valid citationText then link to that
+        if ($('#citation').length > 0 && front_matter.citationText) {
+          doi.html('Citation');
+          $('<a href="#citation"></a>')
+            .text(front_matter.citationText)
+            .appendTo(doi_p);
+        } else {
+          hide_byline_column("DOI");
+        }
+      } else {
+        $('<a></a>')
+           .attr('href', "https://doi.org/" + front_matter.doi)
+           .html(front_matter.doi)
+           .appendTo(doi_p);
+      }
+  
+       // change plural form of authors/affiliations
+      if (front_matter.authors.length === 1) {
+        var grid = $('.authors-affiliations');
+        grid.children('h3:contains("Authors")').text('Author');
+        grid.children('h3:contains("Affiliations")').text('Affiliation');
+      }
+  
+      // remove d-appendix and d-footnote-list local styles
+      $('d-appendix > style:first-child').remove();
+      $('d-footnote-list > style:first-child').remove();
+  
+      // move appendix-bottom entries to the bottom
+      $('.appendix-bottom').appendTo('d-appendix').children().unwrap();
+      $('.appendix-bottom').remove();
+  
+      // hoverable references
+      $('span.citation[data-cites]').each(function() {
+        var refHtml = $('#ref-' + $(this).attr('data-cites')).html();
+        window.tippy(this, {
+          allowHTML: true,
+          content: refHtml,
+          maxWidth: 500,
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        });
+      });
+  
+      // clear polling timer
+      clearInterval(tid);
+  
+      // show body now that everything is ready
+      on_load_complete();
+    }
+  
+    var tid = setInterval(distill_post_process, 50);
+    distill_post_process();
+  
+  }
+  
+  function init_downlevel() {
+  
+    init_common();
+  
+     // insert hr after d-title
+    $('.d-title').after($('<hr class="section-separator"/>'));
+  
+    // check if we have authors
+    var front_matter = JSON.parse($("#distill-front-matter").html());
+    var have_authors = front_matter.authors && front_matter.authors.length > 0;
+  
+    // manage byline/border
+    if (!have_authors)
+      $('.d-byline').remove();
+    $('.d-byline').after($('<hr class="section-separator"/>'));
+    $('.d-byline a').remove();
+  
+    // remove toc
+    $('.d-contents').remove();
+  
+    // move appendix elements
+    $('h1.appendix, h2.appendix').each(function(i, val) {
+      $(this).changeElementType('h3');
+    });
+    $('h3.appendix').each(function(i, val) {
+      $(this).nextUntil($('h1, h2, h3')).addBack().appendTo($('.d-appendix'));
+    });
+  
+  
+    // inject headers into references and footnotes
+    var refs_header = $('<h3></h3>');
+    refs_header.text('References');
+    $('#refs').prepend(refs_header);
+  
+    var footnotes_header = $('<h3></h3');
+    footnotes_header.text('Footnotes');
+    $('.footnotes').children('hr').first().replaceWith(footnotes_header);
+  
+    // move appendix-bottom entries to the bottom
+    $('.appendix-bottom').appendTo('.d-appendix').children().unwrap();
+    $('.appendix-bottom').remove();
+  
+    // remove appendix if it's empty
+    if ($('.d-appendix').children().length === 0)
+      $('.d-appendix').remove();
+  
+    // prepend separator above appendix
+    $('.d-appendix').before($('<hr class="section-separator" style="clear: both"/>'));
+  
+    // trim code
+    $('pre>code').each(function(i, val) {
+      $(this).html($.trim($(this).html()));
+    });
+  
+    // move posts-container right before article
+    $('.posts-container').insertBefore($('.d-article'));
+  
+    $('body').addClass('downlevel');
+  
+    on_load_complete();
+  }
+  
+  
+  function init_common() {
+  
+    // jquery plugin to change element types
+    (function($) {
+      $.fn.changeElementType = function(newType) {
+        var attrs = {};
+  
+        $.each(this[0].attributes, function(idx, attr) {
+          attrs[attr.nodeName] = attr.nodeValue;
+        });
+  
+        this.replaceWith(function() {
+          return $("<" + newType + "/>", attrs).append($(this).contents());
+        });
+      };
+    })(jQuery);
+  
+    // prevent underline for linked images
+    $('a > img').parent().css({'border-bottom' : 'none'});
+  
+    // mark non-body figures created by knitr chunks as 100% width
+    $('.layout-chunk').each(function(i, val) {
+      var figures = $(this).find('img, .html-widget');
+      if ($(this).attr('data-layout') !== "l-body") {
+        figures.css('width', '100%');
+      } else {
+        figures.css('max-width', '100%');
+        figures.filter("[width]").each(function(i, val) {
+          var fig = $(this);
+          fig.css('width', fig.attr('width') + 'px');
+        });
+  
+      }
+    });
+  
+    // auto-append index.html to post-preview links in file: protocol
+    // and in rstudio ide preview
+    $('.post-preview').each(function(i, val) {
+      if (window.location.protocol === "file:")
+        $(this).attr('href', $(this).attr('href') + "index.html");
+    });
+  
+    // get rid of index.html references in header
+    if (window.location.protocol !== "file:") {
+      $('.distill-site-header a[href]').each(function(i,val) {
+        $(this).attr('href', $(this).attr('href').replace("index.html", "./"));
+      });
+    }
+  
+    // add class to pandoc style tables
+    $('tr.header').parent('thead').parent('table').addClass('pandoc-table');
+    $('.kable-table').children('table').addClass('pandoc-table');
+  
+    // add figcaption style to table captions
+    $('caption').parent('table').addClass("figcaption");
+  
+    // initialize posts list
+    if (window.init_posts_list)
+      window.init_posts_list();
+  
+    // implmement disqus comment link
+    $('.disqus-comment-count').click(function() {
+      window.headroom_prevent_pin = true;
+      $('#disqus_thread').toggleClass('hidden');
+      if (!$('#disqus_thread').hasClass('hidden')) {
+        var offset = $(this).offset();
+        $(window).resize();
+        $('html, body').animate({
+          scrollTop: offset.top - 35
+        });
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    if (is_downlevel_browser())
+      init_downlevel();
+    else
+      window.addEventListener('WebComponentsReady', init_distill);
+  });
+  
+  </script>
+  
+  <!--/radix_placeholder_distill-->
+  <script src="site_libs/htmlwidgets-1.5.2/htmlwidgets.js"></script>
+  <script src="site_libs/jquery-1.12.4/jquery.min.js"></script>
+  <link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/datatables-binding-0.16/datatables.js"></script>
+  <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+  <link href="site_libs/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+  <script src="site_libs/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+  <link href="site_libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+  <script src="site_libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
+  <script src="site_libs/popper-2.6.0/popper.min.js"></script>
+  <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
+  <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
+  <script src="site_libs/tippy-6.2.7/tippy.umd.min.js"></script>
+  <script src="site_libs/anchor-4.2.2/anchor.min.js"></script>
+  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
+  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <!--radix_placeholder_site_in_header-->
+  <style type="text/css">
+  @import url("https://fonts.googleapis.com/css?family=Arvo|Lato");
+  @import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Condensed:400,700");
+  
+  body{
+    color: #A7A7A7;
+    background-color: #F7F4EE;/*#e6dec9;*/
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+  }
+  
+  
+  .distill-site-nav{
+    background-color:  #1c333f; 
+    text-decoration: none;
+  }
+  
+  .nav-left a{
+    color: #fae16c;
+    font-weight: 900;
+  }
+  
+  
+  .nav-left a:hover{
+    color: #fae16c;
+    font-weight: 900;
+  }
+  
+  
+  d-title h1, d-title p{
+    color: #292929;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  
+  /* link hover */
+  
+  d-article p a{
+    color: #B94B3B;/*verde #abd174; */
+    text-decoration: none;
+    border-bottom-width: 0;
+  }
+  
+  d-article p a:hover{
+    color: #FF2E3D;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    border-bottom-color: #FF2E3D;
+    text-decoration: none;
+  }
+  
+  /* nome dell'autore che compare negli articoli */
+  .author .name, .affiliation{
+    color: #FF2E3D;  
+    font-weight: 900;
+  }
+  
+  .affiliation{
+    font-weight: 400;
+  }
+  
+  
+  /* blocco codice: eliminiamo il bordo grigio laterale sinistro */
+  d-article div.sourceCode pre {
+      padding-left: 10px;
+      font-size: 12px;
+      border-left: 0 solid rgba(0,0,0,0.1);
+  }
+  </style>
+  <!--/radix_placeholder_site_in_header-->
+
+  <link rel="stylesheet" href="dt.css" type="text/css"/>
+
+</head>
+
+<body>
+
+<!--radix_placeholder_front_matter-->
+
+<script id="distill-front-matter" type="text/json">
+{"title":"Stazioni di monitoraggio","authors":[{"author":"Guido Fioravanti","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-10T00:00:00.000+01:00","citationText":"Fioravanti, 2021"}
+</script>
+
+<!--/radix_placeholder_front_matter-->
+<!--radix_placeholder_navigation_before_body-->
+<header class="header header--fixed" role="banner">
+<nav class="distill-site-nav distill-site-header">
+<div class="nav-left">
+<a href="index.html" class="title">pulviruS</a>
+</div>
+<div class="nav-right">
+<a href="PULVIRUS.html">About PULVIRUS</a>
+<a href="documentazione.html">Documentazione</a>
+<a href="dati.html">Dati</a>
+<a href="stazioni.html">Stazioni</a>
+<a href="risultati.html">Risultati</a>
+<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
+</div>
+</nav>
+</header>
+<!--/radix_placeholder_navigation_before_body-->
+<!--radix_placeholder_site_before_body-->
+<!--/radix_placeholder_site_before_body-->
+
+<div class="d-title">
+<h1>Stazioni di monitoraggio</h1>
+<!--radix_placeholder_categories-->
+<!--/radix_placeholder_categories-->
+
+</div>
+
+<div class="d-byline">
+  Guido Fioravanti  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
+  
+<br/>2021-02-10
+</div>
+
+<div class="d-article">
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<div class="layout-chunk" data-layout="l-body">
+<div id="htmlwidget-3c80a47becc90ee62353" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3c80a47becc90ee62353">{"x":{"filter":"none","data":[["100165","100167","100168","100171","100172","100176","100201","100202","100363","100367","100369","100402","100403","100516","100518","100602","100610","100611","100614","100615","109602","109603","109606","110301","110302","200701","200703","200708","200709","200710","200711","200715","200717","200717","200718","200719","200720","200721","200722","200723","301213","301214","301216","301217","301218","301301","301302","301303","301311","301314","301315","301401","301403","301404","301406","301504","301508","301512","301513","301514","301522","301524","301525","301526","301527","301529","301533","301534","301537","301538","301540","301550","301552","301568","301569","301570","301572","301573","301606","301608","301610","301616","301617","301621","301622","301623","301624","301702","301705","301706","301709","301711","301713","301717","301721","301723","301725","301801","301804","301805","301806","301812","301813","301814","301816","301817","301903","301905","301906","301912","301915","301916","301917","302006","302011","302012","302019","302068","302069","302072","302073","309701","309702","309703","309704","309801","309802","309804","309805","309807","309808","309809","402101","402102","402106","402109","402112","402113","402114","402115","402116","402201","402203","402204","402206","402209","402211","402212","402213","502304","502305","502308","502309","502310","502311","803719","502313","502314","502315","502401","502402","502403","502404","502406","502409","502413","502414","502415","502416","502417","502505","502506","502507","502508","502509","502604","502608","502609","502610","502612","502613","502701","502715","502716","502717","502719","502720","502721","502722","502723","502725","502808","502809","502810","502811","502812","502813","502814","502901","502902","502903","502904","502969","603001","603005","603008","603010","603013","603018","603020","603021","603022","603023","603024","603025","603103","603104","603105","603106","603107","603108","603109","603110","603202","603207","603208","603209","603210","603211","603212","603213","603214","603215","603216","603217","603218","609301","609302","609303","609305","609306","609309","609310","609311","609312","700806","700807","700901","700903","700904","700907","700909","700910","700968","700969","700971","700972","700973","700974","700975","700976","700977","701005","701009","701013","701014","701015","701016","701026","701028","701068","701069","701070","701071","701073","701074","701075","701076","701077","701078","701079","701105","701106","701107","701108","701109","701110","701112","701113","701173","701174","701175","701176","803306","803320","803321","803322","803323","803401","803405","803409","803410","803502","803508","803513","803515","803517","803518","803603","803613","803624","803625","803626","803628","803705","803708","803713","803714","803717","803721","803803","803805","803811","803812","803813","803911","803920","803921","803922","803923","803925","804002","804004","804009","804010","804012","804013","804015","809901","809902","809903","809904","904503","904506","904601","904605","904610","904611","904612","904613","904702","904705","904805","904809","904810","904811","904812","904816","904819","904831","904832","904905","904908","904911","904913","904914","905001","905007","905008","905011","905103","905106","905108","905204","905205","905301","905302","905304","910003","1005401","1005403","1005405","1005406","1005407","1005408","1005409","1005410","1005411","1005413","1005414","1005415","1005416","1005417","1005418","1005420","1005502","1005512","1005515","1005516","1005517","1005518","1104102","1104105","1104110","1104204","1104206","1104208","1104209","1104210","1104211","1104213","1104214","1104215","1104216","1104217","1104218","1104219","1104220","1104221","1104222","1104223","1104224","1104225","1104226","1104227","1104304","1104305","1104308","1104405","1104407","1104409","1104410","1104411","1104413","1104414","1205601","1205602","1205603","1205604","1205605","1205606","1205607","1205701","1205702","1205703","1205801","1205802","1205803","1205804","1205805","1205806","1205807","1205808","1205810","1205817","1205818","1205820","1205821","1205822","1205823","1205824","1205873","1205874","1205875","1205878","1205882","1205883","1205884","1205885","1205886","1205887","1205888","1205889","1205890","1205891","1205892","1205893","1205894","1205895","1205896","1205897","1205898","1205899","1205902","1205904","1205905","1205906","1205907","1205908","1206001","1206002","1206003","1206004","1206005","1206006","1206008","1306601","1306602","1306603","1306604","1306701","1306702","1306804","1306805","1306806","1306807","1306808","1607182","1306809","1306810","1908962","1306814","1306816","1306817","1306902","1306904","1306905","1306906","1407071","1407072","1407073","1407074","1407075","1407076","1409498","1409499","1506101","1506102","1506103","1506104","1506105","1506106","1506107","1506108","1506109","1506110","1506201","1506202","1506203","1506204","1506205","1506301","1506302","1506303","1506304","1506305","1506306","1506307","1506309","1506365","1506366","1506367","1506368","1506369","1506370","1506371","1506372","1506373","1506374","1506375","1506376","1506401","1506402","1506403","1506404","1506405","1506406","1506501","1506502","1506503","1506504","1506505","1506506","1506507","1506508","1506509","1506510","1607113","1607175","1607176","1607178","1607188","1607189","1607201","1607273","1607275","1607276","1607280","1607281","1607285","1607286","1607287","1607288","1607291","1607295","1607296","1607297","1607298","1607299","1607374","1607375","1607376","1607377","1607378","1607379","1607380","1607388","1607389","1607390","1607408","1607410","1607411","1607414","1607415","1607416","1607418","1607420","1607422","1607424","1607426","1607427","1607428","1607576","1607578","1607584","1607585","1607587","1607590","1607591","1707602","1707613","1707615","1707616","1707617","1707618","1707620","1707621","1707622","1707623","1707624","1707625","1707778","2009237","1707779","1707780","1807875","1807876","1807877","1807879","1807880","1807881","1807882","1807883","1807884","1807885","1807886","1807903","1807905","1807906","1807907","1807908","1807909","1807910","1807911","1808001","1808002","1808003","1808004","1808005","1808006","1808007","1808008","1810102","1810103","1810104","1810105","1810107","1810201","1810202","1810203","1908101","1908201","1908202","1908204","1908205","1908206","1908207","1908208","1908209","1908266","1908269","10202","10203","10302","10303","10311","10401","10402","10407","10501","14070","14094","16072","16075","1908270","1908271","1908310","1908312","1908313","1908366","1908367","1908369","1908370","1908371","1908485","1908486","1908487","1908490","1908493","1908496","1908497","1908498","1908501","1908502","1908503","1908504","1908505","1908507","1908508","1908510","1908512","1908513","1908514","1908515","1908517","1908519","1908520","1908521","1908522","1908601","1908701","1908702","1908714","1908788","1908792","1908795","1908801","1908802","1908805","1908901","1908902","1908904","1908909","1908910","1908963","1908964","1908965","1908966","1908967","1908971","1908972","1908973","2009001","2009009","2009011","2009015","2009017","2009021","2009022","2009023","2009024","2009025","2009101","2009102","2009105","2009106","2009107","2009109","2009202","2009204","2009205","2009207","2009210","2009211","2009213","2009217","2009219","2009221","2009222","2102125","2102127","17076029","17077028","502726","n.d.","19084","21021","100108","100110","100114","100122","100126","100129","100130","100132","100164","1409496","1810106","2009238","2009239","2009240","2009241","2009242","2009501","2009502","2009504","2010401","2010601","2010701","2010702","2010703","2102123"],["IT1788A","IT1877A","IT1963A","IT2101A","IT2117A","IT2168A","IT1878A","IT2116A","IT1676A","IT2121A","IT2282A","IT2118A","IT2119A","IT1903A","IT1948A","IT0643A","IT1582A","IT1830A","IT1904A","IT1961A","IT1247A","IT1246A","IT2104A","IT2102A","IT2128A","IT0980A","IT0983A","IT0988A","IT0979A","IT0977A","IT0978A","IT1725A","IT1976A","IT2284A","IT2178A","IT2179A","IT2233A","IT2234A","IT2266A","IT2267A","IT0732A","IT1459A","IT1650A","IT1588A","IT1873A","IT0775A","IT0776A","IT0777A","IT0771A","IT1648A","IT2007A","IT0908A","IT1190A","IT0906A","IT1967A","IT1203A","IT0524A","IT0694A","IT0995A","IT0623A","IT0761A","IT0706A","IT1010A","IT0477A","IT1034A","IT1174A","IT0593A","IT0592A","IT1016A","IT0480A","IT0705A","IT1290A","IT1294A","IT1692A","IT1743A","IT1792A","IT2098A","IT2232A","IT0837A","IT0997A","IT0707A","IT0737A","IT0778A","IT1463A","IT1464A","IT1876A","IT2062A","IT0594A","IT0741A","IT0743A","IT0742A","IT0846A","IT0740A","IT1251A","IT1385A","IT1465A","IT1737A","IT0912A","IT0689A","IT1104A","IT0692A","IT1736A","IT1735A","IT1746A","IT1874A","IT2079A","IT0842A","IT0839A","IT1153A","IT0840A","IT1739A","IT2063A","IT2095A","IT0709A","IT1393A","IT1392A","IT1388A","IT1869A","IT1868A","IT1865A","IT2230A","IT1734A","IT1812A","IT1826A","IT2014A","IT1288A","IT1286A","IT1287A","IT0267A","IT1646A","IT1964A","IT1965A","IT0507A","IT0508A","IT0499A","IT0505A","IT1335A","IT0502A","IT1334A","IT2279A","IT2285A","IT0703A","IT1191A","IT0753A","IT0591A","IT1037A","IT1859A","IT1930A","IT1931A","IT1336A","IT1343A","IT1342A","IT1341A","IT1340A","IT1447A","IT2075A","IT1535A","IT1848A","IT2243A","IT1065A","IT1172A","IT0659A","IT0663A","IT1061A","IT1177A","IT1534A","IT1838A","IT1791A","IT1833A","IT1905A","IT1594A","IT1619A","IT1790A","IT1864A","IT2245A","IT1328A","IT1590A","IT1596A","IT1595A","IT2231A","IT2244A","IT0963A","IT1222A","IT0441A","IT0448A","IT1831A","IT1862A","IT1934A","IT1935A","IT1936A","IT2077A","IT1453A","IT1880A","IT1872A","IT1871A","IT1870A","IT2070A","IT2071A","IT1215A","IT1214A","IT1213A","IT1212A","IT2072A","IT0966A","IT1170A","IT1259A","IT1168A","IT1166A","IT1539A","IT2133A","IT2140A","IT2152A","IT2169A","IT2170A","IT2182A","IT1474A","IT1538A","IT1587A","IT2129A","IT2130A","IT2131A","IT2132A","IT2181A","IT1091A","IT1090A","IT1137A","IT1475A","IT1476A","IT1477A","IT1537A","IT1651A","IT2260A","IT2261A","IT2262A","IT2263A","IT2280A","IT1097A","IT1107A","IT1099A","IT1112A","IT1098A","IT1853A","IT2115A","IT2200A","IT2201A","IT1882A","IT2029A","IT1233A","IT1145A","IT1232A","IT1192A","IT1144A","IT1143A","IT1580A","IT1706A","IT1883A","IT2038A","IT2107A","IT2108A","IT2155A","IT2278A","IT2286A","IT1026A","IT0854A","IT1178A","IT0852A","IT0853A","IT0858A","IT0856A","IT1549A","IT1698A","IT1751A","IT1887A","IT1850A","IT1884A","IT1943A","IT1944A","IT1999A","IT2022A","IT2039A","IT2259A","IT1456A","IT1457A","IT1542A","IT1548A","IT1547A","IT1546A","IT1544A","IT1536A","IT1661A","IT1662A","IT1886A","IT2229A","IT0544A","IT1923A","IT1924A","IT1975A","IT2074A","IT0804A","IT1105A","IT1910A","IT1911A","IT0903A","IT0940A","IT0702A","IT1672A","IT1914A","IT2156A","IT1152A","IT0721A","IT1771A","IT1920A","IT1921A","IT2073A","IT1029A","IT0892A","IT1159A","IT1163A","IT1451A","IT2097A","IT0187A","IT1179A","IT1917A","IT1918A","IT1919A","IT1030A","IT1204A","IT0895A","IT1927A","IT1928A","IT2209A","IT1043A","IT1044A","IT1048A","IT0755A","IT1670A","IT1908A","IT2027A","IT1915A","IT1916A","IT2076A","IT2158A","IT1819A","IT2241A","IT1187A","IT1001A","IT1186A","IT1644A","IT2239A","IT2240A","IT1571A","IT1553A","IT1654A","IT0862A","IT0948A","IT0861A","IT0860A","IT0883A","IT1551A","IT2153A","IT2242A","IT0063A","IT1560A","IT1557A","IT2154A","IT2183A","IT1409A","IT1149A","IT1110A","IT1071A","IT0950A","IT0832A","IT1681A","IT2032A","IT2184A","IT1593A","IT1592A","IT1942A","IT0945A","IT1180A","IT1182A","IT1745A","IT1860A","IT1900A","IT1901A","IT1902A","IT2004A","IT2064A","IT2066A","IT2067A","IT2068A","IT2099A","IT2100A","IT2105A","IT2114A","IT1011A","IT1365A","IT1728A","IT2109A","IT2113A","IT2134A","IT1361A","IT1578A","IT2061A","IT0455A","IT0459A","IT0462A","IT0463A","IT0461A","IT0460A","IT0456A","IT1402A","IT1564A","IT1541A","IT1563A","IT1540A","IT1647A","IT1589A","IT1693A","IT1694A","IT1827A","IT1729A","IT1815A","IT1773A","IT2289A","IT1795A","IT1796A","IT1946A","IT1412A","IT1684A","IT1843A","IT1842A","IT1894A","IT1926A","IT2177A","IT0864A","IT0863A","IT0951A","IT2023A","IT2175A","IT2256A","IT2257A","IT0989A","IT0867A","IT0958A","IT0884A","IT0825A","IT0952A","IT0956A","IT0885A","IT0888A","IT0889A","IT0887A","IT0828A","IT0957A","IT0955A","IT0953A","IT2255A","IT2258A","IT2264A","IT2265A","IT1184A","IT1200A","IT1176A","IT1183A","IT1837A","IT1836A","IT1835A","IT1834A","IT1841A","IT1906A","IT2012A","IT2171A","IT2172A","IT2246A","IT2247A","IT2248A","IT2249A","IT2250A","IT2251A","IT2252A","IT2253A","IT2254A","IT0865A","IT0959A","IT0868A","IT0869A","IT2173A","IT2174A","IT0991A","IT0870A","IT0872A","IT0871A","IT0992A","IT0960A","IT2013A","IT1856A","IT2159A","IT2160A","IT2161A","IT1857A","IT2162A","IT1265A","IT1264A","IT1263A","IT1422A","IT1208A","IT2019A","IT1423A","IT1977A","IT0611A","IT1981A","IT2163A","IT2164A","IT1420A","IT2165A","IT2166A","IT2167A","IT1798A","IT1799A","IT1800A","IT1801A","IT1806A","IT2180A","IT1863A","IT1962A","IT1485A","IT1486A","IT1487A","IT1488A","IT2197A","IT2220A","IT2222A","IT2224A","IT2225A","IT2271A","IT0937A","IT0934A","IT2199A","IT2215A","IT2228A","IT1491A","IT1492A","IT1493A","IT0898A","IT1495A","IT1496A","IT1497A","IT0897A","IT2211A","IT2212A","IT2216A","IT2217A","IT2218A","IT2219A","IT2221A","IT2223A","IT2226A","IT2270A","IT2272A","IT2277A","IT0935A","IT0936A","IT2196A","IT2210A","IT2227A","IT2276A","IT1041A","IT0938A","IT1504A","IT2198A","IT2213A","IT2214A","IT2268A","IT2269A","IT2273A","IT2283A","IT1660A","IT1601A","IT1598A","IT1618A","IT2141A","IT2142A","IT2146A","IT1604A","IT1602A","IT1603A","IT1621A","IT1624A","IT1822A","IT1818A","IT1823A","IT1817A","IT2003A","IT2051A","IT2058A","IT2143A","IT2144A","IT2145A","IT1610A","IT1613A","IT1608A","IT1611A","IT1609A","IT1607A","IT1614A","IT1680A","IT1679A","IT2021A","IT1617A","IT1658A","IT1657A","IT1663A","IT1702A","IT1701A","IT1704A","IT2018A","IT2137A","IT2139A","IT2148A","IT2149A","IT2151A","IT1665A","IT1687A","IT1666A","IT1932A","IT1953A","IT2044A","IT2150A","IT1193A","IT1586A","IT1583A","IT1585A","IT1674A","IT1742A","IT1740A","IT1897A","IT2202A","IT2203A","IT2204A","IT2205A","IT1744A","IT1947A","IT1895A","IT1741A","IT1766A","IT1727A","IT1938A","IT2086A","IT2090A","IT2110A","IT2185A","IT2191A","IT2235A","IT2236A","IT2237A","IT2078A","IT2087A","IT2089A","IT2091A","IT2111A","IT2186A","IT2189A","IT2190A","IT1940A","IT1989A","IT2026A","IT2028A","IT2094A","IT2188A","IT2193A","IT2238A","IT2031A","IT2088A","IT2112A","IT2192A","IT2195A","IT2092A","IT2093A","IT2187A","IT1898A","IT1082A","IT1076A","IT1080A","IT1078A","IT1081A","IT1207A","IT1079A","IT1552A","IT1691A","IT1888A","IT1533A","IT1532A","IT1509A","IT1510A","IT1518A","IT1519A","IT1529A","IT1524A","IT1523A","IT1753A","IT1802A","IT1606A","IT1664A","IT1889A","IT2287A","IT0794A","IT1449A","IT0792A","IT1794A","IT1829A","IT1997A","IT2275A","IT2288A","IT1764A","IT1846A","IT1763A","IT1760A","IT1726A","IT1758A","IT2274A","IT2281A","IT0815A","IT0814A","IT0816A","IT1411A","IT0818A","IT0810A","IT1282A","IT1443A","IT0817A","IT0813A","IT0807A","IT1281A","IT1750A","IT2030A","IT2206A","IT2207A","IT2208A","IT1890A","IT1899A","IT2052A","IT1709A","IT1724A","IT1721A","IT1718A","IT2033A","IT2036A","IT2054A","IT0618A","IT1440A","IT0615A","IT0612A","IT0620A","IT0614A","IT0545A","IT1348A","IT1346A","IT1566A","IT1749A","IT1748A","IT1781A","IT1347A","IT1350A","IT1383A","IT1243A","IT1309A","IT2009A","IT2010A","IT2055A","IT2059A","IT2060A","IT1428A","IT1427A","IT1407A","IT1277A","IT1280A","IT1996A","IT1278A","IT1397A","IT1396A","IT1273A","IT1270A","IT1269A","IT1375A","IT1307A","IT1220A","IT1575A","IT1576A","IT1852A","IT2096A","IT2290A","IT2291A",null,"n.d.","IT1765A","IT1678A","IT0469A","IT0470A","IT1128A","IT1121A","IT1120A","IT1130A","IT1114A","IT1125A","IT1847A","IT1804A","IT2194A","IT1993A","IT2011A","IT2040A","IT2049A","IT2056A","IT1378A","IT1377A","IT2008A","IT2005A","IT1994A","IT1992A","IT1998A","IT2006A","IT1696A"],[240,260,1576,271,246,243,131,211,157,301,null,409,268,119,258,95,116,91,620,1639,405,271,666,259,281,576,581,371,1330,1640,924,570,567,null,667,583,583,583,585,1.544,382,206,212,388,215,228,214,292,201,320,323,1225,262,307,290,184,133,154,146,116,122,123,138,122,221,100,144,158,122,137,122,97,146,122,162,133,181,155,190,249,249,291,125,182,115,273,207,149,51,188,345,147,274,170,226,70,70,77,73,77,87,74,90,88,6,109,61,79,45,70,45,48,36,18,25,14,113,19,22,16,26,237,1192,267,211,64,80,58,80,47,63,76,564,830,640,1770,297,247,260,570,null,380,1601,73,200,203,197,227,131,62,91,21,49,30,54,56,25,824,48,114,61,63,190,240,36,138,35,1366,200,33,401,263,615,2035,403,72,15,14,51,15,15,1,3,6,1,2,1,2,1,1,1,13,11,10,12,18,9,25,7,3,4,1,6,100,100,167,62,316,1717,4,116,3,3,0,771,125,5,50,5,114,0,10,0,92,50,2,27,8,2,12,25,366,24,26,10,140,21,45,28,29,14,23,0,20,30,16,80,400,12,330,350,16,2,6,14,55,2,343,344,450,5,null,380,105,600,20,20,85,45,120,75,140,17,60,7,4,16,30,965,3,50,2,3,140,275,176,21,3,6,28,54,5,25,210,61,48,61,765,60,55,30,202,150,50,50,1120,22,59,25,39,34,131,4,118,42,43,54,64,11,811,8,-2,16,9,0,35,4,4,1,0,35,6,3,29,26,37,32,615,165,78,127,540,98,42,10,15,3,120,130,13,80,48,54,61,75,49,41,195,45,41,121,37,9,13,40,8,5,353,5,16,260,256,650,105,316,10,10,40,62,290,197,282,319,234,498,209,305,516,475,498,318,1038,242,284,623,128,156,138,329,143,95,20,20,380,7,15,5,90,10,100,5,5,5,168,55,35,105,29,1,325,100,279,100,550,null,225,110,200,160,15,150,1000,412,100,7,139,338,-9999,420,146,216,286,948,397,406,542,43,61,53,26,219,223,89,49,48,50,50,576,-9999,6,22,18,161,37,41,26,31,41,32,134,31,55,-9999,-9999,22,21,72,16,1,174,74,87,467,83,12,23,21,-9999,24,445,401,130,316,388,192,255,673,584,794,803,257,228,2,9,6,9,8,76,4,5,300,5,913,132,61,201,50,6,650,726,24,31,884,482,954,170,70,68,68,71,62,45,59,29,21,38,206,159,295,128,125,13,42,33,46,143,173,145,179,29,31,57,45,39,27,83,20,29,75,39,150,382,357,292,303,357,792,41,10,35,72,191,48,70,11,445,null,10,30,20,10,150,150,35,10,10,10,10,10,10,100,100,10,15,130,5,15,40,55,10,10,10,10,10,10,10,400,200,118,20,10,20,10,10,10,10,139,20,20,100,200,50,10,10,10,58,50,50,100,561,705,742,673,720,604,187,319,735,820,603,690,245,56,55,63,325,383,230,223,2,758,711,233,40,158,5,82,140,370,87,518,731,516,19,11,40,224,20,660,901,8,228,37,15,71,71,5,479,467,804,40,42,141,16,34,17,24,17,55,69,187,130,344,124,203,154,392,550,164,150,686,472,10,10,101,null,null,null,70,10,10,28,0,null,3,231,97,424,972,45,0,265,13,13,38,554,290,2,40,680,305,15,608,580,10,9,0,0,0,925,160,135,8,82,88,38,501,598,24,15,150,35,30,60,35,62,9,62,40,10,10,10,15,180,18,192,15,275,16,220,25,61,543,511,181,39,2,532,14,9,28,18,15,22,124,20,2,16,25,210,260,null,null,1,11,64,550,243,23,257,335,268,202,499,231,1077,182,11,15,736,8,5,33,10,3,4,17,56,180,116,96,230],["PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","VALLE_AOSTA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","LOMBARDIA","PA_BOLZANO","PA_BOLZANO","PA_BOLZANO","PA_BOLZANO","PA_BOLZANO","PA_BOLZANO","PA_BOLZANO","PA_BOLZANO","PA_BOLZANO","PA_TRENTO","PA_TRENTO","PA_TRENTO","PA_TRENTO","PA_TRENTO","PA_TRENTO","PA_TRENTO","PA_TRENTO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","EMILIA_ROMAGNA","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","VENETO","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","FRIULI_VENEZIA_GIULIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","LIGURIA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","EMILIA_ROMAGNA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","TOSCANA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","UMBRIA","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","MARCHE","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","LAZIO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","PUGLIA","ABRUZZO","ABRUZZO","SICILIA","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","ABRUZZO","MOLISE","MOLISE","MOLISE","MOLISE","MOLISE","MOLISE","MOLISE","MOLISE","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","CAMPANIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","PUGLIA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","BASILICATA","SARDEGNA","BASILICATA","BASILICATA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","CALABRIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","MOLISE","MOLISE","PUGLIA","PUGLIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SICILIA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","PA_BOLZANO","PA_BOLZANO","BASILICATA","BASILICATA","VENETO","VENETO","SICILIA","PA_BOLZANO","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","PIEMONTE","MOLISE","CALABRIA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","SARDEGNA","PA_BOLZANO"],["Torino","Torino","Torino","Torino","Torino","Torino","Vercelli","Vercelli","Novara","Novara","Novara","Cuneo","Cuneo","Asti","Asti","Alessandria","Alessandria","Alessandria","Alessandria","Verbano-Cusio-Ossola","Biella","Biella","Biella","Verbano-Cusio-Ossola","Verbano-Cusio-Ossola","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Aosta","Varese","Varese","Varese","Varese","Varese","Lecco","Lecco","Lecco","Como","Como","Como","Sondrio","Sondrio","Sondrio","Sondrio","Milano","Milano","Milano","Milano","Milano","Milano","Milano","Milano","Milano","Monza e della Brianza","Milano","Milano","Milano","Milano","Milano","Milano","Milano","Milano","Milano","Monza e della Brianza","Milano","Monza e della Brianza","Milano","Bergamo","Bergamo","Bergamo","Bergamo","Bergamo","Bergamo","Bergamo","Bergamo","Bergamo","Brescia","Brescia","Brescia","Brescia","Brescia","Brescia","Brescia","Brescia","Brescia","Brescia","Pavia","Pavia","Pavia","Pavia","Pavia","Pavia","Pavia","Pavia","Pavia","Cremona","Cremona","Cremona","Cremona","Cremona","Cremona","Cremona","Mantova","Mantova","Mantova","Mantova","Mantova","Mantova","Mantova","Mantova","Lecco","Lecco","Lecco","Lecco","Lodi","Lodi","Lodi","Lodi","Lodi","Lodi","Lodi","Bolzano","Bolzano","Bolzano","Bolzano","Bolzano","Bolzano","Bolzano","Bolzano","Bolzano","Trento","Trento","Trento","Trento","Trento","Trento","Trento","Trento","Verona","Verona","Verona","Verona","Verona","Verona","Bologna","Verona","Verona","Verona","Vicenza","Vicenza","Vicenza","Vicenza","Vicenza","Vicenza","Vicenza","Vicenza","Vicenza","Vicenza","Vicenza","Belluno","Belluno","Belluno","Belluno","Belluno","Treviso","Treviso","Treviso","Treviso","Treviso","Treviso","Venezia","Venezia","Venezia","Venezia","Venezia","Venezia","Venezia","Venezia","Venezia","Venezia","Padova","Padova","Padova","Padova","Padova","Padova","Padova","Rovigo","Rovigo","Rovigo","Rovigo","Rovigo","Udine","Udine","Udine","Udine","Udine","Udine","Udine","Udine","Udine","Udine","Udine","Udine","Gorizia","Gorizia","Gorizia","Gorizia","Gorizia","Gorizia","Gorizia","Gorizia","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Pordenone","Pordenone","Pordenone","Pordenone","Pordenone","Pordenone","Pordenone","Pordenone","Pordenone","Imperia","Imperia","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Savona","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","Genova","La Spezia","La Spezia","La Spezia","La Spezia","La Spezia","La Spezia","La Spezia","La Spezia","La Spezia","La Spezia","La Spezia","La Spezia","Piacenza","Piacenza","Piacenza","Piacenza","Piacenza","Parma","Parma","Parma","Parma","Reggio nell'Emilia","Reggio nell'Emilia","Reggio nell'Emilia","Reggio nell'Emilia","Reggio nell'Emilia","Reggio nell'Emilia","Modena","Modena","Modena","Modena","Modena","Modena","Bologna","Bologna","Bologna","Bologna","Bologna","Bologna","Ferrara","Ferrara","Ferrara","Ferrara","Ferrara","Ravenna","Ravenna","Ravenna","Ravenna","Ravenna","Ravenna","Rimini","Rimini","Forli'-Cesena","Forli'-Cesena","Forli'-Cesena","Forli'-Cesena","Forli'-Cesena","Rimini","Rimini","Rimini","Rimini","Massa Carrara","Massa Carrara","Lucca","Lucca","Lucca","Lucca","Lucca","Lucca","Pistoia","Pistoia","Prato","Firenze","Firenze","Firenze","Firenze","Firenze","Firenze","Firenze","Firenze","Livorno","Livorno","Livorno","Livorno","Livorno","Pisa","Pisa","Pisa","Pisa","Arezzo","Arezzo","Arezzo","Siena","Siena","Grosseto","Grosseto","Grosseto","Prato","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Perugia","Terni","Terni","Terni","Terni","Terni","Terni","Pesaro e Urbino","Pesaro e Urbino","Pesaro e Urbino","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Ancona","Macerata","Macerata","Macerata","Ascoli Piceno","Fermo","Ascoli Piceno","Ascoli Piceno","Ascoli Piceno","Ascoli Piceno","Ascoli Piceno","Viterbo","Viterbo","Viterbo","Viterbo","Viterbo","Viterbo","Viterbo","Rieti","Rieti","Rieti","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Latina","Frosinone","Roma","Frosinone","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Roma","Latina","Latina","Latina","Latina","Latina","Latina","Frosinone","Frosinone","Frosinone","Frosinone","Frosinone","Frosinone","Frosinone","L'Aquila","L'Aquila","L'Aquila","L'Aquila","Teramo","Teramo","Pescara","Pescara","Pescara","Pescara","Pescara","Foggia","Pescara","Pescara","Siracusa","Pescara","Pescara","Pescara","Chieti","Chieti","Chieti","Chieti","Campobasso","Campobasso","Campobasso","Campobasso","Campobasso","Campobasso","Isernia","Isernia","Caserta","Caserta","Caserta","Caserta","Caserta","Caserta","Caserta","Caserta","Caserta","Caserta","Benevento","Benevento","Benevento","Benevento","Benevento","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Caserta","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Avellino","Avellino","Avellino","Avellino","Avellino","Avellino","Salerno","Salerno","Salerno","Salerno","Salerno","Salerno","Salerno","Salerno","Salerno","Salerno","Taranto","Foggia","Foggia","Brindisi","Foggia","Foggia","Bari","Bari","Bari","Bari","Bari","Bari","Barletta-Andria-Trani","Bari","Bari","Bari","Barletta-Andria-Trani","Bari","Bari","Bari","Bari","Bari","Taranto","Taranto","Taranto","Taranto","Taranto","Taranto","Taranto","Taranto","Taranto","Taranto","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Brindisi","Lecce","Lecce","Lecce","Lecce","Lecce","Lecce","Lecce","Potenza","Potenza","Potenza","Potenza","Potenza","Potenza","Potenza","Potenza","Potenza","Potenza","Potenza","Potenza","Matera","Cagliari","Matera","Matera","Cosenza","Cosenza","Cosenza","Cosenza","Cosenza","Cosenza","Cosenza","Cosenza","Catanzaro","Cosenza","Cosenza","Catanzaro","Catanzaro","Catanzaro","Catanzaro","Catanzaro","Catanzaro","Catanzaro","Catanzaro","Reggio di Calabria","Reggio di Calabria","Reggio di Calabria","Reggio di Calabria","Reggio di Calabria","Reggio di Calabria","Reggio di Calabria","Reggio di Calabria","Crotone","Crotone","Crotone","Crotone","Crotone","Vibo Valentia","Vibo Valentia","Vibo Valentia","Trapani","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Vercelli","Vercelli","Novara","Verbano-Cusio-Ossola","Novara","Cuneo","Cuneo","Cuneo","Asti","Campobasso","Isernia","Bari","Lecce","Palermo","Palermo","Messina","Messina","Messina","Messina","Messina","Messina","Messina","Messina","Agrigento","Agrigento","Agrigento","Agrigento","Agrigento","Agrigento","Agrigento","Agrigento","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Caltanissetta","Enna","Catania","Catania","Catania","Catania","Catania","Catania","Ragusa","Ragusa","Ragusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Siracusa","Sassari","Sassari","Sassari","Sassari","Olbia-Tempio","Sassari","Sassari","Sassari","Sassari","Sassari","Nuoro","Nuoro","Nuoro","Nuoro","Ogliastra","Nuoro","Cagliari","Cagliari","Carbonia-Iglesias","Carbonia-Iglesias","Cagliari","Cagliari","Cagliari","Cagliari","Carbonia-Iglesias","Carbonia-Iglesias","Carbonia-Iglesias","Bolzano","Bolzano","Potenza","Matera","Venezia","Padova","Agrigento","Bolzano","Torino","Torino","Torino","Torino","Torino","Torino","Torino","Torino","Torino","Isernia","Crotone","Cagliari","Cagliari","Cagliari","Cagliari","Cagliari","Oristano","Oristano","Oristano","Olbia-Tempio","Medio Campidano","Carbonia-Iglesias","Carbonia-Iglesias","Carbonia-Iglesias","Bolzano"],["Ivrea","Torino","Ceresole Reale","Chieri","Leini","Torino","Vercelli","Cigliano","Novara","Borgomanero","Novara","Mondovì","Revello","Asti","Vinchio","Alessandria","Casale Monferrato","Alessandria","Dernice","Baceno","Biella","Cossato","Valdilana","Omegna","Domodossola","Aosta","Aosta","Donnas","Etroubles","La Thuile","Morgex","Aosta","Aosta","Aosta","Lillianes","Aosta","Aosta","Aosta","Aosta","Cogne","Varese","Busto Arsizio","Saronno","Varese","Ferno","Colico","Lecco","Merate","Como","Cantù","Erba","Bormio","Morbegno","Sondrio","Sondrio","Arconate","Cassano d'Adda","Cinisello Balsamo","Cormano","Corsico","Milano","Pioltello","Magenta","Milano","Meda","Motta Visconti","Pero","Rho","Milano","Sesto San Giovanni","Milano","San Giuliano Milanese","Turbigo","Milano","Monza","Cassano d'Adda","Monza","Cormano","Filago","Bergamo","Bergamo","Tavernola Bergamasca","Treviglio","Osio Sotto","Casirate d'Adda","Calusco d'Adda","Dalmine","Brescia","Gambara","Lonato del Garda","Odolo","Rezzato","Sarezzo","Brescia","Darfo Boario Terme","Brescia","Brescia","Pavia","Mezzana Bigli","Pavia","Sannazzaro de' Burgondi","Cornale e Bastida","Voghera","Ferrera Erbognone","Parona","Vigevano","Corte de' Cortesi con Cignone","Crema","Cremona","Soresina","Cremona","Spinadesco","Cremona","Mantova","Mantova","Borgocarbonara","Ponti sul Mincio","Mantova","Mantova","Schivenoglia","Viadana","Valmadrera","Moggio","Lecco","Perledo","Abbadia Cerreto","Lodi","Codogno","Tavazzano con Villavesco","San Rocco al Porto","Bertonico","Lodi","Bressanone","Brunico","Laces","Renon","Merano","Bolzano","Bolzano","Bressanone","Cortina sulla strada del vino","Borgo Valsugana","Vallelaghi","Riva del Garda","Rovereto","Trento","Trento","Mezzolombardo","Avio","Verona","Verona","Bovolone","San Martino Buon Albergo","San Bonifacio","Villafranca di Verona","Bologna","Legnago","Bosco Chiesanuova","Verona","Bassano del Grappa","Montebello Vicentino","Montecchio Maggiore","Schio","Valdagno","Vicenza","Thiene","Vicenza","Asiago","Chiampo","Vicenza","Belluno","Feltre","Alpago","Falcade","Belluno","Conegliano","Treviso","Mansuè","Castelfranco Veneto","Treviso","Treviso","Venezia","San Donà di Piave","Spinea","Venezia","Concordia Sagittaria","Venezia","Venezia","Mira","Venezia","Venezia","Padova","Padova","Monselice","Este","Cinto Euganeo","Padova","Santa Giustina in Colle","Rovigo","Rovigo","Adria","Porto Tolle","Badia Polesine","Udine","Udine","Osoppo","San Giovanni al Natisone","Tolmezzo","Sutrio","Fiumicello Villa Vicentina","Udine","Torviscosa","Bagnaria Arsa","Torviscosa","Malborghetto Valbruna","Doberdò del Lago","Monfalcone","Gorizia","Monfalcone","Doberdò del Lago","Grado","Ronchi dei Legionari","Grado","Trieste","Trieste","Trieste","Trieste","Trieste","Muggia","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Trieste","Brugnera","Caneva","Pordenone","Porcia","Prata di Pordenone","Sacile","Morsano al Tagliamento","Sacile","Pordenone","Sanremo","Sanremo","Cengio","Savona","Cairo Montenotte","Carcare","Quiliano","Vado Ligure","Albisola Superiore","Savona","Savona","Albenga","Cairo Montenotte","Cairo Montenotte","Cengio","Albisola Superiore","Vado Ligure","Busalla","Genova","Mignanego","Genova","Genova","Genova","Genova","Campomorone","Genova","Busalla","Genova","Genova","Genova","Chiavari","Cogoleto","Genova","Propata","Rapallo","Genova","La Spezia","La Spezia","Follo","Bolano","La Spezia","Portovenere","La Spezia","La Spezia","Santo Stefano di Magra","La Spezia","La Spezia","Sarzana","Lugagnano Val d'Arda","Piacenza","Besenzone","Piacenza","Corte Brugnatella","Parma","Parma","Colorno","Langhirano","Castellarano","Reggio nell'Emilia","Reggio nell'Emilia","Villa Minozzo","Guastalla","Reggio nell'Emilia","Carpi","Modena","Modena","Fiorano Modenese","Mirandola","Sassuolo","Imola","Bologna","Bologna","San Lazzaro di Savena","Molinella","Alto Reno Terme","Ferrara","Jolanda di Savoia","Cento","Ferrara","Ostellato","Faenza","Ravenna","Ravenna","Alfonsine","Cervia","Faenza","Rimini","Rimini","Forlì","Forlì","Cesena","Savignano sul Rubicone","Sogliano al Rubicone","San Clemente","Verucchio","Mondaino","San Leo","Carrara","Massa","Capannori","Lucca","Viareggio","Lucca","Bagni di Lucca","Lucca","Pistoia","Montale","Prato","Firenze","Firenze","Firenze","Firenze","Firenze","Scandicci","Signa","Figline e Incisa Valdarno","Piombino","Livorno","Livorno","Piombino","Livorno","Pisa","Pomarance","Pisa","Santa Croce sull'Arno","Arezzo","Arezzo","Chitignano","Poggibonsi","Siena","Grosseto","Grosseto","Grosseto","Prato","Perugia","Perugia","Spoleto","Spoleto","Foligno","Gubbio","Torgiano","Perugia","Gubbio","Gubbio","Gubbio","Spoleto","Giano dell'Umbria","Magione","Città di Castello","Gubbio","Terni","Terni","Terni","Amelia","Orvieto","Narni","Fano","Pesaro","Urbino","Ancona","Chiaravalle","Falconara Marittima","Falconara Marittima","Falconara Marittima","Jesi","Senigallia","Montemarciano","Ancona","Jesi","Jesi","Jesi","Jesi","Chiaravalle","Ancona","Fabriano","Ancona","Osimo","Loreto","Genga","Ancona","Macerata","Civitanova Marche","Macerata","Ascoli Piceno","Porto Sant'Elpidio","Ascoli Piceno","Montemonaco","Ripatransone","Ascoli Piceno","San Benedetto del Tronto","Civita Castellana","Viterbo","Viterbo","Acquapendente","Civita Castellana","Tarquinia","Monte Romano","Leonessa","Rieti","Rieti","Allumiere","Roma","Roma","Roma","Civitavecchia","Colleferro","Colleferro","Guidonia Montecelio","Roma","Roma","Roma","Roma","Tolfa","Santa Marinella","Civitavecchia","Civitavecchia","Latina","Frosinone","Roma","Cassino","Roma","Roma","Roma","Roma","Ciampino","Roma","Roma","Civitavecchia","Civitavecchia","Fiumicino","Fiumicino","Civitavecchia","Civitavecchia","Civitavecchia","Civitavecchia","Civitavecchia","Civitavecchia","Allumiere","Aprilia","Latina","Latina","Latina","Gaeta","Latina","Alatri","Anagni","Ceccano","Ferentino","Fontechiari","Frosinone","Frosinone","L'Aquila","L'Aquila","L'Aquila","Castel di Sangro","Teramo","Teramo","Pescara","Pescara","Pescara","Pescara","Pescara","Foggia","Pescara","Montesilvano","Melilli","Città Sant'Angelo","Sant'Eufemia a Maiella","Cepagatti","Atessa","Ortona","Chieti","Francavilla al Mare","Campobasso","Campobasso","Termoli","Termoli","Guardiaregia","Bojano","Vastogirardi","Venafro","Caserta","Caserta","Caserta","Maddaloni","Rocca d'Evandro","Pignataro Maggiore","Sparanise","Teverola","Orta di Atella","Aversa","Benevento","Benevento","Montesarchio","Benevento","Benevento","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Napoli","Acerra","San Vitaliano","Casoria","Torre Annunziata","San Felice a Cancello","Acerra","Napoli","Volla","Pomigliano d'Arco","Portici","Pozzuoli","Napoli","Avellino","Avellino","Montefredane","Solofra","Avellino","Ariano Irpino","Salerno","Salerno","Salerno","Salerno","Cava de' Tirreni","Nocera Inferiore","Battipaglia","Salerno","Polla","Ottati","Taranto","Monte Sant'Angelo","Manfredonia","Brindisi","San Severo","Lucera","Modugno","Modugno","Molfetta","Molfetta","Bari","Bari","Andria","Altamura","Casamassima","Monopoli","Barletta","Bari","Bari","Monopoli","Modugno","Modugno","Taranto","Taranto","Statte","Taranto","Taranto","Statte","Taranto","Martina Franca","Grottaglie","Massafra","San Pancrazio Salentino","Torchiarolo","San Pietro Vernotico","Mesagne","Brindisi","Brindisi","Brindisi","Francavilla Fontana","Brindisi","Brindisi","Ceglie Messapica","Cisternino","Torchiarolo","Lecce","Arnesano","Campi Salentina","Lecce","Galatina","Lecce","Surbo","Melfi","Potenza","Potenza","Potenza","Potenza","Viggiano","Melfi","Lavello","Grumento Nova","Viggiano","Viggiano","Viggiano","Matera","Sarroch","Pisticci","Ferrandina","Firmo","Saracena","Cosenza","Rende","Corigliano-Rossano","Acri","Acri","Roggiano Gravina","Simeri Crichi","Altomonte","Corigliano-Rossano","Simeri Crichi","Lamezia Terme","Catanzaro","Catanzaro","Martirano Lombardo","Platania","Martirano Lombardo","Botricello","Locri","Reggio di Calabria","Polistena","Reggio di Calabria","Mammola","Roccaforte del Greco","San Ferdinando","Polistena","Crotone","Crotone","Rocca di Neto","Rocca di Neto","Crotone","Vibo Valentia","Vibo Valentia","Serra San Bruno","Trapani","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Palermo","Partinico","Vercelli","Borgosesia","Cerano","Verbania","Novara","Saliceto","Cuneo","Alba","Asti","Campobasso","Isernia","Bari","Guagnano","Termini Imerese","Palermo","Pace del Mela","San Filippo del Mela","Santa Lucia del Mela","Pace del Mela","Messina","Milazzo","Messina","Milazzo","Porto Empedocle","Agrigento","Agrigento","Canicattì","Cammarata","Lampedusa e Linosa","Porto Empedocle","Agrigento","Gela","Gela","Gela","Caltanissetta","Niscemi","Gela","Gela","San Cataldo","Niscemi","Gela","Caltanissetta","Caltanissetta","Gela","Gela","Gela","Gela","Gela","Enna","Misterbianco","Catania","Catania","Catania","Catania","Catania","Ragusa","Ragusa","Ragusa","Augusta","Siracusa","Priolo Gargallo","Priolo Gargallo","Siracusa","Priolo Gargallo","Siracusa","Siracusa","Siracusa","Siracusa","Augusta","Augusta","Augusta","Porto Torres","Sassari","Porto Torres","Sassari","Olbia","Sassari","Porto Torres","Sassari","Alghero","Sassari","Nuoro","Nuoro","Ottana","Siniscola","Tortolì","Macomer","Assemini","Assemini","Portoscuso","Portoscuso","Sarroch","Sarroch","Nuraminis","Villasor","Sant'Antioco","Portoscuso","Portoscuso","Cortina sulla strada del vino","Bolzano","Guardia Perticara","Tricarico","VE-Rio Novo","Padova","Porto Empedocle","Velturno","Torino","Torino","Borgaro Torinese","Druento","Orbassano","Settimo Torinese","Susa","Vinovo","Oulx","Venafro","Strongoli","Monserrato","Seulo","Quartu Sant'Elena","Assemini","Cagliari","Oristano","Oristano","Santa Giusta","Olbia","San Gavino Monreale","Iglesias","Gonnesa","Carbonia","Laives"],["Ivrea - Liberazione","Torino - Rubino","Ceresole Reale - Diga","Chieri - Bersezio","Leinì (ACEA) - Grande Torino","Torino Lingotto","Vercelli - CONI","Cigliano-Autostrada","Novara - Roma","Borgomanero - Molli","Novara - Arpa","Mondovì-Aragno","Revello - Staffarda","Asti - Baussano","Vinchio - San Michele","Alessandria - D'Annunzio","Casale M.to - Castello","Alessandria - Volta","Dernice - Costa","Baceno - Alpe Devero","Biella - Sturzo","Cossato - Pace","Trivero - Ronco","Omegna - Crusinallo","Domodossola - Curotti","AOSTA (MONT FLEURY)","AOSTA (PIAZZA PLOUVES)","DONNAS","ETROUBLES","LA THUILE","MORGEX","AOSTA (Q.RE DORA)","AOSTA (VIA PRIMO MAGGIO)","AOSTA I maggio","Campagna con il laboratorio mobile nel comune di Lillianes","Campagna con il laboratorio mobile nel comune di Aosta","Aosta Liconi","Aosta Col du Mont","Aosta - via Roma","Cogne","VARESE - VIA VIDOLETTI","BUSTO ARSIZIO - ACCAM","SARONNO - SANTUARIO","VARESE - VIA COPELLI","FERNO","COLICO","LECCO VIA AMENDOLA","MERATE","COMO - VIALE CATTANEO","CANTU - VIA MEUCCI","ERBA- Via Battisti","BORMIO","MORBEGNO","SONDRIO - VIA MAZZINI","SONDRIO - VIA PARIBELLI","ARCONATE","CASSANO VIA DI VONA","CINISELLO B.","CORMANO","CORSICO","MILANO - V.LE LIGURIA","LIMITO","MAGENTA","MILANO - V.LE MARCHE","MEDA","MOTTA VISCONTI","PERO","RHO","MILANO - SENATO","SESTO S.GIOVANNI","MILANO - VERZIERE","S. GIULIANO","TURBIGO","MILANO PASCAL CITTà STUDI","MONZA - VIA  MACHIAVELLI","CASSANO VIA MILANO","MONZA PARCO","Cormano-Edison","FILAGO","BERGAMO - VIA GARIBALDI","BERGAMO - VIA MEUCCI","TAVERNOLA","TREVIGLIO","OSIO SOTTO","CASIRATE D'ADDA","CALUSCO","DALMiNE - Via Verdi","BRESCIA - BROLETTO","GAMBARA","LONATO","ODOLO","REZZATO","SAREZZO","BRESCIA - VIA TURATI","DARFO_2","BRESCIA - VIA ZIZIOLA","BRESCIA VILLAGGIO SERENO","PAVIA - VIA FOLPERTI","MEZZANA BIGLI - CASONI BORRONI","PAVIA - P.ZZA MINERVA","SANNAZZARO","CORNALE","VOGHERA - VIA POZZONI","FERRERA ERBOGNONE - Eni","PARONA","VIGEVANO - VIA VALLETTA","CORTE DEI CORTESI","CREMA","CREMONA - P.ZZA CADORNA","SORESINA","CREMONA VIA FATEBENEFRATELLI","SPINADESCO","CREMONA GERRE BORGHI","MANTOVA - VIA ARIOSTO","MANTOVA - LUNETTA","BORGOFRANCO","PONTI SUL MINCIO","MANTOVA - piazza GRAMSCI","MANTOVA SANT'AGNESE","SCHIVENOGLIA","VIADANA","VALMADRERA","MOGGIO","LECCO VIA SORA","PERLEDO","ABBADIA CERRETO","LODI Vignati","CODOGNO","TAVAZZANO","SAN ROCCO AL PORTO","BERTONICO","LODI S.ALBERTO","BX1 Bressanone","BR1 Brunico","LA1 Laces","RE1 Renon","ME1 Merano","BZ4 Via C. Augusta","BZ5 piazza Adriano","AB3 Autostrada del Brennero A22","CR2 Cortina sulla strada del vino","BORGO VAL","MONTE GAZA","RIVA GAR","ROVERETO LGP","TRENTO PSC","TRENTO VBZ","PIANA ROTALIANA","AVIO A22","VR - Borgo Milano","VR - Cason","BOVOLONE","SAN MARTINO BUON ALBERGO","SAN BONIFACIO","VILLAFRANCA","VIA CHIARINI","LEGNAGO","BOSCOCHIESANUOVA","VR- Giarol Grande","BASSANO DEL GRAPPA","MONTEBELLO VICENTINO","MONTECCHIO MAGGIORE","SCHIO","VALDAGNO","VI - Quartiere Italia","THIENE","VI - San Felice","ASIAGO - CIMA EKAR","CHIAMPO","VI - Ferrovieri","BL - Parco Città di Bologna","AREA FELTRINA","PIEVE D'ALPAGO","PASSO VALLES","BL - La Cerva","CONEGLIANO","TV - Via Lancieri di Novara","MANSUE'","CASTELFRANCO","TV - Strada S. Agnese","TV- riserva","VE - Parco Bissuola","SAN DONA' DI PIAVE","SPINEA","VE - Sacca Fisola","CONCORDIA SAGITTARIA","VE - Via Tagliamento","VE - Via Beccaria","MIRA","VE - Malcontenta","VE - Via Da Verrazzano","PD - Mandria","PD - Arcella","MONSELICE","ESTE","PARCO COLLI EUGANEI","PD - Granze","ALTA PADOVANA","RO - Largo Martiri","RO - Borsea","ADRIA","PORTO TOLLE","BADIA POLESINE","CAIROLI","S.OSVALDO","OSOPPO PROVI","S.GIOVANNI AL NATISONE","TOLMEZZO","MONTE ZONCOLAN - SUTRIO","FIUMICELLO A2A","SAN DANIELE","TORVISCOSA EDISON","CASTIONS EDISON","MALISANA EDISON","UGOVIZZA","DOBERDO DEL LAGO","MONFALCONE","GORIZIA","MONFALCONE A2A","DOBERDO' DEL LAGO A2A","FOSSALON DI GRADO A2A","RONCHI DEI LEGIONARI A2A","PUNTA SDOBBA","MONTE SAN PANTALEONE","CARPINETO","PIAZZA LIBERTA","PITACCO","SVEVO","MUGGIA","TOR BANDENA","SAN SABBA","Sincrotone-Basovizza","Piazza Volontari Giuliani","Piazza Carlo Alberto","Ponticello","p.le Rosmini","BRUGNERA","CANEVA","PORDENONE CENTRO","PORCIA","PRATA DI PORDENONE","SACILE","MORSANO AL TAGLIAMENTO","Sacile 1","Pordenone Centro 1","PIAZZA BATTISTI - SANREMO","GIARDINI REGINA ELENA - SANREMO","CENGIO - CAMPO DI CALCIO","CORSO RICCI - SAVONA","LOCALITA' FARINA - CAIRO M.","VIA NAZIONALE - CARCARE","QUILIANO","VADO LIGURE","CORSO FERRARI - ALBISOLA SUPERIORE","VIA SAN LORENZO - SAVONA","VARALDO - SAVONA","REGIONE CAVALLO - ALBENGA","LOCALITA' MAZZUCCA - CAIRO M.","LOCALITA' BRAGNO - CAIRO M.","CENGIO - RIO PARASACCO","VIA VIII MAGGIO - ALBISOLA SUPERIORE","VIA DE LITTA - VADO LIGURE","PIAZZA GARIBALDI - BUSALLA","CORSO FIRENZE - GENOVA","PASSO DEI GIOVI","MULTEDO - PEGLI - GENOVA","PIAZZA MASNATA - GENOVA","QUARTO - GENOVA","PARCO ACQUASOLA - GENOVA","CAMPORA - CAMPOMORONE","CORSO EUROPA/VIA SAN MARTINO - GENOVA","SARISSOLA - BUSALLA","VIA BUOZZI - GENOVA","VIA PASTORINO - BOLZANETO - GENOVA","CORSO BUENOS AIRES - GENOVA","VIA ASSAROTTI - CHIAVARI","VIA GIOVENTU' - COGOLETO","MULTEDO VILLA CHIESA - GENOVA","PROPATA","CAMPO MACERA - RAPALLO","VIA UNGARETTI - PEGLI - GENOVA","SAN CIPRIANO/LIBERTA - LA SPEZIA","CHIODO/AMENDOLA - LA SPEZIA","FOLLO","BOLANO","SAN VENERIO - LA SPEZIA","LE GRAZIE - PORTOVENERE","FOSSAMASTRA - LA SPEZIA","MAGGIOLINA - LA SPEZIA","SANTO STEFANO MAGRA","CHIAPPA - LA SPEZIA","PIAZZA SAINT BON - LA SPEZIA","LARGO PERTINI - SARZANA","LUGAGNANO","GIORDANI FARNESE","BESENZONE","PARCO MONTECUCCO","CORTE BRUGNATELLA","CITTADELLA","MONTEBELLO","SARAGAT","BADIA","CASTELLARANO","S. LAZZARO","TIMAVO","FEBBIO","SAN ROCCO","TIMAVO","REMESINA","GIARDINI","PARCO FERRARI","SAN FRANCESCO","GAVELLO","PARCO EDILCARANI","DE AMICIS","GIARDINI MARGHERITA","PORTA SAN FELICE","SAN LAZZARO","SAN PIETRO CAPOFIUME","CASTELLUCCIO","ISONZO","GHERARDI","CENTO","VILLA FULVIA","OSTELLATO","PARCO BUCCI","CAORLE","ZALAMELLA","BALLIRANA","DELTA CERVIA","PARCO BERTOZZI","MARECCHIA","FLAMINIA","PARCO RESISTENZA","ROMA","FRANCHINI ANGELONI","SAVIGNANO","SAVIGNANO DI RIGO","SAN CLEMENTE","VERUCCHIO","MONDAINO","SAN LEO","MS-COLOMBAROTTO","MS-MARINA-VECCHIA","LU-CAPANNORI","LU-MICHELETTO","LU-VIAREGGIO","LU-CARIGNANO","LU-FORNOLI","LU-SAN-CONCORDIO","PT-SIGNORELLI","PT-MONTALE","PO-ROMA","FI-BASSI","FI-BOBOLI","FI-GRAMSCI","FI-MOSSE","FI-SETTIGNANO","FI-SCANDICCI","FI-SIGNA","FI-FIGLINE","LI-COTONE","LI-CARDUCCI","LI-CAPPIELLO","LI-PIOMBINO-PARCO-VIII-MARZO","LI-LA-PIRA","PI-BORGHETTO","PI-MONTECERBOLI","PI-PASSI","PI-SANTA-CROCE-COOP","AR-ACROPOLI","AR-REPUBBLICA","AR-CASA-STABBI","SI-POGGIBONSI","SI-BRACCI","GR-URSS","GR-SONNINO","GR-MAREMMA","PO-FERRUCCI","CORTONESE","P.S.GIOVANNI","Santo Chiodo","Piazza Vittoria","PORTA ROMANA","PIAZZA 40 MARTIRI","BRUFA","FONTIVEGGE1","Ghigiano","Leonardo da Vinci","Padule","S. Martino in Trignano","M Martani","Magione","C Castello","Semonte Alta","CARRARA","BORGO RIVO","Le Grazie","Amelia","Ciconia2","Narni Scalo","VIA MONTEGRAPPA","VIA SCARPELLINI","URBINO - LOC.PIANSEVERO - Via Neruda","ANCONA TORRETTE","CHIARAVALLE2","FALCONARA ACQUEDOTTO","FALCONARA ALTA","FALCONARA SCUOLA","JESI","SENIGALLIA","MARINA DI MONTEMARCIANO","ANCONA/VIA BOCCONI","JESI 1 - MURRI","JESI 2 - ZIPA","JESI 3 - COPPETELLA","JESI 4 - EX SEMINARIO","CHIARAVALLE","Ancona - Porto","Fabriano","Ancona Cittadella","Osimo","Loreto","Genga -Parco Gola della Rossa","LABORATORIO MOBILE","Macerata COLLEVARIO","Civitanova IPPODROMO S. MARONE","Macerata SFORZACOSTA","CENTRALINA ITAS - ARPAM","Porto S. Elpidio","MONTICELLI","MONTEMONACO","RIPATRANSONE","CAMPOLUNGO2","San Benedetto del Tronto","CIVITA CASTELLANA","VITERBO","VITERBO METEO","ACQUAPENDENTE","Civita Castellana via Petrarca","Tarquinia","Monte Romano","LEONESSA","RIETI","RIETI METEO","ALLUMIERE","C.SO FRANCIA","CASTEL DI GUIDO","CINECITTA","CIVITAVECCHIA","COLLEFERRO OBERDAN","COLLEFERRO EUROPA","GUIDONIA","L.GO MAGNA GRECIA","TENUTA DEL CAVALIERE","V.SAREDO","VILLA ADA","Tolfa","Santa Marinella","Civitavecchia Porto","Civitavecchia via Morandi","LATINA SCALO","FROSINONE SCALO","L.GO PERESTRELLO","CASSINO","FERMI","CIPRO","BUFALOTTA","TIBURTINA","CIAMPINO","ARENULA","MALAGROTTA","Civitavecchia- via Roma","Civitavecchia- Villa Albani","Fiumicino Porto","Villa Guglielmi","Aurelia","S. Agostino","Fiumaretta","Faro","Campo dell'Oro","S. Gordiano","Allumiere Aldo Moro","APRILIA 2","LT-METEO","LT ROMAGNOLI","LT TASSO","Gaeta Porto","Latina De Chirico","ALATRI","ANAGNI","CECCANO","FERENTINO","FONTECHIARI","FR METEO","FROSINONE MAZZINI","AQ - Amiternum","San Gregorio","Arischia","Castel di Sangro","TE - Porta Madonna","Gammarana","PE - PIAZZA GRUE","PE - VIA FIRENZE","PE - VIALE G. DI ANNUNZIO","PE - CORSO VIT. EMANUELE","PE - VIA SACCO","Rosati","PE - TEATRO D'ANNUNZIO","MONTESILVANO","Melilli","CITTA' S. ANGELO","Parco Nazionale Maiella","ASL CEPAGATTI","ATESSA","Villa Caldari","Scuola Antonelli","Francavilla","CAMPOBASSO3","CAMPOBASSO4","TERMOLI1","TERMOLI2","GUARDIAREGIA","Centro mobile Bojano","VASTOGIRARDI","VENAFRO2","CE53 CENTURANO","CE51 ISTITUTO MANZONI","CE52 SCUOLA DE AMICIS","CE54 SCUOLA SETTEMBRINI","Rocca D'Evandro","Pignataro","Sparanise","Teverola SET","Marcianise SET","Aversa scuola Cirillo","BN31 OSPEDALE RIUNITI","BN32 via flora","Montesarchio","Benevento Zona Industriale","Benevento Campo Sportivo","NA07 ENTE FERROVIE","NA03 I POLICLINICO","NA09 I.T.I.S. ARGINE","NA06 MUSEO NAZIONALE","NA08 OSPEDALE NUOVO PELLEGRINI","NA02 OSPEDALE SANTOBONO","NA01 OSSERVATORIO ASTRONOMICO","NA05 SCUOLA VANVITELLI","Acerra Zona Industriale","San Vitaliano Scuola Elementare Marconi","Casoria Scuola Palizzi (CAM)","Torre Annunziata Scuola Media Pascoli","San Felice a Cancello Complesso scolastico","Acerra scuola Caporale","Tirrenopower Via Epomeo","Tirrenopower Volla","Pomigliano d'Arco Area ASI","Portici parco reggia","Pozzuoli Villa Avellino","Parco Virgiliano","AV42 OSPEDALE MOSCATI","AV41 SCUOLA V CIRCOLO","Montefredane","Solofra Zona Industriale","Avellino Scuola Alighieri","Villa Comunale","SA23 SCUOLA OSVALDO CONTI","SA21 SCUOLA PASTENA MONTE","SA22 Ospedale via Vernieri","Fratte","Cava de' Tirreni Stadio","Nocera Inferiore scuola Solimene","Battipaglia parco fiume","Parco Mercatello","Polla Area tritovagliatore","Alburni","Taranto ARCHIMEDE","Monte S. Angelo SUOLO CIUFFREDA","Manfredonia VIA DEI MANDORLI","Brindisi VIA TARANTO","Posta del Principe","Azienda Russo","EN04 - SAN PAOLO","ENAIP","Molfetta ASM","molfetta VERDI","CAVOUR","KENNEDY","ANDRIA","ALTAMURA","CASAMASSIMA","MONOPOLI","stadio casardi","Carbonara","CUS","Monopoli Italgreen","EN02 - ass. ecologia","EN03 - VIGILI URBANI","taranto SAN VITO","taranto ADIGE","STATTE","taranto MACHIAVELLI","Taranto CISI","taranto WIND","TALSANO","Martina Franca","Grottaglie","Massafra","S. Pancrazio Salentino","TORCHIAROLO","S. Pietro VERNOTICO","Mesagne","brindisi VIA MAGELLANO","brindisi VIA DEI MILLE","brindisi SISRI","Filzi","PERRINO","TERMINAL PASSEGGERI","Ceglie Messapica","Cisternino","Torchiarolo ENEL","LECCE - S. M. Cerrate","ARNESANO - Riesci","Campi Salentina","GARIGLIANO","La Porta","LIBERTINI","Surbo ENEL","MELFI","POTENZA - C.DA ROSSELLINO","POTENZA - VIALE FIRENZE","POTENZA - VIALE UNICEF","Potenza - S.L.Branca","Viggiano","San Nicola di Melfi","Lavello","GRUMENTO 3","VIGGIANO 1","VIGGIANO - MASSERIA DE BLASIIS","VIGGIANO - COSTA MOLINA SUD 1","La Martella","CENSA3","Pisticci","Ferrandina","Firmo","Saracena","Città dei ragazzi","Università","Schiavonea","Acri","Mezzo Mobile Zona C Acri","Mezzo Mobile Zona D Roggiano Gravina","MM1 Pietrapaolo 2015","MM2 Firmo Altomonte 2015","MM3 Schiavonea 2015","Pietropaolo","Municipio","Parco della biodiversità mediterranea","Santa Maria","Martirano Lombardo","Mezzo Mobile Zona C Platania","Mezzo Mobile Zona D Martirano Lombardo","Mezzo Mobile Zona D Botricello","Locri","Piazza Castello","Polistena","Villa Comunale","Mammola","Mezzo Mobile Zona C Roccaforte Del Greco","Mezzo Mobile Zona D San Ferdinando","MM4 Polistena 2015","Gioacchino da Fiore (via)","Tribunale","Rocca di Neto","Mezzo Mobile Zona D Rocca di Neto","Biomasse Crotone","Via Argentaria","Parco Urbano","Mezzo Mobile Zona C Serra San Bruno","Trapani","PA - Belgio","PA - Boccadifalco","GIULIO CESARE","PA - Indipendenza","TORRELUNGA","UNITA DI ITALIA","PA- Castelnuovo","PA - Di Blasi","CEP","Partinico","Vercelli - Gastaldi","Borgosesia - Tonella","Cerano - Bagno","Verbania - Gabardi","Novara - Verdi","Saliceto - Moizo","Cuneo - Alpini","Alba - Tanaro","Asti - D'Acquisto","CAMPOBASSO1","ISERNIA1","Caldarola","GUAGNANO - villa baldassarri","Termini Imerese","PA - Villa Trabia","a2a - Pace del mela","a2a - S.Filippo del Mela","Santa Lucia del Mela","Pace del Mela","ME - Boccetta","Milazzo - Termica","ME - Villa Dante","a2a - Milazzo","PORTO EMPEDOCLE_3","AGRIGENTO_CENTRO","AGRIGENTO_MONSERRATO","CANICATTI","CAMMARATA_OZONO","LAMPEDUSA_OZONO","Porto Empedocle","AG â€“ ASP","Gela - Enimed","AGIP POZZO 57","CIMITERO FARELLO","CORSO V. EMANUELE","LICEO SCIENTIFICO","MINERBIO","OSPEDALE V. EMANUELE","VIA CAVOUR","Niscemi","Gela - Via Venezia","VIA F.TURATI","PIAZZA CAPUANA","PARCHEGGIO-AGIP","Gela - Ex Autoparco","Gela - Biviere","Gela - Capo Soprano","Gela Pontile","Enna","Misterbianco","CT - Parco Gioieni","ZONA INDUSTRIALE","LIBRINO","MORO","CT - Viale Vittorio Veneto","RG - Campo Atletica","RG - Villa Archiemede","Marina di Ragusa","Augusta","SR - Belvedere","CIAPI","SAN CUSMANO","SR - Via Gela","Priolo","ACQUEDOTTO","SR - Pantheon","SR - Verga","SR - Teracati","MEGARA-GIANNALENA","PUNTA CUGNO","Contrada Marcellino","CENSS3","CENS13","CENSS4","CENS12","CENS10","CENS16","CENPT1","CENS17","CEALG1","CENSS2","CENNU1","CENNU2","CENOT3","CENSN1","CENTO1","CENMA1","CENAS6","CENAS8","CENPS2","CENPS4","CENSA1","CENSA2","CENNM1","CENVS1","CENST1","CENPS6","CENPS7","CR1 Cortina sulla strada del vino","BZ6 Via Amba Alagi","GuardiaPerticara 1","Tricarico 1","VE-Rio Novo","PD-APS1","PORTO EMPEDOCLE_1","AB1 Autostrada del Brennero A22","Torino - Consolata","Torino - Rebaudengo","Borgaro T. - Caduti","Druento - La Mandria","Orbassano - Gozzano","Settimo T. - Vivaldi","Susa - Repubblica","Vinovo - Volontari","Oulx - Roma","VENAFRO1","Biomasse Strongoli","CENMO1","CENSE0","CENQU1","CENAS9","CENCA1","CENOR1","CENOR2","CESGI1","CEOLB1","CENSG3","CENIG1","CENNF1","CENCB2","LS1 Laives"],["S","U","R","S","S","U","S","R","U","U","U","U","R","U","R","U","U","U","R","R","U","U","S","U","S","S","U","R","R","R-remote","S","U","S","S","R","U","U","S","U","S","U","S","U","U","U","S","U","U","U","S","U","U","U","U","U","S","U","U","U","U","U","U","U","U","U","R","U","U","U","U","U","U","U","U","U","U","S","U","U","U","U","S","U","S","R","S","U","U","R","U","S","S","U","U","S","S","U","U","R","U","U","R","U","R","U","U","R","S","U","S","U","R","R","U","S","R","S","U","U","R","U","S","R","U","R","R","U","U","S","S","R","U","U","U","U","R-nearcity","U","U","U","S","S","S","R","S","U","U","U","R","S","U","S","U","U","U","U","S","U","R","U","U","S","U","U","U","U","U","U","R","U","U","U","S","R","R","U","U","U","R","R","U","U","U","U","U","U","R","U","U","U","S","U","U","U","U","S","R","U","R","U","U","U","R","R","U","S","S","S","U","R","R","U","S","R","R","S","R","U","U","U","R","R","R","R","S","S","U","S","U","S","U","S","R-nearcity","U","U","S","U","U","U","U","U","S","U","S","S","U","U","U","R-nearcity","U","S","S","S","U","U","U","U","U","S","S","R-nearcity","U","S","U","U","R-nearcity","U","U","U","U","S","U","S","U","U","U","U","S","U","R-regional","U","S","U","U","R-nearcity","R-nearcity","S","S","U","U","S","S","U","U","S","U","R","U","R","U","U","S","R","S","U","U","R","R","U","S","U","U","U","R","U","U","U","U","U","R","R","U","R","S","U","R","U","U","U","R","S","U","U","U","U","U","U","S","R","R","S","R","R","U","U","U","U","U","R","U","U","U","R","U","U","U","U","U","R","U","U","U","S","U","U","U","U","U","S","U","S","U","U","R","U","U","U","U","R","U","U","U","S","U","U","U","R","U","S","S","S","S","R","S","U","S","U","U","U","U","S","S","U","S","S","S","S","S","S","S","U","U","S","U","S","S","S","S","U","S","U","U","U","S","R-regional","U","S","R","S","S","U","U","R-regional","R-regional","S","U","U","U","S","R","U","R","S","R","U","U","R","U","R","U","U","S","S","S","U","S","U","U","R","S","U","U","S","U","U","U","U","U","U","U","U","U","S","U","U","S","U","R","R","U","U","U","U","R","U","S","U","U","U","U","U","U","U","U","R","U","U","U","S","R","S","U","U","U","U","U","U","U","U","U","U","U","S","R","R","S","S","U","S","U","U","U","U","R","S","R","U","S","U","U","S","S","S","S","S","S","U","U","U","U","S","U","U","U","S","U","U","U","U","U","S","U","S","S","S","U","U","S","S","U","U","S","U","S","S","S","U","U","S","U","U","S","S","U","U","U","S","R-regional","S","R","S","U","R","R","S","S","S","U","U","U","U","S","S","S","U","S","S","S","S","U","U","U","S","S","S","S","U","U","S","U","S","S","S","S","S","S","S","S","S","S","S","R","S","R","S","S","U","S","U","R","S","S","U","U","S","R","R","U","S","R","R","R","S","U","R","R","R-nearcity","R","U","U","R-nearcity","U","S","U","R-nearcity","R-nearcity","R-nearcity","R-nearcity","S","U","U","U","S","S","S","U","U","S","U","R-regional","S","U","S","U","U","S","S","U","U","U","S","U","U","S","U","U","S","U","U","U","S","U","U","U","S","U","U","R","U","U","U","U","U","U","S","U","U","S","S","R-nearcity","S","U","S","U","U","U","U","S","U","R","R","S","S","S","R","R","U","S","U","U","U","U","U","U","U","S","S","R-nearcity","U","U","U","U","U","S","S","U","U","S","U","S","U","S","S","S","S","U","U","U","U","U","S","S","S","S","U","R-nearcity","S","U","U","U","U","U","R","U","U","S","U","U","R-nearcity","S","S","S","S","S","S","R","S","R","R-nearcity","S","S","U","R","R","U","U","S","S","U","U","S","R","S","U","S","S","S","U","U","U","R-remote","U","U","U","U","U","U","S","U","U","S","S","S"],["F","F","F","F","F","F","F","T","T","T","F","T","F","T","F","T","F","F","F","F","F","F","F","T","F","F","F","F","F","F","T","F","I","I","F","F","F","I","T","F","F","F","F","T","F","F","T","T","T","F","F","F","F","T","F","F","F","T","T","T","T","F","F","T","T","F","T","F","T","T","T","T","F","F","F","T","F","F","F","T","F","I","T","F","F","F","T","T","F","F","F","I","F","T","F","F","F","F","F","T","I","F","F","I","I","F","F","F","T","T","F","I","F","I","I","F","F","T","F","F","F","F","F","F","F","F","T","T","F","F","F","F","F","F","F","F","T","T","T","T","F","F","F","F","F","F","T","F","T","T","F",null,null,"T",null,"F","F","F","F","F","I",null,"F",null,"F",null,"T","F","I","F","F","F","F",null,"T","F","F","F",null,"T",null,"F","F","F","F",null,"T","T",null,"I","T","F","T","F","I","F","I","F","T","F","F","F","F","F","F","I","F","F","F","I","T","I","F","I","F","F","F","T","I","I","I","I","F","I","F","T","I","I","I","F","I","F","T","F","I","F","T","T","T","F","T","T","F","T","T","T","F","F","T","I","I","I","T","T","T","F","T","I","I","F","T","I","T","F","F","T","T","F","F","F","T","I","T","T","T","T","F","I","F","T","F","T","T","F","F","I","I","I","F","T","F","T","T","F","T","F","F","F","F","T","F","F","F","F","T","F","F","T","F","T","F","T","F","F","T","F","T","T","F","F","T","F","F","F","F","F","F","T","F","F","F","F","T","F","T","F","F","F","F","F","F","F","F","T","F","T","F","F","F","F","F","F","F","F","F","T","T","F","F","F","F","I","T","F","F","F","T","F","F","F/I","F","T","F","F","T","F","T","F","T","F","T","I","F","T","F","F","T","I","I","I","I","F","F","F","I","T","F","T","F","F","F","T","F","F","T","F","I","I","I","T","T","T","T","I","I","I","I","T","I","T","F","F","I","F","I","F","F","T","I","T","F","F","F","I","T","F","T","METEO","F","F","F","F","F","T","METEO","F","T","F","F","F","F/I","F/I","T","T","F","METEO","F","F",null,"I","T","F","T","F","T","T","F","F","T","T","F","F","T","T","I","F","F","F","T","F","F","F","F","F","METEO","T","F","F","T","F","F","T","T","F","METEO","F","F","F","F","F","T","F","F","T","T","T","T","F","F","T","F","T","F","F","I","F","F","F","F","F","T","T","F","F","F","T","T","F","T","T","F","I","I","I","I","T","T","T","T","F","F","T","T","T","T","T","T","F","T","I","F","F","F","T","T","I","I","I","F","F","F","T","F","T","I","T","F","F","T","T","T","F","T","F","F","I","F","I","F","T","T","F","F","I",null,null,"T","T","F","T","T","F","T","F","F","F","T","I","I","F","T","I","I","I","T","F","T","F","T","F","I","I","F","F","T","I","T","F","I","F","F","F","F","F","F","T","I","T","F","I","I","T","T","I","I","I","I","I","I","I","I","I","F","I","I","I","I","F","T","I","F","F","F","I","I","I","I","F","F","T","T","F","F","F","F","T","I","F","F","F","F","I","F","T","F","F","I","T","F","F","F","T","F","T","T","T","T","T","T","T","F","T","F","F","F","F","F","F","F","F","T","T","T","F","F","F","F","F","F","F","T","F","F","F","T","F","I","T","F","F","F","F","F","F","F","T","T","F","T","T","T","T","T","T","F","F","F","F","F","F","F","F","T","F","T","T","F","F","F","F","I","I","I","F","F","F","T","T","T","F","F","F","I","T","I","T","T","F","F","F","F","F","F","F","I","F","F","F","F","I","I","F","F","I","F","F","F","I","F","F","F",null,null,"T","I","F","T","T","T","F","F","F","T","F","F","T","T","I","F","F","F","F","T","F","F","F","F","F","F","F","F","F"],["IT0120","IT0118","IT0121","IT0118","IT0118","IT0118","IT0119","IT0119","IT0119","IT0120","IT0119","IT0120","IT0119","IT0119","IT0120","IT0119","IT0119","IT0119","IT0120","IT0121","IT0119","IT0120","IT0121","IT0120","IT0121","IT0204","IT0204","IT0205","IT0205","IT0205","IT0204","IT0204","IT0204","IT0204","IT0205","IT0204","IT0204","IT0204","IT0204","IT0205","IT0309","IT0306","IT0306","IT0309","IT0309","IT0311","IT0309","IT0306","IT0306","IT0306","IT0309","IT0311","IT0312","IT0312","IT0312","IT0309","IT0309","IT0306","IT0306","IT0306","IT0306","IT0306","IT0309","IT0306","IT0306","IT0310","IT0306","IT0306","IT0306","IT0306","IT0306","IT0309","IT0309","IT0306","IT0306","IT0309","IT0306","IT0306","IT0307","IT0307","IT0307","IT0311","IT0307","IT0307","IT0309","IT0309","IT0307","IT0308","IT0310","IT0309","IT0311","IT0308","IT0308","IT0308","IT0312","IT0308","IT0308","IT0309","IT0310","IT0309","IT0310","IT0310","IT0310","IT0310","IT0310","IT0309","IT0310","IT0310","IT0309","IT0310","IT0309","IT0309","IT0309","IT0309","IT0309","IT0310","IT0310","IT0309","IT0309","IT0310","IT0310","IT0309","IT0311","IT0309","IT0311","IT0310","IT0309","IT0310","IT0309","IT0310","IT0310","IT0309","IT0445","IT0445","IT0445","IT0445","IT0445","IT0445","IT0445","IT0445","IT0445","IT0403","IT0404","IT0403","IT0403","IT0403","IT0403","IT0403","IT0403","IT0512","IT0512","IT0513","IT0512","IT0513","IT0512","IT0890","IT0513","IT0515","IT0512","IT0513","IT0511","IT0511","IT0513","IT0513","IT0511","IT0513","IT0511","IT0515","IT0511","IT0511","IT0516","IT0516","IT0515","IT0515","IT0516","IT0513","IT0509","IT0514","IT0513","IT0509","IT0509","IT0508","IT0513","IT0508","IT0508","IT0514","IT0508","IT0508","IT0508","IT0508","IT0508","IT0510","IT0510","IT0513","IT0513","IT0514","IT0510","IT0513","IT0513","IT0513","IT0514","IT0514","IT0514","IT0608","IT0608","IT0608","IT0608","IT0609","IT0609","IT0608","IT0608","IT0608","IT0608","IT0608","IT0609","IT0608","IT0608","IT0608","IT0608","IT0608","IT0608","IT0608","IT0608","IT0607","IT0607","IT0607","IT0607","IT0607","IT0607","IT0607","IT0607","IT0607","IT0607","IT0607","IT0607","IT0607","IT0608","IT0608","IT0608","IT0608","IT0608","IT0608","IT0608","IT0608","IT0608","IT0714","IT0714","IT0716","IT0712","IT0712","IT0712","IT0712","IT0712","IT0712","IT0712","IT0712","IT0714","IT0712","IT0712","IT0716","IT0712","IT0712","IT0715","IT0711","IT0715","IT0711","IT0711","IT0711","IT0711","IT0716","IT0711","IT0715","IT0711","IT0711","IT0711","IT0714","IT0714","IT0711","IT0716","IT0714","IT0711","IT0713","IT0713","IT0716","IT0713","IT0713","IT0713","IT0713","IT0713","IT0713","IT0713","IT0713","IT0713","IT0892","IT0892","IT0892","IT0892","IT0891","IT0892","IT0892","IT0892","IT0892","IT0892","IT0892","IT0892","IT0891","IT0892","IT0892","IT0892","IT0892","IT0892","IT0892","IT0892","IT0892","IT0893","IT0890","IT0890","IT0890","IT0893","IT0891","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0893","IT0891","IT0893","IT0893","IT0891","IT0891","IT0908","IT0908","IT0909","IT0909","IT0908","IT0909","IT0911","IT0909","IT0907","IT0907","IT0907","IT0906","IT0906","IT0906","IT0906","IT0906","IT0906","IT0906","IT0910","IT0908","IT0908","IT0908","IT0908","IT0908","IT0909","IT0911","IT0909","IT0909","IT0910","IT0910","IT0911","IT0911","IT0911","IT0908","IT0908","IT0908","IT0907","IT1007","IT1007","IT1007","IT1007","IT1007","IT1006","IT1007","IT1007","IT1006","IT1006","IT1006","IT1007","IT1006","IT1006","IT1007","IT1006","IT1008","IT1008","IT1008","IT1006","IT1007","IT1008","IT1110","IT1110","IT1111","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1111","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1110","IT1111","IT1111","IT1110","IT1110","IT1211","IT1211","IT1211","IT1211","IT1211","IT1213","IT1213","IT1211","IT1211","IT1211","IT1213","IT1215","IT1215","IT1215","IT1213","IT1212","IT1212","IT1215","IT1215","IT1215","IT1215","IT1215","IT1213","IT1213","IT1213","IT1213","IT1213","IT1212","IT1215","IT1212","IT1215","IT1215","IT1215","IT1215","IT1215","IT1215","IT1215","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1213","IT1212","IT1212","IT1212","IT1212","IT1212","IT1212","IT1212","IT1306","IT1306","IT1306","IT1307","IT1306","IT1306","IT1305","IT1305","IT1305","IT1305","IT1305","IT1611","IT1305","IT1305","IT1914","IT1306","IT1307","IT1306","IT1306","IT1306","IT1305","IT1305","IT1403","IT1403","IT1404","IT1404","IT1403","IT1403","IT1402","IT1403","IT1507","IT1507","IT1507","IT1507","IT1508","IT1508","IT1508","IT1507","IT1507","IT1507","IT1508","IT1508","IT1508","IT1508","IT1508","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1508","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1507","IT1508","IT1508","IT1508","IT1508","IT1508","IT1509","IT1508","IT1508","IT1508","IT1508","IT1508","IT1508","IT1508","IT1508","IT1508","IT1509","IT1613","IT1611","IT1612","IT1613","IT1611","IT1611","IT1614","IT1614","IT1612","IT1612","IT1614","IT1614","IT1612","IT1611","IT1611","IT1612","IT1612","IT1614","IT1614","IT1612","IT1614","IT1614","IT1613","IT1613","IT1613","IT1613","IT1613","IT1613","IT1613","IT1611","IT1612","IT1613","IT1612","IT1613","IT1613","IT1612","IT1613","IT1613","IT1613","IT1612","IT1613","IT1613","IT1611","IT1611","IT1613","IT1612","IT1612","IT1612","IT1612","IT1612","IT1612","IT1612","IT1703","IT1703","IT1703","IT1703","IT1703","IT1703","IT1703","IT1703","IT1703","IT1703","IT1703","IT1703","IT1703","IT2009","IT1703","IT1703","IT1802","IT1802","IT1801","IT1801","IT1802","IT1803","IT1803","IT1804","IT1802","IT1802","IT1802","IT1802","IT1801","IT1801","IT1801","IT1804","IT1803","IT1804","IT1804","IT1804","IT1801","IT1802","IT1801","IT1804","IT1803","IT1804","IT1802","IT1802","IT1802","IT1804","IT1804","IT1802","IT1801","IT1801","IT1803","IT1915","IT1911","IT1911","IT1911","IT1911","IT1911","IT1911","IT1911","IT1911","IT1911","IT1914","IT0119","IT0120","IT0119","IT0120","IT0119","IT0120","IT0119","IT0120","IT0119","IT1403","IT1403","IT1614","IT1612","IT1914","IT1911","IT1914","IT1914","IT1914","IT1914","IT1913","IT1914","IT1913","IT1914","IT1914","IT1915","IT1915","IT1915","IT1915","IT1915","IT1914","IT1915","IT1914","IT1914","IT1914","IT1915","IT1914","IT1914","IT1914","IT1915","IT1914","IT1914","IT1915","IT1915","IT1914","IT1914","IT1914","IT1914","IT1914","IT1915","IT1912","IT1912","IT1912","IT1912","IT1912","IT1912","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT1914","IT2009","IT2008","IT2009","IT2008","IT2008","IT2008","IT2009","IT2008","IT2010","IT2008","IT2010","IT2010","IT2010","IT2010","IT2010","IT2010","IT2009","IT2009","IT2009","IT2009","IT2009","IT2009","IT2010","IT2010","IT2010","IT2009","IT2009","IT0445","IT0445","IT1704","IT1704","IT0508","IT0510","IT1914","IT0445","IT0118","IT0118","IT0118","IT0118","IT0118","IT0118","IT0120","IT0118","IT0121","IT1403","IT1802","IT2007","IT2010","IT2007","IT2009","IT2007","IT2010","IT2010","IT2010","IT2008","IT2010","IT2010","IT2010","IT2010","IT0445"],["Collina","Agglomerato","Montagna","Agglomerato","Agglomerato","Agglomerato","Pianura","Pianura","Pianura","Collina","Pianura","Collina","Pianura","Pianura","Collina","Pianura","Pianura","Pianura","Collina","Montagna","Pianura","Collina","Montagna","Collina","Montagna","VdA_fondo_valle","VdA_fondo_valle","VdA_rurale montano","VdA_rurale montano","VdA_rurale montano","VdA_fondo_valle","VdA_fondo_valle","VdA_fondo_valle","VdA_fondo_valle","VdA_rurale montano","VdA_fondo_valle","VdA_fondo_valle","VdA_fondo_valle","VdA_fondo_valle","VdA_rurale montano","Zona A- Pianura ad elevata urbanizzazione","Agglomerato di Milano","Agglomerato di Milano","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Zona C - Montagna","Zona A- Pianura ad elevata urbanizzazione","Agglomerato di Milano","Agglomerato di Milano","Agglomerato di Milano","Zona A- Pianura ad elevata urbanizzazione","Zona C - Montagna","Zona D- Fondovalle","Zona D- Fondovalle","Zona D- Fondovalle","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Agglomerato di Milano","Agglomerato di Milano","Agglomerato di Milano","Agglomerato di Milano","Agglomerato di Milano","Zona A- Pianura ad elevata urbanizzazione","Agglomerato di Milano","Agglomerato di Milano","Zona B - Pianura","Agglomerato di Milano","Agglomerato di Milano","Agglomerato di Milano","Agglomerato di Milano","Agglomerato di Milano","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Agglomerato di Milano","Agglomerato di Milano","Zona A- Pianura ad elevata urbanizzazione","Agglomerato di Milano","Agglomerato di Milano","Agglomerato di Bergamo","Agglomerato di Bergamo","Agglomerato di Bergamo","Zona C - Montagna","Agglomerato di Bergamo","Agglomerato di Bergamo","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Agglomerato di Bergamo","Agglomerato di Brescia","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona C - Montagna","Agglomerato di Brescia","Agglomerato di Brescia","Agglomerato di Brescia","Zona D- Fondovalle","Agglomerato di Brescia","Agglomerato di Brescia","Zona A- Pianura ad elevata urbanizzazione","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona B - Pianura","Zona B - Pianura","Zona B - Pianura","Zona B - Pianura","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona B - Pianura","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Zona B - Pianura","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona A- Pianura ad elevata urbanizzazione","Zona B - Pianura","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona C - Montagna","Zona A- Pianura ad elevata urbanizzazione","Zona C - Montagna","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","Zona B - Pianura","Zona B - Pianura","Zona A- Pianura ad elevata urbanizzazione","South Tyrol","South Tyrol","South Tyrol","South Tyrol","South Tyrol","South Tyrol","South Tyrol","South Tyrol","South Tyrol","fondovalle","montagna","fondovalle","fondovalle","fondovalle","fondovalle","fondovalle","fondovalle","Agglomerato_Verona","Agglomerato_Verona","Pianura_Capoluogo_Bassa_Pianura","Agglomerato_Verona","Pianura_Capoluogo_Bassa_Pianura","Agglomerato_Verona","Agglomerato","Pianura_Capoluogo_Bassa_Pianura","Prealpi_Alpi","Agglomerato_Verona","Pianura_Capoluogo_Bassa_Pianura","Agglomerato_Vicenza","Agglomerato_Vicenza","Pianura_Capoluogo_Bassa_Pianura","Pianura_Capoluogo_Bassa_Pianura","Agglomerato_Vicenza","Pianura_Capoluogo_Bassa_Pianura","Agglomerato_Vicenza","Prealpi_Alpi","Agglomerato_Vicenza","Agglomerato_Vicenza","Val_Belluna","Val_Belluna","Prealpi_Alpi","Prealpi_Alpi","Val_Belluna","Pianura_Capoluogo_Bassa_Pianura","Agglomerato_Treviso","Bassa_Pianura_Colli","Pianura_Capoluogo_Bassa_Pianura","Agglomerato_Treviso","Agglomerato_Treviso","Agglomerato_Venezia","Pianura_Capoluogo_Bassa_Pianura","Agglomerato_Venezia","Agglomerato_Venezia","Bassa_Pianura_Colli","Agglomerato_Venezia","Agglomerato_Venezia","Agglomerato_Venezia","Agglomerato_Venezia","Agglomerato_Venezia","Agglomerato_Padova","Agglomerato_Padova","Pianura_Capoluogo_Bassa_Pianura","Pianura_Capoluogo_Bassa_Pianura","Bassa_Pianura_Colli","Agglomerato_Padova","Pianura_Capoluogo_Bassa_Pianura","Pianura_Capoluogo_Bassa_Pianura","Pianura_Capoluogo_Bassa_Pianura","Bassa_Pianura_Colli","Bassa_Pianura_Colli","Bassa_Pianura_Colli","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di montagna","Zona di montagna","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di montagna","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona triestina","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Zona di pianura","Costa alta pressione antropica","Costa alta pressione antropica","Entroterra e costa bassa pressione antropica","Savonese - Bormida","Savonese - Bormida","Savonese - Bormida","Savonese - Bormida","Savonese - Bormida","Savonese - Bormida","Savonese - Bormida","Savonese - Bormida","Costa alta pressione antropica","Savonese - Bormida","Savonese - Bormida","Entroterra e costa bassa pressione antropica","Savonese - Bormida","Savonese - Bormida","Entroterra alta pressione antropica","Agglomerato Genova","Entroterra alta pressione antropica","Agglomerato Genova","Agglomerato Genova","Agglomerato Genova","Agglomerato Genova","Entroterra e costa bassa pressione antropica","Agglomerato Genova","Entroterra alta pressione antropica","Agglomerato Genova","Agglomerato Genova","Agglomerato Genova","Costa alta pressione antropica","Costa alta pressione antropica","Agglomerato Genova","Entroterra e costa bassa pressione antropica","Costa alta pressione antropica","Agglomerato Genova","Spezzino","Spezzino","Entroterra e costa bassa pressione antropica","Spezzino","Spezzino","Spezzino","Spezzino","Spezzino","Spezzino","Spezzino","Spezzino","Spezzino","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Appennino","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Appennino","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Ovest","Pianura Est","Agglomerato","Agglomerato","Agglomerato","Pianura Est","Appennino","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Pianura Est","Appennino","Pianura Est","Pianura Est","Appennino","Appennino","Zona Costiera","Zona Costiera","Zona Valdarno pisano e pianura lucchese","Zona Valdarno pisano e pianura lucchese","Zona Costiera","Zona Valdarno pisano e pianura lucchese","Zona collinare e montana","Zona Valdarno pisano e pianura lucchese","Zona Prato Pistoia","Zona Prato Pistoia","Zona Prato Pistoia","Agglomerato di Firenze","Agglomerato di Firenze","Agglomerato di Firenze","Agglomerato di Firenze","Agglomerato di Firenze","Agglomerato di Firenze","Agglomerato di Firenze","Zona valdarno aretino e valdichiana","Zona Costiera","Zona Costiera","Zona Costiera","Zona Costiera","Zona Costiera","Zona Valdarno pisano e pianura lucchese","Zona collinare e montana","Zona Valdarno pisano e pianura lucchese","Zona Valdarno pisano e pianura lucchese","Zona valdarno aretino e valdichiana","Zona valdarno aretino e valdichiana","Zona collinare e montana","Zona collinare e montana","Zona collinare e montana","Zona Costiera","Zona Costiera","Zona Costiera","Zona Prato Pistoia","Zona di valle","Zona di valle","Zona di valle","Zona di valle","Zona di valle","Zona collinare e montuosa","Zona di valle","Zona di valle","Zona collinare e montuosa","Zona collinare e montuosa","Zona collinare e montuosa","Zona di valle","Zona collinare e montuosa","Zona collinare e montuosa","Zona di valle","Zona collinare e montuosa","Zona della Conca Ternana","Zona della Conca Ternana","Zona della Conca Ternana","Zona collinare e montuosa","Zona di valle","Zona della Conca Ternana","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Collinare Montana","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Collinare Montana","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Collinare Montana","Zona Collinare Montana","Zona Costiera e Valliva","Zona Costiera e Valliva","Zona Appenninica","Zona Appenninica","Zona Appenninica","Zona Appenninica","Zona Appenninica","Zona Litoranea","Zona Litoranea","Zona Appenninica","Zona Appenninica","Zona Appenninica","Zona Litoranea","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Litoranea","Zona Valle del Sacco","Zona Valle del Sacco","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Valle del Sacco","Zona Agglomerato di Roma","Zona Valle del Sacco","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Agglomerato di Roma","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Litoranea","Zona Valle del Sacco","Zona Valle del Sacco","Zona Valle del Sacco","Zona Valle del Sacco","Zona Valle del Sacco","Zona Valle del Sacco","Zona Valle del Sacco","Zona a maggiore pressione antropica","Zona a maggiore pressione antropica","Zona a maggiore pressione antropica","Zona a minore pressione antropica","Zona a maggiore pressione antropica","Zona a maggiore pressione antropica","Agglomerato di Pescara - Chieti","Agglomerato di Pescara - Chieti","Agglomerato di Pescara - Chieti","Agglomerato di Pescara - Chieti","Agglomerato di Pescara - Chieti","Collinare","Agglomerato di Pescara - Chieti","Agglomerato di Pescara - Chieti","Aree Industriali","Zona a maggiore pressione antropica","Zona a minore pressione antropica","Zona a maggiore pressione antropica","Zona a maggiore pressione antropica","Zona a maggiore pressione antropica","Agglomerato di Pescara - Chieti","Agglomerato di Pescara - Chieti","Pianura","Pianura","Fascia costiera","Fascia costiera","Pianura","Pianura","Area collinare","Pianura","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Zona costiera_collinare","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Agglomerato Napoli_Caserta","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona montuosa","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona costiera_collinare","Zona Montuosa","Industriale","Collinare","Pianura","Industriale","Collinare","Collinare","Agglomerato di Bari","Agglomerato di Bari","Pianura","Pianura","Agglomerato di Bari","Agglomerato di Bari","Pianura","Collinare","Collinare","Pianura","Pianura","Agglomerato di Bari","Agglomerato di Bari","Pianura","Agglomerato di Bari","Agglomerato di Bari","Industriale","Industriale","Industriale","Industriale","Industriale","Industriale","Industriale","Collinare","Pianura","Industriale","Pianura","Industriale","Industriale","Pianura","Industriale","Industriale","Industriale","Pianura","Industriale","Industriale","Collinare","Collinare","Industriale","Pianura","Pianura","Pianura","Pianura","Pianura","Pianura","Pianura","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","Zona Industriale","Zona A a maggior carico emissivo","Zona A a maggior carico emissivo","B - industriale","B - industriale","A - urbana","A - urbana","B - industriale","C - montana","C - montana","D - colline e costa","B - industriale","B - industriale","B - industriale","B - industriale","A - urbana","A - urbana","A - urbana","D - colline e costa","C - montana","D - colline e costa","D - colline e costa","D - colline e costa","A - urbana","B - industriale","A - urbana","D - colline e costa","C - montana","D - colline e costa","B - industriale","B - industriale","B - industriale","D - colline e costa","D - colline e costa","B - industriale","A - urbana","A - urbana","C - montana","Altro","Agglomerato Palermo","Agglomerato Palermo","Agglomerato Palermo","Agglomerato Palermo","Agglomerato Palermo","Agglomerato Palermo","Agglomerato Palermo","Agglomerato Palermo","Agglomerato Palermo","Aree Industriali","Pianura","Collina","Pianura","Collina","Pianura","Collina","Pianura","Collina","Pianura","Pianura","Pianura","Agglomerato di Bari","Pianura","Aree Industriali","Agglomerato Palermo","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Agglomerato Messina","Aree Industriali","Agglomerato Messina","Aree Industriali","Aree Industriali","Altro","Altro","Altro","Altro","Altro","Aree Industriali","Altro","Aree Industriali","Aree Industriali","Aree Industriali","Altro","Aree Industriali","Aree Industriali","Aree Industriali","Altro","Aree Industriali","Aree Industriali","Altro","Altro","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Altro","Agglomerato Catania","Agglomerato Catania","Agglomerato Catania","Agglomerato Catania","Agglomerato Catania","Agglomerato Catania","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Aree Industriali","Zona Industriale","Zona Urbana","Zona Industriale","Zona Urbana","Zona Urbana","Zona Urbana","Zona Industriale","Zona Urbana","Zona Rurale","Zona Urbana","Zona Rurale","Zona Rurale","Zona Rurale","Zona Rurale","Zona Rurale","Zona Rurale","Zona Industriale","Zona Industriale","Zona Industriale","Zona Industriale","Zona Industriale","Zona Industriale","Zona Rurale","Zona Rurale","Zona Rurale","Zona Industriale","Zona Industriale","South Tyrol","South Tyrol","Zona B a minor carico emissivo","Zona B a minor carico emissivo","Agglomerato_Venezia","Agglomerato_Padova","Aree Industriali","South Tyrol","Agglomerato","Agglomerato","Agglomerato","Agglomerato","Agglomerato","Agglomerato","Collina","Agglomerato","Montagna","Pianura","B - industriale","Agglomerato di Cagliari","Zona Rurale","Agglomerato di Cagliari","Zona Industriale","Agglomerato di Cagliari","Zona Rurale","Zona Rurale","Zona Rurale","Zona Urbana","Zona Rurale","Zona Rurale","Zona Rurale","Zona Rurale","South Tyrol"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>station_code<\/th>\n      <th>station_eu_code<\/th>\n      <th>altitudine<\/th>\n      <th>regione<\/th>\n      <th>provincia<\/th>\n      <th>comune<\/th>\n      <th>nome_stazione<\/th>\n      <th>tipo_zona<\/th>\n      <th>tipo_stazione<\/th>\n      <th>zone_code<\/th>\n      <th>zone_name<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<!--radix_placeholder_article_footer-->
+<!--/radix_placeholder_article_footer-->
+</div>
+
+<div class="d-appendix">
+</div>
+
+
+<!--radix_placeholder_site_after_body-->
+<!--/radix_placeholder_site_after_body-->
+<!--radix_placeholder_appendices-->
+<div class="appendix-bottom"></div>
+<!--/radix_placeholder_appendices-->
+<!--radix_placeholder_navigation_after_body-->
+<!--/radix_placeholder_navigation_after_body-->
+
+</body>
+
+</html>
