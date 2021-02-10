@@ -14,8 +14,11 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### [Dati inquinanti](./acquisire_dati_inquinanti.html)
 
-Come scaricare i dati giornalieri degli inquinanti sotto forma di `data frame` per il linguaggio `R`. 
-Alcuni suggerimenti per risolvere eventuali [problemi di istallazione dei pacchetti R](./problemi_istallazione.html)
+- Come scaricare i dati giornalieri degli inquinanti sotto forma di `data frame` per il linguaggio `R`.
+
+- [Aggiornamento](./aggiornamento.html) dei pacchetti. 
+
+- Come risolvere eventuali [problemi di istallazione dei pacchetti R](./problemi_istallazione.html).
 
 ### [Parametri meteoclimatici](./acquisire_dati_meteo.html)
 

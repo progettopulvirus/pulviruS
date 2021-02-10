@@ -1,0 +1,28 @@
+---
+title: "Dati"
+author:
+  - name: ISPRA 
+    affiliation: ISPRA
+    affiliation_url: https://www.isprambiente.gov.it/it
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Pacchetti con dati inquinanti
+
+### Versione 0.0.0.9000 (2021-02-05)
+
+- Alcune serie della Pianura Padana presentano record duplicati. In attesa di un aggiornamento dei dati sul database e dei pacchetti `R`, il problema puo' essere risolto eliminando i record con il campo `pollutant_fk` mancante (NA).
+
+Ad esempio:
+
+```{r,eval=FALSE,include=TRUE,echo=TRUE,warning=FALSE,message=FALSE}
+library("lombardia")
+
+pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
+
+```

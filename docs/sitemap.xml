@@ -2,74 +2,78 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/about.html</loc>
-    <lastmod>2021-02-10T10:43:29+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/acquisire_dati_inquinanti.html</loc>
-    <lastmod>2021-02-10T10:45:37+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/acquisire_dati_meteo.html</loc>
-    <lastmod>2021-02-10T10:46:01+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://progettopulvirus.github.io/pulviruS/aggiornamento.html</loc>
+    <lastmod>2021-02-10T21:52:15+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/anagrafica.html</loc>
-    <lastmod>2021-02-10T10:46:26+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/associare.html</loc>
-    <lastmod>2021-02-10T10:46:37+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/completezza.html</loc>
-    <lastmod>2021-02-10T10:46:48+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/dati.html</loc>
-    <lastmod>2021-02-10T10:46:58+01:00</lastmod>
+    <lastmod>2021-02-10T21:35:05+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/documentazione.html</loc>
-    <lastmod>2021-02-10T10:47:07+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/formato.html</loc>
-    <lastmod>2021-02-10T10:47:36+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/</loc>
-    <lastmod>2021-02-10T10:43:29+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/inquinanti.html</loc>
-    <lastmod>2021-02-10T10:47:52+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/mappaStazioniValide.html</loc>
-    <lastmod>2021-02-10T10:48:07+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/pacchetti_inquinanti.html</loc>
-    <lastmod>2021-02-10T10:48:22+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/parametri.html</loc>
-    <lastmod>2021-02-10T10:48:35+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/problemi_istallazione.html</loc>
-    <lastmod>2021-02-10T10:48:47+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/PULVIRUS.html</loc>
-    <lastmod>2021-02-10T10:43:29+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/stazioni.html</loc>
-    <lastmod>2021-02-10T10:49:15+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
   <url>
     <loc>https://progettopulvirus.github.io/pulviruS/tabella_anagrafica.html</loc>
-    <lastmod>2021-02-10T10:49:24+01:00</lastmod>
+    <lastmod>2021-02-10T21:22:10+01:00</lastmod>
   </url>
 </urlset>

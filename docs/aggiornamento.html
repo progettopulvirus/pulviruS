@@ -84,7 +84,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>pulviruS: Problemi di installazione</title>
+  <title>pulviruS: Dati</title>
   
   
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
@@ -95,20 +95,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <meta name="article:author" content="ISPRA"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="pulviruS: Problemi di installazione"/>
+  <meta property="og:title" content="pulviruS: Dati"/>
   <meta property="og:type" content="article"/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="pulviruS"/>
   
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="pulviruS: Problemi di installazione"/>
+  <meta property="twitter:title" content="pulviruS: Dati"/>
   
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Problemi di installazione"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-10"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Dati"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-02-10"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1863,7 +1863,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Problemi di installazione","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-10T00:00:00.000+01:00","citationText":"ISPRA, 2021"}
+{"title":"Dati","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-02-10T00:00:00.000+01:00","citationText":"ISPRA, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1888,7 +1888,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>Problemi di installazione</h1>
+<h1>Dati</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -1901,22 +1901,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<h3 id="problemi-installazione">Problemi installazione</h3>
-<p>A volte problemi di installazione usando la funzione <code>install_github</code> possono dipendere dalla connessione di rete. Generalmente il problema si risolve rilanciando il comando <code>install_github</code> dopo qualche secondo.</p>
-<h3 id="se-ilproblema-persiste">Se ilproblema persiste</h3>
-<ol type="1">
-<li><p>Andate alla <a href="https://github.com/progettopulvirus?tab=repositories">pagina</a> dei repository dei pacchetti</p></li>
-<li><p>Cliccate sul nome della regione di cui volete scaricare i dati (solitamente sono dei link in grassetto di colore blu). Clicchiamo, ad esempio, su <code>valleaosta</code>.</p></li>
-<li><p>Si apre il repository di <code>GitHub</code> del pacchetto <code>valleaosta</code>. In alto a destra cliccate sul pulsante verde <code>Code</code>.</p></li>
-<li><p>Si apre un menu, alla cui base compare il link <code>Download ZIP</code>.</p></li>
-<li><p>Cliccando su <code>Download ZIP</code> vi viene chiesto di salvare un file <code>.zip</code> di nome <code>valleaosta-master.zip</code>. Salvatelo sul vostro pc.</p></li>
-<li><p>Aprite <code>RStudio</code>.</p></li>
-<li><p>Nella barra degli strumenti, in alto a destra, cliccate su <code>Tools</code> e quindi su <code>Install.packages...</code>.</p></li>
-<li><p>Cliccate sul menu a tendina sotto la voce <code>Install From</code> e selezionate <code>Package Archive File (.tar.gz)</code>. In questo modo state dicendo a <code>RStudio</code> di installare un pacchetto da file.</p></li>
-<li><p>Cliccando sul pulsante <code>Browse...</code> cercate il file scaricato da <code>GitHub</code> (nel nostro esempio: <code>valleaosta-master.zip</code>).</p></li>
-<li><p>Cliccate due volte sul file <code>valleaosta-master.zip</code>. Dovreste a questo punto essere nuovamente nella finesta di <code>Install.packages...</code>.</p></li>
-<li><p>Cliccate su <code>Install</code>.</p></li>
-</ol>
+<h1 id="pacchetti-con-dati-inquinanti">Pacchetti con dati inquinanti</h1>
+<h3 id="versione-0.0.0.9000-2021-02-05">Versione 0.0.0.9000 (2021-02-05)</h3>
+<ul>
+<li>Alcune serie della Pianura Padana presentano record duplicati. In attesa di un aggiornamento dei dati sul database e dei pacchetti <code>R</code>, il problema puo’ essere risolto eliminando i record con il campo <code>pollutant_fk</code> mancante (NA).</li>
+</ul>
+<p>Ad esempio:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'>"lombardia"</span><span class='op'>)</span>
+
+<span class='va'>pm10</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>pm10</span><span class='op'>$</span><span class='va'>pollutant_fk</span><span class='op'>)</span><span class='op'>)</span>,<span class='op'>]</span><span class='op'>-&gt;</span><span class='va'>pm10</span>
+</code></pre>
+</div>
+</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
