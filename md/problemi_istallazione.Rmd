@@ -1,7 +1,7 @@
 ---
 title: "Problemi di installazione"
 author:
-  - name: FG
+  - name: ISPRA
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
 date: "`r Sys.Date()`"

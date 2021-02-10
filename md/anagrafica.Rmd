@@ -3,7 +3,7 @@ title: "Stazioni di monitoraggio"
 description: |
   Anagrafica delle stazioni
 author:
-  - name: King Arthur 
+  - name: ISPRA 
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
 date: "`r Sys.Date()`"

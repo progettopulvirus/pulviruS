@@ -1,7 +1,7 @@
 ---
 title: "Stazioni di monitoraggio"
 author:
-  - name: Dr. Jekyll and Mr. Hyde 
+  - name: ISPRA 
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
 date: "`r Sys.Date()`"

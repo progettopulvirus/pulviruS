@@ -3,7 +3,7 @@ title: "Come accedere ai dati"
 description: |
   Scaricare i dati giornalieri degli inquinanti mediante R.
 author:
-  - name: The Marlboro Man 
+  - name: ISPRA
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
 date: "`r Sys.Date()`"

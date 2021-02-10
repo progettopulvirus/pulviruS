@@ -3,7 +3,7 @@ title: "Regioni con dati per gli inquinanti"
 description: |
   Pacchetti R disponibili su github con i dati degli inquinanti
 author:
-  - name: Uncle Tom 
+  - name: ISPRA 
     affiliation: ISPRA
     affiliation_url: https://www.isprambiente.gov.it/it
 date: "`r Sys.Date()`"
