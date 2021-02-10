@@ -22,5 +22,5 @@ read_delim("./assets/ana.csv",delim=";",col_names = TRUE)->ana
 datatable(ana %>% dplyr::select(-municipality_id,-metropoli,-station_municipality_fk,
                                 -flag_rau,-province_fk,-geom,-note,-region_id,-station_start_time,
                                 -station_end_time,-popolazione,-zona_tipo,-nome_comune,
-                                -st_x,-st_y,-zone_type_),rownames = FALSE)
+                                -st_x,-st_y,-zone_type_,-station_code),rownames = FALSE)
 ```
