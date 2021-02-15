@@ -14,7 +14,7 @@ output: distill::distill_article
 knitr::opts_chunk$set(echo = TRUE,comment = "",include = TRUE,eval=FALSE)
 ```
 
-I dati giornalieri dei parametri meteoclimatici sono stati raccolti in unico `data frame` ^[piu' precisamente in un [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)] archiviato nel pacchetto `R` `datiMeteo` disponibile sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus/datiMeteo). 
+I dati giornalieri dei parametri meteoclimatici (originali e standardizzati) sono stati raccolti in unico `data frame` ^[piu' precisamente in un [tibble](https://cran.r-project.org/web/packages/tibble/vignettes/tibble.html)] archiviato nel pacchetto `R` `datiMeteo` disponibile sul repository `github` [`progettopulvirus`](https://github.com/progettopulvirus/datiMeteo). 
 
 Una volta installato, il pacchetto con i dati meteoclimatici risiede in modo permanente nel computer dell'utente (**in altre parole**: l'installazione va effettuata una volta sola!).
 
@@ -32,7 +32,7 @@ devtools::install_github("progettopulvirus/datiMeteo")
 #remotes::install_github("progettopulvirus/datiMeteo")
 ```
 
-A questo punto possiamo caricare il pacchetto `datiMeteo` ed accedere al `data frame` `meteo`.
+A questo punto possiamo caricare il pacchetto `datiMeteo` ed accedere ai `data frame` `meteo` e `meteo_standardizzati`.
 
 ```{r,include=TRUE,eval=TRUE}
 library("datiMeteo")
@@ -45,6 +45,9 @@ data(package="datiMeteo")
 ?meteo
 
 meteo
+
+#i parametri meteoclimatici standardizzati
+meteo_standardizzati
 ```
 
 I codici identificativi dei parametri meteoclimatici sono documentati in [questa pagina](parametri.html).

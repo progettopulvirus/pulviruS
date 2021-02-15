@@ -26,3 +26,13 @@ library("lombardia")
 pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
 
 ```
+
+# Pacchetti datiMeteo
+
+### Versione 1.0.0.0 (2021-02-15)
+
+- Aggiunto data.frame meteo_standardizzati con i parametri meteoclimatici standardizzati
+
+- Eliminata variabile altitude (disponibile in anagrafica stazioni)
+
+- La variabile altitudedem e' stata ricalcolata per eliminare gli NA presenti.
