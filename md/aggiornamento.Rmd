@@ -36,3 +36,7 @@ pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
 - Eliminata variabile altitude (disponibile in anagrafica stazioni)
 
 - La variabile altitudedem e' stata ricalcolata per eliminare gli NA presenti.
+
+### Versione 1.0.0.1 (2021-02-16)
+
+- Le coordinate dei punti stazione in meteo_standardizzati sono state corrette (erano state standardizzate come i restanti parametri meteoclimatici).
