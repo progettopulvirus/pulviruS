@@ -44,7 +44,7 @@ I `data frame` con i dati degli inquinanti contengono:
 ### Pacchetti con i dati 
 
 | Regione                     | Nome Pacchetto      | pm10 | pm2.5 | no2 | nox| c6h6 | co | o3_max_h_d | o3_max_mm8h_d |
-| ---                         |  ---                | --   | --    | --  | -- | --   |    | --         | --            |
+| ---                         |  ---                | --   | --    | --  | -- | --   | -- | --         | --            |
 | Basilicata                  | basilicata          | x    | x     | x   |  x |      | x  | x          | x             |
 | Campania                    | campania            |      | x     | x   |    |      | x  |            |               |
 | Emilia Romagna              | emiliaromagna       | x    | x     | x   |  x | x    |    | x          | x             |
