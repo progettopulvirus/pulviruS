@@ -23,7 +23,7 @@ stopifnot(length(ffile)!=0)
 
 purrr::map_dfr(ffile,.f=function(nomeFile){
   
-  inquinante<-str_remove(str_remove(nomeFile,"^.+_"),".csv$")
+  inquinante<-str_remove(str_remove(nomeFile,"^.+stazioniValide_"),"\\.csv$")
   read_delim(nomeFile,col_names = FALSE,delim=";")->dati
   names(dati)<-c("staz_eu_code","regione")
   dati$inquinante<-inquinante

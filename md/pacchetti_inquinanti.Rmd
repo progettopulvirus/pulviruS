@@ -43,25 +43,25 @@ I `data frame` con i dati degli inquinanti contengono:
 
 ### Pacchetti con i dati 
 
-| Regione | Nome Pacchetto | pm10 | pm2.5 | no2 | nox| c6h6 |
-| ---     | ---       | --   | --    | --  | -- | -- |
-| Basilicata   | basilicata | x  | x   | x   |  x |
-| Campania     | campania   |  | x   | x   |    | |
-| Emilia Romagna | emiliaromagna | x | x   | x  |  x  | x |
-| Friuli Venezia Giulia | friuliveneziagiulia | x | x | | | x |
-| Lazio | lazio | x | x | x | x | |
-| Lombardia | lombardia | x | x | x | x | x |
-| Molise | molise | | | x | x | |
-| Bolzano, Provincia Autonoma | pabolzano | x | x | x | | x |
-| Trento, Provincia Autonoma | patrento | x | x | x | | x |
-| Piemonte | piemonte | x | x | x | | x |
-| Puglia | puglia | x | x | x | x | x |
-| Sardegna | sardegna | x | x | x | x | x |
-| Sicilia  | sicilia | x | x | x | | x |
-| Toscana  | toscana | x | x | x | x | |
-| Umbria   | umbria  | x | x | x | x | x |
-| Valle d'Aosta| valleaosta | x | x | x | | |
-| Veneto       | veneto | x | x | x | x | |
+| Regione                     | Nome Pacchetto      | pm10 | pm2.5 | no2 | nox| c6h6 | co | o3_max_h_d | o3_max_mm8h_d |
+| ---                         |  ---                | --   | --    | --  | -- | --   |    | --         | --            |
+| Basilicata                  | basilicata          | x    | x     | x   |  x |      | x  | x          | x             |
+| Campania                    | campania            |      | x     | x   |    |      | x  |            |               |
+| Emilia Romagna              | emiliaromagna       | x    | x     | x   |  x | x    |    | x          | x             |
+| Friuli Venezia Giulia       | friuliveneziagiulia | x    | x     |     |    | x    | x  | x          | x             |
+| Lazio                       | lazio               | x    | x     | x   | x  |      | x  | x          | x             |
+| Lombardia                   | lombardia           | x    | x     | x   | x  | x    | x  | x          | x             |
+| Molise                      | molise              |      |       | x   | x  |      | x  | x          | x             |
+| Bolzano, Provincia Autonoma | pabolzano           | x    | x     | x   |    | x    | x  | x          | x             |
+| Trento, Provincia Autonoma  | patrento            | x    | x     | x   |    | x    |    | x          | x             |
+| Piemonte                    | piemonte            | x    | x     | x   |    | x    |    | x          | x             |
+| Puglia                      | puglia              | x    | x     | x   | x  | x    | x  | x          | x             |
+| Sardegna                    | sardegna            | x    | x     | x   | x  | x    | x  | x          | x             | 
+| Sicilia                     | sicilia             | x    | x     | x   |    | x    | x  | x          | x             | 
+| Toscana                     | toscana             | x    | x     | x   | x  |      |    | x          | x             |
+| Umbria                      | umbria              | x    | x     | x   | x  | x    |    |            |               |
+| Valle d'Aosta               | valleaosta          | x    | x     | x   |    |      |    | x          | x             |
+| Veneto                      | veneto              | x    | x     | x   | x  |      | x  | x          | x             | 
 
 
 

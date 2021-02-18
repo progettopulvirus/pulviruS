@@ -14,6 +14,14 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Pacchetti con dati inquinanti
 
+### Versione 1.0.0.0 (2021-02-18)
+
+- Risolto il problema delle osservazioni doppie in alcune serie del nord Italia
+
+- Disponibili anche i dati giornalieri di: co, o3 (massimo giornalierio, massimo giornaliero sulla media mobile su 8 ore )
+
+---
+
 ### Versione 0.0.0.9000 (2021-02-05)
 
 - Alcune serie della Pianura Padana presentano record duplicati. In attesa di un aggiornamento dei dati sul database e dei pacchetti `R`, il problema puo' essere risolto eliminando i record con il campo `pollutant_fk` mancante (NA).

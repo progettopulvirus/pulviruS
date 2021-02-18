@@ -19,7 +19,7 @@ library("leaflet")
 read_delim("./assets/ana.csv",delim=";",col_names = TRUE)->ana
 
 #file con l'elenco delle stazioni valide per regione
-list.files(pattern="^stazioniValide_[ncp].+csv$",full.names = TRUE,path = "./assets")->ffile
+list.files(pattern="^stazioniValide_[ncop].+csv$",full.names = TRUE,path = "./assets")->ffile
 
 stopifnot(length(ffile)!=0)
 
@@ -28,7 +28,10 @@ leggi<-function(.x){
   names(dati)<-c("station_eu_code","regione")
   
   #quale inquinante
-  str_remove(str_remove(.x,"^.+_"),"\\.csv")->siglaInquinante
+  str_remove(str_remove(.x,"^.+stazioniValide_"),"\\.csv")->siglaInquinante
+  #str_remove(.x,"_[a-z]+\\.csv$")->siglaInquinante
+  print(.x)
+  print(unique(siglaInquinante))
   dati$inquinante<-siglaInquinante
   
   dati
@@ -59,7 +62,10 @@ leaflet() %>%
   mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="no2"),group="NO2") %>%
   mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="nox"),group="NOx")  %>%
   mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="c6h6"),group="C6H6")  %>%
-  leaflet::addLayersControl(overlayGroups = c("C6H6","PM10","PM2.5","NO2","NOx"),options=layersControlOptions(collapsed=FALSE)) %>%
-  hideGroup(c("C6H6","PM2.5","NO2","NOx")) 
+  mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="co"),group="CO")  %>%
+  mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="o3_max_h_d"),group="O3_max_h_d")  %>%
+  mappaMarkers(map=.,data = stazioni %>% filter(inquinante=="o3_max_mm8h_d"),group="O3_max_mm8h_d")  %>%
+  leaflet::addLayersControl(overlayGroups = c("O3_max_h_d","O3_max_mm8h_d","CO","C6H6","PM10","PM2.5","NO2","NOx"),options=layersControlOptions(collapsed=FALSE)) %>%
+  hideGroup(c("O3_max_h_d","O3_max_mm8h_d","CO","C6H6","PM2.5","NO2","NOx")) 
   
 ```
