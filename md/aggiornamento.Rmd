@@ -14,6 +14,14 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Pacchetti con dati inquinanti
 
+### Versione 1.0.0.1 (2021-03-18)
+
+- Aggiornato il data.frame emiliaromagna dell'no2 privo della colonna dd (giorno)
+
+- Aggiornato ozono per la basilicata
+
+---
+
 ### Versione 1.0.0.0 (2021-02-18)
 
 - Risolto il problema delle osservazioni doppie in alcune serie del nord Italia
@@ -37,6 +45,18 @@ pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
 
 # Pacchetti datiMeteo
 
+### Versione 2.0.0.0 (2021-03-18)
+
+- Calcolata la variabile dtr (diurnal temperature range)
+
+---
+
+### Versione 1.0.0.1 (2021-02-16)
+
+- Le coordinate dei punti stazione in meteo_standardizzati sono state corrette (erano state standardizzate come i restanti parametri meteoclimatici).
+
+---
+
 ### Versione 1.0.0.0 (2021-02-15)
 
 - Aggiunto data.frame meteo_standardizzati con i parametri meteoclimatici standardizzati
@@ -44,7 +64,3 @@ pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
 - Eliminata variabile altitude (disponibile in anagrafica stazioni)
 
 - La variabile altitudedem e' stata ricalcolata per eliminare gli NA presenti.
-
-### Versione 1.0.0.1 (2021-02-16)
-
-- Le coordinate dei punti stazione in meteo_standardizzati sono state corrette (erano state standardizzate come i restanti parametri meteoclimatici).
