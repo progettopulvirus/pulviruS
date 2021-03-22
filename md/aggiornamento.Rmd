@@ -14,6 +14,20 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Pacchetti con dati inquinanti
 
+### Versione 2.0.0.0 (2021-03-22)
+
+- I data.frame con i dati giornalieri adesso includono:
+
+  - le stazioni che verificano tutti i controlli di completezza delle serie sul periodo 2016-2020
+  
+  - le stazioni complete solo per l'anno 2020 (precedentemente non incluse)
+  
+Per distinguere il livello di completezza delle serie l'anagrafica delle stazioni (data.frame `stazioni` nel pacchetto `stazioniMonitoraggio`) adesso riporta per, ogni inquinante, una stringa descrittiva del livello di completezza/incompletezza.
+
+Le stazioni complete solo per il 2020 sono identificate dalla stringa "completa solo 2020", mentre le stazioni complete per il periodo 2016-2020 sono identificate dalla stringa "completa 2016-2020". Una stringamancante (NA) corrisponde a una stazione che non fornisce dati per uno specifico inquinante.
+
+---
+
 ### Versione 1.0.0.1 (2021-03-18)
 
 - Aggiornato il data.frame emiliaromagna dell'no2 privo della colonna dd (giorno)
@@ -43,7 +57,7 @@ pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
 
 ```
 
-# Pacchetti datiMeteo
+# Pacchetto datiMeteo
 
 ### Versione 2.0.0.0 (2021-03-18)
 
@@ -64,3 +78,15 @@ pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
 - Eliminata variabile altitude (disponibile in anagrafica stazioni)
 
 - La variabile altitudedem e' stata ricalcolata per eliminare gli NA presenti.
+
+---
+
+# Pacchetto stazioniMonitoraggio
+
+### Versione 1.0.0.0 (2021-03-22)
+
+Contiene il data.frame `stazioni` con l'anagrafica delle stazioni di monitoraggio.
+
+- Aggiunte le colonneche descrivono il levello di completezza di ciascuna serie per ciascun inquinante.
+
+---

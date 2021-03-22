@@ -91,8 +91,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-03-18"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-03-18"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-03-22"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-03-22"/>
   <meta name="article:author" content="ISPRA"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -111,7 +111,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Stazioni di monitoraggio"]},{"type":"character","attributes":{},"value":["Anagrafica delle stazioni\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-03-18"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Stazioni di monitoraggio"]},{"type":"character","attributes":{},"value":["Anagrafica delle stazioni\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-03-22"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1866,7 +1866,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Stazioni di monitoraggio","description":"Anagrafica delle stazioni","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-03-18T00:00:00.000+01:00","citationText":"ISPRA, 2021"}
+{"title":"Stazioni di monitoraggio","description":"Anagrafica delle stazioni","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-03-22T00:00:00.000+01:00","citationText":"ISPRA, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1900,7 +1900,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-byline">
   ISPRA  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
   
-<br/>2021-03-18
+<br/>2021-03-22
 </div>
 
 <div class="d-article">
@@ -1908,34 +1908,35 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p>Una volta istallato, il pacchetto con l’anagrafica delle stazioni risiede in modo permanente nel computer dell’utente (<strong>in altre parole</strong>: l’istallazione va effettuata una volta sola!).</p>
 <p>Per scaricare e istallare il pacchetto da <code>github</code> e’ necessario utilizzare la funzione <code>install_github</code> disponibile nella libreria <code>devtools</code> (o in alternativa nella libreria <code>remotes</code>).</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code>Error in install.packages : Updating loaded packages</code></pre>
+
 </div>
 <p>A questo punto possiamo caricare il pacchetto <code>stazioniMonitoraggio</code> ed accedere al <code>data frame</code> <code>stazioni</code>.</p>
 <div class="layout-chunk" data-layout="l-body">
-<pre><code># A tibble: 1,711 x 29
-   station_eu_code regione   inquinante municipality_id metropoli
-   &lt;chr&gt;           &lt;chr&gt;     &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;
- 1 IT1877A         PIEMONTE  c6h6               1001272       201
- 2 IT1676A         PIEMONTE  c6h6               1003106         3
- 3 IT1903A         PIEMONTE  c6h6               1005005         5
- 4 IT1509A         PIEMONTE  c6h6               1003049         3
- 5 IT1510A         PIEMONTE  c6h6               1103072       103
- 6 IT1524A         PIEMONTE  c6h6               1004003         4
- 7 IT1529A         PIEMONTE  c6h6               1004078         4
- 8 IT1125A         PIEMONTE  c6h6               1001309       201
- 9 IT1128A         PIEMONTE  c6h6               1001028       201
-10 IT0906A         LOMBARDIA c6h6               3014061        14
-# … with 1,701 more rows, and 24 more variables: flag_rau &lt;dbl&gt;,
-#   region_id &lt;dbl&gt;, province_fk &lt;dbl&gt;,
-#   station_municipality_fk &lt;dbl&gt;, station_code &lt;chr&gt;, st_x &lt;dbl&gt;,
-#   st_y &lt;dbl&gt;, altitudine &lt;dbl&gt;, provincia &lt;chr&gt;, comune &lt;chr&gt;,
+<pre><code># A tibble: 822 x 34
+   municipality_id metropoli flag_rau region_id province_fk
+             &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;
+ 1         1001125       201        0         1           1
+ 2         1001272       201        1         1           1
+ 3         1001073       201        0         1           1
+ 4         1001078       201        0         1           1
+ 5         1001130       201        0         1           1
+ 6         1001272       201        1         1           1
+ 7         1002158         2        1         1           2
+ 8         1002042         2        0         1           2
+ 9         1003106         3        1         1           3
+10         1003024         3        0         1           3
+# … with 812 more rows, and 29 more variables:
+#   station_municipality_fk &lt;dbl&gt;, station_code &lt;chr&gt;,
+#   station_eu_code &lt;chr&gt;, st_x &lt;dbl&gt;, st_y &lt;dbl&gt;, altitudine &lt;dbl&gt;,
+#   regione &lt;chr&gt;, provincia &lt;chr&gt;, comune &lt;chr&gt;,
 #   nome_stazione &lt;chr&gt;, tipo_zona &lt;chr&gt;, tipo_stazione &lt;chr&gt;,
 #   zona_tipo &lt;chr&gt;, station_start_time &lt;date&gt;,
 #   station_end_time &lt;chr&gt;, nome_comune &lt;chr&gt;, popolazione &lt;dbl&gt;,
 #   zone_code &lt;chr&gt;, zone_name &lt;chr&gt;, zone_type_ &lt;chr&gt;, note &lt;chr&gt;,
-#   geom &lt;chr&gt;, testoPop &lt;glue&gt;</code></pre>
+#   co &lt;chr&gt;, pm10 &lt;chr&gt;, pm25 &lt;chr&gt;, c6h6 &lt;chr&gt;, no2 &lt;chr&gt;,
+#   nox &lt;chr&gt;, o3_max_mm8h_d &lt;chr&gt;, o3_max_h_d &lt;chr&gt;</code></pre>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <section class="footnotes">
 <hr />
 <ol>

@@ -25,7 +25,7 @@ stopifnot(length(ffile)!=0)
 
 leggi<-function(.x){
   read_delim(.x,col_names = FALSE,delim=";")->dati
-  names(dati)<-c("station_eu_code","regione")
+  names(dati)<-c("station_eu_code","completezza","regione")
   
   #quale inquinante
   str_remove(str_remove(.x,"^.+stazioniValide_"),"\\.csv")->siglaInquinante
@@ -44,7 +44,7 @@ purrr::map_dfr(ffile,.f=leggi)->stazioni
 full_join(stazioni,ana)->stazioni
 
 stazioni %>%
-  mutate(testoPop=glue::glue("<h4>{nome_stazione} ({provincia})</h4><p>Regione: {str_replace(Hmisc::capitalize(regione),'_',' ')}</p><p>Altitudine: {altitudine} m</p> <p>Station EU code: {station_eu_code}</p>"))->stazioni
+  mutate(testoPop=glue::glue("<h4>{nome_stazione} ({provincia})</h4><p>Regione: {str_replace(Hmisc::capitalize(regione),'_',' ')}</p><p>Altitudine: {altitudine} m</p> <p>Station EU code: {station_eu_code}</p> <p>Completezza serie: {completezza}</p>"))->stazioni
 
 purrr::partial(.f=addMarkers,lng=~st_x,lat=~st_y,label=~nome_stazione,popup=~testoPop)->mappaMarkers
 ```
