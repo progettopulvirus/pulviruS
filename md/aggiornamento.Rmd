@@ -59,6 +59,14 @@ pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
 
 # Pacchetto datiMeteo
 
+### Versione 3.0.0.0 (2021-04-27)
+
+- Corretti i nomi del dataframe meteo_standardizzati
+
+- Eliminata variabile altitudedem (spostata nel dataframe stazioni del pacchetto stazioniMonitoraggio)
+
+---
+
 ### Versione 2.0.0.0 (2021-03-18)
 
 - Calcolata la variabile dtr (diurnal temperature range)
@@ -82,6 +90,12 @@ pm10[which(!is.na(pm10$pollutant_fk)),]->pm10
 ---
 
 # Pacchetto stazioniMonitoraggio
+
+### Versione 2.0.0.0 (2021-04-27)
+
+Aggiunta in anagrafica la variabile altitudedem (quota delle stazioni ricavata dal dem dell'USGS)
+
+---
 
 ### Versione 1.0.0.0 (2021-03-22)
 

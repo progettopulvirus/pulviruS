@@ -91,8 +91,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico"/>
   
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2021-03-22"/>
-  <meta property="article:created" itemprop="dateCreated" content="2021-03-22"/>
+  <meta property="article:published" itemprop="datePublished" content="2021-04-27"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-04-27"/>
   <meta name="article:author" content="ISPRA"/>
   
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
@@ -111,7 +111,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Come accedere ai dati"]},{"type":"character","attributes":{},"value":["Scaricare i dati giornalieri dei parametri meteoclimatici mediante R\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-03-22"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Come accedere ai dati"]},{"type":"character","attributes":{},"value":["Scaricare i dati giornalieri dei parametri meteoclimatici mediante R\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","affiliation","affiliation_url"]}},"value":[{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["ISPRA"]},{"type":"character","attributes":{},"value":["https://www.isprambiente.gov.it/it"]}]}]},{"type":"character","attributes":{},"value":["2021-04-27"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1866,7 +1866,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Come accedere ai dati","description":"Scaricare i dati giornalieri dei parametri meteoclimatici mediante R","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-03-22T00:00:00.000+01:00","citationText":"ISPRA, 2021"}
+{"title":"Come accedere ai dati","description":"Scaricare i dati giornalieri dei parametri meteoclimatici mediante R","authors":[{"author":"ISPRA","authorURL":"#","affiliation":"ISPRA","affiliationURL":"https://www.isprambiente.gov.it/it","orcidID":""}],"publishedDate":"2021-04-27T00:00:00.000+02:00","citationText":"ISPRA, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1900,7 +1900,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-byline">
   ISPRA  (ISPRA)<a href="https://www.isprambiente.gov.it/it" class="uri">https://www.isprambiente.gov.it/it</a>
   
-<br/>2021-03-22
+<br/>2021-04-27
 </div>
 
 <div class="d-article">
@@ -1936,7 +1936,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <span class='va'>meteo</span>
 </code></pre>
 </div>
-<pre><code># A tibble: 2,250,900 x 25
+<pre><code># A tibble: 2,250,900 x 23
    station_code station_eu_code date         t2m tmin2m tmax2m    tp
           &lt;dbl&gt; &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
  1       100108 IT0469A         2012-12-25   4.3    3.5    4.7   1.1
@@ -1949,36 +1949,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
  8       100108 IT0469A         2013-01-01   2.3   -1.1    5.4   0.9
  9       100108 IT0469A         2013-01-02   3.3    0      6.6   0.5
 10       100108 IT0469A         2013-01-03   3.6   -0.3    8.2   0  
-# … with 2,250,890 more rows, and 18 more variables: ptp &lt;dbl&gt;,
+# … with 2,250,890 more rows, and 16 more variables: ptp &lt;dbl&gt;,
 #   rh &lt;dbl&gt;, u10m &lt;dbl&gt;, v10m &lt;dbl&gt;, sp &lt;dbl&gt;, nirradiance &lt;dbl&gt;,
 #   pbl00 &lt;dbl&gt;, pbl12 &lt;dbl&gt;, pblmin &lt;dbl&gt;, pblmax &lt;dbl&gt;,
-#   coordx &lt;dbl&gt;, coordy &lt;dbl&gt;, altitude &lt;dbl&gt;, altitudedem &lt;dbl&gt;,
-#   wdir &lt;dbl&gt;, wspeed &lt;dbl&gt;, pwspeed &lt;dbl&gt;, dtr &lt;dbl&gt;</code></pre>
+#   coordx &lt;dbl&gt;, coordy &lt;dbl&gt;, wdir &lt;dbl&gt;, wspeed &lt;dbl&gt;,
+#   pwspeed &lt;dbl&gt;, dtr &lt;dbl&gt;</code></pre>
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#i parametri meteoclimatici standardizzati</span>
 <span class='va'>meteo_standardizzati</span>
 </code></pre>
 </div>
-<pre><code># A tibble: 2,250,900 x 25
-   station_code station_eu_code date       t2m[,1] tmin2m[,1]
-          &lt;dbl&gt; &lt;chr&gt;           &lt;date&gt;       &lt;dbl&gt;      &lt;dbl&gt;
- 1       100108 IT0469A         2012-12-25   -1.29     -0.904
- 2       100108 IT0469A         2012-12-26   -1.20     -1.48 
- 3       100108 IT0469A         2012-12-27   -1.57     -1.69 
- 4       100108 IT0469A         2012-12-28   -1.31     -1.48 
- 5       100108 IT0469A         2012-12-29   -1.40     -1.38 
- 6       100108 IT0469A         2012-12-30   -1.40     -1.49 
- 7       100108 IT0469A         2012-12-31   -1.53     -1.57 
- 8       100108 IT0469A         2013-01-01   -1.56     -1.53 
- 9       100108 IT0469A         2013-01-02   -1.43     -1.38 
-10       100108 IT0469A         2013-01-03   -1.39     -1.42 
-# … with 2,250,890 more rows, and 20 more variables:
-#   tmax2m &lt;dbl[,1]&gt;, tp &lt;dbl[,1]&gt;, ptp &lt;dbl[,1]&gt;, rh &lt;dbl[,1]&gt;,
-#   u10m &lt;dbl[,1]&gt;, v10m &lt;dbl[,1]&gt;, sp &lt;dbl[,1]&gt;,
-#   nirradiance &lt;dbl[,1]&gt;, pbl00 &lt;dbl[,1]&gt;, pbl12 &lt;dbl[,1]&gt;,
-#   pblmin &lt;dbl[,1]&gt;, pblmax &lt;dbl[,1]&gt;, coordx &lt;dbl&gt;, coordy &lt;dbl&gt;,
-#   altitude &lt;dbl[,1]&gt;, altitudedem &lt;dbl[,1]&gt;, wdir &lt;dbl[,1]&gt;,
-#   wspeed &lt;dbl[,1]&gt;, pwspeed &lt;dbl[,1]&gt;, dtr &lt;dbl[,1]&gt;</code></pre>
+<pre><code># A tibble: 2,250,900 x 23
+   station_code station_eu_code date         t2m tmin2m tmax2m     tp
+          &lt;dbl&gt; &lt;chr&gt;           &lt;date&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+ 1       100108 IT0469A         2012-12-25 -1.29 -0.904 -1.69  -0.268
+ 2       100108 IT0469A         2012-12-26 -1.20 -1.48  -1.10  -0.356
+ 3       100108 IT0469A         2012-12-27 -1.57 -1.69  -1.39  -0.342
+ 4       100108 IT0469A         2012-12-28 -1.31 -1.48  -0.972 -0.430
+ 5       100108 IT0469A         2012-12-29 -1.40 -1.38  -1.25  -0.430
+ 6       100108 IT0469A         2012-12-30 -1.40 -1.49  -1.31  -0.430
+ 7       100108 IT0469A         2012-12-31 -1.53 -1.57  -1.36  -0.430
+ 8       100108 IT0469A         2013-01-01 -1.56 -1.53  -1.60  -0.297
+ 9       100108 IT0469A         2013-01-02 -1.43 -1.38  -1.45  -0.356
+10       100108 IT0469A         2013-01-03 -1.39 -1.42  -1.25  -0.430
+# … with 2,250,890 more rows, and 16 more variables: ptp &lt;dbl&gt;,
+#   rh &lt;dbl&gt;, u10m &lt;dbl&gt;, v10m &lt;dbl&gt;, sp &lt;dbl&gt;, nirradiance &lt;dbl&gt;,
+#   pbl00 &lt;dbl&gt;, pbl12 &lt;dbl&gt;, pblmin &lt;dbl&gt;, pblmax &lt;dbl&gt;,
+#   coordx &lt;dbl&gt;, coordy &lt;dbl&gt;, wdir &lt;dbl&gt;, wspeed &lt;dbl&gt;,
+#   pwspeed &lt;dbl&gt;, dtr &lt;dbl&gt;</code></pre>
 </div>
 <p>I codici identificativi dei parametri meteoclimatici sono documentati in <a href="parametri.html">questa pagina</a>.</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
