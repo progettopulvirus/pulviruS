@@ -14,6 +14,12 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Pacchetti con dati inquinanti
 
+### Versione 3.0.0.0 (2021-10-08)
+
+Aggiornamento generale dei dati. Adesso i dati della Liguria sono disponibili.
+
+---
+
 ### Versione 2.0.0.0 (2021-03-22)
 
 - I data.frame con i dati giornalieri adesso includono:
